@@ -1,0 +1,49 @@
+{
+	"glossary": [
+
+	],
+	"variables": [
+		{
+			"id": "1722999479-648",
+			"name": "talk_to_people",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723102204-573",
+			"name": "manor_guard",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723187790-648",
+			"name": "child_tips",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723190522-787",
+			"name": "after_quiz",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723102985-768",
+			"name": "paladin",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723097830-905",
+			"name": "citizen",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723097011-648",
+			"name": "explore_town",
+			"type": 0,
+			"value": "0"
+		}
+	]
+}

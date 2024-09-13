@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://intro/video/logo.ogv" type="VideoStream" id=1]
+[ext_resource path="res://intro/script/icon_cutscene.gd" type="Script" id=2]
+
+[node name="Node" type="Node"]
+script = ExtResource( 2 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

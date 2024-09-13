@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Controllers/pictures/Attack.png" type="Texture" id=1]
+[ext_resource path="res://Controllers/pictures/Roll.png" type="Texture" id=2]
+[ext_resource path="res://Controllers/pictures/Roll_fade.png" type="Texture" id=3]
+[ext_resource path="res://Controllers/pictures/Attack_fade.png" type="Texture" id=4]
+
+[node name="Control" type="Node"]
+
+[node name="BtnAttack" type="TouchScreenButton" parent="."]
+position = Vector2( 253, 133 )
+scale = Vector2( 0.250001, 0.234375 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 4 )
+action = "attack"
+
+[node name="BtnRoll" type="TouchScreenButton" parent="."]
+position = Vector2( 211, 134 )
+scale = Vector2( 0.25, 0.234375 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+action = "roll"

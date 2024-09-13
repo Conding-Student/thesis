@@ -1,0 +1,21 @@
+{
+	"color": "#ffc81414",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1721724551.json",
+	"mirror_portraits": true,
+	"name": "Child",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -30,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/paladin/child.png"
+		}
+	],
+	"scale": 22,
+	"theme": "theme-1723097669.cfg"
+}

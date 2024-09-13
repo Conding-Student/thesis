@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/l4s4.wav-26abf64cb3e3ce86ad425b5db3dcbcea.sample"
+
+[deps]
+
+source_file="res://Dialogue/Voice/level4s1/l4s4.wav"
+dest_files=[ "res://.import/l4s4.wav-26abf64cb3e3ce86ad425b5db3dcbcea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

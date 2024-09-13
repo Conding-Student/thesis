@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://intro/picture/mute_button.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Kenney Mini Square.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://intro/picture/mute_button1.png" type="Texture" id=3]
+[ext_resource path="res://intro/picture/close.png" type="Texture" id=4]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node
+
+var master_bus = AudioServer.get_bus_index(\"Master\")
+
+onready var ui = $Panel
+onready var texture_button = $Panel/mute # Update the path to your TextureButton
+
+func _ready():
+	ui.hide()
+	
+	# Check the mute state and update the button appearance
+	if Global.mute_trigger:
+		texture_button.set_pressed(true)  # Show the unchecked sign (assuming pressed is unchecked)
+	else:
+		texture_button.set_pressed(false)  # Show the checked sign (assuming normal is checked)
+
+func _on_TextureButton_pressed():
+	# Toggle the mute state
+	AudioServer.set_bus_mute(master_bus, not AudioServer.is_bus_mute(master_bus))
+	
+	# Toggle the Global mute trigger state
+	Global.mute_trigger = not Global.mute_trigger
+	
+	# Update the button appearance based on the new state
+	if Global.mute_trigger:
+		texture_button.set_pressed(true)
+	else:
+		texture_button.set_pressed(false)
+
+func _on_close_pressed():
+	ui.hide()
+"
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="settings" type="Node"]
+script = SubResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="close" type="TextureButton" parent="Panel"]
+margin_left = 302.0
+margin_top = 5.0
+margin_right = 315.0
+margin_bottom = 15.0
+toggle_mode = true
+texture_normal = ExtResource( 4 )
+
+[node name="music" type="Label" parent="Panel"]
+margin_left = 73.0
+margin_top = 78.0
+margin_right = 199.0
+margin_bottom = 98.0
+custom_fonts/font = SubResource( 1 )
+text = "Master Volume"
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 121.0
+margin_top = 21.0
+margin_right = 191.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "SETTINGS"
+
+[node name="mute" type="TextureButton" parent="Panel"]
+margin_left = 202.0
+margin_top = 78.0
+margin_right = 227.0
+margin_bottom = 101.0
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
+
+[connection signal="pressed" from="Panel/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/mute" to="." method="_on_TextureButton_pressed"]

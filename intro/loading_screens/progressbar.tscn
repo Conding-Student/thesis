@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://intro/script/progressbar.gd" type="Script" id=1]
+[ext_resource path="res://intro/picture/loading-screen2.png" type="Texture" id=2]
+[ext_resource path="res://intro/picture/fireflies-removebg-preview.png" type="Texture" id=3]
+[ext_resource path="res://intro/sounds/fur-elise.wav" type="AudioStream" id=4]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="ParticlesMaterial" id=1]
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_box_extents = Vector3( 100, 100, 1 )
+flag_disable_z = true
+direction = Vector3( 50, 50, 0 )
+gravity = Vector3( 0, 0, 100 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 5 )
+
+[node name="progressbar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 2.0
+texture = ExtResource( 2 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 85.0
+margin_top = 150.0
+margin_right = 245.0
+margin_bottom = 164.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 160, 100 )
+scale = Vector2( 1.5, 0.5 )
+lifetime = 10.0
+speed_scale = 25.07
+randomness = 0.36
+process_material = SubResource( 1 )
+texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 1.0
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 51.0
+margin_top = 108.0
+margin_right = 277.0
+margin_bottom = 162.0
+custom_fonts/font = SubResource( 2 )
+text = "                                                  Tip: 
+		           Can't surpass the current level? 
+try to check the spellbook for referrences"
+
+[node name="tip2" type="Label" parent="."]
+visible = false
+margin_left = 51.0
+margin_top = 108.0
+margin_right = 277.0
+margin_bottom = 162.0
+custom_fonts/font = SubResource( 2 )
+text = "                                                  Tip:
+Did you ever try to click the image of spell in 
+                       spell book? If not,  Do it!!"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

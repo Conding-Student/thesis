@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1723102784.json",
+	"mirror_portraits": true,
+	"name": "paladin",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -20,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/paladin/paladin_men.png"
+		}
+	],
+	"scale": 20,
+	"theme": "theme-1723097669.cfg"
+}

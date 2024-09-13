@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Music and Sounds/bg music/just-relax-11157.wav" type="AudioStream" id=1]
+
+[node name="chill_bg_music" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+volume_db = -20.0
+autoplay = true
+bus = "Music"

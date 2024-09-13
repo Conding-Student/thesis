@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/pictures/town/Boxes/boxes.png" type="Texture" id=1]
+
+[node name="boxes" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 114, 123, 47, 42 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -19, 15, -19, -4, -10, -4, -10, -16, 8, -16, 8, -5, 17, -5, 17, 15 )

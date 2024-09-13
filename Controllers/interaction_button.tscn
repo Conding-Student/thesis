@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://NPC/picture/interact-removebg-preview.png" type="Texture" id=1]
+
+[node name="interaction_button" type="TouchScreenButton"]
+position = Vector2( -20, -23 )
+scale = Vector2( 0.125, 0.117187 )
+normal = ExtResource( 1 )

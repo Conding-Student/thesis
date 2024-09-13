@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1722827409.json",
+	"mirror_portraits": false,
+	"name": "Manor guard",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -20,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/paladin/manor_guard.png"
+		}
+	],
+	"scale": 18,
+	"theme": "theme-1722757873.cfg"
+}

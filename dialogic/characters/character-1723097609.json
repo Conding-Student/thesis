@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1723097609.json",
+	"mirror_portraits": false,
+	"name": "citizen",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -20,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/paladin/citizen3.png"
+		}
+	],
+	"scale": 20,
+	"theme": "theme-1723097669.cfg"
+}

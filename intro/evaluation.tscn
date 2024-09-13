@@ -1,0 +1,1266 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Kenney Future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://intro/picture/spellbook/Untitled.png" type="Texture" id=3]
+[ext_resource path="res://intro/script/Evaluation.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 6
+font_data = ExtResource( 1 )
+
+[node name="evaluation" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="methods" type="RichTextLabel" parent="."]
+margin_left = 14.0
+margin_top = 7.0
+margin_right = 106.0
+margin_bottom = 42.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "
+Evaluation"
+scroll_active = false
+
+[node name="Control" type="Control" parent="."]
+margin_left = 3.0
+margin_top = 57.0
+margin_right = 103.0
+margin_bottom = 149.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -16.0
+margin_right = 2.0
+margin_bottom = 12.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+margin_right = 100.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Question1" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 15.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question 1"
+
+[node name="Question2" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 19.0
+margin_right = 100.0
+margin_bottom = 34.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question2"
+
+[node name="Question3" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 38.0
+margin_right = 100.0
+margin_bottom = 53.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question3"
+
+[node name="Question4" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 57.0
+margin_right = 100.0
+margin_bottom = 72.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question4"
+
+[node name="Question5" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 91.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question5"
+
+[node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 95.0
+margin_right = 100.0
+margin_bottom = 95.0
+
+[node name="Control2" type="Control" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 99.0
+margin_right = 100.0
+margin_bottom = 99.0
+
+[node name="next_stage" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 103.0
+margin_right = 100.0
+margin_bottom = 118.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+text = "Next stage"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 108.0
+margin_top = 15.0
+margin_right = 313.0
+margin_bottom = 172.0
+
+[node name="question1" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question1"]
+margin_right = 191.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question1/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question1/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 6 )
+text = "question"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 24.0
+
+[node name="space2" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 28.0
+margin_right = 191.0
+margin_bottom = 28.0
+
+[node name="one" type="VBoxContainer" parent="PanelContainer/question1/info"]
+visible = false
+margin_top = 32.0
+margin_right = 191.0
+margin_bottom = 76.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question1/info/one"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question1/info/one"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question1/info/one"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question1/info/one"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "feedback"
+autowrap = true
+
+[node name="space3" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 32.0
+margin_right = 191.0
+margin_bottom = 32.0
+
+[node name="space4" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 36.0
+
+[node name="two" type="VBoxContainer" parent="PanelContainer/question1/info"]
+visible = false
+margin_top = 88.0
+margin_right = 179.0
+margin_bottom = 132.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question1/info/two"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question1/info/two"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question1/info/two"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question1/info/two"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space5" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 40.0
+margin_right = 191.0
+margin_bottom = 40.0
+
+[node name="space6" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 44.0
+margin_right = 191.0
+margin_bottom = 44.0
+
+[node name="three" type="VBoxContainer" parent="PanelContainer/question1/info"]
+visible = false
+margin_top = 48.0
+margin_right = 191.0
+margin_bottom = 92.0
+
+[node name="answer_label2" type="Label" parent="PanelContainer/question1/info/three"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer2" type="Label" parent="PanelContainer/question1/info/three"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label2" type="Label" parent="PanelContainer/question1/info/three"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback2" type="Label" parent="PanelContainer/question1/info/three"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space7" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 48.0
+margin_right = 191.0
+margin_bottom = 48.0
+
+[node name="space8" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 52.0
+margin_right = 191.0
+margin_bottom = 52.0
+
+[node name="four" type="VBoxContainer" parent="PanelContainer/question1/info"]
+visible = false
+margin_top = 200.0
+margin_right = 179.0
+margin_bottom = 244.0
+
+[node name="answer_label3" type="Label" parent="PanelContainer/question1/info/four"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer3" type="Label" parent="PanelContainer/question1/info/four"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Object oriented prestidigitation (oop)"
+autowrap = true
+
+[node name="feedback_label3" type="Label" parent="PanelContainer/question1/info/four"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback3" type="Label" parent="PanelContainer/question1/info/four"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space9" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 48.0
+margin_right = 191.0
+margin_bottom = 48.0
+
+[node name="space10" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 52.0
+margin_right = 191.0
+margin_bottom = 52.0
+
+[node name="question2" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question2"]
+margin_right = 191.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question2/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question2/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+text = "Which  magic is used to unlock doors, chest, and even decrypt complex key locks"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 35.0
+margin_right = 191.0
+margin_bottom = 35.0
+
+[node name="space2" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 39.0
+margin_right = 191.0
+margin_bottom = 39.0
+
+[node name="one" type="VBoxContainer" parent="PanelContainer/question2/info"]
+visible = false
+margin_top = 43.0
+margin_right = 179.0
+margin_bottom = 87.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question2/info/one"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question2/info/one"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "List"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question2/info/one"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question2/info/one"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space3" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 43.0
+margin_right = 191.0
+margin_bottom = 43.0
+
+[node name="space4" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 47.0
+margin_right = 191.0
+margin_bottom = 47.0
+
+[node name="two" type="VBoxContainer" parent="PanelContainer/question2/info"]
+visible = false
+margin_top = 51.0
+margin_right = 179.0
+margin_bottom = 95.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question2/info/two"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question2/info/two"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question2/info/two"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question2/info/two"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space5" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 51.0
+margin_right = 191.0
+margin_bottom = 51.0
+
+[node name="space6" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 55.0
+margin_right = 191.0
+margin_bottom = 55.0
+
+[node name="three" type="VBoxContainer" parent="PanelContainer/question2/info"]
+visible = false
+margin_top = 59.0
+margin_right = 179.0
+margin_bottom = 103.0
+
+[node name="answer_label2" type="Label" parent="PanelContainer/question2/info/three"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer2" type="Label" parent="PanelContainer/question2/info/three"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label2" type="Label" parent="PanelContainer/question2/info/three"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback2" type="Label" parent="PanelContainer/question2/info/three"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space7" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 59.0
+margin_right = 191.0
+margin_bottom = 59.0
+
+[node name="space8" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 63.0
+margin_right = 191.0
+margin_bottom = 63.0
+
+[node name="four" type="VBoxContainer" parent="PanelContainer/question2/info"]
+visible = false
+margin_top = 67.0
+margin_right = 191.0
+margin_bottom = 111.0
+
+[node name="answer_label3" type="Label" parent="PanelContainer/question2/info/four"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer3" type="Label" parent="PanelContainer/question2/info/four"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Object oriented prestidigitation (oop)"
+autowrap = true
+
+[node name="feedback_label3" type="Label" parent="PanelContainer/question2/info/four"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback3" type="Label" parent="PanelContainer/question2/info/four"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space9" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 67.0
+margin_right = 191.0
+margin_bottom = 67.0
+
+[node name="space10" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 71.0
+margin_right = 191.0
+margin_bottom = 71.0
+
+[node name="question3" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question3"]
+margin_right = 191.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question3/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question3/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+text = "Which  magic is used to unlock doors, chest, and even decrypt complex key locks"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 35.0
+margin_right = 191.0
+margin_bottom = 35.0
+
+[node name="space2" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 39.0
+margin_right = 191.0
+margin_bottom = 39.0
+
+[node name="one" type="VBoxContainer" parent="PanelContainer/question3/info"]
+visible = false
+margin_top = 43.0
+margin_right = 179.0
+margin_bottom = 87.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question3/info/one"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question3/info/one"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "List"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question3/info/one"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question3/info/one"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space3" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 43.0
+margin_right = 191.0
+margin_bottom = 43.0
+
+[node name="space4" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 47.0
+margin_right = 191.0
+margin_bottom = 47.0
+
+[node name="two" type="VBoxContainer" parent="PanelContainer/question3/info"]
+visible = false
+margin_top = 51.0
+margin_right = 179.0
+margin_bottom = 95.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question3/info/two"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question3/info/two"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question3/info/two"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question3/info/two"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space5" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 51.0
+margin_right = 191.0
+margin_bottom = 51.0
+
+[node name="space6" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 55.0
+margin_right = 191.0
+margin_bottom = 55.0
+
+[node name="three" type="VBoxContainer" parent="PanelContainer/question3/info"]
+visible = false
+margin_top = 59.0
+margin_right = 179.0
+margin_bottom = 103.0
+
+[node name="answer_label2" type="Label" parent="PanelContainer/question3/info/three"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer2" type="Label" parent="PanelContainer/question3/info/three"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label2" type="Label" parent="PanelContainer/question3/info/three"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback2" type="Label" parent="PanelContainer/question3/info/three"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space7" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 59.0
+margin_right = 191.0
+margin_bottom = 59.0
+
+[node name="space8" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 63.0
+margin_right = 191.0
+margin_bottom = 63.0
+
+[node name="four" type="VBoxContainer" parent="PanelContainer/question3/info"]
+visible = false
+margin_top = 67.0
+margin_right = 191.0
+margin_bottom = 111.0
+
+[node name="answer_label3" type="Label" parent="PanelContainer/question3/info/four"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer3" type="Label" parent="PanelContainer/question3/info/four"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Object oriented prestidigitation (oop)"
+autowrap = true
+
+[node name="feedback_label3" type="Label" parent="PanelContainer/question3/info/four"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback3" type="Label" parent="PanelContainer/question3/info/four"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space9" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 67.0
+margin_right = 191.0
+margin_bottom = 67.0
+
+[node name="space10" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 71.0
+margin_right = 191.0
+margin_bottom = 71.0
+
+[node name="question4" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question4"]
+margin_right = 191.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question4/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question4/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+text = "Which  magic is used to unlock doors, chest, and even decrypt complex key locks"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 35.0
+margin_right = 191.0
+margin_bottom = 35.0
+
+[node name="space2" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 39.0
+margin_right = 191.0
+margin_bottom = 39.0
+
+[node name="one" type="VBoxContainer" parent="PanelContainer/question4/info"]
+visible = false
+margin_top = 43.0
+margin_right = 179.0
+margin_bottom = 87.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question4/info/one"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question4/info/one"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "List"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question4/info/one"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question4/info/one"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space3" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 43.0
+margin_right = 191.0
+margin_bottom = 43.0
+
+[node name="space4" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 47.0
+margin_right = 191.0
+margin_bottom = 47.0
+
+[node name="two" type="VBoxContainer" parent="PanelContainer/question4/info"]
+visible = false
+margin_top = 51.0
+margin_right = 179.0
+margin_bottom = 95.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question4/info/two"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question4/info/two"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question4/info/two"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question4/info/two"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space5" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 51.0
+margin_right = 191.0
+margin_bottom = 51.0
+
+[node name="space6" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 55.0
+margin_right = 191.0
+margin_bottom = 55.0
+
+[node name="three" type="VBoxContainer" parent="PanelContainer/question4/info"]
+visible = false
+margin_top = 59.0
+margin_right = 179.0
+margin_bottom = 103.0
+
+[node name="answer_label2" type="Label" parent="PanelContainer/question4/info/three"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer2" type="Label" parent="PanelContainer/question4/info/three"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label2" type="Label" parent="PanelContainer/question4/info/three"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback2" type="Label" parent="PanelContainer/question4/info/three"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space7" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 59.0
+margin_right = 191.0
+margin_bottom = 59.0
+
+[node name="space8" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 63.0
+margin_right = 191.0
+margin_bottom = 63.0
+
+[node name="four" type="VBoxContainer" parent="PanelContainer/question4/info"]
+visible = false
+margin_top = 67.0
+margin_right = 191.0
+margin_bottom = 111.0
+
+[node name="answer_label3" type="Label" parent="PanelContainer/question4/info/four"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer3" type="Label" parent="PanelContainer/question4/info/four"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Object oriented prestidigitation (oop)"
+autowrap = true
+
+[node name="feedback_label3" type="Label" parent="PanelContainer/question4/info/four"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback3" type="Label" parent="PanelContainer/question4/info/four"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space9" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 67.0
+margin_right = 191.0
+margin_bottom = 67.0
+
+[node name="space10" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 71.0
+margin_right = 191.0
+margin_bottom = 71.0
+
+[node name="question5" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question5"]
+margin_right = 191.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question5/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question5/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+text = "Which  magic is used to unlock doors, chest, and even decrypt complex key locks"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 35.0
+margin_right = 191.0
+margin_bottom = 35.0
+
+[node name="space2" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 39.0
+margin_right = 191.0
+margin_bottom = 39.0
+
+[node name="one" type="VBoxContainer" parent="PanelContainer/question5/info"]
+visible = false
+margin_top = 43.0
+margin_right = 179.0
+margin_bottom = 87.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question5/info/one"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question5/info/one"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "List"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question5/info/one"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question5/info/one"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space3" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 43.0
+margin_right = 191.0
+margin_bottom = 43.0
+
+[node name="space4" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 47.0
+margin_right = 191.0
+margin_bottom = 47.0
+
+[node name="two" type="VBoxContainer" parent="PanelContainer/question5/info"]
+visible = false
+margin_top = 51.0
+margin_right = 179.0
+margin_bottom = 95.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question5/info/two"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question5/info/two"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question5/info/two"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question5/info/two"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space5" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 51.0
+margin_right = 191.0
+margin_bottom = 51.0
+
+[node name="space6" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 55.0
+margin_right = 191.0
+margin_bottom = 55.0
+
+[node name="three" type="VBoxContainer" parent="PanelContainer/question5/info"]
+visible = false
+margin_top = 59.0
+margin_right = 179.0
+margin_bottom = 103.0
+
+[node name="answer_label2" type="Label" parent="PanelContainer/question5/info/three"]
+margin_right = 179.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer2" type="Label" parent="PanelContainer/question5/info/three"]
+margin_top = 12.0
+margin_right = 179.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Classcraft"
+autowrap = true
+
+[node name="feedback_label2" type="Label" parent="PanelContainer/question5/info/three"]
+margin_top = 24.0
+margin_right = 179.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback2" type="Label" parent="PanelContainer/question5/info/three"]
+margin_top = 36.0
+margin_right = 179.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space7" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 59.0
+margin_right = 191.0
+margin_bottom = 59.0
+
+[node name="space8" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 63.0
+margin_right = 191.0
+margin_bottom = 63.0
+
+[node name="four" type="VBoxContainer" parent="PanelContainer/question5/info"]
+visible = false
+margin_top = 67.0
+margin_right = 191.0
+margin_bottom = 111.0
+
+[node name="answer_label3" type="Label" parent="PanelContainer/question5/info/four"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer3" type="Label" parent="PanelContainer/question5/info/four"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "Object oriented prestidigitation (oop)"
+autowrap = true
+
+[node name="feedback_label3" type="Label" parent="PanelContainer/question5/info/four"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback3" type="Label" parent="PanelContainer/question5/info/four"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "You will be rewarded by a new heart!"
+autowrap = true
+
+[node name="space9" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 67.0
+margin_right = 191.0
+margin_bottom = 67.0
+
+[node name="space10" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 71.0
+margin_right = 191.0
+margin_bottom = 71.0
+
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question1" to="." method="_on_Question1_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question2" to="." method="_on_Question2_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question3" to="." method="_on_Question3_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question4" to="." method="_on_Question4_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question5" to="." method="_on_Question5_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/next_stage" to="." method="_on_next_stage_pressed"]

@@ -1,0 +1,21 @@
+{
+	"color": "#fff4520a",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1723544892.json",
+	"mirror_portraits": false,
+	"name": "manorMaster",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/silhoutte/manorMaster.png"
+		}
+	],
+	"scale": 5,
+	"theme": ""
+}

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 193.775, 122.614, 43.8123, 29.9212 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13.2002, 21.943 )
+
+[node name="table" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -0.0653073, -0.994722 )
+rotation = 1.56146
+shape = SubResource( 2 )

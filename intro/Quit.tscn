@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://intro/script/Quit.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 14
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+font_data = ExtResource( 2 )
+
+[node name="Quit" type="Node"]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+margin_left = 54.0
+margin_top = 44.0
+margin_right = 263.0
+margin_bottom = 141.0
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 12.0
+margin_top = 29.0
+margin_right = 197.0
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 1 )
+text = "Do you really like  to quit the game?"
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 56.0
+margin_top = 6.0
+margin_right = 159.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 2 )
+text = "Confirm quit"
+
+[node name="Yes" type="Button" parent="Panel"]
+margin_left = 42.0
+margin_top = 53.0
+margin_right = 86.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 3 )
+text = "Yes"
+
+[node name="No" type="Button" parent="Panel"]
+margin_left = 121.0
+margin_top = 53.0
+margin_right = 165.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 3 )
+text = "No"
+
+[connection signal="pressed" from="Panel/Yes" to="." method="_on_Yes_pressed"]
+[connection signal="pressed" from="Panel/No" to="." method="_on_No_pressed"]

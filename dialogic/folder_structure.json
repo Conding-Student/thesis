@@ -1,0 +1,181 @@
+{
+	"files": [
+
+	],
+	"folders": {
+		"Characters": {
+			"files": [
+				"character-1723544892.json",
+				"character-1723102784.json",
+				"character-1723101616.json",
+				"character-1723097609.json",
+				"character-1722951024.json",
+				"character-1721952703.json",
+				"character-1721952113.json",
+				"character-1721724551.json",
+				"character-1720150982.json"
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": true
+			}
+		},
+		"Definitions": {
+			"files": [
+				"1723187790-648",
+				"1723102985-768",
+				"1723102204-573",
+				"1723097830-905",
+				"1723097011-648"
+			],
+			"folders": {
+				"stage2": {
+					"files": [
+						"1723190522-787"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				}
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		},
+		"Themes": {
+			"files": [
+				"theme-1723254206.cfg",
+				"theme-1723097669.cfg",
+				"theme-1721953720.cfg",
+				"theme-1721781230.cfg",
+				"theme-1718855012.cfg",
+				"theme-1717764707.cfg"
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": true
+			}
+		},
+		"Timelines": {
+			"files": [
+				"timeline-1720150872.json",
+				"timeline-1718871577.json",
+				"timeline-1718854892.json"
+			],
+			"folders": {
+				"Manor Guard": {
+					"files": [
+						"timeline-1723101681.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				},
+				"Merrick": {
+					"files": [
+						"timeline-1721950864.json",
+						"timeline-1721976689.json",
+						"timeline-1722605060.json",
+						"timeline-1722652973.json",
+						"timeline-1722653052.json",
+						"timeline-1722927703.json",
+						"timeline-1722927847.json",
+						"timeline-1722927941.json",
+						"timeline-1722928007.json",
+						"timeline-1722950685.json",
+						"timeline-1722950750.json",
+						"timeline-1722950878.json",
+						"timeline-1723096670.json",
+						"timeline-1723515023.json",
+						"timeline-1723543306.json",
+						"timeline-1723544395.json",
+						"timeline-1723545000.json",
+						"timeline-1723547149.json",
+						"timeline-1723547771.json",
+						"timeline-1723548141.json",
+						"timeline-1723549061.json",
+						"timeline-1723616821.json",
+						"timeline-1723617380.json",
+						"timeline-1723976902.json",
+						"timeline-1723977003.json",
+						"timeline-1723977394.json",
+						"timeline-1723977619.json",
+						"timeline-1723977731.json",
+						"timeline-1723978459.json",
+						"timeline-1723983693.json",
+						"timeline-1723985846.json",
+						"timeline-1723991380.json",
+						"timeline-1723992686.json",
+						"timeline-1723993652.json",
+						"timeline-1723993959.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				},
+				"Valen": {
+					"files": [
+						"timeline-1723512771.json",
+						"timeline-1723815657.json",
+						"timeline-1723958326.json",
+						"timeline-1725179796.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				},
+				"citizen3": {
+					"files": [
+						"timeline-1723097509.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				},
+				"paladin": {
+					"files": [
+						"timeline-1723102825.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				}
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		}
+	}
+}

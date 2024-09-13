@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://intro/script/saving_file.gd" type="Script" id=1]
+
+[node name="saving_file" type="Node"]
+script = ExtResource( 1 )

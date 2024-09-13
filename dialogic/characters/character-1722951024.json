@@ -1,0 +1,21 @@
+{
+	"color": "#ff8a4c40",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1722951024.json",
+	"mirror_portraits": false,
+	"name": "manorWoker",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/silhoutte/worker.png"
+		}
+	],
+	"scale": 5,
+	"theme": "theme-1721953720.cfg"
+}

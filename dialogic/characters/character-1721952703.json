@@ -1,0 +1,21 @@
+{
+	"color": "#fff709f3",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1721952703.json",
+	"mirror_portraits": false,
+	"name": "Valen",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 40,
+	"offset_y": 25,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/silhoutte/e1a06b78031700f62cc788e99ea3b640-removebg-preview.png"
+		}
+	],
+	"scale": 60,
+	"theme": "theme-1721953720.cfg"
+}

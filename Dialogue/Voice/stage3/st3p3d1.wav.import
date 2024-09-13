@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/st3p3d1.wav-0ec913fb25056f46e13d1f2d9cb5338b.sample"
+
+[deps]
+
+source_file="res://Dialogue/Voice/stage3/st3p3d1.wav"
+dest_files=[ "res://.import/st3p3d1.wav-0ec913fb25056f46e13d1f2d9cb5338b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

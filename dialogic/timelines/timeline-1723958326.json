@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Dialogue/Voice/miscVoices/v5ep1.mp3",
+			"volume": 0
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It looks like this was locked, I need to open this to get inside."
+		},
+		{
+			"change_scene": "res://intro/sequencing.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1723958326.json",
+		"name": "valstage5ep1"
+	}
+}

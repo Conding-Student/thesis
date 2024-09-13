@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Video/intro-scene.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Scenes/Script/Intro-scene.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/pictures/skip.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/Kenney Mini Square Mono.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 9
+font_data = ExtResource( 4 )
+
+[node name="Intro-scene" type="Node"]
+script = ExtResource( 2 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Skip_button" type="TextureButton" parent="."]
+margin_left = 271.0
+margin_top = 135.0
+margin_right = 321.0
+margin_bottom = 185.0
+texture_normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Skip_button"]
+margin_left = 12.0
+margin_top = 19.0
+margin_right = 39.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 1, 0.654902, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Skip"
+
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="Skip_button" to="." method="_on_Skip_button_pressed"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://intro/script/Label.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 1 )
+
+[node name="Label" type="Label"]
+margin_left = 133.0
+margin_top = 3.0
+margin_right = 210.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 1 )
+text = "Chapter1 U1 1 / 5"
+script = ExtResource( 2 )

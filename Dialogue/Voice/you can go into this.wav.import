@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/you can go into this.wav-779d881391e46ea5a5c8f3758c8d5f4f.sample"
+
+[deps]
+
+source_file="res://Dialogue/Voice/you can go into this.wav"
+dest_files=[ "res://.import/you can go into this.wav-779d881391e46ea5a5c8f3758c8d5f4f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

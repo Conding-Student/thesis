@@ -1,0 +1,506 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://intro/picture/spellbook/Untitled.png" type="Texture" id=2]
+[ext_resource path="res://intro/picture/spellbook/module/Inheritance Output.png" type="Texture" id=3]
+[ext_resource path="res://intro/picture/spellbook/module/Creating Abstraction (1st).png" type="Texture" id=4]
+[ext_resource path="res://intro/picture/spellbook/module/Inheritance (1) .png" type="Texture" id=5]
+[ext_resource path="res://intro/picture/spellbook/module/Inheritance (2).png" type="Texture" id=6]
+[ext_resource path="res://intro/script/OOP_spellbookinfo.gd" type="Script" id=7]
+[ext_resource path="res://intro/picture/spellbook/module/Creating Encapsulation.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 6
+font_data = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+script = ExtResource( 7 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 5.0
+margin_top = 57.0
+margin_right = 105.0
+margin_bottom = 129.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 3.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+margin_right = 100.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Abstraction" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 15.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "Abstraction"
+
+[node name="Encapsulation" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 19.0
+margin_right = 100.0
+margin_bottom = 34.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "Encapsulation"
+
+[node name="Inheritance" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 38.0
+margin_right = 100.0
+margin_bottom = 53.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "Inheritance"
+
+[node name="Polymorphism" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 57.0
+margin_right = 100.0
+margin_bottom = 72.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "Polymorphism"
+
+[node name="Control2" type="Control" parent="."]
+margin_left = 113.0
+margin_top = 29.0
+margin_right = 312.0
+margin_bottom = 156.0
+
+[node name="abstraction" type="PanelContainer" parent="Control2"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -5.0
+margin_top = -3.0
+
+[node name="code1" type="VBoxContainer" parent="Control2/abstraction"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 206.0
+margin_bottom = 129.0
+
+[node name="image_code" type="TextureRect" parent="Control2/abstraction/code1"]
+margin_right = 199.0
+margin_bottom = 78.0
+texture = ExtResource( 4 )
+
+[node name="space" type="Control" parent="Control2/abstraction/code1"]
+margin_top = 82.0
+margin_right = 199.0
+margin_bottom = 82.0
+
+[node name="title" type="Label" parent="Control2/abstraction/code1"]
+margin_top = 86.0
+margin_right = 199.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 2 )
+text = "Applying Abstraction"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="space3" type="Control" parent="Control2/abstraction/code1"]
+margin_top = 99.0
+margin_right = 199.0
+margin_bottom = 99.0
+
+[node name="Label" type="Label" parent="Control2/abstraction/code1"]
+margin_top = 103.0
+margin_right = 199.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 3 )
+text = "Adding \"abtract\" keyword before the class make it possible to hide the whole class itself."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/abstraction/code1"]
+visible = false
+margin_top = 126.0
+margin_right = 199.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="previous" type="Button" parent="Control2/abstraction/code1/HBoxContainer"]
+margin_right = 42.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+text = "Previous"
+
+[node name="Control" type="Control" parent="Control2/abstraction/code1/HBoxContainer"]
+margin_left = 46.0
+margin_right = 157.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="next" type="Button" parent="Control2/abstraction/code1/HBoxContainer"]
+margin_left = 161.0
+margin_right = 199.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "  Next   "
+
+[node name="inheritance" type="PanelContainer" parent="Control2"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -5.0
+margin_top = -3.0
+
+[node name="code1" type="VBoxContainer" parent="Control2/inheritance"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 206.0
+margin_bottom = 132.0
+
+[node name="image_code" type="TextureRect" parent="Control2/inheritance/code1"]
+margin_right = 199.0
+margin_bottom = 78.0
+texture = ExtResource( 5 )
+
+[node name="space" type="Control" parent="Control2/inheritance/code1"]
+margin_top = 82.0
+margin_right = 199.0
+margin_bottom = 82.0
+
+[node name="title" type="Label" parent="Control2/inheritance/code1"]
+margin_top = 86.0
+margin_right = 199.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 2 )
+text = "Applying inheritance"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label" type="Label" parent="Control2/inheritance/code1"]
+margin_top = 99.0
+margin_right = 199.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 3 )
+text = "none"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/inheritance/code1"]
+margin_top = 111.0
+margin_right = 199.0
+margin_bottom = 125.0
+alignment = 1
+
+[node name="previous" type="Button" parent="Control2/inheritance/code1/HBoxContainer"]
+margin_right = 42.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+text = "Previous"
+
+[node name="Control" type="Control" parent="Control2/inheritance/code1/HBoxContainer"]
+margin_left = 46.0
+margin_right = 157.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="next" type="Button" parent="Control2/inheritance/code1/HBoxContainer"]
+margin_left = 161.0
+margin_right = 199.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "  Next   "
+
+[node name="code2" type="VBoxContainer" parent="Control2/inheritance"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 206.0
+margin_bottom = 132.0
+
+[node name="image_code" type="TextureRect" parent="Control2/inheritance/code2"]
+margin_right = 199.0
+margin_bottom = 78.0
+texture = ExtResource( 6 )
+
+[node name="space" type="Control" parent="Control2/inheritance/code2"]
+margin_top = 82.0
+margin_right = 199.0
+margin_bottom = 82.0
+
+[node name="title" type="Label" parent="Control2/inheritance/code2"]
+margin_top = 86.0
+margin_right = 199.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 2 )
+text = "Applying inheritance"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label" type="Label" parent="Control2/inheritance/code2"]
+margin_top = 99.0
+margin_right = 199.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 3 )
+text = "none"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/inheritance/code2"]
+margin_top = 111.0
+margin_right = 199.0
+margin_bottom = 125.0
+alignment = 1
+
+[node name="previous" type="Button" parent="Control2/inheritance/code2/HBoxContainer"]
+margin_right = 42.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "Previous"
+
+[node name="Control" type="Control" parent="Control2/inheritance/code2/HBoxContainer"]
+margin_left = 46.0
+margin_right = 157.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="next" type="Button" parent="Control2/inheritance/code2/HBoxContainer"]
+margin_left = 161.0
+margin_right = 199.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "  Next   "
+
+[node name="code3" type="VBoxContainer" parent="Control2/inheritance"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 206.0
+margin_bottom = 132.0
+
+[node name="image_code" type="TextureRect" parent="Control2/inheritance/code3"]
+margin_right = 199.0
+margin_bottom = 78.0
+texture = ExtResource( 3 )
+
+[node name="space" type="Control" parent="Control2/inheritance/code3"]
+margin_top = 82.0
+margin_right = 199.0
+margin_bottom = 82.0
+
+[node name="title" type="Label" parent="Control2/inheritance/code3"]
+margin_top = 86.0
+margin_right = 199.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 2 )
+text = "Outputting inheritance"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label" type="Label" parent="Control2/inheritance/code3"]
+margin_top = 99.0
+margin_right = 199.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 3 )
+text = "none"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/inheritance/code3"]
+margin_top = 111.0
+margin_right = 199.0
+margin_bottom = 125.0
+alignment = 1
+
+[node name="previous" type="Button" parent="Control2/inheritance/code3/HBoxContainer"]
+margin_right = 42.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "Previous"
+
+[node name="Control" type="Control" parent="Control2/inheritance/code3/HBoxContainer"]
+margin_left = 46.0
+margin_right = 157.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="next" type="Button" parent="Control2/inheritance/code3/HBoxContainer"]
+margin_left = 161.0
+margin_right = 199.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+text = "  Next   "
+
+[node name="encapsulation" type="PanelContainer" parent="Control2"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -5.0
+margin_top = -3.0
+
+[node name="code1" type="VBoxContainer" parent="Control2/encapsulation"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 206.0
+margin_bottom = 140.0
+
+[node name="image_code" type="TextureRect" parent="Control2/encapsulation/code1"]
+margin_right = 199.0
+margin_bottom = 78.0
+texture = ExtResource( 8 )
+
+[node name="space" type="Control" parent="Control2/encapsulation/code1"]
+margin_top = 82.0
+margin_right = 199.0
+margin_bottom = 82.0
+
+[node name="title" type="Label" parent="Control2/encapsulation/code1"]
+margin_top = 86.0
+margin_right = 199.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 2 )
+text = "Applying Encapsulation"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="space3" type="Control" parent="Control2/encapsulation/code1"]
+margin_top = 99.0
+margin_right = 199.0
+margin_bottom = 99.0
+
+[node name="Label" type="Label" parent="Control2/encapsulation/code1"]
+margin_top = 103.0
+margin_right = 199.0
+margin_bottom = 133.0
+custom_fonts/font = SubResource( 3 )
+text = "It is a technique used to protect the information in an object from another object. Hide the data for security by making the variables private."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/encapsulation/code1"]
+visible = false
+margin_top = 126.0
+margin_right = 199.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="previous" type="Button" parent="Control2/encapsulation/code1/HBoxContainer"]
+margin_right = 42.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+text = "Previous"
+
+[node name="Control" type="Control" parent="Control2/encapsulation/code1/HBoxContainer"]
+margin_left = 46.0
+margin_right = 157.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="next" type="Button" parent="Control2/encapsulation/code1/HBoxContainer"]
+margin_left = 161.0
+margin_right = 199.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "  Next   "
+
+[node name="polymorphism" type="PanelContainer" parent="Control2"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -5.0
+margin_top = -3.0
+
+[node name="code1" type="VBoxContainer" parent="Control2/polymorphism"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 11.0
+
+[node name="image_code" type="TextureRect" parent="Control2/polymorphism/code1"]
+visible = false
+margin_right = 1.0
+
+[node name="space" type="Control" parent="Control2/polymorphism/code1"]
+
+[node name="title" type="Label" parent="Control2/polymorphism/code1"]
+visible = false
+margin_top = 4.0
+margin_right = 1.0
+margin_bottom = 289.0
+custom_fonts/font = SubResource( 2 )
+text = "Applying Encapsulation"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="space3" type="Control" parent="Control2/polymorphism/code1"]
+margin_top = 4.0
+margin_bottom = 4.0
+
+[node name="Label" type="Label" parent="Control2/polymorphism/code1"]
+visible = false
+margin_top = 8.0
+margin_right = 1.0
+margin_bottom = 1600.0
+custom_fonts/font = SubResource( 3 )
+text = "It is a technique used to protect the information in an object from another object. Hide the data for security by making the variables private."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/polymorphism/code1"]
+visible = false
+margin_top = 126.0
+margin_right = 199.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="previous" type="Button" parent="Control2/polymorphism/code1/HBoxContainer"]
+margin_right = 42.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+text = "Previous"
+
+[node name="Control" type="Control" parent="Control2/polymorphism/code1/HBoxContainer"]
+margin_left = 46.0
+margin_right = 157.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="next" type="Button" parent="Control2/polymorphism/code1/HBoxContainer"]
+margin_left = 161.0
+margin_right = 199.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "  Next   "
+
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Abstraction" to="." method="_on_Abstraction_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Encapsulation" to="." method="_on_Encapsulation_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Inheritance" to="." method="_on_Inheritance_pressed"]
+[connection signal="pressed" from="Control2/inheritance/code1/HBoxContainer/next" to="." method="_on_inheritance_code1_next_pressed"]
+[connection signal="pressed" from="Control2/inheritance/code2/HBoxContainer/previous" to="." method="_on_inheritance_code2_previous_pressed"]
+[connection signal="pressed" from="Control2/inheritance/code2/HBoxContainer/next" to="." method="_on_inheritance_code3_next_pressed"]
+[connection signal="pressed" from="Control2/inheritance/code3/HBoxContainer/previous" to="." method="_on_inheritance_code3_previous_pressed"]

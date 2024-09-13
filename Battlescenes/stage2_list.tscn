@@ -1,0 +1,359 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Fonts/Kenney Mini Square.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Stats.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Music and Sounds/Hurt.wav" type="AudioStream" id=5]
+[ext_resource path="res://Scenes/pictures/orphanage/office.png" type="Texture" id=6]
+[ext_resource path="res://Battlescenes/Script/stage2_list.gd" type="Script" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 7
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 7
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 7
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "shake"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -6, -6 ), Vector2( 5, -6 ), Vector2( -6, 8 ), Vector2( 9, 5 ), Vector2( 0, 0 ) ]
+}
+
+[node name="stage2_list" type="Control"]
+script = ExtResource( 7 )
+
+[node name="arena" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 320.0
+margin_bottom = 177.0
+texture = ExtResource( 6 )
+
+[node name="player_panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_top = 156.0
+margin_right = 319.0
+margin_bottom = 179.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="player_data" type="HBoxContainer" parent="player_panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Stats" parent="player_panel" instance=ExtResource( 3 )]
+
+[node name="HeartUI" parent="player_panel" instance=ExtResource( 4 )]
+margin_left = 216.0
+margin_top = 6.0
+margin_right = 297.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+
+[node name="Label" type="Label" parent="player_panel"]
+margin_left = 95.0
+margin_top = 4.0
+margin_right = 141.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 2 )
+text = "player"
+align = 1
+
+[node name="action_panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -1.0
+margin_top = 104.0
+margin_right = 320.0
+margin_bottom = 151.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="actions" type="HBoxContainer" parent="action_panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = 15.0
+margin_right = -20.0
+margin_bottom = -21.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="list" type="Button" parent="action_panel/actions"]
+margin_right = 67.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "Listkey"
+
+[node name="classcraft" type="Button" parent="action_panel/actions"]
+margin_left = 72.0
+margin_right = 140.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "Classcraft"
+
+[node name="OOP" type="Button" parent="action_panel/actions"]
+margin_left = 145.0
+margin_right = 213.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "oop"
+
+[node name="foreach" type="Button" parent="action_panel/actions"]
+margin_left = 218.0
+margin_right = 286.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "Foreach"
+
+[node name="actions2" type="HBoxContainer" parent="action_panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = 15.0
+margin_right = -20.0
+margin_bottom = -21.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="inbox" type="Button" parent="action_panel/actions2"]
+margin_right = 67.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "inbox"
+
+[node name="index" type="Button" parent="action_panel/actions2"]
+margin_left = 72.0
+margin_right = 140.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "index"
+
+[node name="indoors" type="Button" parent="action_panel/actions2"]
+margin_left = 145.0
+margin_right = 213.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "indoors"
+
+[node name="incode" type="Button" parent="action_panel/actions2"]
+margin_left = 218.0
+margin_right = 286.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "incode"
+
+[node name="Question" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -1.0
+margin_right = 320.0
+margin_bottom = 35.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="text" type="Label" parent="Question"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "Which  magic is used to unlock doors, chest, and even decrypt complex key locks"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="textbox" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 12.0
+margin_top = 4.0
+margin_right = 307.0
+margin_bottom = 41.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="Label" type="Label" parent="textbox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+custom_fonts/font = SubResource( 12 )
+text = "A BAT appears!"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ticker" type="Label" parent="textbox"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -14.0
+margin_top = -15.0
+margin_right = -3.0
+margin_bottom = -1.0
+text = ">"
+
+[node name="hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -5.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 7 )
+anims/shake = SubResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+anchor_mode = 0
+current = true
+
+[connection signal="pressed" from="action_panel/actions/list" to="." method="_on_list_pressed"]
+[connection signal="pressed" from="action_panel/actions/classcraft" to="." method="_on_classcraft_pressed"]
+[connection signal="pressed" from="action_panel/actions/OOP" to="." method="_on_OOP_pressed"]
+[connection signal="pressed" from="action_panel/actions/foreach" to="." method="_on_foreach_pressed"]
+[connection signal="pressed" from="action_panel/actions2/inbox" to="." method="_on_inbox_pressed"]
+[connection signal="pressed" from="action_panel/actions2/index" to="." method="_on_index_pressed"]
+[connection signal="pressed" from="action_panel/actions2/indoors" to="." method="_on_indoors_pressed"]
+[connection signal="pressed" from="action_panel/actions2/incode" to="." method="_on_incode_pressed"]
+
+[editable path="player_panel/Stats"]

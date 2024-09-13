@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/paladin1d4.wav-dc41bb3d7c2cc048a4cfe48c63dc5a0d.sample"
+
+[deps]
+
+source_file="res://Dialogue/Voice/paladin1/paladin1d4.wav"
+dest_files=[ "res://.import/paladin1d4.wav-dc41bb3d7c2cc048a4cfe48c63dc5a0d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

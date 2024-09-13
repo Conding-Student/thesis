@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes it works! now I can go inside of this door"
+		},
+		{
+			"change_scene": "res://intro/evaluation.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1725179796.json",
+		"name": "valstage5ep1end"
+	}
+}

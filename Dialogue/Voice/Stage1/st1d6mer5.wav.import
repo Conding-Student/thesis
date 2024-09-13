@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/st1d6mer5.wav-bc875382b0473744423a7c3f721984fb.sample"
+
+[deps]
+
+source_file="res://Dialogue/Voice/Stage1/st1d6mer5.wav"
+dest_files=[ "res://.import/st1d6mer5.wav-bc875382b0473744423a7c3f721984fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
