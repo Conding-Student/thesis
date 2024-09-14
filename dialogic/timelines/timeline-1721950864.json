@@ -68,100 +68,154 @@
 			"text": "It doesn't matter where  I am. What's important is you are here."
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1/st1d4mer3.wav",
-			"volume": 0
+			"event_id": "dialogic_015",
+			"id": "anchor-1726216430",
+			"index": 0,
+			"name": "teach"
 		},
 		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm going to teach you about ListKey magic. This is a repository of magical keys imbued with C# properties. "
+			"text": " I'm going to teach you about pseudocode. It is a generic way of describing an algorithm without the use of any specific programming language syntax."
 		},
 		{
-			"background": "res://Scenes/pictures/stage1/orphanage_basement_withlist.png",
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " In fact it serves as an English like way to state an algorithm. Here is the  Pseudocode example to add two numbers. "
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/start.jpg.png",
 			"event_id": "dialogic_021"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1/st1d5mer4.wav",
-			"volume": 0
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
 		},
 		{
-			"character": "character-1721952113.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Each key within this collection corresponds to a specific lock or door."
-		},
-		{
-			"background": "res://Scenes/pictures/stage1/orphanage_basement_withlist_index.png",
+			"background": "res://Scenes/pictures/stage1/start2.png",
 			"event_id": "dialogic_021"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1/st1d6mer5.wav",
-			"volume": 0
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/start3.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/start4.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/start5.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
 		},
 		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": " By identifying the correct index of the locked or door, ListKey magic can unlock them."
+			"text": "As you may notice I’ll just simply showed to you how I add two numbers by describing it step by step. That is pseudocode Valen."
 		},
 		{
 			"background": "res://Scenes/pictures/stage1/orphanage_basement.jpg",
 			"event_id": "dialogic_021"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1/st1d7val2.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1721952703.json",
-			"event_id": "dialogic_001",
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
 			"portrait": "",
-			"text": "Why are you teaching me this now?"
+			"question": "Did you get it?"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1/st1d8mer6.wav",
-			"volume": 0
+			"choice": "Yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
 		},
 		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Because you're ready. And because it's time you learned a more sophisticated form of magic. "
+			"text": "Good! Now let me teach about this last one topic."
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1/st1d9mer7.wav",
-			"volume": 0
+			"choice": "Not yet",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
 		},
 		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "It's not just about brute force or simple spells. You need to understand the intricacies of magic to be truly effective."
+			"text": "Okay, let me repeat it again."
+		},
+		{
+			"anchor_id": "anchor-1726216430",
+			"event_id": "dialogic_016"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_022",

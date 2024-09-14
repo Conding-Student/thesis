@@ -119,7 +119,6 @@ func _ready():
 	
 	stats.connect("no_health", self, "_on_no_health")  # Connect the no_health signal
 	q_and_a_show()  # Show the question and answer panel initially
-	Global2.set_question(0,"Which magic is used to unlock doors, chest, and even decrypt complex key locks")
 
 # Show the question and answer panel
 func q_and_a_show():

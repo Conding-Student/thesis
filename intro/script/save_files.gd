@@ -15,7 +15,7 @@ func _ready():
 	panel.hide()
 
 	
-
+	
 	if Global.save_triggered == true or Global.save_button_click == true:
 		saving_file.load_game_button()
 		file1.text = Global.current_level
@@ -32,8 +32,10 @@ func _ready():
 func _process(delta):
 	if Global.load_button_click == true:
 		auto.disabled = false	
-	if Global.save_button_click == true:
+	if Global.save_button_click == true or Global.save_triggered == true:
 		file1.disabled = false
+		saving_file.load_game_button()
+		file1.text = Global.current_level
 	
 
 func auto_save():

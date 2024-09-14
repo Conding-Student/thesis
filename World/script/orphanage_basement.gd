@@ -78,10 +78,9 @@ func _on_pause_game_pressed():
 	pause_ui.show()
 
 func merrick1():
-	#here I wanted to disabled it
 	player_controls.visible = false
 	interaction_button.visible = false
-	var new_dialog = Dialogic.start('stage1')
+	var new_dialog = Dialogic.start('stage1') #new dialogue
 	add_child(new_dialog)
 	new_dialog.connect("timeline_end", self, "after_stage1")
 

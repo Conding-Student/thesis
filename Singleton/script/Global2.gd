@@ -33,7 +33,7 @@ var evaluations = {
 	"answers": ["","", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "", "",""],
 	"feedback": ["", "", "", "","", "", "", "","",""
-	, "feedback11", "feedback12", "feedback13","feedback14", "feedback15", "feedback16", "feedback17", "feedback18", "feedback19", "feedback20",""]
+	, "", "", "","", "", "", "", "", "", "",""]
 }
 
 #correct answer trigger

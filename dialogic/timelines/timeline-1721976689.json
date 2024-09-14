@@ -1,43 +1,13 @@
 {
 	"events": [
 		{
-			"background": "res://Scenes/pictures/stage1/orphanage_basementindex1.png",
-			"event_id": "dialogic_021"
+			"event_id": "dialogic_015",
+			"id": "anchor-1726281699",
+			"index": 0,
+			"name": "start"
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 2
-		},
-		{
-			"background": "res://Scenes/pictures/stage1/orphanage_basementindex2.png",
-			"event_id": "dialogic_021"
-		},
-		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 1.5
-		},
-		{
-			"background": "res://Scenes/pictures/stage1/orphanage_basementindex3.png",
-			"event_id": "dialogic_021"
-		},
-		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 1.5
-		},
-		{
-			"background": "res://Scenes/pictures/stage1/orphanage_basementindex4.png",
-			"event_id": "dialogic_021"
-		},
-		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 1.5
-		},
-		{
-			"background": "res://Scenes/pictures/stage1/orphanage_basementindex5.png",
+			"background": "res://Scenes/pictures/stage1/flowchart.jpg",
 			"event_id": "dialogic_021"
 		},
 		{
@@ -61,92 +31,136 @@
 			"z_index": 0
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1m2/st2d1mer1.wav",
-			"volume": 0
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Flowchart visually represents program logic, showing the sequence of instructions using symbols and arrows to indicate execution order"
 		},
 		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This is the power of ListKey magic. Each key is indexed to a specific lock. You must find the right index, the right key, to unlock each door or chest."
+			"text": " It helps with program documentation and communication by simplifying complex ideas through drawings. take a look at the given example."
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/flowchart1.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This one is called"
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/flowchart1.1.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "TERMINAL box, Used to signify the beginning and end of flowchart"
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/flowchart2.1.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Meanwhile, this square shape is called PROCESS. It Performs any calculations that needs to be done. "
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/flowchart5.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This parallelogram shape are  data to be read into the computer memory from an input device or data to be passed from the memory to an output device."
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/flowchart3.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This shapes Signifies any decisions that are to be done. it checks if a certain condition is true or false. Based on the result, It follows one of the two paths"
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/flowchart4.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This was the second to the last shape that I wanted you to know. This shape shows the entry or exit point of the flowchart."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It is used to connect one part of a flowchart to another without drawing flowlines"
+		},
+		{
+			"background": "res://Scenes/pictures/stage1/flowchart6.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "For the final element that you need to know, this one is called FLOW LINES, Signifies the process that is to be executed next."
 		},
 		{
 			"background": "res://Scenes/pictures/stage1/orphanage_basement.jpg",
 			"event_id": "dialogic_021"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1m2/st2d2val1.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1721952703.json",
-			"event_id": "dialogic_001",
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
 			"portrait": "",
-			"text": "So, it's like finding the correct element in a list by its index?"
+			"question": "Did you undertand the topic that I discuss? I can repeat my explanation if want just tell me."
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1m2/st2d3mer2.wav",
-			"volume": 0
+			"choice": "Yes, I cleary understood",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Nope, can you repeat it?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
 		},
 		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Exactly,  For now, explore this town and came back to me if you already familiarize every place on it."
+			"text": "I like your honesty Valen."
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1m2/st2d4mer3.wav",
-			"volume": 0
+			"anchor_id": "anchor-1726281699",
+			"event_id": "dialogic_016"
 		},
 		{
-			"character": "character-1721952113.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Also Remember, learning Listkey Magic is vital for our line of work. Make sure to master it."
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1m2/st2d5val2.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1721952703.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I understand. But one day, I want to use this magic for something better. To protect and help those I care about."
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/Stage1m2/st2d6mer4.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1721952113.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "We'll see about that. For now, focus on the task that needs to be done."
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_022",

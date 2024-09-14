@@ -20,8 +20,10 @@ func _ready():
 	exit_button.connect("pressed", self, "_on_exit_pressed")
 	continue_button.connect("pressed", self, "_on_continue_pressed")
 	loaded_files.check_if_loaded_data()
+	
 	if Global.save_triggered == false:
 		continue_button.disabled = true
+		
 		
 	
 

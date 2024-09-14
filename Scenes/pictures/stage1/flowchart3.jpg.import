@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/orphanage_basement_withlist_index.png-4367073b0cc4db324f1011236cd73bb5.stex"
+path="res://.import/flowchart3.jpg-94f2ebfc9b58460a55223b44c9543ec6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/pictures/stage1/orphanage_basement_withlist_index.png"
-dest_files=[ "res://.import/orphanage_basement_withlist_index.png-4367073b0cc4db324f1011236cd73bb5.stex" ]
+source_file="res://Scenes/pictures/stage1/flowchart3.jpg"
+dest_files=[ "res://.import/flowchart3.jpg-94f2ebfc9b58460a55223b44c9543ec6.stex" ]
 
 [params]
 
