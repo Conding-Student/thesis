@@ -8,7 +8,7 @@ onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var player_controls = $YSort/Player/Controller
 onready var interaction_button1 = $YSort/people/citizen3/TextureButton
-
+onready var place_name = $TopUi/Label2
 var current_map = "res://levels/towncenter.tscn"
 var starting_player_position = Vector2(128, 67)
 
@@ -18,7 +18,7 @@ func _ready():
 	set_player_position()
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button1.connect("pressed", self, "citizen_dialogue")
-	
+	place_name.text = "Towncenter"
 	Global.set_map(current_map)
 
 func set_player_position():

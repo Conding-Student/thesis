@@ -8,7 +8,7 @@ onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var player_controls = $YSort/Player/Controller
 onready var interaction_button = $YSort/people/merricks2/TextureButton
-
+onready var place_name = $TopUi/Label2
 var current_map = "res://World/room/orphanage_office.tscn"
 var starting_player_position = Vector2(160, 170)
 
@@ -17,7 +17,7 @@ var starting_player_position = Vector2(160, 170)
 func _ready():
 	set_overall_initial_position()
 	set_player_position()
-	
+	place_name.text = "Orphanage Office"
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button.connect("pressed", self, "merrick2")
 	Global.set_map(current_map)
@@ -89,6 +89,7 @@ func yes(param):
 	Global2.set_answers(1,"Spanish")
 	Global2.set_answers(2,"Tagalog")
 	Global2.set_answers(3,"Japanese")
+	Global2.set_picture_path(0,"res://Scenes/pictures/stage1/flowchart5.jpg")
 	
 	Global2.set_feedback(0,"Correct!")
 	Global2.set_feedback(1,"wrong!, You must remember that it was a universal language")
@@ -100,6 +101,7 @@ func yes(param):
 	Global2.set_answers(5,"Terminal")
 	Global2.set_answers(6,"process")
 	Global2.set_answers(7,"Decision")
+	Global2.set_picture_path(1,"res://Scenes/pictures/stage1/flowchart6.jpg")
 	
 	Global2.set_feedback(4,"Nope, the answer starts with letter T but not this one.")
 	Global2.set_feedback(5,"Correct!")

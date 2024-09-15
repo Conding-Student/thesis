@@ -8,11 +8,14 @@ onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var interaction_button = $YSort/child_boy4/interaction_button2
 onready var player_controls = $YSort/Player/Controller
+onready var place_name = $TopUi/Label2
 var current_map = "res://World/room/orphanage_hallway.tscn"
 var staring_player_position = Vector2(301,102)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	place_name.text = "Orphanage Hallway"
 	set_overall_initial_position()
 	set_player_position()
 	resume.connect("pressed", self, "resume_the_game")

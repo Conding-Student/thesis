@@ -23,8 +23,14 @@ var stage1_complete = false
 var stage2_complete = false
 
 
+################## PRE-POST TEST ###################
+var pre_final_score = 0 # still not save in local file
+var post_final_score = 0 #still not save in local file
 
+var MPI = 30 - pre_final_score
+var NRI =  ((post_final_score - pre_final_score) / MPI) * 100 # Need to be display
 
+################## PRE-POST TEST ###################
 
 ######################### DYNAMIC QUIZ VALUES #######################
 # Evaluation: using dictionaries for questions, answers, and feedback
@@ -33,7 +39,8 @@ var evaluations = {
 	"answers": ["","", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "", "",""],
 	"feedback": ["", "", "", "","", "", "", "","",""
-	, "", "", "","", "", "", "", "", "", "",""]
+	, "", "", "","", "", "", "", "", "", "",""],
+	"pictures_path": ["", "", "", "","",""],
 }
 
 #correct answer trigger
@@ -154,3 +161,9 @@ func set_feedback(index: int, feedback_local: String):
 
 func get_feedback(index: int) -> String:
 	return evaluations["feedback"][index]
+
+func set_picture_path(index: int, picture_local: String):
+	evaluations["pictures_path"][index] = picture_local
+	
+func get_picture_path(index: int) -> String:
+	return evaluations["pictures_path"][index]

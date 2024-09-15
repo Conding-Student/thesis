@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/16x16Rustic Indoor.png-d08d61d74e26850bb081e6c41581f626.stex"
+path="res://.import/arrow1.png-27bbde5c56fe5ae81f74606973805937.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/pictures/interior/16x16Rustic Indoor.png"
-dest_files=[ "res://.import/16x16Rustic Indoor.png-d08d61d74e26850bb081e6c41581f626.stex" ]
+source_file="res://intro/picture/arrow1.png"
+dest_files=[ "res://.import/arrow1.png-27bbde5c56fe5ae81f74606973805937.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

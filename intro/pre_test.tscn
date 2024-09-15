@@ -1,0 +1,163 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Kenney Mini Square.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/pictures/orphanage/office.png" type="Texture" id=3]
+[ext_resource path="res://intro/script/pre_test.gd" type="Script" id=4]
+[ext_resource path="res://Fonts/Kenney Pixel Square.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 7
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 7
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 10
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -218, -111 )
+script = ExtResource( 4 )
+
+[node name="bg_pic5" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2.0
+texture = ExtResource( 3 )
+
+[node name="action_panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -160.0
+margin_top = 134.0
+margin_right = 161.0
+margin_bottom = 181.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="choices1" type="HBoxContainer" parent="action_panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = 15.0
+margin_right = -20.0
+margin_bottom = -21.0
+custom_constants/separation = 5
+alignment = 1
+
+[node name="ch1_1" type="Button" parent="action_panel/choices1"]
+margin_right = 67.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+enabled_focus_mode = 0
+
+[node name="ch1_2" type="Button" parent="action_panel/choices1"]
+margin_left = 72.0
+margin_right = 140.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+enabled_focus_mode = 0
+
+[node name="ch1_3" type="Button" parent="action_panel/choices1"]
+margin_left = 145.0
+margin_right = 213.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+enabled_focus_mode = 0
+
+[node name="ch1_4" type="Button" parent="action_panel/choices1"]
+margin_left = 218.0
+margin_right = 286.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+enabled_focus_mode = 0
+
+[node name="Question" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -160.0
+margin_top = 2.0
+margin_right = 161.0
+margin_bottom = 37.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="q1" type="Label" parent="Question"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Play_button" type="Button" parent="."]
+visible = false
+margin_left = 114.0
+margin_top = 72.0
+margin_right = 197.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 6 )
+text = "Continue "
+
+[connection signal="pressed" from="Play_button" to="." method="_on_Play_button_pressed"]

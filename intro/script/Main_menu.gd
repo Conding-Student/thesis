@@ -21,6 +21,7 @@ func _ready():
 	continue_button.connect("pressed", self, "_on_continue_pressed")
 	loaded_files.check_if_loaded_data()
 	
+	
 	if Global.save_triggered == false:
 		continue_button.disabled = true
 		
@@ -34,7 +35,7 @@ func _on_continue_pressed() ->void:
 
 func _on_start_pressed() ->void:
 	Global.start_level_trigger = true
-	SceneTransition.change_scene("res://Scenes/Intro-scene.tscn")
+	SceneTransition.change_scene("res://intro/pre_test.tscn")
 
 func _on_exit_pressed() ->void:
 	quit.show()

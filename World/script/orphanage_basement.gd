@@ -8,6 +8,8 @@ onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var player_controls = $YSort/Player/Controller
 onready var interaction_button = $YSort/YSort2/Path2D/PathFollow2D/Merrick/TextureButton 
+onready var place_name = $TopUi/Label2
+
 var current_map = "res://World/room/orphanage_basement.tscn"
 var starting_player_position = Vector2(236, 81)
 
@@ -28,7 +30,7 @@ onready var enter_signal1 = $YSort/YSort2/Path2D/PathFollow2D/Merrick/Area2D
 func _ready():
 	set_overall_initial_position()
 	set_player_position()
-	
+	place_name.text = "Orphanage Basement"
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button.connect("pressed", self, "merrick1")
 	Global.set_map(current_map)

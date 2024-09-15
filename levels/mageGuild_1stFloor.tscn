@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://World/pictures/interior/16x16Room_Builder_free.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/interior/tilesetformattedupdate1.png" type="Texture" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://World/room/levels_entrance.tscn" type="PackedScene" id=13]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=14]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=15]
-[ext_resource path="res://NPC/paladin.tscn" type="PackedScene" id=16]
 [ext_resource path="res://NPC/bard.tscn" type="PackedScene" id=17]
 [ext_resource path="res://NPC/mage_female.tscn" type="PackedScene" id=18]
 [ext_resource path="res://NPC/healer_female.tscn" type="PackedScene" id=19]
@@ -33,6 +32,7 @@
 [ext_resource path="res://NPC/king.tscn" type="PackedScene" id=31]
 [ext_resource path="res://World/world objects/table_wood2.tscn" type="PackedScene" id=32]
 [ext_resource path="res://World/world objects/bookshelf_wood1.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=34]
 
 [sub_resource type="TileSet" id=1]
 1/name = "16x16Room_Builder_free.png 1"
@@ -698,6 +698,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 3/shapes = [  ]
 3/z_index = 0
 
+[sub_resource type="DynamicFont" id=66]
+size = 5
+font_data = ExtResource( 34 )
+
 [node name="mageGuild_1stFloor" type="Node2D"]
 script = ExtResource( 9 )
 
@@ -785,9 +789,6 @@ position = Vector2( 286, 278 )
 [node name="cultist" parent="objects/people" instance=ExtResource( 26 )]
 position = Vector2( 28, 309 )
 
-[node name="paladin" parent="objects/people" instance=ExtResource( 16 )]
-position = Vector2( 423, 298 )
-
 [node name="samurai" parent="objects/people" instance=ExtResource( 24 )]
 position = Vector2( 274, 148 )
 
@@ -814,15 +815,6 @@ position = Vector2( 360, 231 )
 
 [node name="king" parent="objects/people" instance=ExtResource( 31 )]
 position = Vector2( 66, 225 )
-
-[node name="paladin2" parent="objects/people" instance=ExtResource( 16 )]
-position = Vector2( 254, 223 )
-
-[node name="paladin3" parent="objects/people" instance=ExtResource( 16 )]
-position = Vector2( 287, 323 )
-
-[node name="paladin4" parent="objects/people" instance=ExtResource( 16 )]
-position = Vector2( 217, 284 )
 
 [node name="bookshelf1" parent="objects" instance=ExtResource( 33 )]
 position = Vector2( 336, 321 )
@@ -892,6 +884,13 @@ margin_bottom = 40.0
 
 [node name="Label" parent="TopUi" instance=ExtResource( 10 )]
 
-[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+[node name="Label2" type="Label" parent="TopUi"]
+margin_left = 132.0
+margin_top = 8.0
+margin_right = 205.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 66 )
+align = 1
+valign = 1
 
 [editable path="objects/Camera2D"]

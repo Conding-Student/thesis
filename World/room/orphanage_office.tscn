@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=1]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://World/room/entrance.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPC/merricks2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://intro/stages_complete.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="TileSet" id=49]
 0/name = "atlas_16x.png 0"
@@ -891,6 +892,10 @@ points = PoolVector2Array( 0, 0, 29, 0, 29, 17, 0, 17 )
 30/shapes = [  ]
 30/z_index = 0
 
+[sub_resource type="DynamicFont" id=65]
+size = 5
+font_data = ExtResource( 11 )
+
 [node name="orphanage_office" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -945,6 +950,21 @@ tile_data = PoolIntArray( 196625, 12, 0, 262151, 0, 0, 262170, 27, 0, 262174, 28
 [node name="merricks2" parent="YSort/people" instance=ExtResource( 9 )]
 position = Vector2( 140, 84 )
 
+[node name="orphanage_hallway" parent="." instance=ExtResource( 8 )]
+position = Vector2( 160, 182 )
+rotation = 1.5708
+
+[node name="orphanage_hallway_pos" type="Position2D" parent="."]
+position = Vector2( 160, 170 )
+
+[node name="orphanage_basement" parent="." instance=ExtResource( 8 )]
+position = Vector2( 265, 51 )
+
+[node name="orphanage_basement_pos" type="Position2D" parent="."]
+position = Vector2( 266, 72 )
+
+[node name="stages_comeplete" parent="." instance=ExtResource( 10 )]
+
 [node name="TopUi" type="CanvasLayer" parent="."]
 
 [node name="pause_game" type="TextureButton" parent="TopUi"]
@@ -968,19 +988,11 @@ margin_bottom = 40.0
 
 [node name="Label" parent="TopUi" instance=ExtResource( 4 )]
 
-[node name="orphanage_hallway" parent="." instance=ExtResource( 8 )]
-position = Vector2( 160, 182 )
-rotation = 1.5708
-
-[node name="orphanage_hallway_pos" type="Position2D" parent="."]
-position = Vector2( 160, 170 )
-
-[node name="orphanage_basement" parent="." instance=ExtResource( 8 )]
-position = Vector2( 265, 51 )
-
-[node name="orphanage_basement_pos" type="Position2D" parent="."]
-position = Vector2( 266, 72 )
-
-[node name="stages_comeplete" parent="." instance=ExtResource( 10 )]
-
-[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+[node name="Label2" type="Label" parent="TopUi"]
+margin_left = 132.0
+margin_top = 8.0
+margin_right = 205.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 65 )
+align = 1
+valign = 1

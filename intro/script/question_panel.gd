@@ -43,6 +43,13 @@ onready var ch5_2 = $action_panel/choices5/ch5_2
 onready var ch5_3 = $action_panel/choices5/ch5_3
 onready var ch5_4 = $action_panel/choices5/ch5_4
 
+#background pic
+onready var bg_pic1 = $bg_pic1
+onready var bg_pic2 = $bg_pic2
+onready var bg_pic3 = $bg_pic3
+onready var bg_pic4 = $bg_pic4
+onready var bg_pic5 = $bg_pic5
+
 # Player
 onready var hurt = $hurt
 
@@ -51,6 +58,7 @@ signal no_health  # Signal emitted when player health reaches zero
 # Textbox panel
 onready var feedback_panel = $textbox
 onready var feedback_label = $textbox/Label
+
 
 
 # Called when the node is added to the scene
@@ -62,6 +70,7 @@ func _ready():
 		ch1_2.text = Global2.get_answers(1)
 		ch1_3.text = Global2.get_answers(2)
 		ch1_4.text = Global2.get_answers(3)
+		bg_pic1.texture = load(Global2.get_picture_path(0))
 	else:
 		pass
 
@@ -72,6 +81,7 @@ func _ready():
 		ch2_2.text = Global2.get_answers(5)
 		ch2_3.text = Global2.get_answers(6)
 		ch2_4.text = Global2.get_answers(7)
+		bg_pic2.texture = load(Global2.get_picture_path(1))
 	else:
 		#print("feedback 2 trigger")
 		Global2.change_scene_on_question1 = true
@@ -83,6 +93,7 @@ func _ready():
 		ch3_2.text = Global2.get_answers(9)
 		ch3_3.text = Global2.get_answers(10)
 		ch3_4.text = Global2.get_answers(11)
+		bg_pic2.texture = load(Global2.get_picture_path(2))
 	else:
 		#print("feedback 3 trigger")
 		Global2.change_scene_on_question2 = true
@@ -230,6 +241,11 @@ func question2_show():
 	question3.visible = false
 	question4.visible = false
 	question5.visible = false
+	bg_pic1.visible = false
+	bg_pic2.visible = true
+	bg_pic3.visible = false
+	bg_pic4.visible = false
+	bg_pic5.visible = false
 
 # Show the third question, hide others
 func question3_show():
@@ -238,6 +254,11 @@ func question3_show():
 	question3.visible = true
 	question4.visible = false
 	question5.visible = false
+	bg_pic1.visible = false
+	bg_pic2.visible = false
+	bg_pic3.visible = true
+	bg_pic4.visible = false
+	bg_pic5.visible = false
 
 # Show the third question, hide others
 func question4_show():
@@ -246,6 +267,11 @@ func question4_show():
 	question3.visible = false
 	question4.visible = true
 	question5.visible = false
+	bg_pic1.visible = false
+	bg_pic2.visible = false
+	bg_pic3.visible = false
+	bg_pic4.visible = true
+	bg_pic5.visible = false
 
 # Show the third question, hide others
 func question5_show():
@@ -254,6 +280,11 @@ func question5_show():
 	question3.visible = false
 	question4.visible = false
 	question5.visible = true
+	bg_pic1.visible = false
+	bg_pic2.visible = false
+	bg_pic3.visible = false
+	bg_pic4.visible = false
+	bg_pic5.visible = true
 
 # Handle the action when the first choice of the first question is pressed
 func _on_ch1_1_pressed():

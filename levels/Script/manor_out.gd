@@ -8,6 +8,7 @@ onready var current_level = $TopUi/Label
 onready var player =$objects/Player
 onready var player_controls = $objects/Player/Controller
 onready var interaction_button1 = $objects/people/knight/TextureButton
+onready var place_name = $TopUi/Label2
 
 var current_map = "res://levels/manor_out.tscn"
 var starting_player_position = Vector2 (528, 395)
@@ -19,6 +20,7 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button1.connect("pressed", self, "knight_dialogue")
 	Global.set_map(current_map)
+	place_name.text = "Manor Outside"
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):

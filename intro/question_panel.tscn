@@ -88,9 +88,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
 
-[node name="arena" type="TextureRect" parent="."]
+[node name="bg_pic1" type="TextureRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+texture = ExtResource( 7 )
+
+[node name="bg_pic2" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+
+[node name="bg_pic3" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+
+[node name="bg_pic4" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+
+[node name="bg_pic5" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2.0
 texture = ExtResource( 7 )
 
 [node name="player_panel" type="Panel" parent="."]

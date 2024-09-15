@@ -18,7 +18,8 @@ func _ready():
 	
 	if Global.save_triggered == true or Global.save_button_click == true:
 		saving_file.load_game_button()
-		file1.text = Global.current_level
+		if Global.current_level:
+			file1.text = Global.current_level
 	else:
 		auto.text = "Auto Save File"
 		file1.text = "File 1"

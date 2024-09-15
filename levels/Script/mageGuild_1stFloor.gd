@@ -7,6 +7,7 @@ onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as 
 onready var current_level = $TopUi/Label
 onready var player = $objects/Player
 onready var player_controls = $objects/Player/Controller
+onready var place_name = $TopUi/Label2
 var current_map = "res://levels/mageGuild_1stFloor.tscn"
 var starting_player_position = Vector2 (568, 428)
 
@@ -14,7 +15,7 @@ var starting_player_position = Vector2 (568, 428)
 func _ready():
 	set_overall_initial_position()
 	set_player_position()
-	
+	place_name.text = "Mage Guild Inside"
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
 

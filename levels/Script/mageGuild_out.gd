@@ -9,6 +9,7 @@ onready var player = $objects/Player
 onready var player_controls = $objects/Player/Controller
 onready var interaction_button1 = $objects/people/paladin/TextureButton
 onready var interaction_button2 = $objects/people/paladin2/TextureButton
+onready var place_name = $TopUi/Label2
 
 var current_map = "res://levels/mageGuild_out.tscn"
 var starting_player_position = Vector2 (568, 428)
@@ -22,7 +23,8 @@ func _ready():
 	interaction_button1.connect("pressed", self, "paladin_dialogue")
 	interaction_button2.connect("pressed", self, "paladin_dialogue")
 	Global.set_map(current_map)
-
+	place_name.text = "Mage Guild Outside"
+	
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)

@@ -146,17 +146,24 @@ func check_if_loaded_data() -> void:
 	var loaded_data = load_from_file("user://file.txt")
 	var loaded_data2 = load_from_file("user://autosave.txt")
 
-	# Check if either loaded_data or loaded_data2 is valid and not null
-	if "save_triggered" in loaded_data2 and loaded_data2["save_triggered"]:
-		Global.save_triggered = true
-		Global2.badge1 = loaded_data["badge1"]
-		Global2.badge2 = loaded_data["badge2"]
+	var save_triggered_file = false
+	var save_triggered_autosave = false
 
+	# Check if "save_triggered" exists in both loaded_data and loaded_data2
 	if "save_triggered" in loaded_data and loaded_data["save_triggered"]:
+		save_triggered_file = true
+
+	if "save_triggered" in loaded_data2 and loaded_data2["save_triggered"]:
+		save_triggered_autosave = true
+
+	# Check if both are triggered simultaneously
+	if save_triggered_file and save_triggered_autosave:
 		Global.save_triggered = true
 		Global2.badge1 = loaded_data["badge1"]
 		Global2.badge2 = loaded_data["badge2"]
+		print("Both saves triggered, data loaded successfully.")
+	else:
+		Global.save_triggered = false
+		print("Save not triggered simultaneously or file loading error.")
 
-	if not Global.save_triggered:
-		print("No valid save data found or file loading error.")
 
