@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=90 format=2]
 
 [ext_resource path="res://World/pictures/interior/16x16Room_Builder_free.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/interior/tilesetformattedupdate1.png" type="Texture" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://World/world objects/table_wood2.tscn" type="PackedScene" id=32]
 [ext_resource path="res://World/world objects/bookshelf_wood1.tscn" type="PackedScene" id=33]
 [ext_resource path="res://World/room/night_level_entrance.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=35]
 
 [sub_resource type="TileSet" id=1]
 1/name = "16x16Room_Builder_free.png 1"
@@ -699,6 +700,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 3/shapes = [  ]
 3/z_index = 0
 
+[sub_resource type="DynamicFont" id=66]
+size = 5
+font_data = ExtResource( 35 )
+
 [node name="mageGuild_1stFloor_night" type="Node2D"]
 script = ExtResource( 9 )
 
@@ -968,6 +973,24 @@ position = Vector2( 366, 339 )
 [node name="BottomRight" parent="objects/Camera2D/Limits" index="1"]
 position = Vector2( 516, 394 )
 
+[node name="mageGuild_cellar_night_pos" type="Position2D" parent="."]
+position = Vector2( 489, 60 )
+rotation = 1.57079
+
+[node name="mageGuild_cellar_night" parent="." instance=ExtResource( 34 )]
+position = Vector2( 488, 29 )
+rotation = 3.14159
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.341176, 0.333333, 0.317647, 1 )
+
+[node name="mageGuild_out_night_pos" type="Position2D" parent="."]
+position = Vector2( 247, 365 )
+
+[node name="mageGuild_out_night" parent="." instance=ExtResource( 34 )]
+position = Vector2( 248, 389 )
+rotation = 1.57079
+
 [node name="TopUi" type="CanvasLayer" parent="."]
 
 [node name="pause_game" type="TextureButton" parent="TopUi"]
@@ -991,24 +1014,14 @@ margin_bottom = 40.0
 
 [node name="Label" parent="TopUi" instance=ExtResource( 10 )]
 
-[node name="mageGuild_cellar_night_pos" type="Position2D" parent="."]
-position = Vector2( 489, 60 )
-rotation = 1.57079
-
-[node name="mageGuild_cellar_night" parent="." instance=ExtResource( 34 )]
-position = Vector2( 488, 29 )
-rotation = 3.14159
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.341176, 0.333333, 0.317647, 1 )
-
-[node name="mageGuild_out_night_pos" type="Position2D" parent="."]
-position = Vector2( 247, 365 )
-
-[node name="mageGuild_out_night" parent="." instance=ExtResource( 34 )]
-position = Vector2( 248, 389 )
-rotation = 1.57079
-
-[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+[node name="Label2" type="Label" parent="TopUi"]
+margin_left = 133.0
+margin_top = 9.0
+margin_right = 206.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 66 )
+align = 1
+valign = 1
+autowrap = true
 
 [editable path="objects/Camera2D"]

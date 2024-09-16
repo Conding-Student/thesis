@@ -13,16 +13,15 @@ onready var notification_panel = $Panel/textbox
 func _ready():
 	
 	panel.hide()
-
-	
-	
-	if Global.save_triggered == true or Global.save_button_click == true:
-		saving_file.load_game_button()
-		if Global.current_level:
-			file1.text = Global.current_level
-	else:
-		auto.text = "Auto Save File"
-		file1.text = "File 1"
+	#if Global.load_button_click == true:
+		#auto.disabled = false	
+	#if saving_file.check_save_triggered_in_file() == true or Global.save_button_click == true:
+		#saving_file.load_game_button()
+		#if Global.current_level:
+			#file1.text = Global.current_level
+	#else:
+		#auto.text = "Auto Save File"
+		#file1.text = "File 1"
 
 	
 	# Connect signals from buttons to respective functions
@@ -31,12 +30,18 @@ func _ready():
 	#file2.connect("pressed", self, "file2_pressed")
 
 func _process(delta):
+	#pass
 	if Global.load_button_click == true:
 		auto.disabled = false	
-	if Global.save_button_click == true or Global.save_triggered == true:
+	if saving_file.check_save_triggered_in_file() == true or Global.save_button_click == true:
 		file1.disabled = false
-		saving_file.load_game_button()
-		file1.text = Global.current_level
+		
+		if saving_file.check_current_level_in_file() == "":
+			file1.text = "File 1"
+		else:
+			file1.text = saving_file.check_current_level_in_file()
+	else:
+		file1.text = "File 1"
 	
 
 func auto_save():

@@ -1,0 +1,203 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1723187790-648",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Does the current stage was too difficult for you? You can check the spellbook for further information."
+		},
+		{
+			"definition": "1723187790-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 6,
+			"set_random": true,
+			"set_value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1723187790-648",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Try to click the image on spellbook, it compose of knowledge and information that you need."
+		},
+		{
+			"definition": "1723187790-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 6,
+			"set_random": true,
+			"set_value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "==",
+			"definition": "1723187790-648",
+			"event_id": "dialogic_012",
+			"value": "2"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You may check what current stage are you by looking at the top level screen. You may check the overall stages by looking at the badges."
+		},
+		{
+			"definition": "1723187790-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_lower_limit": 0,
+			"random_upper_limit": 6,
+			"set_random": true,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "==",
+			"definition": "1723187790-648",
+			"event_id": "dialogic_012",
+			"value": "3"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Did you forget your objectives? try to ask Mr. Merrick or the last people you talked."
+		},
+		{
+			"definition": "1723187790-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_lower_limit": 0,
+			"random_upper_limit": 6,
+			"set_random": true,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1723187790-648",
+			"event_id": "dialogic_012",
+			"value": "4"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Their is a small passage inside the mage guild. In the upper right of the map."
+		},
+		{
+			"definition": "1723187790-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_lower_limit": 0,
+			"random_upper_limit": 6,
+			"set_random": true,
+			"set_value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_012",
+			"value": "5"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The game autosave your progress! just go into Continue section in main menu and click autosave."
+		},
+		{
+			"definition": "1723187790-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_lower_limit": 0,
+			"random_upper_limit": 6,
+			"set_random": true,
+			"set_value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1723187790-648",
+			"event_id": "dialogic_012",
+			"value": "6"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You cannot used your swords to harm and kill netizen!"
+		},
+		{
+			"definition": "1723187790-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_lower_limit": 0,
+			"random_upper_limit": 6,
+			"set_random": true,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1726474382.json",
+		"name": "tips"
+	}
+}

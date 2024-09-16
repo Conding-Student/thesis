@@ -8,6 +8,7 @@ onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var player_controls = $YSort/Player/Controller
 onready var interaction_button = $YSort/people/merricks2/TextureButton
+onready var place_name = $TopUi/Label2
 
 var current_map ="res://World/room/night/orphanage_office_night.tscn"
 var starting_player_position = Vector2(160, 170)
@@ -20,6 +21,7 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button.connect("pressed", self, "merrick2")
 	Global.set_map(current_map)
+	place_name.text = "Orphanage Office"
 	
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):

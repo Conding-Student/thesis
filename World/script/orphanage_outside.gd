@@ -8,17 +8,38 @@ onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var player_controls = $YSort/Player/Controller
 onready var place_name = $TopUi/Label2
+onready var interaction_button = $YSort/Area2D/TextureButton
 
 var current_map = "res://World/room/orphanage_outside.tscn"
 var starting_player_position = Vector2(128, 67)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	interaction_button.hide()
 	set_overall_initial_position()
 	set_player_position()
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
 	place_name.text = "Orphanage Outside"
+	interaction_button.connect("pressed",self, "_on_signage_interaction")
+#functionality after getting the updated dialogic
+func _on_signage_interaction():
+	player_controls.visible = false
+	interaction_button.visible = false
+	get_tree().paused = true
+	var new_dialog = Dialogic.start('tips')
+	new_dialog.pause_mode = Node.PAUSE_MODE_PROCESS
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "after_dialog")
+
+func after_dialog(timelinename):
+	player_controls.visible = true
+	interaction_button.visible = true
+	get_tree().paused = false
+	# Remove the dialog from the scene tree
+	#var dialog = get_child(get_child_count() - 1) # Assuming the dialog is the last added child
+	#if dialog:
+		#dialog.queue_free() # This will remove the dialog node
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
@@ -60,3 +81,11 @@ func _on_door_markings_body_shape_entered(body_rid, body, body_shape_index, loca
 
 func _on_door_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	SceneTransition.change_scene("res://World/room/orphanage_hallway.tscn")
+
+#signage interaction
+func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	interaction_button.show()
+
+
+func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	interaction_button.hide()

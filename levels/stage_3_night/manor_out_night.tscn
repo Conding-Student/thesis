@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://World/pictures/base_out_atlas.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/terrain_atlas.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://World/ligthing/light.png" type="Texture" id=15]
 [ext_resource path="res://World/room/night_level_entrance.tscn" type="PackedScene" id=16]
 [ext_resource path="res://World/fountain.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=18]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrain_atlas.png 0"
@@ -902,6 +903,10 @@ extents = Vector2( 36, 36 )
 7/shapes = [  ]
 7/z_index = 0
 
+[sub_resource type="DynamicFont" id=19]
+size = 5
+font_data = ExtResource( 18 )
+
 [node name="manor_out_night" type="Node2D"]
 script = ExtResource( 13 )
 
@@ -1243,29 +1248,6 @@ polygon = PoolVector2Array( -9, -9, 23, -20, 38, -20, 38, -24, 69, -36, 69, -42,
 position = Vector2( -52, -75 )
 shape = SubResource( 17 )
 
-[node name="TopUi" type="CanvasLayer" parent="."]
-
-[node name="pause_game" type="TextureButton" parent="TopUi"]
-margin_left = 292.0
-margin_top = 3.0
-margin_right = 312.0
-margin_bottom = 23.0
-texture_normal = ExtResource( 14 )
-
-[node name="HealthUI" parent="TopUi" instance=ExtResource( 10 )]
-margin_left = 3.0
-margin_top = 3.0
-margin_right = 63.0
-margin_bottom = 14.0
-
-[node name="quest" type="TextureButton" parent="TopUi"]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="pause_menu" parent="TopUi" instance=ExtResource( 11 )]
-
-[node name="Label" parent="TopUi" instance=ExtResource( 12 )]
-
 [node name="layer5" type="TileMap" parent="."]
 position = Vector2( 41, 43 )
 z_index = -95
@@ -1292,6 +1274,37 @@ position = Vector2( 228, 95 )
 position = Vector2( 263, 107 )
 rotation = 1.57079
 
-[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+[node name="TopUi" type="CanvasLayer" parent="."]
+
+[node name="pause_game" type="TextureButton" parent="TopUi"]
+margin_left = 292.0
+margin_top = 3.0
+margin_right = 312.0
+margin_bottom = 23.0
+texture_normal = ExtResource( 14 )
+
+[node name="HealthUI" parent="TopUi" instance=ExtResource( 10 )]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 63.0
+margin_bottom = 14.0
+
+[node name="quest" type="TextureButton" parent="TopUi"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="pause_menu" parent="TopUi" instance=ExtResource( 11 )]
+
+[node name="Label" parent="TopUi" instance=ExtResource( 12 )]
+
+[node name="Label2" type="Label" parent="TopUi"]
+margin_left = 133.0
+margin_top = 9.0
+margin_right = 206.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 19 )
+align = 1
+valign = 1
+autowrap = true
 
 [editable path="Camera2D"]

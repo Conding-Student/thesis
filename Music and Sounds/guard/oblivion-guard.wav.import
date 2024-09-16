@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/oblivion-guard.wav-53eaadebc95c3148fe5004838060c302.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/guard/oblivion-guard.wav"
+dest_files=[ "res://.import/oblivion-guard.wav-53eaadebc95c3148fe5004838060c302.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -129,7 +129,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Valen": {
@@ -157,6 +157,18 @@
 					"metadata": {
 						"color": null,
 						"folded": true
+					}
+				},
+				"hints": {
+					"files": [
+						"timeline-1726474382.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
 					}
 				},
 				"paladin": {

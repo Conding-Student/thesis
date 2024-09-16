@@ -57,6 +57,7 @@ func resume_the_game() -> void:
 	pause_ui.hide()
 
 func _on_pause_game_pressed():
+	
 	get_tree().paused = true
 	topui.visible = false
 	player_controller.visible = false
@@ -107,6 +108,9 @@ func yes(param):
 	Global2.set_feedback(5,"Correct!")
 	Global2.set_feedback(6,"nope not the process. remember, It shape was looks like an oblong one.")
 	Global2.set_feedback(7,"Wrong Valen!, you will lose heart for your mistake.")
+	
+	Global2.set_question(2, "Which of the following flowchart symbols is used to represent a process or action")
+	
 	Global2.dialogue_name = "evaluation"
 	Global2.correct_answer_ch1_1 = true
 	Global2.correct_answer_ch2_2 = true

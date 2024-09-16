@@ -18,6 +18,7 @@ func _ready():
 	Global.set_player_initial_position(Global.get_player_current_position())
 	Global.set_map(current_map)
 
+
 func after_dialog(timelinename):
 	player_controller.show()
 	Global.start_level_trigger = true

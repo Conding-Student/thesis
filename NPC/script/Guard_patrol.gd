@@ -1,3 +1,4 @@
+
 extends KinematicBody2D
 
 const deatheffect = preload("res://Effects/EnemyDeathEffect.tscn")
@@ -12,7 +13,7 @@ onready var sprite = $sprite
 onready var animation = $AnimationPlayer
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
-
+onready var guard_voice = $AudioStreamPlayer2D
 enum {
 	IDLE,
 	WANDER,
@@ -39,6 +40,7 @@ func _physics_process(delta):
 			if global_position.distance_to(wanderController.target_position) <= WANDER_TARGET_RANGE:
 				update_wander()
 		CHASE:
+			
 			var player = playerDetectionZone.player
 			if player != null:
 				#animation.play("attack")
@@ -51,6 +53,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 
 func accelerate_towards_point(point, delta):
+	
 	var direction = global_position.direction_to(point)
 	velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 	
@@ -91,6 +94,7 @@ func pick_random_state(state_list):
 
 func seek_player():
 	if playerDetectionZone.can_see_player():
+		guard_voice.play()
 		state = CHASE
 
 func _on_Stats_no_health():

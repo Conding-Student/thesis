@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://World/room/night_level_entrance.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://World/pictures/interior/tilesetformattedupdate1.png" type="Texture" id=10]
 [ext_resource path="res://World/pictures/interior/16x16rpg indoor tileset expansion 1 trans.png" type="Texture" id=11]
 [ext_resource path="res://World/world objects/mageGuild_Decor.tres" type="TileSet" id=12]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -322,6 +323,10 @@ points = PoolVector2Array( 8.68199, 0.118736, 16, 0, 16, 16, 8.68199, 15.7473 )
 3/shapes = [  ]
 3/z_index = 0
 
+[sub_resource type="DynamicFont" id=29]
+size = 5
+font_data = ExtResource( 13 )
+
 [node name="mageGuild_cellar_night" type="Node2D"]
 script = ExtResource( 7 )
 
@@ -377,6 +382,28 @@ position = Vector2( 152, 79 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
 
+[node name="Camera2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 152, 79 )
+zoom = Vector2( 0.7, 0.7 )
+
+[node name="TopLeft" parent="Camera2D/Limits" index="0"]
+position = Vector2( -1, -32 )
+
+[node name="BottomRight" parent="Camera2D/Limits" index="1"]
+position = Vector2( 225, 146 )
+
+[node name="mageGuild_sewer_night" parent="." instance=ExtResource( 1 )]
+position = Vector2( 137, -10 )
+
+[node name="mageGuild_sewer_night_pos" type="Position2D" parent="."]
+position = Vector2( 136, 19 )
+
+[node name="mageGuild_1stFloor_night" parent="." instance=ExtResource( 1 )]
+position = Vector2( 185, 115 )
+
+[node name="mageGuild_1stFloor_night_pos" type="Position2D" parent="."]
+position = Vector2( 156, 102 )
+
 [node name="TopUi" type="CanvasLayer" parent="."]
 
 [node name="pause_game" type="TextureButton" parent="TopUi"]
@@ -400,28 +427,14 @@ margin_bottom = 40.0
 
 [node name="Label" parent="TopUi" instance=ExtResource( 6 )]
 
-[node name="Camera2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 152, 79 )
-zoom = Vector2( 0.7, 0.7 )
-
-[node name="TopLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( -1, -32 )
-
-[node name="BottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 225, 146 )
-
-[node name="mageGuild_sewer_night" parent="." instance=ExtResource( 1 )]
-position = Vector2( 137, -10 )
-
-[node name="mageGuild_sewer_night_pos" type="Position2D" parent="."]
-position = Vector2( 136, 19 )
-
-[node name="mageGuild_1stFloor_night" parent="." instance=ExtResource( 1 )]
-position = Vector2( 185, 115 )
-
-[node name="mageGuild_1stFloor_night_pos" type="Position2D" parent="."]
-position = Vector2( 156, 102 )
-
-[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+[node name="Label2" type="Label" parent="TopUi"]
+margin_left = 133.0
+margin_top = 9.0
+margin_right = 206.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 29 )
+align = 1
+valign = 1
+autowrap = true
 
 [editable path="Camera2D"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://World/houses/stall5.tscn" type="PackedScene" id=31]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=32]
 [ext_resource path="res://World/room/night_level_entrance.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=34]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=35]
 [ext_resource path="res://World/houses/single_house.tscn" type="PackedScene" id=36]
 [ext_resource path="res://World/houses/stall4.tscn" type="PackedScene" id=38]
@@ -655,6 +656,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
+[sub_resource type="DynamicFont" id=58]
+size = 5
+font_data = ExtResource( 34 )
+
 [node name="towncenter_night" type="Node2D"]
 script = ExtResource( 22 )
 
@@ -912,6 +917,26 @@ texture = ExtResource( 23 )
 texture_scale = 2.0
 energy = 0.5
 
+[node name="orphanage_outside_night_pos" type="Position2D" parent="."]
+position = Vector2( 37, 224 )
+
+[node name="orphanage_outside_night" parent="." instance=ExtResource( 29 )]
+position = Vector2( 5, 223 )
+
+[node name="mageGuild_out_night_pos" type="Position2D" parent="."]
+position = Vector2( 361, 25 )
+
+[node name="mageGuild_out_night" parent="." instance=ExtResource( 33 )]
+position = Vector2( 361, 1 )
+rotation = 1.57079
+
+[node name="manor_out_night_pos" type="Position2D" parent="."]
+position = Vector2( 673, 219 )
+
+[node name="manor_out_night" parent="." instance=ExtResource( 33 )]
+position = Vector2( 699, 222 )
+rotation = 3.14159
+
 [node name="TopUi" type="CanvasLayer" parent="."]
 
 [node name="pause_game" type="TextureButton" parent="TopUi"]
@@ -935,26 +960,14 @@ margin_bottom = 40.0
 
 [node name="Label" parent="TopUi" instance=ExtResource( 1 )]
 
-[node name="orphanage_outside_night_pos" type="Position2D" parent="."]
-position = Vector2( 37, 224 )
-
-[node name="orphanage_outside_night" parent="." instance=ExtResource( 29 )]
-position = Vector2( 5, 223 )
-
-[node name="mageGuild_out_night_pos" type="Position2D" parent="."]
-position = Vector2( 361, 25 )
-
-[node name="mageGuild_out_night" parent="." instance=ExtResource( 33 )]
-position = Vector2( 361, 1 )
-rotation = 1.57079
-
-[node name="manor_out_night_pos" type="Position2D" parent="."]
-position = Vector2( 673, 219 )
-
-[node name="manor_out_night" parent="." instance=ExtResource( 33 )]
-position = Vector2( 699, 222 )
-rotation = 3.14159
-
-[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+[node name="Label2" type="Label" parent="TopUi"]
+margin_left = 133.0
+margin_top = 9.0
+margin_right = 206.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 58 )
+align = 1
+valign = 1
+autowrap = true
 
 [editable path="Camera2D"]

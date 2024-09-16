@@ -963,4 +963,6 @@ custom_fonts/font = SubResource( 58 )
 align = 1
 valign = 1
 
+[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+
 [editable path="Camera2D"]

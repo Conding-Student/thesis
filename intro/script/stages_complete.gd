@@ -31,6 +31,8 @@ func show_stage(stage):
 			stage2.visible = false
 			current_stage = 1
 			PlayerStats.health = 5
+			var text = "Chapter1 U1 2 / 5"
+			Global.set_current_level(text)
 			Global.save_triggered = true
 			save_n_load.auto_save_file()
 			timer.start(3)

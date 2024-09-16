@@ -134,6 +134,26 @@ func apply_loaded_data(loaded_data: Dictionary) -> void:
 	if "bat_states" in loaded_data:
 		Global.bat_states = loaded_data["bat_states"]
 
+# Function to check if "save_triggered" is set in file.txt
+func check_save_triggered_in_file() -> bool:
+	var loaded_data = load_from_file("user://file.txt")
+	if loaded_data and "save_triggered" in loaded_data:
+		return loaded_data["save_triggered"]
+	return false
+
+# Function to check if "current_level" is set in file.txt
+func check_current_level_in_file() -> String:
+	var loaded_data = load_from_file("user://file.txt")
+	if loaded_data and "current_level" in loaded_data:
+		return str(loaded_data["current_level"])  # Ensure the return value is a String
+	return ""  # Return an empty string or a default value if "current_level" is not found
+
+# Function to check if "save_triggered" is set in file.txt
+func check_save_triggered_in_autosave() -> bool:
+	var loaded_data = load_from_file("user://autosave.txt")
+	if loaded_data and "save_triggered" in loaded_data:
+		return loaded_data["save_triggered"]
+	return false
 
 # Load current game level from file
 func load_game_button() -> void:
@@ -141,7 +161,6 @@ func load_game_button() -> void:
 	if loaded_data:
 		Global.set_current_level(loaded_data["current_level"])
 
-# Check if there is loaded data
 func check_if_loaded_data() -> void:
 	var loaded_data = load_from_file("user://file.txt")
 	var loaded_data2 = load_from_file("user://autosave.txt")
@@ -149,21 +168,27 @@ func check_if_loaded_data() -> void:
 	var save_triggered_file = false
 	var save_triggered_autosave = false
 
-	# Check if "save_triggered" exists in both loaded_data and loaded_data2
-	if "save_triggered" in loaded_data and loaded_data["save_triggered"]:
+	# Check if "save_triggered" exists and is true in the first file
+	if loaded_data and "save_triggered" in loaded_data and loaded_data["save_triggered"]:
 		save_triggered_file = true
 
-	if "save_triggered" in loaded_data2 and loaded_data2["save_triggered"]:
+	# Check if "save_triggered" exists and is true in the second file
+	if loaded_data2 and "save_triggered" in loaded_data2 and loaded_data2["save_triggered"]:
 		save_triggered_autosave = true
 
-	# Check if both are triggered simultaneously
-	if save_triggered_file and save_triggered_autosave:
+	# Check if "save_triggered" is true in at least one of the files
+	if save_triggered_file or save_triggered_autosave:
 		Global.save_triggered = true
-		Global2.badge1 = loaded_data["badge1"]
-		Global2.badge2 = loaded_data["badge2"]
-		print("Both saves triggered, data loaded successfully.")
+		if save_triggered_file:
+			Global2.badge1 = loaded_data["badge1"]
+			Global2.badge2 = loaded_data["badge2"]
+		if save_triggered_autosave:
+			# Add logic if you want to handle badge2 from autosave.txt or other data
+			pass
+		print("Save triggered in at least one file, data loaded successfully.")
 	else:
 		Global.save_triggered = false
-		print("Save not triggered simultaneously or file loading error.")
+		print("No valid save data found or file loading error.")
+
 
 
