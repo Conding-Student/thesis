@@ -38,7 +38,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Impressive, Val. Your diligence has paid off. You have successfully unlocked a Singly Linked ListKey door on your first attempt"
+			"text": "Impressive, Val. Your diligence has paid off. You have successfully unlocked a Syntax-protected lock for the very first time!"
 		},
 		{
 			"audio": "play",
@@ -52,7 +52,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You've proven your capability with Singly Linked ListKey magic. Continue to refine your skills, and soon you'll be ready for even more complex enchantments"
+			"text": "You've proven your capability with datatype and variables. Continue to refine your skills, and soon you'll be ready for even more complex enchantments"
 		}
 	],
 	"metadata": {

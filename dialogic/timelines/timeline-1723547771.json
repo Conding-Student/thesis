@@ -52,7 +52,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Use the List.AddRange() method to add all elements from another collection"
+			"text": "This is a flowchart decision symbol, we use it if a process has more than one possible outcomes"
 		},
 		{
 			"audio": "play",
@@ -66,7 +66,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You can access list values using a foreach or for loop to iterate through a List<T> collection"
+			"text": "By utilizing decision symbols, we can indicated which path to follow if the decision is true and if it is false"
 		},
 		{
 			"audio": "play",
@@ -80,7 +80,13 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Use the IList.Insert() method to insert an element into a List<T> collection at the specified index"
+			"text": "This on the other hand are the on-page connector symbols."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Connector symbols acts like a mini portal for processes."
 		},
 		{
 			"audio": "play",
@@ -94,7 +100,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "To remove items from a List<T> collection, use the Remove() and RemoveAt() methods"
+			"text": "We use the connector symbols to connect processes within the flowchart"
 		}
 	],
 	"metadata": {

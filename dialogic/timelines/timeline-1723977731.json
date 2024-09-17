@@ -38,7 +38,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Excellent work, Val. You've proven your mastery of Singly Linked ListKey magic."
+			"text": "Excellent work, Val. You've proven your skills with variable and data types"
 		},
 		{
 			"audio": "play",
@@ -52,7 +52,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Remember, this is just the beginning. There are even more advanced forms of Linked ListKey magic to learn"
+			"text": "Remember, this is just the beginning. There are even more advanced forms of syntaxes to learn"
 		},
 		{
 			"audio": "play",
