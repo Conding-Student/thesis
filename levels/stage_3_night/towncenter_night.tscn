@@ -700,6 +700,12 @@ position = Vector2( 361, 24 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
 
+[node name="Light2D" type="Light2D" parent="YSort/Player"]
+position = Vector2( -1, -4 )
+scale = Vector2( 0.347656, 0.255859 )
+texture = ExtResource( 23 )
+energy = 0.7
+
 [node name="tree_bush" type="YSort" parent="YSort"]
 
 [node name="Tree" parent="YSort/tree_bush" instance=ExtResource( 35 )]
@@ -880,43 +886,6 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 536870912, 0, -65534, 
 
 [node name="people" type="YSort" parent="YSort"]
 
-[node name="lightning" type="YSort" parent="YSort"]
-visible = false
-
-[node name="Light2D" type="Light2D" parent="YSort/lightning"]
-visible = false
-position = Vector2( 133, 383 )
-texture = ExtResource( 23 )
-energy = 0.5
-
-[node name="Light2D2" type="Light2D" parent="YSort/lightning"]
-visible = false
-position = Vector2( 153, 57 )
-texture = ExtResource( 23 )
-texture_scale = 1.5
-energy = 0.5
-
-[node name="Light2D3" type="Light2D" parent="YSort/lightning"]
-visible = false
-position = Vector2( 585, 54 )
-texture = ExtResource( 23 )
-texture_scale = 1.5
-energy = 0.5
-
-[node name="Light2D4" type="Light2D" parent="YSort/lightning"]
-visible = false
-position = Vector2( 551, 398 )
-texture = ExtResource( 23 )
-texture_scale = 1.5
-energy = 0.5
-
-[node name="Light2D5" type="Light2D" parent="YSort/lightning"]
-position = Vector2( 324, 227.5 )
-scale = Vector2( 1.57031, 1.03516 )
-texture = ExtResource( 23 )
-texture_scale = 2.0
-energy = 0.5
-
 [node name="orphanage_outside_night_pos" type="Position2D" parent="."]
 position = Vector2( 37, 224 )
 
@@ -969,5 +938,7 @@ custom_fonts/font = SubResource( 58 )
 align = 1
 valign = 1
 autowrap = true
+
+[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 
 [editable path="Camera2D"]

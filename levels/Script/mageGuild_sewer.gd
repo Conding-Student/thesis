@@ -8,7 +8,7 @@ onready var current_level = $TopUi/Label
 onready var player = $Player
 onready var player_controls = $Player/Controller
 onready var interaction_button = $objects/door/TextureButton
-
+onready var place_name = $TopUi/Label2
 var current_map = "res://levels/stage_3_night/mageGuild_sewer_night.tscn"
 
 var starting_player_position = Vector2 (568, 428)
@@ -22,7 +22,7 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button.connect("pressed", self, "first_door")
 	Global.set_map(current_map)
-	
+	place_name.text = "Mage Guild Sewer"
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):

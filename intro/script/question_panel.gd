@@ -93,7 +93,7 @@ func _ready():
 		ch3_2.text = Global2.get_answers(9)
 		ch3_3.text = Global2.get_answers(10)
 		ch3_4.text = Global2.get_answers(11)
-		bg_pic2.texture = load(Global2.get_picture_path(2))
+		bg_pic3.texture = load(Global2.get_picture_path(2))
 	else:
 		#print("feedback 3 trigger")
 		Global2.change_scene_on_question2 = true
@@ -105,6 +105,7 @@ func _ready():
 		ch4_2.text = Global2.get_answers(13)
 		ch4_3.text = Global2.get_answers(14)
 		ch4_4.text = Global2.get_answers(15)
+		bg_pic4.texture = load(Global2.get_picture_path(3))
 	else:
 		#print("feedback 4 trigger")
 		Global2.change_scene_on_question3 = true
@@ -116,6 +117,7 @@ func _ready():
 		ch5_2.text = Global2.get_answers(17)
 		ch5_3.text = Global2.get_answers(18)
 		ch5_4.text = Global2.get_answers(19)
+		bg_pic5.texture = load(Global2.get_picture_path(4))
 	else:
 		#print("feedback 5 trigger")
 		Global2.change_scene_on_question4 = true
@@ -221,18 +223,8 @@ func value_activating(param):
 		pass
 		#print("trigger")
 # Reset all relevant Global2 properties to false (used to avoid dialogue errors)
-func end(timelinename):
-	
-	var properties = [
-		"correct_answer_ch1_1", "correct_answer_ch1_2", "correct_answer_ch1_3", "correct_answer_ch1_4",
-		"correct_answer_ch2_1", "correct_answer_ch2_2", "correct_answer_ch2_3", "correct_answer_ch2_4",
-		"correct_answer_ch3_1", "correct_answer_ch3_2", "correct_answer_ch3_3", "correct_answer_ch3_4",
-		"correct_answer_ch4_1", "correct_answer_ch4_2", "correct_answer_ch4_3", "correct_answer_ch4_4",
-		"correct_answer_ch5_1", "correct_answer_ch5_2", "correct_answer_ch5_3", "correct_answer_ch5_4"
-		]
-	
-	for property in properties:
-		Global2.set(property, false)
+
+
 	#Global2.reset_trigger_answers()
 # Show the second question, hide others
 func question2_show():

@@ -161,7 +161,7 @@ align = 1
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -160.0
-margin_top = 107.0
+margin_top = 126.0
 margin_right = 161.0
 margin_bottom = 154.0
 custom_styles/panel = SubResource( 1 )
@@ -173,7 +173,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 15.0
-margin_top = 15.0
+margin_top = 9.0
 margin_right = -20.0
 margin_bottom = -21.0
 custom_constants/separation = 5
@@ -484,7 +484,6 @@ custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 enabled_focus_mode = 0
-text = "inbox"
 
 [node name="ch5_2" type="Button" parent="action_panel/choices5"]
 margin_left = 72.0
@@ -500,7 +499,6 @@ custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 enabled_focus_mode = 0
-text = "index"
 
 [node name="ch5_3" type="Button" parent="action_panel/choices5"]
 margin_left = 145.0
@@ -516,7 +514,6 @@ custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 enabled_focus_mode = 0
-text = "indoors"
 
 [node name="ch5_4" type="Button" parent="action_panel/choices5"]
 margin_left = 218.0
@@ -532,7 +529,6 @@ custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 enabled_focus_mode = 0
-text = "incode"
 
 [node name="Question" type="Panel" parent="."]
 anchor_left = 0.5

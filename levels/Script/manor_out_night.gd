@@ -12,6 +12,7 @@ onready var place_name = $TopUi/Label2
 var current_map = "res://levels/stage_3_night/manor_out_night.tscn"
 var starting_player_position = Vector2 (528, 395)
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_overall_initial_position()

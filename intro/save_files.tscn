@@ -30,6 +30,7 @@ font_data = ExtResource( 5 )
 script = ExtResource( 3 )
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 margin_right = 320.0
 margin_bottom = 180.0
 

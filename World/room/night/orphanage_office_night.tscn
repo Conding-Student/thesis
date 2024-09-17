@@ -1009,3 +1009,5 @@ custom_fonts/font = SubResource( 65 )
 align = 1
 valign = 1
 autowrap = true
+
+[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]

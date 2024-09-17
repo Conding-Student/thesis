@@ -3,6 +3,7 @@ extends Node
 #Badges, levels, stages
 var badge1 = false
 var badge2 = false
+var badge3 = false
 
 #Stage 2 talking with the villiger number of times
 #quest
@@ -40,7 +41,7 @@ var evaluations = {
 	, "", "", "","", "", "", "", "", "", "", "",""],
 	"feedback": ["", "", "", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "",""],
-	"pictures_path": ["", "", "", "","",""],
+	"pictures_path": ["res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png"],
 }
 
 #correct answer trigger
