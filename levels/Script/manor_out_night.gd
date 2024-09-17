@@ -8,7 +8,8 @@ onready var current_level = $TopUi/Label
 onready var player =$objects/Player
 onready var player_controls = $objects/Player/Controller
 onready var place_name = $TopUi/Label2
-
+onready var interaction_button = $Merrick_manor/TextureButton
+onready var attack_button = $objects/Player/Controller/Control/BtnAttack
 var current_map = "res://levels/stage_3_night/manor_out_night.tscn"
 var starting_player_position = Vector2 (528, 395)
 
@@ -20,8 +21,10 @@ func _ready():
 	place_name.text = "Manor outside"
 	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
+	interaction_button.connect("pressed", self, "merrick2")
+	attack_button.hide()
 	Global.set_map(current_map)
-
+	
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)
@@ -63,7 +66,18 @@ func _process(_delta):
 		if result != OK:
 			print("Failed to load the scene: " + str(result))
 
+func merrick2():
+	player_controls.visible = false
+	interaction_button.visible = false
 	
+	Global.set_map(current_map)
+	var new_dialog = Dialogic.start('stage3p1')
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "interaction_endpoint")
+
+func interaction_endpoint(timelineend):
+	player_controls.visible = true
+
 func _on_pause_game_pressed():
 	get_tree().paused = true
 	topui.visible = false

@@ -87,7 +87,13 @@
 			"text": "I see..."
 		},
 		{
-			"animation": "back_out_left.gd",
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I will wait for you to get into the manor. Don't forget it!"
+		},
+		{
+			"animation": "4-fade_out.gd",
 			"animation_length": 2,
 			"animation_wait": true,
 			"change_mirror_portrait": false,
@@ -204,6 +210,12 @@
 			},
 			"type": 1,
 			"z_index": 0
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It looks like I need to go into the Manor which is located at the right side of the townsquare."
 		},
 		{
 			"event_id": "dialogic_022",

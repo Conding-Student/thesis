@@ -22,12 +22,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1723102985-768",
-			"name": "paladin",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1723097830-905",
 			"name": "citizen",
 			"type": 0,
@@ -42,6 +36,12 @@
 		{
 			"id": "1723187790-648",
 			"name": "child_tips",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723102985-768",
+			"name": "paladin",
 			"type": 0,
 			"value": "0"
 		}

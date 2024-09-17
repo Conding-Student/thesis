@@ -38,7 +38,25 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "We've got a tip that there's an unguarded treasure inside this manor. This is the perfect opportunity for you to practice using ListKey magic."
+			"text": "We've got a tip that there's an unguarded treasure inside this manor. This is the perfect opportunity for you to practice your knowledge. ."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Don't mind those guard outside, once we get inside it was already unguarded."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "But how do we get inside?"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Just simply run and follow me at the backdoor of the manor. It was located at the upper part of the house"
 		},
 		{
 			"event_id": "dialogic_022",

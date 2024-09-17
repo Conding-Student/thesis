@@ -9,6 +9,10 @@
 			"volume": 0
 		},
 		{
+			"background": "res://Scenes/pictures/orphanage_hallway.png",
+			"event_id": "dialogic_021"
+		},
+		{
 			"character": "character-1721952703.json",
 			"event_id": "dialogic_001",
 			"portrait": "",

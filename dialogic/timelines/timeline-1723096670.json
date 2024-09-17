@@ -160,36 +160,8 @@
 			"z_index": 0
 		},
 		{
-			"background": "res://Scenes/pictures/stage2/office_list.png",
+			"background": "res://Scenes/pictures/stage3/decision_shape.png",
 			"event_id": "dialogic_021"
-		},
-		{
-			"character": "character-1721952113.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Have you seen this syntax formulei before? This is the Listkey Magic Right? Let me cast another one."
-		},
-		{
-			"event_id": "dialogic_015",
-			"id": "anchor-1723253747",
-			"index": 0,
-			"name": "two_list"
-		},
-		{
-			"background": "res://Scenes/pictures/stage2/office_2list.png",
-			"event_id": "dialogic_021"
-		},
-		{
-			"event_id": "dialogic_024",
-			"set_theme": "theme-1723254206.cfg"
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/stage2merrick/s2u1d2.wav",
-			"volume": 0
 		},
 		{
 			"character": "character-1721952113.json",
@@ -198,7 +170,7 @@
 
 			],
 			"portrait": "",
-			"question": "Now, Did you notice the difference between this two?"
+			"question": "Did you remember this shape?"
 		},
 		{
 			"choice": "Yes",
@@ -208,96 +180,62 @@
 			"value": ""
 		},
 		{
-			"background": "res://Scenes/pictures/orphanage/office.png",
-			"event_id": "dialogic_021"
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/stage2merrick/s2u1d3.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1721952113.json",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
-			"portrait": "",
-			"question": "Okay what is it?"
-		},
-		{
-			"choice": "1.) List and IList",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
 			"event_id": "dialogic_015",
-			"id": "anchor-1723259235",
+			"id": "anchor-1726603100",
 			"index": 0,
-			"name": "List_dif_Ilist"
+			"name": "explanation"
 		},
 		{
-			"background": "res://Scenes/pictures/stage2/office_list.png",
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This shape is very important because it dictates which outcome will happen. When the condition is true and when the condition is false."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Let me give you an example"
+		},
+		{
+			"background": "res://Scenes/pictures/stage3/given_condition.png",
 			"event_id": "dialogic_021"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/stage2merrick/s2u1d4.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good, When we are using LIST to create LisKey Magic it means we are using specific key to unlock a various object."
+			"text": "The condition is already given, A is greater than 0. There are only two possible answers."
 		},
 		{
-			"background": "res://Scenes/pictures/stage2/Ilist_solo.png",
+			"background": "res://Scenes/pictures/stage3/If_true.png",
 			"event_id": "dialogic_021"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/stage2merrick/s2u1d5.wav",
-			"volume": 0
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " If it was true or in other word a yes "
+		},
+		{
+			"background": "res://Scenes/pictures/stage3/if_false.png",
+			"event_id": "dialogic_021"
 		},
 		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Meanwhile, When we are using IList as ListKey Magic. It means we are using Universal Key. Not a specific one."
+			"text": "or if it was false in other word no. "
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/stage2merrick/s2u1d6.wav",
-			"volume": 0
+			"background": "res://Scenes/pictures/stage3/decision1.png",
+			"event_id": "dialogic_021"
 		},
 		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "That's why it is much appropriate to use this IList formulei to unlock chest or doors. "
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/stage2merrick/s2u1d7.wav",
-			"volume": 0
+			"text": "The outcome will be based on the given condition if it was met or not. Wether A is greater than 0 or it is less than zero."
 		},
 		{
 			"character": "character-1721952113.json",
@@ -306,10 +244,10 @@
 
 			],
 			"portrait": "",
-			"question": "Did you get it?"
+			"question": "Did  you still track what i'm saying?"
 		},
 		{
-			"choice": "1.) Yes",
+			"choice": "Yes ",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -320,74 +258,40 @@
 			"event_id": "dialogic_020"
 		},
 		{
-			"choice": "2.) Can you repeat it again?",
+			"choice": "No,",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"anchor_id": "anchor-1723259235",
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay let me repeat it for you."
+		},
+		{
+			"anchor_id": "anchor-1726603100",
 			"event_id": "dialogic_016"
 		},
 		{
 			"event_id": "dialogic_013"
 		},
 		{
-			"choice": "2.) Can you cast it again?",
+			"choice": "No",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"anchor_id": "anchor-1723253747",
-			"event_id": "dialogic_016"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"choice": "Nope",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/stage2merrick/s2u1d8.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Let me highlight the difference"
+			"text": "Let me explain it to you again Valen. This diamond Shape Signifies any decision that are to be done. To test wether the condition fulfill."
 		},
 		{
-			"background": "res://Scenes/pictures/stage2/list higlioghts.png",
-			"event_id": "dialogic_021"
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/stage2merrick/s2u1d9.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1721952113.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": " Check the syntax formulei Valen."
-		},
-		{
-			"anchor_id": "anchor-1723253747",
+			"anchor_id": "anchor-1726603100",
 			"event_id": "dialogic_016"
 		},
 		{
