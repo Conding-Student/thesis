@@ -38,7 +38,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Linked ListKey magic unravels advanced magical sequences in locks and doors. It navigates enchanted links, decoding complex protections and hidden enchantments. This advanced magic is essential for opening doors crafted by master enchanters to safeguard ancient treasures and forbidden knowledge"
+			"text": "Datatypes and Variable are a fundamental C# concepts what you need to know in order to effectively make a syntax"
 		},
 		{
 			"audio": "play",
@@ -52,7 +52,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This advanced magic is essential for opening doors crafted by master enchanters to safeguard ancient treasures and forbidden knowledge"
+			"text": "Datatype defines what type of data is used for processing"
 		},
 		{
 			"audio": "play",
@@ -66,7 +66,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "It has two types primarily, but for now, I will teach you just the Singly Linked ListKey magic."
+			"text": "Meanwhile, variables refers to the memory address of which we store temporary data or values"
 		},
 		{
 			"audio": "play",
@@ -80,7 +80,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "In Singly Linked ListKey magic, each Node is like a key that not only holds its own value but also points to the next Node in the sequence"
+			"text": "This magic is essential for opening doors crafted by master enchanters to safeguard ancient treasures and forbidden knowledge"
 		},
 		{
 			"audio": "play",
@@ -94,7 +94,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This pointer, or link, is what allows us to navigate through a series of enchanted locks"
+			"text": "There are many different data types. But for now, let me tell you about the most commonly used ones."
 		},
 		{
 			"audio": "play",
@@ -108,7 +108,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Unlike simple ListKey magic, which deals with straightforward arrays of elements, or magical keys, Singly Linked ListKey magic deals with interconnected pathways."
+			"text": "The first is STRING"
 		},
 		{
 			"audio": "play",
@@ -122,7 +122,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Each Node leads to the next, and our task is to decipher these connections to unlock more advanced locks and doors"
+			"text": "string allows us to store a sequence of characters that's sorrounded by double quotes"
 		},
 		{
 			"audio": "play",
@@ -136,7 +136,31 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Master the theoretical aspects first, Val. Understand how each Node interacts with the next, and tomorrow we'll put your knowledge to the test"
+			"text": "The second are INT and LONG which allows us to store whole numbers with each having different limits"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The third are FLOAT and  DOUBLE which allows us to assign decimal values"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The next one is BOOL, which can have the values 'true' or 'false'"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The last one is CHAR. which only allows us to store one character when sorrounded by ' '"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "aster the Data Types first and you'll gain a great understanding of everything that comes next..."
 		}
 	],
 	"metadata": {

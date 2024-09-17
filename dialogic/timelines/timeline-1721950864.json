@@ -68,6 +68,24 @@
 			"text": "It doesn't matter where  I am. What's important is you are here."
 		},
 		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As you know, our world is made up of invisible algorithm and syntaxes called C#"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "C# defines our very reality and anyone can learn and use it..."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "But it takes skill to do it effectively so listen carefully."
+		},
+		{
 			"event_id": "dialogic_015",
 			"id": "anchor-1726216430",
 			"index": 0,

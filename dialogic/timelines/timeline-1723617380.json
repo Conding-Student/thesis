@@ -73,7 +73,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good. Now, tell me, what is the significance of the Pointer Field in a Node?"
+			"text": "Question"
 		},
 		{
 			"audio": "play",
@@ -87,7 +87,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Excellent. Describe the process of unlocking a door using Singly Linked ListKey magic"
+			"text": "Question"
 		},
 		{
 			"audio": "play",
@@ -101,7 +101,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "And what happens if we encounter a broken link or an incorrect sequence?"
+			"text": "Question"
 		},
 		{
 			"audio": "play",
@@ -115,7 +115,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Well done, Val. Your understanding is impressive. Now, let's see how you handle a practical application. Follow me"
+			"text": "Question"
 		}
 	],
 	"metadata": {

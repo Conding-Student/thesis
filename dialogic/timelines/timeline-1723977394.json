@@ -38,7 +38,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You've managed to do the first part of the practical application for Linked ListKey magic, which is opening the enchanted door"
+			"text": "You've managed to do the first part of the practical application for variable and data type, which is opening the enchanted door"
 		},
 		{
 			"audio": "play",
@@ -52,7 +52,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Now, for the second part, you should open these locked items. Each of these is enchanted with advanced magic to practice your proficiency"
+			"text": "Now, for the second part, you should open these locked items. Each of these is enchanted with advanced syntax magic to practice your proficiency"
 		}
 	],
 	"metadata": {

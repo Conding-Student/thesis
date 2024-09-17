@@ -26,19 +26,19 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1721952703.json",
+			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "ListKey magic is a repository of magical keys, each imbued with C# properties."
+			"text": "Flowchart and pseudocode are algorithm sequence that lets us understand our code process better!"
 		},
 		{
-			"character": "character-1721952703.json",
+			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Each key corresponds to a specific lock or door, and its index holds the key to unlocking them"
+			"text": "Some locks of our world are encrypted with improper flowchart and pseudocodes"
 		},
 		{
-			"character": "character-1721952703.json",
+			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "By identifying the correct index, we can unlock the corresponding lock or door"
@@ -97,7 +97,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I have a job for you tonight. This will be your chance to use ListKey magic in a real situation"
+			"text": "I have a job for you tonight. This will be your chance to use C# magic in a real situation"
 		},
 		{
 			"change_scene": "res://World/room/night/orphanage_hallway_night.tscn",

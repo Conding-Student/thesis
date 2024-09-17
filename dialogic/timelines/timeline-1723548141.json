@@ -59,7 +59,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Val, tell me what you've learned about AddRange"
+			"text": "Val, tell me what you've learned about Flowchart decision and connectors"
 		},
 		{
 			"audio": "play",
@@ -73,7 +73,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good. Now, explain how you would access the values in a list"
+			"text": "(Question)"
 		},
 		{
 			"audio": "play",
@@ -87,7 +87,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Excellent. Now, describe how to insert an element at a specific index"
+			"text": "(Question)"
 		},
 		{
 			"audio": "play",
@@ -101,7 +101,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Finally, explain how to remove an element and then remove another at a specific index"
+			"text": "(Question)"
 		},
 		{
 			"audio": "play",

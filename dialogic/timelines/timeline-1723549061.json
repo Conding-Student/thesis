@@ -72,7 +72,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Very good, Val! You have proven that you already mastered ListKey magic, even its advanced methods"
+			"text": "Very good, Val! You have proven that you already mastered pseudocode and flowchart magic"
 		},
 		{
 			"audio": "play",
@@ -86,7 +86,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "However, what you've learned about ListKey magic is just the fundamentals"
+			"text": "However, what you've learned doesn't include any syntaxes yet"
 		},
 		{
 			"audio": "play",
@@ -114,7 +114,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "But today, I want to introduce you to something more advanced: LinkedList Magic"
+			"text": "But today, I want to introduce you to the basic of syntaxes, the variable and datatypes magic."
 		}
 	],
 	"metadata": {
