@@ -209,7 +209,10 @@ func change_scene(change_scene_on, dialogue_name):
 		new_dialog.connect("timeline_end", self, "end")
 	else:
 		q_and_a_show()
-		
+
+func end(timelineend):
+	pass
+
 func value_activating(param):
 	if param == "stage2_done" && PlayerStats.health != 0:
 		Global2.after_quiz = Dialogic.set_variable("after_quiz",1)

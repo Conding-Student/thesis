@@ -8,11 +8,13 @@ onready var current_level = $TopUi/Label
 onready var player =$objects/Player
 onready var player_controls = $objects/Player/Controller
 onready var place_name = $TopUi/Label2
-onready var interaction_button = $Merrick_manor/TextureButton
+onready var interaction_button = $objects/Merrick_manor/TextureButton
 onready var attack_button = $objects/Player/Controller/Control/BtnAttack
+onready var path_inside_manor = $manor_inside_night/CollisionShape2D
+onready var question_before_entering = $Area2D/CollisionShape2D
 var current_map = "res://levels/stage_3_night/manor_out_night.tscn"
 var starting_player_position = Vector2 (528, 395)
-
+var door_id = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +26,18 @@ func _ready():
 	interaction_button.connect("pressed", self, "merrick2")
 	attack_button.hide()
 	Global.set_map(current_map)
+	
+	if Global.get_door_state("manor_inside"):
+		#print("Bat is dead on load, removing from scene: ID =", bat_id)  # Debugging print
+		path_inside_manor.disabled = false
+	else:
+		path_inside_manor.disabled = true
+	
+	if Global.get_dialogue_state("manor_inside"):
+		#print("Bat is dead on load, removing from scene: ID =", bat_id)  # Debugging print
+		question_before_entering.disabled = true
+	else:
+		question_before_entering.disabled = false
 	
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
@@ -57,31 +71,50 @@ func resume_the_game() -> void:
 	pause_ui.hide()
 
 func _process(_delta):
-	if is_instance_valid(player):
-		# If the player still exists, update its position in the Global script
-		Global.set_player_current_position(player.global_position)
-	else:
-		# Handle the player no longer existing, such as changing to a Game Over scene
-		var result = get_tree().change_scene("res://intro/Game_over.tscn")
-		if result != OK:
-			print("Failed to load the scene: " + str(result))
-
+	pass
+	
 func merrick2():
 	player_controls.visible = false
 	interaction_button.visible = false
-	
-	Global.set_map(current_map)
 	var new_dialog = Dialogic.start('stage3p1')
 	add_child(new_dialog)
 	new_dialog.connect("timeline_end", self, "interaction_endpoint")
+	new_dialog.connect("dialogic_signal", self, "merrick_inside")
 
 func interaction_endpoint(timelineend):
 	player_controls.visible = true
 
+func merrick_inside(param):
+	$objects/Merrick_manor.hide()
 func _on_pause_game_pressed():
 	get_tree().paused = true
 	topui.visible = false
 	player_controller.visible = false
 	pause_ui.show()
 
+func unlocking(param):
+	player_controls.visible = true
+	Global2.set_question(0,"Which of the following flowchart symbols is used to represent a process or action?")
+	Global2.set_answers(0,"Oval")
+	Global2.set_answers(1,"Rectangle")
+	Global2.set_answers(2,"Square")
+	Global2.set_answers(3,"Diamond")
+	Global2.set_picture_path(0,"res://intro/picture/question/Flowchart_shape_unit1.png")
+	
+	Global2.set_feedback(0,"Not this one, This shape used in the beggining and endof the flowchart")
+	Global2.set_feedback(1,"Correct!")
+	Global2.set_feedback(2,"nope, Square shape doesn't commonly used in flowcharting.")
+	Global2.set_feedback(3,"Wrong Valen!, This diamond shape is most commonly used in decision making.")
 
+	Global2.dialogue_name = "stage3React1"
+	Global.set_map("res://levels/stage_3_night/manor_inside_night.tscn")
+	Global2.correct_answer_ch1_2 = true
+	Global.set_dialogue_state("manor_inside", true)
+	Global.set_door_state("manor_inside", true)
+
+func entering_manor_door(body_rid, body, body_shape_index, local_shape_index):
+	player_controls.visible = false
+	var new_dialog = Dialogic.start('door_lock')
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "interaction_endpoint")
+	new_dialog.connect("dialogic_signal", self, "unlocking")

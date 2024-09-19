@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://NPC/picture/childrens.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.0
+height = 0.0
+
+[node name="child_girl2_sleeping" type="KinematicBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -1 )
+shape = SubResource( 1 )
+
+[node name="character" type="Sprite" parent="."]
+position = Vector2( -1, -8 )
+texture = ExtResource( 1 )
+hframes = 16
+vframes = 16
+frame = 56

@@ -73,7 +73,9 @@ func save_data(filename: String) -> void:
 		"lady_on_townsquare": Global2.lady_on_townsquare,
 		"paladin_mage_guild": Global2.paladin_mage_guild,
 		"after_quiz": Global2.after_quiz,
-		"bat_states": Global.bat_states  # Save bat states
+		"bat_states": Global.bat_states,  # Save bat states
+		"door_states": Global.door_states,
+		"dialogue_states": Global.dialogue_states
 	}
 	save_to_file(filename, save_data)
 
@@ -129,7 +131,8 @@ func apply_loaded_data(loaded_data: Dictionary) -> void:
 	Global.set_map(loaded_data["map"])
 	Global.set_current_level(loaded_data["current_level"])
 	PlayerStats.health = loaded_data["players_health"]
-
+	Global.door_states = loaded_data["door_states"]
+	Global.dialogue_states = loaded_data["dialogue_states"]
 	# Load bat states back into the global state
 	if "bat_states" in loaded_data:
 		Global.bat_states = loaded_data["bat_states"]

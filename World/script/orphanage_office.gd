@@ -140,7 +140,7 @@ func yes(param):
 	
 	Global2.set_feedback(16, "Wrong!")
 	Global2.set_feedback(17, "Correct")
-	Global2.set_feedback(18, "Wrong! it was either yes or no")
+	Global2.set_feedback(18, "Gotcha! it was either yes or no")
 	Global2.set_feedback(19, "Wrong, the asnwer was either on the first three choices.")
 	
 	Global2.dialogue_name = "evaluation"

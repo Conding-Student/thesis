@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/script/orphanage_hallway.gd" type="Script" id=2]
@@ -9,9 +9,11 @@
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPC/child_boy4.tscn" type="PackedScene" id=9]
+[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=10]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="TileSet" id=41]
+resource_local_to_scene = true
 0/name = "atlas_16x.png 0"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
@@ -443,6 +445,22 @@ points = PoolVector2Array( 0, 0, 29, 0, 29, 17, 0, 17 )
 } ]
 15/z_index = 0
 
+[sub_resource type="TileSet" id=62]
+0/name = "path_arrow.tres 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 7, 6 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="DynamicFont" id=61]
 size = 5
 font_data = ExtResource( 11 )
@@ -491,7 +509,7 @@ frame = 40
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 299, 101 )
+position = Vector2( 292, 101 )
 
 [node name="child_boy4" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 144, 102 )
@@ -499,11 +517,19 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="objects" type="YSort" parent="YSort"]
+
+[node name="path_arrow" type="TileMap" parent="YSort/objects"]
+tile_set = SubResource( 62 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 3801162, 0, 0, 6029624, 0, 0, 6094849, 0, 0 )
+
 [node name="orphanage_room" parent="." instance=ExtResource( 6 )]
-position = Vector2( 322, 96 )
+position = Vector2( 316, 96 )
 
 [node name="orphanage_room_pos" type="Position2D" parent="."]
-position = Vector2( 300, 95 )
+position = Vector2( 292, 95 )
 
 [node name="orphanage_office" parent="." instance=ExtResource( 6 )]
 position = Vector2( 77, 51 )

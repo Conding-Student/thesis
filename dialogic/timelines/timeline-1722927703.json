@@ -56,7 +56,11 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Just simply run and follow me at the backdoor of the manor. It was located at the upper part of the house"
+			"text": "Just simply run and go into the backdoor of the manor. It was located at the upper part of the house. I will go first to avoid commotion, avoid getting caught by the guards."
+		},
+		{
+			"emit_signal": "merrick_inside",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_022",

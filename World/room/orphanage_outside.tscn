@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/script/orphanage_outside.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://World/room/levels_entrance.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://NPC/picture/interact-removebg-preview.png" type="Texture" id=15]
+[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Solaria Demo Update 01.png 0"
@@ -540,6 +541,22 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 17/z_index = 0
 
+[sub_resource type="TileSet" id=39]
+0/name = "path_arrow.tres 0"
+0/texture = ExtResource( 16 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 7, 6 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="CircleShape2D" id=38]
 radius = 23.0054
 
@@ -580,6 +597,13 @@ position = Vector2( 105, 71 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 position = Vector2( -95, 1 )
 remote_path = NodePath("../../../Camera2D")
+
+[node name="path_arrow" type="TileMap" parent="YSort"]
+z_index = 1
+tile_set = SubResource( 39 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 2949244, 0, 0, 7012665, 0, 0 )
 
 [node name="trees" type="YSort" parent="YSort"]
 
@@ -711,10 +735,10 @@ rotation = 1.5708
 position = Vector2( 128, 62 )
 
 [node name="towncenter" parent="." instance=ExtResource( 13 )]
-position = Vector2( 324, 110 )
+position = Vector2( 317, 111 )
 
 [node name="towncenter_pos" type="Position2D" parent="."]
-position = Vector2( 307, 111 )
+position = Vector2( 291, 112 )
 
 [connection signal="body_shape_entered" from="YSort/Area2D" to="." method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="YSort/Area2D" to="." method="_on_Area2D_body_shape_exited"]

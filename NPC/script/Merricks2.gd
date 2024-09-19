@@ -4,7 +4,7 @@ onready var merrick = $Sprite
 onready var dialogue_button = $TextureButton
 # $TextureButtonCalled when the node enters the scene tree for the first time.
 func _ready():
-	if Global2.badge1 == true && Global2.badge2 == true:
+	if Global2.badge1 == true:
 		merrick.visible = true
 		#print(Global.stage1)
 	else:

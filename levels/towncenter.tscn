@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=2]
@@ -43,6 +43,7 @@
 [ext_resource path="res://NPC/citezen2.tscn" type="PackedScene" id=41]
 [ext_resource path="res://NPC/citizen3.tscn" type="PackedScene" id=42]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=43]
+[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=44]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Solaria Demo Update 01.png 0"
@@ -538,6 +539,22 @@ points = PoolVector2Array( 2.72511, 4.97405, 45.7933, 4.97405, 44.0436, 47.6384,
 } ]
 0/z_index = 0
 
+[sub_resource type="TileSet" id=59]
+0/name = "path_arrow.tres 0"
+0/texture = ExtResource( 44 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 7, 6 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="ConvexPolygonShape2D" id=33]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -824,6 +841,12 @@ position = Vector2( 481, 28 )
 
 [node name="statue_Wizard_no_light" parent="YSort/buildings" instance=ExtResource( 21 )]
 position = Vector2( 361, 201 )
+
+[node name="path_arrow" type="TileMap" parent="YSort/buildings"]
+tile_set = SubResource( 59 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( -196252, 0, 0, 14286849, 0, 0, 14418617, 0, 0 )
 
 [node name="walls" type="YSort" parent="YSort"]
 

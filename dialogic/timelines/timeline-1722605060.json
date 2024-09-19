@@ -64,7 +64,12 @@
 			"text": "I have a job for you tonight. This will be your chance to use C# magic in a real situation"
 		},
 		{
-			"change_scene": "res://World/room/night/orphanage_hallway_night.tscn",
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1.5
+		},
+		{
+			"change_scene": "res://Scenes/Orphanage_night.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

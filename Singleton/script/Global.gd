@@ -32,8 +32,38 @@ var current_level = "Chapter1 U1 1 / 5"
 var save_button_click = false
 var load_button_click = false
 
+# Dialogue before the quest and answer
+var dialogue_states = {}
+
+
+#Declare those door that has been opened
+var door_states = {}
+
 # Declare and initialize the dictionary to store the bat states
 var bat_states = {}  # Add this line at the top
+
+
+# Function to set the state of a dialogue (open or closed)
+func set_dialogue_state(dialogue_id: String, is_open: bool):
+	dialogue_states[dialogue_id] = is_open
+
+# Function to get the state of a dialogue, defaulting to closed (false) if not set
+func get_dialogue_state(dialogue_id: String) -> bool:
+	# Default to false if not set
+	return dialogue_states.get(dialogue_id, false)
+
+
+# Function to set the state of a bat (alive or dead)
+func set_door_state(door_id: String, is_open: bool):
+	#print("Setting bat state: ID =", bat_id, "Alive =", is_alive)  # Debugging print
+	door_states[door_id] = is_open
+
+# Function to get the state of a bat, defaulting to alive if not set
+func get_door_state(door_id: String) -> bool:
+	var state = door_states.get(door_id, false)  # Default to true (alive) if not set
+	#print("Getting bat state: ID =", bat_id, "Alive =", state)  # Debugging print
+	return state
+
 
 # Function to set the state of a bat (alive or dead)
 func set_bat_state(bat_id: String, is_alive: bool):

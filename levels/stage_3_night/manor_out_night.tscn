@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://World/pictures/base_out_atlas.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/terrain_atlas.png" type="Texture" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://World/fountain.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=18]
 [ext_resource path="res://NPC/Merrick_manor.tscn" type="PackedScene" id=19]
+[ext_resource path="res://World/room/door_statestscn.tscn" type="PackedScene" id=20]
+[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=21]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrain_atlas.png 0"
@@ -731,6 +733,22 @@ points = PoolVector2Array( 0, 0, 33, 0, 33, 29, 0, 29 )
 } ]
 1/z_index = 0
 
+[sub_resource type="TileSet" id=20]
+0/name = "path_arrow.tres 0"
+0/texture = ExtResource( 21 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 7, 6 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 36, 36 )
 
@@ -976,6 +994,9 @@ position = Vector2( -143, 440 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="objects/Player"]
 remote_path = NodePath("../../../Camera2D")
 
+[node name="Merrick_manor" parent="objects" instance=ExtResource( 19 )]
+position = Vector2( -113, 425 )
+
 [node name="props" type="YSort" parent="objects"]
 
 [node name="Tree" parent="objects/props" instance=ExtResource( 5 )]
@@ -1207,9 +1228,6 @@ position = Vector2( 134, 339 )
 [node name="Guard_patrol3" parent="objects/people" instance=ExtResource( 9 )]
 position = Vector2( 263, 353 )
 
-[node name="Guard_patrol4" parent="objects/people" instance=ExtResource( 9 )]
-position = Vector2( 3, 88 )
-
 [node name="Guard_patrol5" parent="objects/people" instance=ExtResource( 9 )]
 position = Vector2( 538, 195 )
 
@@ -1228,6 +1246,12 @@ scale = Vector2( 1.82227, 1.06738 )
 texture = ExtResource( 15 )
 texture_scale = 0.5
 energy = 0.6
+
+[node name="path_arrow" type="TileMap" parent="objects/lighting"]
+tile_set = SubResource( 20 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 6488324, 0, 0, 28311380, 0, 0 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( -143, 440 )
@@ -1274,6 +1298,7 @@ position = Vector2( 228, 95 )
 [node name="manor_inside_night" parent="." instance=ExtResource( 16 )]
 position = Vector2( 263, 107 )
 rotation = 1.57079
+door_id = "manor_inside"
 
 [node name="TopUi" type="CanvasLayer" parent="."]
 
@@ -1308,9 +1333,12 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Merrick_manor" parent="." instance=ExtResource( 19 )]
-position = Vector2( -113, 425 )
+[node name="Area2D" parent="." instance=ExtResource( 20 )]
+position = Vector2( 264, 103 )
+collision_layer = 128
+collision_mask = 2
 
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="entering_manor_door"]
 
 [editable path="Camera2D"]

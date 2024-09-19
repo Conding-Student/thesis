@@ -10,7 +10,7 @@ onready var player_controls = $YSort/Player/Controller
 onready var place_name = $TopUi/Label2
 
 var current_map = "res://levels/stage_3_night/towncenter_night.tscn"
-var starting_player_position = Vector2(128, 67)
+var starting_player_position = Vector2(37, 223)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -54,7 +54,8 @@ func resume_the_game() -> void:
 	pause_ui.hide()
 
 func _process(_delta):
-	Global.set_player_current_position(player.global_position)
+	pass
+	#Global.set_player_current_position(player.global_position)
 	
 func _on_pause_game_pressed():
 	get_tree().paused = true

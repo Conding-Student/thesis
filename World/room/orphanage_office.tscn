@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=1]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://NPC/merricks2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://intro/stages_complete.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=12]
 
 [sub_resource type="TileSet" id=49]
 0/name = "atlas_16x.png 0"
@@ -892,6 +893,22 @@ points = PoolVector2Array( 0, 0, 29, 0, 29, 17, 0, 17 )
 30/shapes = [  ]
 30/z_index = 0
 
+[sub_resource type="TileSet" id=66]
+0/name = "path_arrow.tres 0"
+0/texture = ExtResource( 12 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 7, 6 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="DynamicFont" id=65]
 size = 5
 font_data = ExtResource( 11 )
@@ -944,6 +961,12 @@ cell_size = Vector2( 5, 10 )
 cell_y_sort = true
 format = 1
 tile_data = PoolIntArray( 196625, 12, 0, 262151, 0, 0, 262170, 27, 0, 262174, 28, 0, 262189, 22, 0, 262195, 18, 0, 327691, 16, 0, 393255, 8, 0, 458762, 25, 0, 458789, 5, 0, 524299, 7, 0, 524322, 20, 0, 524332, 17, 0, 589863, 21, 0, 786486, 24, 0 )
+
+[node name="path_arrow" type="TileMap" parent="YSort/objects"]
+tile_set = SubResource( 66 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 3866885, 0, 0, 11600028, 0, 0 )
 
 [node name="people" type="YSort" parent="YSort"]
 

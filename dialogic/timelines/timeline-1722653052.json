@@ -1,10 +1,6 @@
 {
 	"events": [
 		{
-			"background": "res://Scenes/pictures/orphanage_hallway.png",
-			"event_id": "dialogic_021"
-		},
-		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 1,
 			"animation_wait": true,
@@ -114,6 +110,10 @@
 			"z_index": 0
 		},
 		{
+			"background": "res://Scenes/pictures/orphanage_hallway.png",
+			"event_id": "dialogic_021"
+		},
+		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 1,
 			"animation_wait": true,
@@ -216,6 +216,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "It looks like I need to go into the Manor which is located at the right side of the townsquare."
+		},
+		{
+			"change_scene": "res://World/room/night/orphanage_hallway_night.tscn",
+			"event_id": "dialogic_041"
 		},
 		{
 			"event_id": "dialogic_022",

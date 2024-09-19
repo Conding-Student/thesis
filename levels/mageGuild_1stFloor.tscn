@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=90 format=2]
 
 [ext_resource path="res://World/pictures/interior/16x16Room_Builder_free.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/interior/tilesetformattedupdate1.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://World/room/levels_entrance.tscn" type="PackedScene" id=13]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=14]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=15]
+[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=16]
 [ext_resource path="res://NPC/bard.tscn" type="PackedScene" id=17]
 [ext_resource path="res://NPC/mage_female.tscn" type="PackedScene" id=18]
 [ext_resource path="res://NPC/healer_female.tscn" type="PackedScene" id=19]
@@ -698,6 +699,22 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 3/shapes = [  ]
 3/z_index = 0
 
+[sub_resource type="TileSet" id=67]
+0/name = "path_arrow.tres 0"
+0/texture = ExtResource( 16 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 7, 6 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="DynamicFont" id=66]
 size = 5
 font_data = ExtResource( 34 )
@@ -816,6 +833,12 @@ position = Vector2( 360, 231 )
 [node name="king" parent="objects/people" instance=ExtResource( 31 )]
 position = Vector2( 66, 225 )
 
+[node name="path_arrow" type="TileMap" parent="objects/people"]
+tile_set = SubResource( 67 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 24641780, 0, 0 )
+
 [node name="bookshelf1" parent="objects" instance=ExtResource( 33 )]
 position = Vector2( 336, 321 )
 
@@ -853,10 +876,10 @@ position = Vector2( 366, 339 )
 position = Vector2( 516, 394 )
 
 [node name="mageGuild_out_pos" type="Position2D" parent="."]
-position = Vector2( 247, 365 )
+position = Vector2( 247, 358 )
 
 [node name="mageGuild_out" parent="." instance=ExtResource( 13 )]
-position = Vector2( 248, 387 )
+position = Vector2( 248, 381 )
 rotation = 1.57079
 collision_layer = 128
 collision_mask = 2

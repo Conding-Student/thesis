@@ -1,20 +1,19 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=1]
 [ext_resource path="res://World/tres/fire.tres" type="Texture" id=2]
-[ext_resource path="res://NPC/child_girl1.tscn" type="PackedScene" id=3]
-[ext_resource path="res://NPC/child_boy1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://NPC/child_boy2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/room/orphanage_room_night.gd" type="Script" id=3]
+[ext_resource path="res://NPC/child_girl1_sleeping.tscn" type="PackedScene" id=4]
+[ext_resource path="res://NPC/child_girl2_sleeping.tscn" type="PackedScene" id=5]
 [ext_resource path="res://NPC/child_boy3.tscn" type="PackedScene" id=6]
-[ext_resource path="res://NPC/child_girl2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://NPC/child_boy2_sleeping.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=9]
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=10]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=12]
-[ext_resource path="res://World/script/orphanage_room.gd" type="Script" id=13]
+[ext_resource path="res://NPC/child_boy1_sleeping.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/room/entrance.tscn" type="PackedScene" id=14]
-[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=15]
 
 [sub_resource type="TileSet" id=20]
 0/name = "atlas_16x.png 0"
@@ -743,24 +742,8 @@ points = PoolVector2Array( 0, 0, 13, 0, 13, 15, 0, 15 )
 } ]
 11/z_index = 0
 
-[sub_resource type="TileSet" id=44]
-0/name = "path_arrow.tres 0"
-0/texture = ExtResource( 15 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 7, 6 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
 [node name="orphanage_room" type="Node2D"]
-script = ExtResource( 13 )
+script = ExtResource( 3 )
 
 [node name="floors" type="TileMap" parent="."]
 tile_set = SubResource( 20 )
@@ -795,24 +778,7 @@ tile_data = PoolIntArray( 262148, 4, 0, 524292, 4, 0 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 42, 44 )
-
-[node name="children" type="YSort" parent="YSort"]
-
-[node name="child_girl1" parent="YSort/children" instance=ExtResource( 3 )]
-position = Vector2( 64, 99 )
-
-[node name="child_boy1" parent="YSort/children" instance=ExtResource( 4 )]
-position = Vector2( 231, 127 )
-
-[node name="child_boy2" parent="YSort/children" instance=ExtResource( 5 )]
-position = Vector2( 116, 123 )
-
-[node name="child_boy3" parent="YSort/children" instance=ExtResource( 6 )]
-position = Vector2( 118, 57 )
-
-[node name="child_girl2" parent="YSort/children" instance=ExtResource( 7 )]
-position = Vector2( 240, 63 )
+position = Vector2( 64, 101 )
 
 [node name="YSort" type="YSort" parent="YSort"]
 
@@ -833,11 +799,22 @@ cell_size = Vector2( 8, 12 )
 format = 1
 tile_data = PoolIntArray( 18, 2, 0, 65548, 3, 0, 65552, 0, 0, 65558, 0, 0, 65560, 3, 0, 131090, 5, 0, 196617, 7, 0, 196637, 7, 0, 327698, 8, 0, 327700, 8, 0, 393234, 11, 0, 524306, 7, 0, 720912, 4, 0, 720914, 3, 0, 720918, 4, 0 )
 
-[node name="path_arrow" type="TileMap" parent="YSort/YSort"]
-tile_set = SubResource( 44 )
-cell_size = Vector2( 1, 1 )
-format = 1
-tile_data = PoolIntArray( 5963777, 0, 0 )
+[node name="children" type="YSort" parent="YSort"]
+
+[node name="child_girl1_sleeping" parent="YSort/children" instance=ExtResource( 4 )]
+position = Vector2( 41, 167 )
+
+[node name="child_boy1_sleeping" parent="YSort/children" instance=ExtResource( 13 )]
+position = Vector2( 280, 45 )
+
+[node name="child_boy2_sleeping" parent="YSort/children" instance=ExtResource( 7 )]
+position = Vector2( 214, 165 )
+
+[node name="child_girl2_sleeping" parent="YSort/children" instance=ExtResource( 5 )]
+position = Vector2( 106, 165 )
+
+[node name="child_boy3" parent="YSort/children" instance=ExtResource( 6 )]
+position = Vector2( 281, 165 )
 
 [node name="TopUi" type="CanvasLayer" parent="."]
 
@@ -864,5 +841,8 @@ position = Vector2( 5, 96 )
 
 [node name="orphanage_hallway_pos" type="Position2D" parent="."]
 position = Vector2( 26, 96 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.160784, 0.145098, 0.145098, 1 )
 
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
