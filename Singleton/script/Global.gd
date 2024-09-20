@@ -52,6 +52,12 @@ func get_dialogue_state(dialogue_id: String) -> bool:
 	# Default to false if not set
 	return dialogue_states.get(dialogue_id, false)
 
+# Function to return the door name if it exists
+func get_door_name(door_name: String) -> String:
+	if door_states.has(door_name):
+		return door_name  # Return the name (key) itself
+	else:
+		return "Door not found"
 
 # Function to set the state of a bat (alive or dead)
 func set_door_state(door_id: String, is_open: bool):

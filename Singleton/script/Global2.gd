@@ -1,9 +1,7 @@
 extends Node
 
-#Badges, levels, stages
-#var badge1 = false
-#var badge2 = false
-#var badge3 = false
+#stage 4 singleton state
+var state = ""
 
 #Stage 2 talking with the villiger number of times
 #quest

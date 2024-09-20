@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "its been a little bit difficult but I successfully open the chest."
+		},
+		{
+			"emit_signal": "chest_open",
+			"event_id": "dialogic_040"
+		},
+		{
+			"change_scene": "res://levels/stage_3_night/manor_2ndfloor_night.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1726839008.json",
+		"name": "stage4chest"
+	}
+}

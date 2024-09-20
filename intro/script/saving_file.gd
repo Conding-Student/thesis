@@ -69,7 +69,8 @@ func save_data(filename: String) -> void:
 		"after_quiz": Global2.after_quiz,
 		"bat_states": Global.bat_states,
 		"door_states": Global.door_states,
-		"dialogue_states": Global.dialogue_states
+		"dialogue_states": Global.dialogue_states,
+		"manor_quest": Global2.state
 	}
 
 	# Collect badge data for saving
@@ -148,6 +149,9 @@ func apply_loaded_data(loaded_data: Dictionary) -> void:
 	Global.set_current_level(loaded_data.get("current_level", 1))
 	Global.door_states = loaded_data.get("door_states", {})
 	Global.dialogue_states = loaded_data.get("dialogue_states", {})
+
+	#quest
+	Global2.state = loaded_data.get("manor_quest")
 
 	# Load bat states if available
 	if "bat_states" in loaded_data:

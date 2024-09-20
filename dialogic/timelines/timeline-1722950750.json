@@ -41,6 +41,10 @@
 			"text": "This is it. Open the safe!"
 		},
 		{
+			"change_scene": "res://intro/question_panel.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
 		}
