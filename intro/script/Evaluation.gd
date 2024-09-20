@@ -248,7 +248,10 @@ func _on_Question5_pressed():
 	panel5.visible = true
 
 func _on_next_stage_pressed():
+	SceneTransition.change_scene(Global.get_map())
 	Global2.reset_scene_change_flags()
 	Global2.reset_trigger_answers()
-	SceneTransition.change_scene(Global.get_map())
+	Global2.reset_evaluations()
+	
+	
 	

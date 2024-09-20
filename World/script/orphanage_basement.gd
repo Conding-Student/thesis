@@ -37,7 +37,7 @@ func _ready():
 	# Get the length of the Path2D curve
 	path_length = $YSort/YSort2/Path2D.curve.get_baked_length()
 	
-	if Global2.badge1 == true:
+	if Global2.is_badge_complete("badge1") == true:
 		merrick_sprite.visible = false
 	
 
@@ -119,8 +119,7 @@ func after_stagem2(timelinename):
 	merrick_sprite.flip_h = true
 	merrick_sprite.flip_h = false
 	player_controls.visible = true
-	Global2.badge1 = true
-	Global2.stage2_trigger = true
-	Global2.stage1_complete = true
+	Global2.complete_badge("badge1")
 	merrick_sprite.visible = true
+	SceneTransition.change_scene("res://intro/stages_complete.tscn")
 	

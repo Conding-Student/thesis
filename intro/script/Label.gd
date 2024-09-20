@@ -1,9 +1,19 @@
 extends Label
 
 func _process(delta):
-	if Global2.stage2_trigger == true:
+	pass
+
+func _ready():
+	updating_label()
+
+
+func updating_label():
+	if Global2.is_badge_complete("badge1"):
 		text = "Chapter1 U1 2 / 5"
 		Global.set_current_level(text)	
-	elif Global2.stage3_trigger == true:
+	if Global2.is_badge_complete("badge2"):
 		text = "Chapter1 U1 3 / 5"
+		Global.set_current_level(text)
+	if Global2.is_badge_complete("badge3"):
+		text = "Chapter1 U1 4 / 5"
 		Global.set_current_level(text)

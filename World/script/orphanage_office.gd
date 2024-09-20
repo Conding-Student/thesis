@@ -22,6 +22,8 @@ func _ready():
 	interaction_button.connect("pressed", self, "merrick2")
 	Global.set_map(current_map)
 
+
+
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)
@@ -33,6 +35,7 @@ func set_player_position():
 		#print("3")
 	elif Global.get_player_current_position() != Vector2(0,0) and Global.player_position_retain == true:
 		player.global_position = Global.get_player_current_position()
+		
 		
 	elif Global.from_level != null:
 		var target_node_path = Global.from_level + "_pos"

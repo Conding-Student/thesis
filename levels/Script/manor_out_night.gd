@@ -26,7 +26,6 @@ func _ready():
 	interaction_button.connect("pressed", self, "merrick2")
 	attack_button.hide()
 	Global.set_map(current_map)
-	
 	if Global.get_door_state("manor_inside"):
 		#print("Bat is dead on load, removing from scene: ID =", bat_id)  # Debugging print
 		path_inside_manor.disabled = false
@@ -86,6 +85,7 @@ func interaction_endpoint(timelineend):
 
 func merrick_inside(param):
 	$objects/Merrick_manor.hide()
+	
 func _on_pause_game_pressed():
 	get_tree().paused = true
 	topui.visible = false
@@ -93,24 +93,26 @@ func _on_pause_game_pressed():
 	pause_ui.show()
 
 func unlocking(param):
-	player_controls.visible = true
-	Global2.set_question(0,"Which of the following flowchart symbols is used to represent a process or action?")
-	Global2.set_answers(0,"Oval")
-	Global2.set_answers(1,"Rectangle")
-	Global2.set_answers(2,"Square")
-	Global2.set_answers(3,"Diamond")
-	Global2.set_picture_path(0,"res://intro/picture/question/Flowchart_shape_unit1.png")
-	
-	Global2.set_feedback(0,"Not this one, This shape used in the beggining and endof the flowchart")
-	Global2.set_feedback(1,"Correct!")
-	Global2.set_feedback(2,"nope, Square shape doesn't commonly used in flowcharting.")
-	Global2.set_feedback(3,"Wrong Valen!, This diamond shape is most commonly used in decision making.")
+	if param == "unlocking":
+		player_controls.visible = true
+		Global2.set_question(0,"Which of the following flowchart symbols is used to represent a process or action?")
+		Global2.set_answers(0,"Oval")
+		Global2.set_answers(1,"Rectangle")
+		Global2.set_answers(2,"Square")
+		Global2.set_answers(3,"Diamond")
+		Global2.set_picture_path(0,"res://intro/picture/question/Flowchart_shape_unit1.png")
+		
+		Global2.set_feedback(0,"Not this one, This shape used in the beggining and endof the flowchart")
+		Global2.set_feedback(1,"Correct!")
+		Global2.set_feedback(2,"nope, Square shape doesn't commonly used in flowcharting.")
+		Global2.set_feedback(3,"Wrong Valen!, This diamond shape is most commonly used in decision making.")
 
-	Global2.dialogue_name = "stage3React1"
-	Global.set_map("res://levels/stage_3_night/manor_inside_night.tscn")
-	Global2.correct_answer_ch1_2 = true
-	Global.set_dialogue_state("manor_inside", true)
-	Global.set_door_state("manor_inside", true)
+		Global2.dialogue_name = "stage3React1"
+		Global2.correct_answer_ch1_2 = true
+		Global.set_dialogue_state("manor_inside", true)
+		Global.set_door_state("manor_inside", true)
+	else:
+		print("error")
 
 func entering_manor_door(body_rid, body, body_shape_index, local_shape_index):
 	player_controls.visible = false

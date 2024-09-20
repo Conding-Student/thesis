@@ -62,22 +62,22 @@ func save_data(filename: String) -> void:
 		"enemy_state": Global.enemy_state,
 		"enemy_defeated": Global.enemy_defeated,
 		"dialogue_start_tutorial": Global.dialogue_start_tutorial,
-		"badge1": Global2.badge1,
-		"badge2": Global2.badge2,
-		"stage1_complete": Global2.stage1_complete,
-		"stage2_complete": Global2.stage2_complete,
-		"stage2_trigger": Global2.stage2_trigger,
-		"stage3_trigger": Global2.stage3_trigger,
 		"explore_town": Global2.explore_town,
 		"manor_guard": Global2.manor_guard,
 		"lady_on_townsquare": Global2.lady_on_townsquare,
 		"paladin_mage_guild": Global2.paladin_mage_guild,
 		"after_quiz": Global2.after_quiz,
-		"bat_states": Global.bat_states,  # Save bat states
+		"bat_states": Global.bat_states,
 		"door_states": Global.door_states,
 		"dialogue_states": Global.dialogue_states
 	}
+
+	# Collect badge data for saving
+	for badge_name in Global2.badges_complete.keys():
+		save_data[badge_name] = Global2.badges_complete[badge_name]
+
 	save_to_file(filename, save_data)
+
 
 
 # Load game data from a file
@@ -94,48 +94,65 @@ func load_game_auto() ->void:
 	if loaded_data:
 		apply_loaded_data(loaded_data)
 
-# Apply loaded data to game variables
+
 func apply_loaded_data(loaded_data: Dictionary) -> void:
-	Global2.badge1 = loaded_data["badge1"]
-	Global2.badge2 = loaded_data["badge2"]
-	Global2.stage1_complete = loaded_data["stage1_complete"]
-	Global2.stage2_complete = loaded_data["stage2_complete"]
-	Global2.stage2_trigger = loaded_data["stage2_trigger"]
-	Global2.stage3_trigger = loaded_data["stage3_trigger"]
-	Global.save_triggered = loaded_data["save_triggered"]
-	Global2.explore_town = int(loaded_data["explore_town"])
-	Global2.paladin_mage_guild = int(loaded_data["paladin_mage_guild"])
-	Global2.lady_on_townsquare = int(loaded_data["lady_on_townsquare"])
-	Global2.manor_guard = int(loaded_data["manor_guard"])
-	Global2.after_quiz = int(loaded_data["after_quiz"])
+	# Load general game state
+	Global.save_triggered = loaded_data.get("save_triggered", false)
+	Global.from_level = loaded_data.get("from_level", "")
+	PlayerStats.health = loaded_data.get("players_health", 100)  # Assuming a default value
+
+	# Load location and state variables
+	Global2.explore_town = int(loaded_data.get("explore_town", 0))
+	Global2.paladin_mage_guild = int(loaded_data.get("paladin_mage_guild", 0))
+	Global2.lady_on_townsquare = int(loaded_data.get("lady_on_townsquare", 0))
+	Global2.manor_guard = int(loaded_data.get("manor_guard", 0))
+	Global2.after_quiz = int(loaded_data.get("after_quiz", 0))
+
+	# Set dialogic variables
 	Dialogic.set_variable("explore_town", Global2.explore_town)
 	Dialogic.set_variable("paladin", Global2.paladin_mage_guild)
 	Dialogic.set_variable("citizen", Global2.lady_on_townsquare)
 	Dialogic.set_variable("manor_guard", Global2.manor_guard)
 	Dialogic.set_variable("after_quiz", Global2.after_quiz)
-	Global.from_level = loaded_data["from_level"]
-	Global.set_player_current_position(Vector2(loaded_data["player_current_position"][0], loaded_data["player_current_position"][1]))
-	Global.set_player_initial_position(Vector2(loaded_data["player_initial_position"][0], loaded_data["player_initial_position"][1]))
-	Global.set_player_position_engaged(Vector2(loaded_data["player_position_engaged"][0], loaded_data["player_position_engaged"][1]))
-	Global.set_player_after_door_position(Vector2(loaded_data["player_after_door_position"][0], loaded_data["player_after_door_position"][1]))
-	Global.player_position_retain = loaded_data["player_position_retain"]
-	Global.load_game_position = loaded_data["load_position"]
-	for enemy in loaded_data["enemy_current_position"]:
-		Global.set_enemy_current_position(enemy, Vector2(loaded_data["enemy_current_position"][enemy][0], loaded_data["enemy_current_position"][enemy][1]))
-	for enemy in loaded_data["enemy_initial_position"]:
-		Global.set_enemy_initial_position(enemy, Vector2(loaded_data["enemy_initial_position"][enemy][0], loaded_data["enemy_initial_position"][enemy][1]))
-	for enemy in loaded_data["enemy_engaged_position"]:
-		Global.set_enemy_engaged_position(enemy, Vector2(loaded_data["enemy_engaged_position"][enemy][0], loaded_data["enemy_engaged_position"][enemy][1]))
-	Global.enemy_state = loaded_data["enemy_state"]
-	Global.enemy_defeated = loaded_data["enemy_defeated"]
-	Global.set_map(loaded_data["map"])
-	Global.set_current_level(loaded_data["current_level"])
-	PlayerStats.health = loaded_data["players_health"]
-	Global.door_states = loaded_data["door_states"]
-	Global.dialogue_states = loaded_data["dialogue_states"]
-	# Load bat states back into the global state
+
+	# Load player positions
+	Global.set_player_current_position(Vector2(loaded_data.get("player_current_position", [0, 0])[0], loaded_data.get("player_current_position", [0, 0])[1]))
+	Global.set_player_initial_position(Vector2(loaded_data.get("player_initial_position", [0, 0])[0], loaded_data.get("player_initial_position", [0, 0])[1]))
+	Global.set_player_position_engaged(Vector2(loaded_data.get("player_position_engaged", [0, 0])[0], loaded_data.get("player_position_engaged", [0, 0])[1]))
+	Global.set_player_after_door_position(Vector2(loaded_data.get("player_after_door_position", [0, 0])[0], loaded_data.get("player_after_door_position", [0, 0])[1]))
+	Global.player_position_retain = loaded_data.get("player_position_retain", false)
+	Global.load_game_position = loaded_data.get("load_position", Vector2(0, 0))
+
+	# Load enemy positions
+	if "enemy_current_position" in loaded_data:
+		for enemy in loaded_data["enemy_current_position"]:
+			Global.set_enemy_current_position(enemy, Vector2(loaded_data["enemy_current_position"][enemy][0], loaded_data["enemy_current_position"][enemy][1]))
+
+	if "enemy_initial_position" in loaded_data:
+		for enemy in loaded_data["enemy_initial_position"]:
+			Global.set_enemy_initial_position(enemy, Vector2(loaded_data["enemy_initial_position"][enemy][0], loaded_data["enemy_initial_position"][enemy][1]))
+
+	if "enemy_engaged_position" in loaded_data:
+		for enemy in loaded_data["enemy_engaged_position"]:
+			Global.set_enemy_engaged_position(enemy, Vector2(loaded_data["enemy_engaged_position"][enemy][0], loaded_data["enemy_engaged_position"][enemy][1]))
+
+	# Load badges
+	for badge_name in Global2.badges_complete.keys():
+		if badge_name in loaded_data:
+			Global2.badges_complete[badge_name] = loaded_data[badge_name]
+
+	# Load enemy state and map
+	Global.enemy_state = loaded_data.get("enemy_state", {})
+	Global.enemy_defeated = loaded_data.get("enemy_defeated", false)
+	Global.set_map(loaded_data.get("map", ""))
+	Global.set_current_level(loaded_data.get("current_level", 1))
+	Global.door_states = loaded_data.get("door_states", {})
+	Global.dialogue_states = loaded_data.get("dialogue_states", {})
+
+	# Load bat states if available
 	if "bat_states" in loaded_data:
 		Global.bat_states = loaded_data["bat_states"]
+
 
 # Function to check if "save_triggered" is set in file.txt
 func check_save_triggered_in_file() -> bool:
@@ -171,27 +188,30 @@ func check_if_loaded_data() -> void:
 	var save_triggered_file = false
 	var save_triggered_autosave = false
 
-	# Check if "save_triggered" exists and is true in the first file
 	if loaded_data and "save_triggered" in loaded_data and loaded_data["save_triggered"]:
 		save_triggered_file = true
 
-	# Check if "save_triggered" exists and is true in the second file
 	if loaded_data2 and "save_triggered" in loaded_data2 and loaded_data2["save_triggered"]:
 		save_triggered_autosave = true
 
-	# Check if "save_triggered" is true in at least one of the files
 	if save_triggered_file or save_triggered_autosave:
 		Global.save_triggered = true
 		if save_triggered_file:
-			Global2.badge1 = loaded_data["badge1"]
-			Global2.badge2 = loaded_data["badge2"]
+			if "badges_complete" in loaded_data:
+				Global2.badges_complete = loaded_data["badges_complete"]
+			else:
+				print("Key 'badges_complete' not found in loaded_data.")
 		if save_triggered_autosave:
-			# Add logic if you want to handle badge2 from autosave.txt or other data
+			if "badges_complete" in loaded_data:
+				Global2.badges_complete = loaded_data["badges_complete"]
+			else:
+				print("Key 'badges_complete' not found in loaded_data.")
 			pass
 		print("Save triggered in at least one file, data loaded successfully.")
 	else:
 		Global.save_triggered = false
 		print("No valid save data found or file loading error.")
+
 
 
 

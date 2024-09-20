@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/ligthing/light.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/room/night_room_entrance.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=11]
 
 [sub_resource type="TileSet" id=41]
 0/name = "atlas_16x.png 0"
@@ -443,6 +444,36 @@ points = PoolVector2Array( 0, 0, 29, 0, 29, 17, 0, 17 )
 } ]
 15/z_index = 0
 
+[sub_resource type="TileSet" id=62]
+0/name = "path_arrow.tres 0"
+0/texture = ExtResource( 11 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -1, -1, 0, 0 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "path_arrow.tres 1"
+1/texture = ExtResource( 11 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 7, 7 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
 [sub_resource type="DynamicFont" id=61]
 size = 5
 font_data = ExtResource( 10 )
@@ -492,6 +523,7 @@ frame = 40
 
 [node name="Player" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 298, 101 )
+z_index = 2
 
 [node name="YSort" type="YSort" parent="YSort"]
 
@@ -500,6 +532,13 @@ position = Vector2( 168, 103 )
 texture = ExtResource( 2 )
 texture_scale = 1.5
 energy = 0.6
+
+[node name="path_arrow" type="TileMap" parent="YSort/YSort"]
+z_index = 1
+tile_set = SubResource( 62 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 3801162, 1, 0, 5963777, 1, 0, 13041812, 0, 0, 13172886, 0, 0 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.160784, 0.145098, 0.145098, 1 )

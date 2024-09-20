@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=1]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=7]
 [ext_resource path="res://World/room/night_room_entrance.tscn" type="PackedScene" id=8]
-[ext_resource path="res://NPC/merricks2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=9]
 [ext_resource path="res://intro/stages_complete.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/ligthing/light.png" type="Texture" id=11]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=12]
@@ -257,6 +257,36 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 211, 38, 10, 20 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="TileSet" id=66]
+0/name = "path_arrow.tres 0"
+0/texture = ExtResource( 9 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -1, -1, 0, 0 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "path_arrow.tres 1"
+1/texture = ExtResource( 9 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 7, 7 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
@@ -936,6 +966,13 @@ tile_data = PoolIntArray( 327727, 0, 0, 327731, 1, 0 )
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 146, 110 )
 
+[node name="path_arrow" type="TileMap" parent="YSort"]
+z_index = 1
+tile_set = SubResource( 66 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 3801350, 1, 0, 11141276, 1, 0, 13041812, 0, 0, 13172886, 0, 0 )
+
 [node name="objects" type="YSort" parent="YSort"]
 
 [node name="TileMap3" type="TileMap" parent="YSort/objects"]
@@ -947,9 +984,6 @@ format = 1
 tile_data = PoolIntArray( 196625, 12, 0, 262151, 0, 0, 262170, 27, 0, 262174, 28, 0, 262189, 22, 0, 262195, 18, 0, 327691, 16, 0, 393255, 8, 0, 458762, 25, 0, 458789, 5, 0, 524299, 7, 0, 524322, 20, 0, 524332, 17, 0, 589863, 21, 0, 786486, 24, 0 )
 
 [node name="people" type="YSort" parent="YSort"]
-
-[node name="merricks2" parent="YSort/people" instance=ExtResource( 9 )]
-position = Vector2( 140, 84 )
 
 [node name="lighting" type="YSort" parent="YSort"]
 
@@ -964,10 +998,10 @@ energy = 0.8
 color = Color( 0.160784, 0.145098, 0.145098, 1 )
 
 [node name="orphanage_hallway_night_pos" type="Position2D" parent="."]
-position = Vector2( 159, 161 )
+position = Vector2( 160, 155 )
 
 [node name="orphanage_hallway_night" parent="." instance=ExtResource( 8 )]
-position = Vector2( 160, 186 )
+position = Vector2( 160, 175 )
 rotation = 1.57079
 
 [node name="orphanage_basement_night_pos" type="Position2D" parent="."]

@@ -38,7 +38,25 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Use your ListKey magic here and find the correct index."
+			"text": "Oh thankfully you're here. Did the guards saw you?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oum."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "By the way this door are locked can you open it?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'll gonna try"
 		},
 		{
 			"event_id": "dialogic_022",

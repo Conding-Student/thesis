@@ -93,4 +93,5 @@ color = Color( 0, 0, 0, 1 )
 anims/Fadein = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="Skip_button" to="." method="_on_Skip_button_pressed"]

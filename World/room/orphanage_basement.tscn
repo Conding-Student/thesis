@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=10]
 [ext_resource path="res://NPC/Merrick.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/chest_lock.tscn" type="PackedScene" id=12]
-[ext_resource path="res://intro/stages_complete.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=15]
 
@@ -508,8 +507,6 @@ rotation = 3.14159
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="stages_comeplete" parent="." instance=ExtResource( 13 )]
 
 [node name="orphanage_office" parent="." instance=ExtResource( 4 )]
 position = Vector2( 250, 61 )

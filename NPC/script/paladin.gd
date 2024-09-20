@@ -8,7 +8,7 @@ func _ready():
 
 
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if Global2.stage2_trigger == true:
+	if Global2.is_badge_complete("badge1") == true:
 		dialogue_button.visible = true
 		#print(Global.stage1)
 	else:

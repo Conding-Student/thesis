@@ -58,6 +58,7 @@ func resume_the_game() -> void:
 	pause_ui.hide()
 
 func _on_pause_game_pressed():
+	
 	get_tree().paused = true
 	topui.visible = false
 	player_controller.visible = false

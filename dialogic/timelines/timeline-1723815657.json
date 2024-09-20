@@ -15,12 +15,16 @@
 			"text": "I thought I can never open this."
 		},
 		{
-			"emit_signal": "stage3_done",
+			"emit_signal": "next_map",
 			"event_id": "dialogic_040"
 		},
 		{
-			"change_scene": "res://intro/Evaluation.tscn",
+			"change_scene": "res://intro/evaluation.tscn",
 			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {

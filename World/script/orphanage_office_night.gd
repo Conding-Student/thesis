@@ -7,7 +7,6 @@ onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as 
 onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var player_controls = $YSort/Player/Controller
-onready var interaction_button = $YSort/people/merricks2/TextureButton
 onready var place_name = $TopUi/Label2
 
 var current_map ="res://World/room/night/orphanage_office_night.tscn"
@@ -19,7 +18,7 @@ func _ready():
 	set_overall_initial_position()
 	set_player_position()
 	resume.connect("pressed", self, "resume_the_game")
-	interaction_button.connect("pressed", self, "merrick2")
+	
 	Global.set_map(current_map)
 	place_name.text = "Orphanage Office"
 	
@@ -56,9 +55,6 @@ func resume_the_game() -> void:
 	topui.visible = true
 	player_controller.visible = true
 	pause_ui.hide()
-
-func _process(_delta):
-	Global.set_player_current_position(player.global_position)
 	
 func _on_pause_game_pressed():
 	get_tree().paused = true
@@ -70,17 +66,4 @@ func after_tutorial_headings(timelinename):
 	topui.show()
 	player_controller.show()
 	
-func merrick2():
-	player_controls.visible = false
-	interaction_button.visible = false
-	
-	Global.set_map(current_map)
-	var new_dialog = Dialogic.start('stage2p3')
-	add_child(new_dialog)
-	new_dialog.connect("timeline_end", self, "after_question_no")
-
-func after_question_no(timelineend):
-	player_controls.visible = true
-	#print(Dialogic.get_variable("talk_to_people"))
-	#pass
 

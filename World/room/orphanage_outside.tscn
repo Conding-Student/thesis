@@ -593,6 +593,7 @@ position = Vector2( 320, 224 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 105, 71 )
+z_index = 2
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 position = Vector2( -95, 1 )

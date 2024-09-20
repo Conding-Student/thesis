@@ -5,6 +5,9 @@ var stats = PlayerStats  # Reference to the player's stats
 
 var current_enemy_health = 0  # Variable to track the current health of the enemy
 
+#accesing badges ,label value
+onready var badge = $badges
+onready var label = $Label
 # Questions
 onready var question1 = $Question/q1
 onready var question2 = $Question/q2
@@ -216,15 +219,16 @@ func end(timelineend):
 func value_activating(param):
 	if param == "stage2_done" && PlayerStats.health != 0:
 		Global2.after_quiz = Dialogic.set_variable("after_quiz",1)
-		Global2.stage2_complete = true
-		Global2.stage2_trigger = false
-		Global2.stage3_trigger = true
-		Global2.badge2 = true
+		Global2.complete_badge("badge2")
+		badge.update_badges()
+		label.updating_label()
 		#print("trigger")
-	if param == "stage3_done": # SPACE FOR STAGE 3 DONE, TRIGGER IN DIALOGIC VALEN.
-		
-		pass
-		#print("trigger")
+	elif param == "next_map": # SPACE FOR STAGE 3 DONE, TRIGGER IN DIALOGIC VALEN.
+		Global.set_map("res://levels/stage_3_night/manor_inside_night.tscn")
+	elif param == "Open_door":
+		Global.set_door_state("door1", true)
+		Global2.complete_badge("badge3")
+		badge.update_badges()
 # Reset all relevant Global2 properties to false (used to avoid dialogue errors)
 
 
