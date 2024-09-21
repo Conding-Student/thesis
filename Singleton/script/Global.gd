@@ -14,6 +14,9 @@ var door_activated = false
 var load_game_position = false
 var from_level
 
+#came from sequence scene trigger
+var from_sequence = false
+
 # Settings
 var mute_trigger = false
 

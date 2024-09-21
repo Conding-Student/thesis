@@ -525,6 +525,12 @@ frame = 40
 position = Vector2( 298, 101 )
 z_index = 2
 
+[node name="Light2D" type="Light2D" parent="YSort/Player"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 2 )
+texture_scale = 0.5
+energy = 0.6
+
 [node name="YSort" type="YSort" parent="YSort"]
 
 [node name="Light2D" type="Light2D" parent="YSort/YSort"]

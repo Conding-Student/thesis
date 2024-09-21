@@ -15,10 +15,10 @@ onready var path_arrow = $YSort2/TileMap
 #2nd door
 onready var door2_image =$YSort/objects/door2 
 onready var door2_collision =$YSort/objects/door2/Area2D/CollisionShape2D
-onready var door2_collisionp =$YSort/objects/door2/CollisionPolygon2D
+onready var door2_solid_collision = $YSort/objects/door2/CollisionPolygon2D
 onready var open_door2 = $YSort/objects/open_door2
 onready var merrick = $YSort/YSort/Sprite2
-onready var path_arrow2 = $YSort2/TileMap2 
+onready var path_arrow2 = $YSort2/door_arrow 
 #chest
 onready var chest_closed = $YSort/objects/chess
 onready var chest_collision = $YSort/objects/chess/Area2D/CollisionShape2D
@@ -26,7 +26,17 @@ onready var chest_open = $YSort/objects/chess_open
 onready var chest_arrow = $YSort2/chest_arrow
 var current_map = "res://levels/stage_3_night/manor_2ndfloor_night.tscn"
 var starting_player_position = Vector2 (528, 395)
+#position retain per door engagement
 var state
+
+#door escape
+onready var escape_arrow = $YSort2/escape_arrow
+onready var escape_door = $YSort/objects/door3
+onready var escape_door_solid_collision = $YSort/objects/door3/CollisionPolygon2D
+onready var escape_door_collision = $YSort/objects/door3/Area2D/CollisionShape2D
+onready var escape_door_open = $YSort/objects/open_door3
+
+
 
 func _ready():
 	state = Global2.state
@@ -38,8 +48,8 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
 	first_dialogue()
-	checking_all_doors()
-	doors()
+	checking_all_door_state()
+	doors_state_after_quest()
 	
 	
 
@@ -93,20 +103,29 @@ func first_dialogue():
 func interaction_endpoint(timelineend):
 	player_controller.show()
 
-func checking_all_doors():
+func checking_all_door_state():
+	if Global.get_door_state("escape_door"):
+		#pass
+		escape_arrow.hide()
+		escape_door.hide()
+		escape_door_collision.disabled = true
+		escape_door_solid_collision.disabled = true
+		escape_door_open.show()
 	if Global.get_door_state("chest1"):
+		#pass
 		chest_arrow.hide()
-		chest_closed.show()
-		chest_open.hide()
+		chest_closed.hide()
+		chest_open.show()
 		chest_collision.disabled = true
-		player_controller.hide()
 	if Global.get_door_state("door2"):
+		#pass
 		door2_image.hide()
+		door2_solid_collision.disabled = true
 		door2_collision.disabled = true
-		door2_collisionp.disabled = true
 		open_door2.show()
 		merrick.hide()
 		path_arrow2.hide()
+		
 	if Global.get_door_state("door1"):
 		door1_image.hide()
 		door1_collision.disabled = true
@@ -114,12 +133,20 @@ func checking_all_doors():
 		open_door1.show()
 		meerick.hide()
 		path_arrow.hide()
-func doors():
+func doors_state_after_quest():
 	match state:
+		"escape_door":
+			print("na trigger na")
+			escape_arrow.hide()
+			escape_door.hide()
+			escape_door_collision.disabled = true
+			escape_door_solid_collision.disabled = true
+			escape_door_open.show()
 		"door2":
+			#pass
 			door2_image.hide()
 			door2_collision.disabled = true
-			door2_collisionp.disabled = true
+			door2_solid_collision.disabled = true
 			open_door2.show()
 			merrick.hide()
 			path_arrow2.hide()
@@ -139,15 +166,16 @@ func doors():
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, "interaction_endpoint")
 		"chest1":
+			#pass
 			chest_arrow.hide()
-			chest_closed.show()
-			chest_open.hide()
+			escape_arrow.show()
+			chest_closed.hide()
+			chest_open.show()
 			chest_collision.disabled = true
 			player_controller.hide()
 			var new_dialog = Dialogic.start('stage4p3')
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, "interaction_endpoint")
-
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 		Global2.set_question(0,"In a flowchart, what does a diamond shape usually represent?")
 		Global2.set_answers(0,"reading")
@@ -162,6 +190,7 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 
 		Global2.dialogue_name = "stage3React2"
 		Global2.correct_answer_ch1_4 = true
+		Global.load_game_position = true
 		
 		SceneTransition.change_scene("res://intro/question_panel.tscn")
 
@@ -180,7 +209,11 @@ func _on_Area2D_body_shape_entered_door2(body_rid, body, body_shape_index, local
 	Global2.set_feedback(3, "wrong this was out of the question. There is no D or C")
 	Global2.correct_answer_ch1_3 = true
 	Global2.dialogue_name = "stage4door1"
-	SceneTransition.change_scene("res://intro/question_panel.tscn")
+	Global.load_game_position = true
+	player_controller.hide()
+	var new_dialog = Dialogic.start('stage4p0')
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "interaction_endpoint")
 
 
 func _on_Area2D_body_shape_entered_chess(body_rid, body, body_shape_index, local_shape_index):
@@ -195,8 +228,23 @@ func _on_Area2D_body_shape_entered_chess(body_rid, body, body_shape_index, local
 	Global2.set_feedback(2, "Wrong! this will only check the locked")
 	Global2.set_feedback(3, "wrong this was out of the question.")
 	Global2.correct_answer_ch1_1 = true
+	Global.load_game_position = true
 	Global2.dialogue_name = "stage4chest"
 	player_controller.hide()
 	var new_dialog = Dialogic.start('stage4p2')
 	add_child(new_dialog)
-	new_dialog.connect("timeline_end", self, "interaction_endpoint")
+	new_dialog.connect("timeline_end", self, "interaction_endpoint_question")
+
+func interaction_endpoint_question():
+	SceneTransition.change_scene("res://intro/question_panel.tscn")
+
+
+func _on_Area2D_body_shape_entered_escape(body_rid, body, body_shape_index, local_shape_index):
+	Global2.set_question(0,"Input the addition of a and b")
+	Global2.set_answers(0, "a + b")
+	Global2.set_feedback(0, "remember to put spaces also it is case sensitive. If 'a' is small it should be small")
+	Global2.dialogue_name = "stage5p2"
+	Global2.set_picture_path(0,"res://intro/picture/question/stage5_sequence.png")
+	SceneTransition.change_scene("res://intro/sequencing.tscn")
+	Global.load_game_position = true
+	

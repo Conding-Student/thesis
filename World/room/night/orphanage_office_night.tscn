@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=1]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=7]
 [ext_resource path="res://World/room/night_room_entrance.tscn" type="PackedScene" id=8]
 [ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=9]
-[ext_resource path="res://intro/stages_complete.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/ligthing/light.png" type="Texture" id=11]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=12]
 
@@ -991,8 +990,6 @@ tile_data = PoolIntArray( 196625, 12, 0, 262151, 0, 0, 262170, 27, 0, 262174, 28
 position = Vector2( 154, 102 )
 texture = ExtResource( 11 )
 energy = 0.8
-
-[node name="stages_comeplete" parent="." instance=ExtResource( 10 )]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.160784, 0.145098, 0.145098, 1 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=10]
 [ext_resource path="res://World/ligthing/light.png" type="Texture" id=11]
 [ext_resource path="res://World/chest_lock.tscn" type="PackedScene" id=12]
-[ext_resource path="res://intro/stages_complete.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
@@ -471,8 +470,6 @@ scale = Vector2( 1.58984, 1 )
 texture = ExtResource( 11 )
 texture_scale = 0.5
 energy = 0.8
-
-[node name="stages_comeplete" parent="." instance=ExtResource( 13 )]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.160784, 0.145098, 0.145098, 1 )

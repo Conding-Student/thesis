@@ -1,0 +1,605 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Kenney Future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://intro/picture/spellbook/Untitled.png" type="Texture" id=3]
+[ext_resource path="res://intro/script/evaluation_sequence.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 6
+font_data = ExtResource( 1 )
+
+[node name="evaluation_sequence" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="methods" type="RichTextLabel" parent="."]
+margin_left = 14.0
+margin_top = 7.0
+margin_right = 106.0
+margin_bottom = 42.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "
+Evaluation"
+scroll_active = false
+
+[node name="Control" type="Control" parent="."]
+margin_left = 3.0
+margin_top = 57.0
+margin_right = 103.0
+margin_bottom = 149.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -16.0
+margin_right = 2.0
+margin_bottom = 12.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+margin_right = 100.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Question1" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 15.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question 1"
+
+[node name="Question2" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 19.0
+margin_right = 100.0
+margin_bottom = 34.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question2"
+
+[node name="Question3" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 38.0
+margin_right = 100.0
+margin_bottom = 53.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question3"
+
+[node name="Question4" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 57.0
+margin_right = 100.0
+margin_bottom = 72.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question4"
+
+[node name="Question5" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 91.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Question5"
+
+[node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 95.0
+margin_right = 100.0
+margin_bottom = 95.0
+
+[node name="Control2" type="Control" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 99.0
+margin_right = 100.0
+margin_bottom = 99.0
+
+[node name="next_stage" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+margin_top = 103.0
+margin_right = 100.0
+margin_bottom = 118.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+text = "Next stage"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 108.0
+margin_top = 15.0
+margin_right = 313.0
+margin_bottom = 172.0
+
+[node name="question1" type="ScrollContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question1"]
+margin_right = 191.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question1/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question1/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 6 )
+text = "question"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 24.0
+
+[node name="space2" type="Control" parent="PanelContainer/question1/info"]
+margin_top = 28.0
+margin_right = 191.0
+margin_bottom = 28.0
+
+[node name="correction" type="VBoxContainer" parent="PanelContainer/question1/info"]
+margin_top = 32.0
+margin_right = 191.0
+margin_bottom = 52.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question1/info/correction"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Right answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question1/info/correction"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="answer" type="VBoxContainer" parent="PanelContainer/question1/info"]
+margin_top = 56.0
+margin_right = 191.0
+margin_bottom = 100.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question1/info/answer"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question1/info/answer"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question1/info/answer"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question1/info/answer"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "feedback"
+autowrap = true
+
+[node name="question2" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question2"]
+margin_right = 191.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question2/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question2/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 6 )
+text = "question"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 24.0
+
+[node name="space2" type="Control" parent="PanelContainer/question2/info"]
+margin_top = 28.0
+margin_right = 191.0
+margin_bottom = 28.0
+
+[node name="correction" type="VBoxContainer" parent="PanelContainer/question2/info"]
+margin_top = 32.0
+margin_right = 191.0
+margin_bottom = 52.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question2/info/correction"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Right answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question2/info/correction"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="answer" type="VBoxContainer" parent="PanelContainer/question2/info"]
+margin_top = 56.0
+margin_right = 191.0
+margin_bottom = 100.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question2/info/answer"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question2/info/answer"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question2/info/answer"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question2/info/answer"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "feedback"
+autowrap = true
+
+[node name="question3" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question3"]
+margin_right = 191.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question3/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question3/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 6 )
+text = "question"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 24.0
+
+[node name="space2" type="Control" parent="PanelContainer/question3/info"]
+margin_top = 28.0
+margin_right = 191.0
+margin_bottom = 28.0
+
+[node name="correction" type="VBoxContainer" parent="PanelContainer/question3/info"]
+margin_top = 32.0
+margin_right = 191.0
+margin_bottom = 52.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question3/info/correction"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Right answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question3/info/correction"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="answer" type="VBoxContainer" parent="PanelContainer/question3/info"]
+margin_top = 56.0
+margin_right = 191.0
+margin_bottom = 100.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question3/info/answer"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question3/info/answer"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question3/info/answer"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question3/info/answer"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "feedback"
+autowrap = true
+
+[node name="question4" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question4"]
+margin_right = 191.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question4/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question4/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 6 )
+text = "question"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 24.0
+
+[node name="space2" type="Control" parent="PanelContainer/question4/info"]
+margin_top = 28.0
+margin_right = 191.0
+margin_bottom = 28.0
+
+[node name="correction" type="VBoxContainer" parent="PanelContainer/question4/info"]
+margin_top = 32.0
+margin_right = 191.0
+margin_bottom = 52.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question4/info/correction"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Right answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question4/info/correction"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="answer" type="VBoxContainer" parent="PanelContainer/question4/info"]
+margin_top = 56.0
+margin_right = 191.0
+margin_bottom = 100.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question4/info/answer"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question4/info/answer"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question4/info/answer"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question4/info/answer"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "feedback"
+autowrap = true
+
+[node name="question5" type="ScrollContainer" parent="PanelContainer"]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 198.0
+margin_bottom = 150.0
+
+[node name="info" type="VBoxContainer" parent="PanelContainer/question5"]
+margin_right = 191.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="question_label" type="Label" parent="PanelContainer/question5/info"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.101961, 0.85098, 0.8, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Question:"
+
+[node name="question" type="Label" parent="PanelContainer/question5/info"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 6 )
+text = "question"
+autowrap = true
+
+[node name="space" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 24.0
+
+[node name="space2" type="Control" parent="PanelContainer/question5/info"]
+margin_top = 28.0
+margin_right = 191.0
+margin_bottom = 28.0
+
+[node name="correction" type="VBoxContainer" parent="PanelContainer/question5/info"]
+margin_top = 32.0
+margin_right = 191.0
+margin_bottom = 52.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question5/info/correction"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Right answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question5/info/correction"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="answer" type="VBoxContainer" parent="PanelContainer/question5/info"]
+margin_top = 56.0
+margin_right = 191.0
+margin_bottom = 100.0
+
+[node name="answer_label" type="Label" parent="PanelContainer/question5/info/answer"]
+margin_right = 191.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.941176, 0.870588, 0.321569, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Answer:"
+
+[node name="answer" type="Label" parent="PanelContainer/question5/info/answer"]
+margin_top = 12.0
+margin_right = 191.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+text = "answer"
+autowrap = true
+
+[node name="feedback_label" type="Label" parent="PanelContainer/question5/info/answer"]
+margin_top = 24.0
+margin_right = 191.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.92549, 0.588235, 0.196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Feedback:"
+
+[node name="feedback" type="Label" parent="PanelContainer/question5/info/answer"]
+margin_top = 36.0
+margin_right = 191.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "feedback"
+autowrap = true
+
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question1" to="." method="_on_Question1_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question2" to="." method="_on_Question2_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question3" to="." method="_on_Question3_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question4" to="." method="_on_Question4_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/Question5" to="." method="_on_Question5_pressed"]
+[connection signal="pressed" from="Control/ScrollContainer/VBoxContainer/next_stage" to="." method="_on_next_stage_pressed"]

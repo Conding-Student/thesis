@@ -1,77 +1,170 @@
 extends Control
 
+#ad ons update
+onready var stage_label_update = $Label
+onready var badges_update = $badges
+
+signal textbox_closed  # Signal emitted when the textbox is closed
+var stats = PlayerStats
+
+onready var hurt = $hurt
+signal no_health
+
+# Global node references
 onready var feedback_textbox = $textbox
 onready var feedback_label = $textbox/Label
 onready var feedback_panel = $textbox  # Assuming the panel is the same as `feedback_textbox`
 
-onready var instruction_panel = $Question
+onready var instruction_panel_orig = $Question
+onready var instruction_panel = $Question/q1
 onready var action_panel = $action_panel
+onready var player_panel = $player_panel
 
-onready var box1 = $action_panel/user_input1/LineEdit
-onready var box2 = $action_panel/user_input1/LineEdit2
-onready var box3 = $action_panel/user_input1/LineEdit3
-onready var box4 = $action_panel/user_input1/LineEdit4
-onready var box5 = $action_panel/user_input1/LineEdit5
+onready var textfield1 = $action_panel/user_input1/LineEdit
+onready var textfield2 = $action_panel/user_input1/LineEdit2
+onready var textfield3 = $action_panel/user_input1/LineEdit3
+onready var textfield4 = $action_panel/user_input1/LineEdit4
+onready var textfield5 = $action_panel/user_input1/LineEdit5
 onready var submit_button = $Button
 
-signal textbox_closed  # Signal emitted when the textbox is closed
-signal no_health  # Signal emitted when player health reaches zero
+# Background picture
+onready var bg_pic = $arena
 
-onready var hurt = $hurt # Player
+# Tracking the current question index
+var current_question_index = 0
 
-var stats = PlayerStats
+#hide everything
+func hide_everything():
+	bg_pic.hide()
+	instruction_panel.hide()
+	action_panel.hide()
+	feedback_panel.hide()
+	player_panel.hide()
+	instruction_panel_orig.hide()
 
-# Dictionary to store question, correct answers, and feedback
-var question_data = {
-	"question": "Use Listkey magic to open the door. Use the below formula to create Listkey magic. Magic name is 'key' and use 'int' datatype(T).",
-	"correct_answers": {
-		"box1": "IList<int>",
-		"box2": "key",
-		"box3": "=",
-		"box4": "new List<int>",
-		"box5": "();"
-	},
-	"feedback": {
-		"box1": "Wrong box1: It is case sensitive, missing letters, or wrong datatype.\n",
-		"box2": "Wrong box2: It is case sensitive or maybe missing letters.\n",
-		"box3": "Wrong box3: Missing '='.\n",
-		"box4": "Wrong box4: It is case sensitive, missing letters, space, or wrong datatype.\n",
-		"box5": "Wrong box5: Missing symbol either (, ), or ;\n"
-	}
-}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# Connect the text_changed signal for each LineEdit to the check_inputs function
-	box1.connect("text_changed", self, "_on_text_changed")
-	box2.connect("text_changed", self, "_on_text_changed")
-	box3.connect("text_changed", self, "_on_text_changed")
-	box4.connect("text_changed", self, "_on_text_changed")
-	box5.connect("text_changed", self, "_on_text_changed")
-	setting_char_limit()
-
-func _on_text_changed(new_text):
-	# Check if all LineEdits have a value
-	submit_button.visible = box1.text.strip_edges() != "" and box2.text.strip_edges() != "" and box3.text.strip_edges() != "" and box4.text.strip_edges() != "" and box5.text.strip_edges() != ""
-
-func setting_char_limit():
-	box1.max_length = 10
-	box2.max_length = 3
-	box3.max_length = 1
-	box4.max_length = 14
-	box5.max_length = 4
+	# Connect the player's no_health signal to the _on_no_health function
+	stats.connect("no_health", self, "_on_no_health")
 	
-func display_feedback(feedback):
-	feedback_label.text = feedback
-	adjust_feedback_panel_size()
-	feedback_textbox.show()
+	# Hide the button initially
+	submit_button.hide()
+	
+	# Connect the text_changed signals of all textfields to the same function
+	textfield1.connect("text_changed", self, "_on_textfield_text_changed")
+	textfield2.connect("text_changed", self, "_on_textfield_text_changed")
+	textfield3.connect("text_changed", self, "_on_textfield_text_changed")
+	textfield4.connect("text_changed", self, "_on_textfield_text_changed")
+	textfield5.connect("text_changed", self, "_on_textfield_text_changed")
+	
+	# Load the first question, feedback, and background when the scene loads
+	load_question(0)
 
-func adjust_feedback_panel_size():
-	# Adjust the panel size based on the label's text
-	feedback_label.rect_min_size = Vector2(feedback_label.rect_min_size.x, feedback_label.get_line_height() * feedback_label.get_line_count() + 20)  # Add padding to the height
+# Function to load questions, feedback, and images based on the index
+func load_question(index: int):
+	current_question_index = index  # Update the current question index
+	
+	var question = Global2.evaluations["questions"][index]
+	
+	# If the question is empty, hide the textfields and submit button
+	if question.strip_edges() == "":
+		hide_all_textfields()
+		submit_button.hide()
+		hide_everything()
+		var new_dialog = Dialogic.start(Global2.dialogue_name)
+		add_child(new_dialog)
+		new_dialog.connect("dialogic_signal", self, "value_activating")
+		new_dialog.connect("timeline_end", self, "end")
+	else:
+		show_only_relevant_textfield(index)
+		instruction_panel.text = question
+	
+	# Update the background image
+	bg_pic.texture = load(Global2.evaluations["pictures_path"][index])
+	
+	# Update the feedback textbox and label with the corresponding feedback
+	feedback_label.text = Global2.evaluations["feedback"][index]
 
-	# Adjust the feedback panel to fit the label's new size
-	feedback_panel.rect_min_size = Vector2(feedback_panel.rect_min_size.x, feedback_label.rect_min_size.y + 20)  # Add some padding to the panel as well
+#trigger dialogue
+func end(timelineend):
+	pass
+
+func value_activating(param):
+	if param == "stage5done":
+		Global2.complete_badge("badge5")
+		Global2.state = "escape_door"
+		Global.from_sequence = true
+		badges_update.update_badges()
+		print("emit signal trigger okay toh")
+		SceneTransition.change_scene("res://intro/stages_complete.tscn")
+		
+# Hide all textfields
+func hide_all_textfields():
+	textfield1.hide()
+	textfield2.hide()
+	textfield3.hide()
+	textfield4.hide()
+	textfield5.hide()
+
+# Show only the relevant textfield based on the question index
+func show_only_relevant_textfield(index: int):
+	hide_all_textfields()
+	match index:
+		0:
+			textfield1.show()
+		1:
+			textfield2.show()
+		2:
+			textfield3.show()
+		3:
+			textfield4.show()
+		4:
+			textfield5.show()
+
+# Function that gets called when any textfield's text changes
+func _on_textfield_text_changed(new_text):
+	if textfield1.text.strip_edges() != "" or textfield2.text.strip_edges() != "" or textfield3.text.strip_edges() != "" or textfield4.text.strip_edges() != "" or textfield5.text.strip_edges() != "":
+		submit_button.show()  # Show the button if any field has text
+	else:
+		submit_button.hide()  # Hide the button if all fields are empty
+
+# Check the answer and provide feedback
+func check_answer():
+	var correct_answer = Global2.evaluations["answers"][current_question_index]
+	var user_answer = get_relevant_user_answer(current_question_index)
+	var wrong_feedback = Global2.evaluations["feedback"][current_question_index]
+
+	if user_answer == correct_answer:
+		# First handle heart feedback
+		yield(need_hearts(), "completed")  # Wait for heart feedback to finish
+		feedback_label.text = "Correct"  # Now show correct feedback
+
+		if current_question_index + 1 < Global2.evaluations["questions"].size():
+			load_question(current_question_index + 1)
+		else:
+			instruction_panel.text = "All questions completed!"
+	else:
+		Global2.interaction_history["interactions"][current_question_index] = user_answer
+		feedback_orig(wrong_feedback)
+		Global2.set_trigger_answer(0, current_question_index, true)
+		enemy_dialogue(wrong_feedback)  # Trigger shaking and heart loss on wrong answer
+
+# Get the relevant user input based on the current question
+func get_relevant_user_answer(index: int) -> String:
+	match index:
+		0:
+			return textfield1.text
+		1:
+			return textfield2.text
+		2:
+			return textfield3.text
+		3:
+			return textfield4.text
+		4:
+			return textfield5.text
+		_:
+			return ""
 
 # Handle screen touch input to hide the textbox and emit the textbox_closed signal
 func _input(event):
@@ -79,75 +172,58 @@ func _input(event):
 		$textbox.hide()
 		emit_signal("textbox_closed")
 
-func q_and_a_hide():
-	instruction_panel.hide()
-	action_panel.hide()
+# Handle the player's no_health signal
+func _on_no_health():
+	stats.health = 5  # Reset player's health
+	var result = get_tree().change_scene("res://intro/Game_over.tscn")  # Change to Game Over scene
+	if result != OK:
+		print("failed to load " + result)
 
 func q_and_a_show():
-	instruction_panel.show()
-	action_panel.show()
+	$action_panel.show()
+	$Question.show()
+	submit_button.disabled = false
+	submit_button.visible = false
 
-func hurt_effect():
-	q_and_a_hide()  # Hide Q&A panel
+# Hide the question and answer panel
+func q_and_a_hide():
+	$action_panel.hide()
+	$Question.hide()
+	submit_button.visible = true
+	submit_button.disabled = true
+
+# Show feedback when the player enters a wrong answer, triggers screen shake and heart loss
+func enemy_dialogue(feedback):
+	q_and_a_hide()
+	display_text(feedback)
+	yield(self, "textbox_closed")
 	$AnimationPlayer.play("shake")
 	hurt.play()
 	yield($AnimationPlayer, "animation_finished")
-	stats.health = max(0, stats.health - 1)  # Decrease player health
-	
-	if stats.health == 0:
+	stats.health = max(0, stats.health - 1)  # Decrease health
+	if stats.health <= 0:
 		emit_signal("no_health")
+	q_and_a_show()
 
-func _on_Button_pressed():
-	submit_button.hide()
-
-	# Concatenate all the input answers
-	var user_answer = box1.text.strip_edges() + " " + box2.text.strip_edges() + " " + box3.text.strip_edges() + " " + box4.text.strip_edges() + " " + box5.text.strip_edges()
-	
-	# The correct answer
-	var correct_answer = "IList<int> key = new List<int> ();"
-
-	# Initialize feedback
-	var feedback = ""
-	var correct = true
-	
-	Global2.set_question(0, question_data["question"])
-	
-	# Check each box and accumulate errors using the dictionary
-	if box1.text.strip_edges() != question_data["correct_answers"]["box1"]:
-		Global2.set_trigger_answer(0, 0, true)
-		correct = false
-		feedback += question_data["feedback"]["box1"]
-	if box2.text.strip_edges() != question_data["correct_answers"]["box2"]:
-		Global2.set_trigger_answer(0, 0, true)
-		correct = false
-		feedback += question_data["feedback"]["box2"]
-	if box3.text.strip_edges() != question_data["correct_answers"]["box3"]:
-		Global2.set_trigger_answer(0, 0, true)
-		correct = false
-		feedback += question_data["feedback"]["box3"]
-	if box4.text.strip_edges() != question_data["correct_answers"]["box4"]:
-		Global2.set_trigger_answer(0, 0, true)
-		correct = false
-		feedback += question_data["feedback"]["box4"]
-	if box5.text.strip_edges() != question_data["correct_answers"]["box5"]:
-		correct = false
-		Global2.set_trigger_answer(0, 0, true)
-		feedback += question_data["feedback"]["box5"]
-		
-	# Compare the concatenated user answer to the correct answer
-	if user_answer != correct_answer:
-		correct = false
-		feedback += "\nConcatenated answer is incorrect.\n"
-		feedback += "Expected: " + correct_answer + "\n"
-		feedback += "Received: " + user_answer + "\n"
-		Global2.set_answers(0, user_answer)
-		Global2.set_feedback(0, feedback)
-		
-	if correct:
-		display_feedback("All boxes correct!")
-		SceneTransition.change_scene("res://intro/Evaluation.tscn")
+# Check if the player needs more health (hearts)
+func need_hearts():
+	if stats.health == 5:
+		display_text("No need to gain hearts!")
 	else:
-		hurt_effect()
-		display_feedback(feedback)
-		yield(self, "textbox_closed")
-		q_and_a_show()
+		stats.health = min(5, stats.health + 1)
+		display_text("You gained 1 heart!")
+	yield(self, "textbox_closed")  # Wait until the textbox is closed
+
+# Handle displaying the feedback text
+func display_text(text):
+	$textbox.show()
+	$textbox/Label.text = text
+
+# Original feedback function (no scene change)
+func feedback_orig(feedback):
+	display_text(feedback)
+	yield(self, "textbox_closed")
+
+# Button press handling
+func _on_Button_pressed():
+	check_answer()

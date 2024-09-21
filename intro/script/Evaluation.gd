@@ -121,7 +121,8 @@ func _ready():
 			question1_feedback4.text = Global2.get_feedback(3)
 	else:
 	# The question has not been set (is an empty string
-		print("Question at index", 0, "is still empty.")
+		#print("Question at index", 0, "is still empty.")
+		pass
 	#if question has been set for 1st and then so on
 	if Global2.evaluations["questions"][1] != "":
 		button2.disabled = false
@@ -144,7 +145,8 @@ func _ready():
 			question2_feedback4.text = Global2.get_feedback(7)
 	else:
 	# The question has not been set (is an empty string
-		print("Question at index", 0, "is still empty.")
+		#print("Question at index", 0, "is still empty.")
+		pass
 	if Global2.evaluations["questions"][2] != "":
 		button3.disabled = false
 		question3.text = Global2.get_question(2)
@@ -166,7 +168,8 @@ func _ready():
 			question3_feedback4.text = Global2.get_feedback(11)
 	else:
 	# The question has not been set (is an empty string
-		print("Question at index", 0, "is still empty.")
+		#print("Question at index", 0, "is still empty.")
+		pass
 	if Global2.evaluations["questions"][3] != "":
 		button4.disabled = false
 		question4.text = Global2.get_question(3)
@@ -188,7 +191,8 @@ func _ready():
 			question4_feedback4.text = Global2.get_feedback(15)
 	else:
 	# The question has not been set (is an empty string
-		print("Question at index", 0, "is still empty.")
+		#print("Question at index", 0, "is still empty.")
+		pass
 	if Global2.evaluations["questions"][4] != "":
 		button5.disabled = false
 		question5.text = Global2.get_question(4)
@@ -210,7 +214,8 @@ func _ready():
 			question5_feedback4.text = Global2.get_feedback(19)
 	else:
 	# The question has not been set (is an empty string
-		print("Question at index", 0, "is still empty.")
+		pass
+		#print("Question at index", 0, "is still empty.")
 
 func _on_Question1_pressed():
 	panel1.visible = true

@@ -61,10 +61,10 @@ var NRI =  ((post_final_score - pre_final_score) / MPI) * 100 # Need to be displ
 ######################### DYNAMIC QUIZ VALUES #######################
 # Evaluation: using dictionaries for questions, answers, and feedback
 var evaluations = {
-	"questions": ["", "", "", "","",""],
-	"answers": ["","", "","", "", "", "","",""
+	"questions": ["question1", "question2", "", "","",""],
+	"answers": ["answer1","answer2", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "", "",""],
-	"feedback": ["", "", "", "","", "", "", "","",""
+	"feedback": ["one", "two", "", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "",""],
 	"pictures_path": ["res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png"],
 }
@@ -118,6 +118,22 @@ func reset_scene_change_flags():
 	change_scene_on_question2 = false
 	change_scene_on_question3 = false
 	change_scene_on_question4 = false
+
+func get_answer_evaluation(question_index: int) -> String:
+	# Check if the index is valid
+	if question_index < 0 or question_index >= evaluations["answers"].size():
+		return "Invalid question index."
+	
+	# Retrieve and return the answer
+	return evaluations["answers"][question_index]
+
+func get_feedback_evaluation(question_index: int) -> String:
+	# Check if the index is valid
+	if question_index < 0 or question_index >= evaluations["feedback"].size():
+		return "Invalid question index."
+	
+	# Retrieve and return the feedback
+	return evaluations["feedback"][question_index]
 
 # Function to reset all values to false
 func reset_trigger_answers():
@@ -194,28 +210,19 @@ func reset_evaluations():
 ######################### Sequence logic ############################
 # Dictionary to store the history of interactions
 var interaction_history = {
-	"interactions": []
+	"interactions": ["","","","",""]
 }
 
-# Function to add an interaction to the history
-func add_interaction(question: String, user_answer: String, feedback: String, correct: bool) -> void:
-	interaction_history["interactions"].append({
-		"question": question,
-		"user_answer": user_answer,
-		"feedback": feedback,
-		"correct": correct
-	})
+# Reset function to clear all user interactions
+func reset_interactions():
+	for i in range(interaction_history["interactions"].size()):
+		interaction_history["interactions"][i] = ""
+	print("Interactions have been reset!")
+func get_answers_sequence(index: int) -> String:
+	return interaction_history["interactions"][index]
 
-# Function to get the entire interaction history
-func get_interaction_history() -> Dictionary:
-	return interaction_history
-
-# Function to clear the interaction history
-func clear_interaction_history() -> void:
-	interaction_history = {
-		"interactions": []
-	}
-
+func get_question_sequence(index: int) -> String:
+	return interaction_history["interactions"][index]
 ######################### Sequence Logic ############################
 
 #Questions

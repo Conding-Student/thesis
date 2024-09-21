@@ -236,6 +236,7 @@ func value_activating(param):
 	elif param == "chest_open":
 		Global.set_door_state("chest1", true)
 		Global2.state = "chest1"
+		Global2.complete_badge("badge4")
 	
 # Reset all relevant Global2 properties to false (used to avoid dialogue errors)
 

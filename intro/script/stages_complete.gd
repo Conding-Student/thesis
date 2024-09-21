@@ -24,6 +24,11 @@ func _ready():
 func check_badges():
 	#print("Checking badges... Current badge: ", current_badge)
 	
+	if Global2.is_badge_complete("badge5") and current_badge != 5:
+		#print("Badge 3 complete. Showing badge 3.")
+		show_badge(1)  # Display third badge (use correct index)
+		Global2.complete_badge("badge5")
+		
 	if Global2.is_badge_complete("badge1") and current_badge != 0:
 		#print("Badge 1 complete. Showing badge 1.")
 		show_badge(0)  # Display first badge
@@ -38,6 +43,10 @@ func check_badges():
 		#print("Badge 3 complete. Showing badge 3.")
 		show_badge(0)  # Display third badge (use correct index)
 		Global2.complete_badge("badge3")
+	if Global2.is_badge_complete("badge4") and current_badge != 4:
+		#print("Badge 3 complete. Showing badge 3.")
+		show_badge(0)  # Display third badge (use correct index)
+		Global2.complete_badge("badge4")
 
 # Call this function to show the badge and emit the signal
 func show_badge(index):
@@ -66,16 +75,19 @@ func show_badge(index):
 		emit_signal("achievement_completed", index)
 
 		# Start the timer to hide the badge after 3 seconds
-		print("Starting timer for 3 seconds.")
+		#print("Starting timer for 3 seconds.")
 		timer.start(3)
 
 func _on_Timer_timeout():
-	print("Timer timeout reached. Fading out badge.")
+	#print("Timer timeout reached. Fading out badge.")
 	
 	# Play the fade-out animation and hide the badge
 	animation.play("fade_out")
-	SceneTransition.change_scene("res://intro/evaluation.tscn")
+	if Global.from_sequence == true:
+		SceneTransition.change_scene("res://intro/evaluation_sequence.tscn")
+	else:
+		SceneTransition.change_scene("res://intro/evaluation.tscn")
 	if current_badge != -1:
-		print("Hiding badge: ", current_badge)
+		#print("Hiding badge: ", current_badge)
 		badge_display[current_badge].visible = false
 		current_badge = -1  # Reset the current badge

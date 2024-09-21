@@ -1,9 +1,15 @@
 {
 	"events": [
 		{
-			"animation": "1-fade_in.gd",
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes! I successfully open it Mr. merri..."
+		},
+		{
+			"animation": "instant_in.gd",
 			"animation_length": 1,
-			"animation_wait": true,
+			"animation_wait": false,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1722951024.json",
@@ -39,6 +45,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Intruders! in the master's quarters!!"
+		},
+		{
+			"emit_signal": "stage5done",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {
