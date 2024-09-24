@@ -6,7 +6,7 @@ onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
-onready var player_controls = $YSort/Player/Controller
+onready var player_controller_joystick = $YSort/Player/Controller/joystick
 onready var interaction_button = $YSort/people/merricks2/TextureButton
 onready var place_name = $TopUi/Label2
 var current_map = "res://World/room/orphanage_office.tscn"
@@ -69,9 +69,10 @@ func _on_pause_game_pressed():
 func after_tutorial_headings(timelinename):
 	topui.show()
 	player_controller.show()
-	
+
 func merrick2():
-	player_controls.visible = false
+	player_controller.visible = false
+	player_controller_joystick.disable_joystick()
 	interaction_button.visible = false
 	
 	Global.set_map(current_map)
@@ -80,9 +81,10 @@ func merrick2():
 	new_dialog.connect("timeline_end", self, "after_question_no")
 	new_dialog.connect("dialogic_signal", self, "yes")
 
-		
+
 func after_question_no(timelineend):
-	player_controls.visible = true
+	player_controller.visible = true
+	player_controller_joystick.enable_joystick()
 	
 
 #after asnwering yes

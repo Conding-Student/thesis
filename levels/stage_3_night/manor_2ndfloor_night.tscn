@@ -2778,15 +2778,6 @@ show_collision = true
 format = 1
 tile_data = PoolIntArray( -65528, 30, 0, -65527, 30, 1, 589849, 61, 0, 1114134, 1, 65536, 1114135, 1, 3 )
 
-[node name="wallOverlay1" type="TileMap" parent="YSort2"]
-position = Vector2( 0, 16 )
-z_index = 1
-tile_set = SubResource( 2 )
-cell_size = Vector2( 16, 16 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 131087, 4, 196609, 131088, 4, 196609, 131089, 4, 196609, 393219, 4, 196609, 393220, 4, 196609, 393221, 4, 196609, 393231, 4, 196609, 393232, 4, 196609, 393233, 4, 196609, 393236, 4, 196609, 393237, 4, 196609, 393238, 4, 196609, 655387, 4, 0, 720896, 4, 196609, 720897, 4, 196609, 720898, 4, 196609, 720899, 4, 196609, 720900, 4, 196609, 720901, 4, 196609, 720902, 4, 196609, 720903, 5, 1, 720904, 4, 196609, 720905, 4, 196609, 720906, 4, 196609, 720907, 4, 196609, 720908, 4, 196609, 720909, 4, 196609, 720910, 4, 196609, 720911, 4, 196609, 720912, 5, 1, 720913, 4, 196609, 720914, 4, 196609, 720915, 4, 196609, 720916, 4, 196609, 720917, 4, 196609, 720918, 4, 196609, 720919, 4, 196609, 720920, 4, 196609, 720921, 4, 196609 )
-
 [node name="wallOverlay2" type="TileMap" parent="YSort2"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
@@ -2842,6 +2833,15 @@ color = Color( 0.160784, 0.145098, 0.145098, 1 )
 
 [node name="YSort" type="YSort" parent="."]
 
+[node name="wallOverlay1" type="TileMap" parent="YSort"]
+position = Vector2( 0, 16 )
+z_index = 3
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 131087, 4, 196609, 131088, 4, 196609, 131089, 4, 196609, 393219, 4, 196609, 393220, 4, 196609, 393221, 4, 196609, 393231, 4, 196609, 393232, 4, 196609, 393233, 4, 196609, 393236, 4, 196609, 393237, 4, 196609, 393238, 4, 196609, 655387, 4, 0, 720896, 4, 196609, 720897, 4, 196609, 720898, 4, 196609, 720899, 4, 196609, 720900, 4, 196609, 720901, 4, 196609, 720902, 4, 196609, 720903, 5, 1, 720904, 4, 196609, 720905, 4, 196609, 720906, 4, 196609, 720907, 4, 196609, 720908, 4, 196609, 720909, 4, 196609, 720910, 4, 196609, 720911, 4, 196609, 720912, 5, 1, 720913, 4, 196609, 720914, 4, 196609, 720915, 4, 196609, 720916, 4, 196609, 720917, 4, 196609, 720918, 4, 196609, 720919, 4, 196609, 720920, 4, 196609, 720921, 4, 196609 )
+
 [node name="player" parent="YSort" instance=ExtResource( 23 )]
 position = Vector2( 401, 274 )
 z_index = 2
@@ -2853,7 +2853,6 @@ remote_path = NodePath("../../../Camera2D")
 position = Vector2( -2, 0 )
 texture = ExtResource( 25 )
 texture_scale = 0.5
-energy = 0.6
 
 [node name="objects" type="YSort" parent="YSort"]
 
@@ -2923,6 +2922,8 @@ scale = Vector2( 0.888888, 1.3 )
 texture = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" parent="YSort/objects/door2" index="1"]
+position = Vector2( 0, -17.8333 )
+scale = Vector2( 1, 2.08333 )
 polygon = PoolVector2Array( -8, 16, -8, 4, 8, 4, 8, 16 )
 
 [node name="Area2D" parent="YSort/objects/door2" index="2"]
@@ -2959,6 +2960,8 @@ texture = ExtResource( 4 )
 region_filter_clip = true
 
 [node name="CollisionPolygon2D" parent="YSort/objects/door3" index="1"]
+position = Vector2( 0, -13.125 )
+scale = Vector2( 1, 2.01923 )
 polygon = PoolVector2Array( -8, 0, 8, 0, 8, 13, -8, 13 )
 
 [node name="Area2D" parent="YSort/objects/door3" index="2"]

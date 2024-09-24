@@ -1,15 +1,16 @@
 extends Node2D
 
 onready var topui = $TopUi
-onready var player_controller = $Player/Controller
+onready var player_controller = $YSort/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var current_level = $TopUi/Label
-onready var player = $Player
-onready var player_controls = $Player/Controller
+onready var player = $YSort/Player
+onready var player_controls = $YSort/Player/Controller
 onready var place_name = $TopUi/Label2
 var current_map = "res://levels/stage_3_night/mageGuild_cellar_night.tscn"
 var starting_player_position = Vector2 (568, 428)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

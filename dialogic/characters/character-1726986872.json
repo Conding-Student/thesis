@@ -1,0 +1,21 @@
+{
+	"color": "#ffa900f6",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1726986872.json",
+	"mirror_portraits": false,
+	"name": "storyteller",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -20,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/storyteller_women_bg.png"
+		}
+	],
+	"scale": 20,
+	"theme": "theme-1726986938.cfg"
+}

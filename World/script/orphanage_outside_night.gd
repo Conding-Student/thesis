@@ -17,6 +17,9 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
 	place_name.text = "Orphanage Outside"
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/orphanageNight.wav")
+	Musicmanager.change_scene("orphanage_night")
+	
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)

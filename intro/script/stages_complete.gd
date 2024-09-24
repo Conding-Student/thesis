@@ -24,29 +24,13 @@ func _ready():
 func check_badges():
 	#print("Checking badges... Current badge: ", current_badge)
 	
-	if Global2.is_badge_complete("badge5") and current_badge != 5:
+	if Global2.is_badge_complete("badge5"):
 		#print("Badge 3 complete. Showing badge 3.")
 		show_badge(1)  # Display third badge (use correct index)
 		Global2.complete_badge("badge5")
-		
-	if Global2.is_badge_complete("badge1") and current_badge != 0:
-		#print("Badge 1 complete. Showing badge 1.")
+	else:
 		show_badge(0)  # Display first badge
-		Global2.complete_badge("badge1")
-		
-	if Global2.is_badge_complete("badge2") and current_badge != 1:
-		#print("Badge 2 complete. Showing badge 2.")
-		show_badge(0)  # Display second badge (use correct index)
-		Global2.complete_badge("badge2")
-		
-	if Global2.is_badge_complete("badge3") and current_badge != 2:
-		#print("Badge 3 complete. Showing badge 3.")
-		show_badge(0)  # Display third badge (use correct index)
-		Global2.complete_badge("badge3")
-	if Global2.is_badge_complete("badge4") and current_badge != 4:
-		#print("Badge 3 complete. Showing badge 3.")
-		show_badge(0)  # Display third badge (use correct index)
-		Global2.complete_badge("badge4")
+		#Global2.complete_badge("badge1")
 
 # Call this function to show the badge and emit the signal
 func show_badge(index):

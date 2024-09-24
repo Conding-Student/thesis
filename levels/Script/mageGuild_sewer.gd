@@ -1,13 +1,13 @@
 extends Node2D
 
 onready var topui = $TopUi
-onready var player_controller = $Player/Controller
+onready var player_controller = $YSort/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var current_level = $TopUi/Label
-onready var player = $Player
-onready var player_controls = $Player/Controller
-onready var interaction_button = $objects/door/TextureButton
+onready var player = $YSort/Player
+onready var player_controls = $YSort/Player/Controller
+#onready var interaction_button = $objects/door/TextureButton
 onready var place_name = $TopUi/Label2
 var current_map = "res://levels/stage_3_night/mageGuild_sewer_night.tscn"
 
@@ -20,9 +20,11 @@ func _ready():
 	
 	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
-	interaction_button.connect("pressed", self, "first_door")
+	#interaction_button.connect("pressed", self, "first_door")
 	Global.set_map(current_map)
 	place_name.text = "Mage Guild Sewer"
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/sewer_library.wav")
+	Musicmanager.change_scene("Mage Guild Sewer")
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
@@ -60,9 +62,6 @@ func resume_the_game() -> void:
 	player_controller.visible = true
 	pause_ui.hide()
 
-func _process(_delta):
-	Global.set_player_current_position(player.global_position)
-	
 func _on_pause_game_pressed():
 	get_tree().paused = true
 	topui.visible = false
@@ -72,7 +71,7 @@ func _on_pause_game_pressed():
 #accesing dialogue
 func first_door():
 	player_controls.visible = false
-	interaction_button.visible = false
+	#interaction_button.visible = false
 	
 	Global.set_map(current_map)
 	var new_dialog = Dialogic.start('valstage5ep1')

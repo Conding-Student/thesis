@@ -1,0 +1,46 @@
+{
+	"events": [
+		{
+			"background": "res://intro/picture/scenery/intro_map.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1726986872.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1726986872.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In this world, magic flows through code. Every incantation, every spell, is powered by the logic and syntax of this language."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": ""
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1726979986.json",
+		"name": "introduction"
+	}
+}

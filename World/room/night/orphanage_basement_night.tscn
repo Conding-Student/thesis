@@ -475,7 +475,7 @@ energy = 0.8
 color = Color( 0.160784, 0.145098, 0.145098, 1 )
 
 [node name="orphanage_office_night_pos" type="Position2D" parent="."]
-position = Vector2( 232, 68 )
+position = Vector2( 221, 68 )
 
 [node name="orphanage_office_night" parent="." instance=ExtResource( 4 )]
 position = Vector2( 260, 68 )

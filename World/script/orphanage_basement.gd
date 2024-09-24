@@ -6,7 +6,7 @@ onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
-onready var player_controls = $YSort/Player/Controller
+onready var player_control_collision = $YSort/Player/Controller/joystick
 onready var interaction_button = $YSort/YSort2/Path2D/PathFollow2D/Merrick/TextureButton 
 onready var place_name = $TopUi/Label2
 
@@ -80,7 +80,8 @@ func _on_pause_game_pressed():
 	pause_ui.show()
 
 func merrick1():
-	player_controls.visible = false
+	player_controller.visible = false
+	player_control_collision.disable_joystick()
 	interaction_button.visible = false
 	var new_dialog = Dialogic.start('stage1') #new dialogue
 	add_child(new_dialog)
@@ -118,8 +119,10 @@ func start_second_dialogue():
 func after_stagem2(timelinename):
 	merrick_sprite.flip_h = true
 	merrick_sprite.flip_h = false
-	player_controls.visible = true
+	player_controller.visible = true
+	player_control_collision.enable_joystick()
 	Global2.complete_badge("badge1")
 	merrick_sprite.visible = true
-	SceneTransition.change_scene("res://intro/stages_complete.tscn")
+	SceneTransition.change_scene("res://intro/stages_complete.tscn"
+	)
 	

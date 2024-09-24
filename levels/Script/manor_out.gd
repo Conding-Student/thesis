@@ -6,7 +6,7 @@ onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var current_level = $TopUi/Label
 onready var player =$objects/Player
-onready var player_controls = $objects/Player/Controller
+onready var player_controller_joystick = $objects/Player/Controller/joystick
 onready var interaction_button1 = $objects/people/knight/TextureButton
 onready var place_name = $TopUi/Label2
 
@@ -21,6 +21,9 @@ func _ready():
 	interaction_button1.connect("pressed", self, "knight_dialogue")
 	Global.set_map(current_map)
 	place_name.text = "Manor Outside"
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/manorOutside_day.wav"
+	)
+	Musicmanager.change_scene("Manor Outside")
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
@@ -60,14 +63,18 @@ func _on_pause_game_pressed():
 	pause_ui.show()
 
 func knight_dialogue():
-	player_controls.visible = false
+	player_controller.visible = false
+	player_controller_joystick.disable_joystick()
+	Musicmanager.set_to_low()
 	interaction_button1.hide()
 	var new_dialog = Dialogic.start('manor_guard')
 	add_child(new_dialog)
 	new_dialog.connect("timeline_end", self, "after_knight")
 
 func after_knight(timelinename):
-	player_controls.visible = true
+	player_controller.visible = true
+	player_controller_joystick.enable_joystick()
+	Musicmanager.normal_volume()
 	interaction_button1.show()
 	Global2.explore_town = int(Dialogic.get_variable("explore_town"))
 	Global2.manor_guard = int(Dialogic.get_variable("manor_guard"))

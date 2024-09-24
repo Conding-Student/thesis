@@ -1,6 +1,9 @@
 extends Node
 
-#stage 4 singleton state
+
+
+#stage 4 singleton state. Ito gamitin mo after sa videoa animation stage 4
+#yungpart ng dorr activation collision. dapat lumabas yonafter makausap si merrick 
 var state = ""
 
 #Stage 2 talking with the villiger number of times

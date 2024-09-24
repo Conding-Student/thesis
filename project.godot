@@ -92,6 +92,7 @@ EnemyState="*res://Singleton/enemy_state.tscn"
 Global="*res://Singleton/global.tscn"
 SceneRandomizer="*res://intro/loading_screens/loading_screens.tscn"
 Global2="*res://Singleton/Global2.tscn"
+Musicmanager="*res://Singleton/Musicmanager.tscn"
 
 [display]
 

@@ -5,7 +5,7 @@
 	"display_name_bool": false,
 	"id": "character-1723544892.json",
 	"mirror_portraits": false,
-	"name": "manorMaster",
+	"name": "Manor Master",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -13,9 +13,9 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://Dialogue/Picture/silhoutte/manorMaster.png"
+			"path": ""
 		}
 	],
 	"scale": 5,
-	"theme": ""
+	"theme": "theme-1727127117.cfg"
 }

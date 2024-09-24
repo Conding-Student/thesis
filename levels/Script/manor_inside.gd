@@ -19,6 +19,9 @@ func _ready():
 	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/manor_insideNight.wav")
+	Musicmanager.change_scene("Manor inside")
+	Musicmanager.normal_volume()
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):

@@ -1002,7 +1002,7 @@ position = Vector2( 160, 175 )
 rotation = 1.57079
 
 [node name="orphanage_basement_night_pos" type="Position2D" parent="."]
-position = Vector2( 266, 76 )
+position = Vector2( 278, 78 )
 
 [node name="orphanage_basement_night" parent="." instance=ExtResource( 8 )]
 position = Vector2( 265, 51 )

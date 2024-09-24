@@ -19,7 +19,8 @@ func _ready():
 	place_name.text = "Mage Guild Outside"
 	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
-
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildOutside_night.wav")
+	Musicmanager.change_scene("Mage Guild Outside night")
 	Global.set_map(current_map)
 
 func set_player_position():

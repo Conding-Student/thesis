@@ -5,6 +5,7 @@
 	"folders": {
 		"Characters": {
 			"files": [
+				"character-1726986872.json",
 				"character-1723544892.json",
 				"character-1723102784.json",
 				"character-1723101616.json",
@@ -20,7 +21,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Definitions": {
@@ -47,11 +48,13 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Themes": {
 			"files": [
+				"theme-1727127117.cfg",
+				"theme-1726986938.cfg",
 				"theme-1723254206.cfg",
 				"theme-1723097669.cfg",
 				"theme-1721953720.cfg",
@@ -69,6 +72,7 @@
 		},
 		"Timelines": {
 			"files": [
+				"timeline-1726979971.json",
 				"timeline-1720150872.json",
 				"timeline-1718871577.json",
 				"timeline-1718854892.json"
@@ -148,12 +152,24 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"citizen3": {
 					"files": [
 						"timeline-1723097509.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				},
+				"game": {
+					"files": [
+						"timeline-1726979986.json"
 					],
 					"folders": {
 
@@ -172,7 +188,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"paladin": {
@@ -185,6 +201,18 @@
 					"metadata": {
 						"color": null,
 						"folded": true
+					}
+				},
+				"u1stage5": {
+					"files": [
+						"timeline-1727127050.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
 					}
 				}
 			},

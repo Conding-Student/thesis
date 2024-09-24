@@ -52,11 +52,11 @@
 			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": false,
+				"0": true,
 				"1": false,
 				"2": false,
 				"3": false,
-				"4": true
+				"4": false
 			},
 			"type": 0,
 			"z_index": 0
@@ -143,7 +143,11 @@
 			"character": "character-1723544892.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good. The job will be done on the day of the festival. Most wizards will be busy, so it's the perfect time to strike. Make sure you’re well prepared so you don't disappoint me"
+			"text": "Good. The job will be done on the day of the festival. Most wizards will be busy, so it's the perfect time to strike. Make sure you’re well prepared so you \ndon't disappoint me"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {

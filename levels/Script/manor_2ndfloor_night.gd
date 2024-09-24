@@ -1,6 +1,7 @@
 extends Node2D
 onready var topui = $TopUi
 onready var player_controller = $YSort/player/Controller
+onready var player_controller_joystick = $YSort/player/Controller/joystick
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var current_level = $TopUi/Label
@@ -50,8 +51,7 @@ func _ready():
 	first_dialogue()
 	checking_all_door_state()
 	doors_state_after_quest()
-	
-	
+	Musicmanager.normal_volume()
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
@@ -93,6 +93,8 @@ func _on_pause_game_pressed():
 func first_dialogue():
 	if Global.get_door_state("manor_inside") == true && Global.get_door_state("door1") == false:
 		player_controller.hide()
+		player_controller_joystick.disable_joystick()
+		Musicmanager.set_to_low()
 		var new_dialog = Dialogic.start('stage3p2')
 		add_child(new_dialog)
 		new_dialog.connect("timeline_end", self, "interaction_endpoint")
@@ -102,6 +104,8 @@ func first_dialogue():
 
 func interaction_endpoint(timelineend):
 	player_controller.show()
+	player_controller_joystick.enable_joystick()
+	Musicmanager.resume_music()
 
 func checking_all_door_state():
 	if Global.get_door_state("escape_door"):
@@ -130,6 +134,7 @@ func checking_all_door_state():
 		door1_image.hide()
 		door1_collision.disabled = true
 		door1_collisionp.disabled = true
+		escape_door_collision.disabled = true
 		open_door1.show()
 		meerick.hide()
 		path_arrow.hide()
@@ -151,6 +156,8 @@ func doors_state_after_quest():
 			merrick.hide()
 			path_arrow2.hide()
 			player_controller.hide()
+			player_controller_joystick.disable_joystick()
+			Musicmanager.set_to_low()
 			var new_dialog = Dialogic.start('stage4p1')
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, "interaction_endpoint")
@@ -158,10 +165,13 @@ func doors_state_after_quest():
 			door1_image.hide()
 			door1_collision.disabled = true
 			door1_collisionp.disabled = true
+			escape_door_collision.disabled = true
 			open_door1.show()
 			meerick.hide()
 			player_controller.hide()
+			player_controller_joystick.disable_joystick()
 			path_arrow.hide()
+			Musicmanager.set_to_low()
 			var new_dialog = Dialogic.start('stage3p3')
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, "interaction_endpoint")
@@ -172,7 +182,10 @@ func doors_state_after_quest():
 			chest_closed.hide()
 			chest_open.show()
 			chest_collision.disabled = true
+			escape_door_collision.disabled = false
 			player_controller.hide()
+			player_controller_joystick.disable_joystick()
+			Musicmanager.set_to_low()
 			var new_dialog = Dialogic.start('stage4p3')
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, "interaction_endpoint")
@@ -191,7 +204,8 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 		Global2.dialogue_name = "stage3React2"
 		Global2.correct_answer_ch1_4 = true
 		Global.load_game_position = true
-		
+		#Musicmanager.stop_music()
+		Musicmanager.set_to_low()
 		SceneTransition.change_scene("res://intro/question_panel.tscn")
 
 
@@ -211,6 +225,9 @@ func _on_Area2D_body_shape_entered_door2(body_rid, body, body_shape_index, local
 	Global2.dialogue_name = "stage4door1"
 	Global.load_game_position = true
 	player_controller.hide()
+	player_controller_joystick.disable_joystick()
+	Musicmanager.set_to_low()
+	#Musicmanager.stop_music()
 	var new_dialog = Dialogic.start('stage4p0')
 	add_child(new_dialog)
 	new_dialog.connect("timeline_end", self, "interaction_endpoint")
@@ -231,6 +248,9 @@ func _on_Area2D_body_shape_entered_chess(body_rid, body, body_shape_index, local
 	Global.load_game_position = true
 	Global2.dialogue_name = "stage4chest"
 	player_controller.hide()
+	player_controller_joystick.disable_joystick()
+	Musicmanager.set_to_low()
+	#Musicmanager.stop_music()
 	var new_dialog = Dialogic.start('stage4p2')
 	add_child(new_dialog)
 	new_dialog.connect("timeline_end", self, "interaction_endpoint_question")
@@ -240,10 +260,11 @@ func interaction_endpoint_question():
 
 
 func _on_Area2D_body_shape_entered_escape(body_rid, body, body_shape_index, local_shape_index):
-	Global2.set_question(0,"Input the addition of a and b")
+	Global2.set_question(0,"Input the addition of a and b. Follow this format letter + letter")
 	Global2.set_answers(0, "a + b")
 	Global2.set_feedback(0, "remember to put spaces also it is case sensitive. If 'a' is small it should be small")
 	Global2.dialogue_name = "stage5p2"
+	Musicmanager.set_to_low()
 	Global2.set_picture_path(0,"res://intro/picture/question/stage5_sequence.png")
 	SceneTransition.change_scene("res://intro/sequencing.tscn")
 	Global.load_game_position = true

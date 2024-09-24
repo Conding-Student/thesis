@@ -19,6 +19,8 @@ func _ready():
 	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildInside.wav")
+	Musicmanager.change_scene("Mage Guild inside")
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):

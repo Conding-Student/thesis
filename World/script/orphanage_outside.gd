@@ -6,7 +6,7 @@ onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
-onready var player_controls = $YSort/Player/Controller
+onready var player_controller_joystick = $YSort/Player/Controller/joystick
 onready var place_name = $TopUi/Label2
 onready var interaction_button = $YSort/Area2D/TextureButton
 
@@ -22,9 +22,13 @@ func _ready():
 	Global.set_map(current_map)
 	place_name.text = "Orphanage Outside"
 	interaction_button.connect("pressed",self, "_on_signage_interaction")
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/orphanageDay.wav")
+	Musicmanager.change_scene("orphanage")
+	
 #functionality after getting the updated dialogic
 func _on_signage_interaction():
-	player_controls.visible = false
+	player_controller.visible = false
+	player_controller_joystick.disable_joystick()
 	interaction_button.visible = false
 	get_tree().paused = true
 	var new_dialog = Dialogic.start('tips')
@@ -33,7 +37,8 @@ func _on_signage_interaction():
 	new_dialog.connect("timeline_end", self, "after_dialog")
 
 func after_dialog(timelinename):
-	player_controls.visible = true
+	player_controller.visible = true
+	player_controller_joystick.enable_joystick()
 	interaction_button.visible = true
 	get_tree().paused = false
 	# Remove the dialog from the scene tree
@@ -74,7 +79,8 @@ func _on_pause_game_pressed():
 	get_tree().paused = true
 	topui.visible = false
 	player_controller.visible = false
-	pause_ui.show()
+	pause_ui.show
+	
 
 func _on_door_markings_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	Global.set_player_position_engaged(body.position)

@@ -1978,7 +1978,6 @@ remote_path = NodePath("../../../Camera2D")
 position = Vector2( -2, 0 )
 texture = ExtResource( 7 )
 texture_scale = 0.5
-energy = 0.6
 
 [node name="decor" type="YSort" parent="YSort"]
 

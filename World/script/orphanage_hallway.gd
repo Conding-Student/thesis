@@ -7,7 +7,7 @@ onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as 
 onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var interaction_button = $YSort/child_boy4/interaction_button2
-onready var player_controls = $YSort/Player/Controller
+onready var player_control_collision = $YSort/Player/Controller/joystick
 onready var place_name = $TopUi/Label2
 var current_map = "res://World/room/orphanage_hallway.tscn"
 var staring_player_position = Vector2(301,102)
@@ -21,7 +21,6 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button.connect("pressed",self, "_on_NPC_interaction_stage1")
 	Global.set_map(current_map)
-	
 	
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0,0):
@@ -38,6 +37,7 @@ func set_player_position():
 			player.global_position = target_node.position
 			topui.hide()
 			player_controller.hide()
+			player_control_collision.disable_joystick()
 			var new_dialog = Dialogic.start('heading_tutorial')
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, "after_tutorial_headings")            
@@ -60,6 +60,7 @@ func set_overall_initial_position():
 func after_tutorial_headings(timelinename):
 	topui.show()
 	player_controller.show()
+	player_control_collision.enable_joystick()
 	Global.door_activated=true
 	
 
@@ -79,7 +80,8 @@ func _on_pause_game_pressed():
 # NPC dialogue enter
 	
 func _on_NPC_interaction_stage1():
-	player_controls.visible = false
+	player_controller.visible = false
+	player_control_collision.disable_joystick()
 	interaction_button.visible = false
 	get_tree().paused = true
 	var new_dialog = Dialogic.start('child1')
@@ -88,7 +90,8 @@ func _on_NPC_interaction_stage1():
 	new_dialog.connect("timeline_end", self, "after_dialog")
 
 func after_dialog(timelinename):
-	player_controls.visible = true
+	player_controller.visible = true
+	player_control_collision.enable_joystick()
 	interaction_button.visible = true
 	get_tree().paused = false
 	# Remove the dialog from the scene tree
