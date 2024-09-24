@@ -27,7 +27,7 @@ func check_badges():
 	if Global2.is_badge_complete("badge5"):
 		#print("Badge 3 complete. Showing badge 3.")
 		show_badge(1)  # Display third badge (use correct index)
-		Global2.complete_badge("badge5")
+		#Global2.complete_badge("badge5")
 	else:
 		show_badge(0)  # Display first badge
 		#Global2.complete_badge("badge1")

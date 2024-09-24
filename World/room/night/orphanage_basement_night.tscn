@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=2]
@@ -11,8 +11,12 @@
 [ext_resource path="res://World/pictures/interior/lpc_interior.png" type="Texture" id=9]
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=10]
 [ext_resource path="res://World/ligthing/light.png" type="Texture" id=11]
-[ext_resource path="res://World/chest_lock.tscn" type="PackedScene" id=12]
+[ext_resource path="res://NPC/picture/grandpa.png" type="Texture" id=12]
+[ext_resource path="res://NPC/picture/interact-removebg-preview.png" type="Texture" id=13]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="CircleShape2D" id=30]
+radius = 36.4812
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -410,6 +414,28 @@ script = ExtResource( 6 )
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 198, 87 )
 
+[node name="merick" type="Sprite" parent="YSort"]
+position = Vector2( 82, 101 )
+scale = Vector2( 1.125, 1.22222 )
+texture = ExtResource( 12 )
+hframes = 3
+vframes = 4
+frame = 4
+
+[node name="Area2D" type="Area2D" parent="YSort/merick"]
+position = Vector2( 1.52588e-05, 7.62939e-06 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/merick/Area2D"]
+shape = SubResource( 30 )
+
+[node name="TextureButton" type="TouchScreenButton" parent="YSort/merick"]
+visible = false
+position = Vector2( -28.4445, -27.8182 )
+scale = Vector2( 0.165625, 0.0888889 )
+normal = ExtResource( 13 )
+
 [node name="floors" type="TileMap" parent="YSort"]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
@@ -423,9 +449,6 @@ format = 1
 tile_data = PoolIntArray( 262146, 0, 0, 262147, 536870912, 0, 262148, 536870912, 0, 262149, 536870912, 0, 262150, 536870912, 0, 262151, 536870912, 0, 786436, 536870912, 0 )
 
 [node name="YSort2" type="YSort" parent="YSort"]
-
-[node name="chest_lock" parent="YSort/YSort2" instance=ExtResource( 12 )]
-position = Vector2( 80, 103 )
 
 [node name="TileMap" type="TileMap" parent="YSort/YSort2"]
 tile_set = SubResource( 18 )
@@ -514,4 +537,6 @@ align = 1
 valign = 1
 autowrap = true
 
+[connection signal="body_shape_entered" from="YSort/merick/Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="YSort/merick/Area2D" to="." method="_on_Area2D_body_shape_exited"]
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]

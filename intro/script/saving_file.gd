@@ -44,6 +44,7 @@ func auto_save_file() -> void:
 
 # Consolidated function to save game data
 func save_data(filename: String) -> void:
+	
 	var save_data = {
 		"players_health": PlayerStats.health,
 		"map": Global.get_map(),
@@ -72,11 +73,11 @@ func save_data(filename: String) -> void:
 		"dialogue_states": Global.dialogue_states,
 		"manor_quest": Global2.state
 	}
-
+	Dialogic.save("slot1")
 	# Collect badge data for saving
 	for badge_name in Global2.badges_complete.keys():
 		save_data[badge_name] = Global2.badges_complete[badge_name]
-
+	
 	save_to_file(filename, save_data)
 
 
@@ -101,7 +102,7 @@ func apply_loaded_data(loaded_data: Dictionary) -> void:
 	Global.save_triggered = loaded_data.get("save_triggered", false)
 	Global.from_level = loaded_data.get("from_level", "")
 	PlayerStats.health = loaded_data.get("players_health", 100)  # Assuming a default value
-
+	Dialogic.load("slot1")
 	# Load location and state variables
 	Global2.explore_town = int(loaded_data.get("explore_town", 0))
 	Global2.paladin_mage_guild = int(loaded_data.get("paladin_mage_guild", 0))

@@ -121,6 +121,7 @@ func checking_all_door_state():
 		chest_closed.hide()
 		chest_open.show()
 		chest_collision.disabled = true
+		escape_door_collision.disabled = true
 	if Global.get_door_state("door2"):
 		#pass
 		door2_image.hide()
@@ -134,19 +135,19 @@ func checking_all_door_state():
 		door1_image.hide()
 		door1_collision.disabled = true
 		door1_collisionp.disabled = true
-		escape_door_collision.disabled = true
 		open_door1.show()
 		meerick.hide()
 		path_arrow.hide()
 func doors_state_after_quest():
 	match state:
 		"escape_door":
-			print("na trigger na")
+			#print("na trigger na")
 			escape_arrow.hide()
 			escape_door.hide()
 			escape_door_collision.disabled = true
 			escape_door_solid_collision.disabled = true
 			escape_door_open.show()
+			SceneTransition.change_scene("res://Scenes/run.tscn")
 		"door2":
 			#pass
 			door2_image.hide()
@@ -165,7 +166,6 @@ func doors_state_after_quest():
 			door1_image.hide()
 			door1_collision.disabled = true
 			door1_collisionp.disabled = true
-			escape_door_collision.disabled = true
 			open_door1.show()
 			meerick.hide()
 			player_controller.hide()

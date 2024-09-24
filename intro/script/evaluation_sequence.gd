@@ -130,8 +130,8 @@ func _on_Question5_pressed():
 
 
 func _on_next_stage_pressed():
-	print("nasa evalutation scene ako at yung nasa babako")
-	print(Global.from_sequence)
+	#print("nasa evalutation scene ako at yung nasa babako")
+	#print(Global.from_sequence)
 	SceneTransition.change_scene(Global.map)
 	Global2.reset_evaluations()
 	Global2.reset_interactions()

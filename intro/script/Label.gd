@@ -23,3 +23,6 @@ func updating_label():
 	if Global2.is_badge_complete("badge5"):
 		text = "Chapter1 U2 1 / 5"
 		Global.set_current_level(text)
+	if Global2.is_badge_complete("badgel2s1"):
+		text = "Chapter1 U2 2 / 5"
+		Global.set_current_level(text)

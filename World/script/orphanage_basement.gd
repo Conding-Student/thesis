@@ -123,6 +123,5 @@ func after_stagem2(timelinename):
 	player_control_collision.enable_joystick()
 	Global2.complete_badge("badge1")
 	merrick_sprite.visible = true
-	SceneTransition.change_scene("res://intro/stages_complete.tscn"
-	)
+	SceneTransition.change_scene("res://intro/stages_complete.tscn")
 	

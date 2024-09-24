@@ -1,6 +1,10 @@
 {
 	"events": [
 		{
+			"background": "res://Scenes/pictures/unit2cahpter1/stage1/orphanage_basement.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 1,
 			"animation_wait": true,
@@ -41,6 +45,10 @@
 			"text": "Alright, let's start with the basics"
 		},
 		{
+			"background": "res://Scenes/pictures/unit2cahpter1/stage1/orphanage_basement_decision.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
 			"audio": "play",
 			"audio_bus": "Master",
 			"event_id": "dialogic_030",
@@ -53,6 +61,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "This is a flowchart decision symbol, we use it if a process has more than one possible outcomes"
+		},
+		{
+			"background": "res://Scenes/pictures/unit2cahpter1/stage1/orphanage_basement_decision2.jpg",
+			"event_id": "dialogic_021"
 		},
 		{
 			"audio": "play",
@@ -69,6 +81,10 @@
 			"text": "By utilizing decision symbols, we can indicated which path to follow if the decision is true and if it is false"
 		},
 		{
+			"background": "res://Scenes/pictures/unit2cahpter1/stage1/orphanage_basement_onpagejpg.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
 			"audio": "play",
 			"audio_bus": "Master",
 			"event_id": "dialogic_030",
@@ -80,7 +96,11 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This on the other hand are the on-page connector symbols."
+			"text": "This on the other hand is the on-page connector symbols."
+		},
+		{
+			"background": "res://Scenes/pictures/unit2cahpter1/stage1/orphanage_basement_onpage_flow.jpg",
+			"event_id": "dialogic_021"
 		},
 		{
 			"character": "character-1721952113.json",
@@ -101,6 +121,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "We use the connector symbols to connect processes within the flowchart"
+		},
+		{
+			"emit_signal": "s2s1_done",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {

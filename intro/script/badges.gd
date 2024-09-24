@@ -11,7 +11,12 @@ onready var badges = [
 	$Panel4/Panel/Badges/HBoxContainer/Units/s2,
 	$Panel4/Panel/Badges/HBoxContainer/Units/s3,
 	$Panel4/Panel/Badges/HBoxContainer/Units/s4,
-	$Panel4/Panel/Badges/HBoxContainer/Units/s5
+	$Panel4/Panel/Badges/HBoxContainer/Units/s5,
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s1,
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s2,
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s3,
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s4,
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s5
 ]
 
 # Array of badge images (default and completed)
@@ -34,7 +39,27 @@ var badge_images = {
 	},
 	"badge5": {
 		"default": preload("res://intro/picture/semi-mastery badges.png"),
-		"earned": preload("res://intro/picture/semi-mastery.png")
+		"earned": preload("res://intro/picture/semi-mastery.png"),
+	},
+	"badge6": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge7": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge8": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge9": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge10": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
 	}
 }
 

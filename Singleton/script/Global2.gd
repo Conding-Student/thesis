@@ -32,7 +32,12 @@ var badges_complete = {
 	"badge2": false,
 	"badge3": false,
 	"badge4": false,
-	"badge5": false
+	"badge5": false,
+	"badgell2s1": false,
+	"badgell2s2": false,
+	"badgell2s3": false,
+	"badgell2s4": false,
+	"badgell2s5": false,
 	
 }
 

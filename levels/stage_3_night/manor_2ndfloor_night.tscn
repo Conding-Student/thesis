@@ -2690,7 +2690,7 @@ extents = Vector2( 10, 13.75 )
 extents = Vector2( 13, 11.5 )
 
 [sub_resource type="RectangleShape2D" id=74]
-extents = Vector2( 8, 10 )
+extents = Vector2( 8, 15.5 )
 
 [sub_resource type="DynamicFont" id=69]
 size = 5
@@ -2969,8 +2969,9 @@ collision_layer = 128
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="YSort/objects/door3/Area2D" index="0"]
-position = Vector2( 0, 3 )
+position = Vector2( 0, -2.5 )
 shape = SubResource( 74 )
+disabled = true
 
 [node name="open_door3" parent="YSort/objects" instance=ExtResource( 28 )]
 visible = false

@@ -1,0 +1,25 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1727127117.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The festival was approaching, and it was past midnight. Merrick ordered Val to accompany him on a mission. They arrived at the outside of a lavish mansion. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Merrick explained their agenda."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727174936.json",
+		"name": "manor_out"
+	}
+}

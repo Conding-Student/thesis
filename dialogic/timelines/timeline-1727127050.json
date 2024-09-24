@@ -1,30 +1,10 @@
 {
 	"events": [
 		{
-			"animation": "[Default]",
-			"animation_length": 0,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
-			"character": "",
-			"event_id": "dialogic_002",
-			"mirror_portrait": false,
-			"portrait": "",
-			"portrait_definition": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": false
-			},
-			"type": 0,
-			"z_index": 0
-		},
-		{
-			"character": "character-1727127085.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You two are quite skilled. My manor is heavily guarded with magical locks and doors, yet you managed to get past them. Impressive."
+			"condition": "",
+			"definition": "1727150110-648",
+			"event_id": "dialogic_012",
+			"value": "1"
 		},
 		{
 			"animation": "[Default]",
@@ -47,15 +27,157 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1721952113.json",
+			"character": "character-1721952703.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": ""
+			"text": "That’s odd... a cultist working behind the bar? This guild is stranger than I expected."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "character-1727146946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What can I get for you today, traveler? We’ve got the finest ale and hearty stew"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You’re... serving here? In a mage guild?"
+		},
+		{
+			"character": "character-1727146946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Everyone has their role to play. Today, mine is to ensure your thirst is quenched and your hunger sated"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Right... well, I’ll take an ale then. And the stew."
+		},
+		{
+			"character": "character-1727146946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wise choice. The stew has some... special ingredients today. Good for sharpening the mind."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Special ingredients? You’re not trying to pull something, are you?"
+		},
+		{
+			"character": "character-1727146946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I serve only what’s ordered, nothing more. But power comes in many forms, doesn’t it?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"This guy... definitely more than just a server. I should be careful around him.\""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "==",
+			"definition": "1727150110-648",
+			"event_id": "dialogic_012",
+			"value": "2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "character-1727146946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You look like you’ve been through much. Sit, rest, and let our food restore you"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You seem to know exactly what I need"
+		},
+		{
+			"character": "character-1727146946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It’s my duty to ensure those who pass through these doors leave stronger than when they arrived"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There’s something about this food... it feels like more than just a meal."
+		},
+		{
+			"character": "character-1727146946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Everything served here carries a bit of the guild’s essence. It will do more than fill your belly—eat, and you’ll feel your strength return."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I can feel it already... like my energy is coming back. This is no ordinary meal."
+		},
+		{
+			"character": "character-1727146946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Of course. Our patrons leave with more than they expect."
+		},
+		{
+			"emit_signal": "heal",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
 		"file": "timeline-1727127050.json",
-		"name": "owner_p1"
+		"name": "cultist"
 	}
 }

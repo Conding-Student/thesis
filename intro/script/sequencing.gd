@@ -96,7 +96,7 @@ func value_activating(param):
 		Global2.state = "escape_door"
 		Global.from_sequence = true
 		badges_update.update_badges()
-		print("emit signal trigger okay toh")
+		#print("emit signal trigger okay toh")
 		SceneTransition.change_scene("res://intro/stages_complete.tscn")
 		
 # Hide all textfields

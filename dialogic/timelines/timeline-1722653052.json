@@ -218,7 +218,7 @@
 			"text": "It looks like I need to go into the Manor which is located at the right side of the townsquare."
 		},
 		{
-			"change_scene": "res://World/room/night/orphanage_hallway_night.tscn",
+			"change_scene": "res://Scenes/manor_out.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

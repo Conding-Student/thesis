@@ -44,6 +44,12 @@
 			"name": "explore_town",
 			"type": 0,
 			"value": "0"
+		},
+		{
+			"id": "1727150110-648",
+			"name": "introduction",
+			"type": 0,
+			"value": "0"
 		}
 	]
 }
