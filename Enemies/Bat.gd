@@ -26,6 +26,7 @@ onready var hurtbox = $Hurtbox
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animationPlayer = $AnimationPlayer
+onready var bat_sounds = $bat_sounds
 
 func _ready():
 	# Check the state from the Global singleton
@@ -33,6 +34,7 @@ func _ready():
 		#print("Bat is dead on load, removing from scene: ID =", bat_id)  # Debugging print
 		queue_free()  # If dead, remove from the scene
 	else:
+		
 		#print("Bat is alive on load, initializing state: ID =", bat_id)  # Debugging print
 		state = pick_random_state([IDLE, WANDER])  # Initialize state if alive
 
@@ -44,6 +46,7 @@ func _physics_process(delta):
 	
 	match state:
 		IDLE:
+			bat_sounds.stop()
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 			seek_player()
 			if wanderController.get_time_left() == 0:
@@ -76,6 +79,7 @@ func accelerate_towards_point(point, delta):
 func seek_player():
 	if playerDetectionZone.can_see_player():
 		state = CHASE
+		bat_sounds.play()
 
 func update_wander():
 	state = pick_random_state([IDLE, WANDER])

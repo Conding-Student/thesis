@@ -6,6 +6,7 @@ extends Node
 #yungpart ng dorr activation collision. dapat lumabas yonafter makausap si merrick 
 var state = ""
 
+
 #Stage 2 talking with the villiger number of times
 #quest
 var explore_town = 0
@@ -33,11 +34,11 @@ var badges_complete = {
 	"badge3": false,
 	"badge4": false,
 	"badge5": false,
-	"badgell2s1": false,
-	"badgell2s2": false,
-	"badgell2s3": false,
-	"badgell2s4": false,
-	"badgell2s5": false,
+	"badge6": false,
+	"badge7": false,
+	"badge8": false,
+	"badge9": false,
+	"badge10": false,
 	
 }
 
@@ -69,10 +70,10 @@ var NRI =  ((post_final_score - pre_final_score) / MPI) * 100 # Need to be displ
 ######################### DYNAMIC QUIZ VALUES #######################
 # Evaluation: using dictionaries for questions, answers, and feedback
 var evaluations = {
-	"questions": ["question1", "question2", "", "","",""],
-	"answers": ["answer1","answer2", "","", "", "", "","",""
+	"questions": ["", "", "", "","",""],
+	"answers": ["","", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "", "",""],
-	"feedback": ["one", "two", "", "","", "", "", "","",""
+	"feedback": ["", "", "", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "",""],
 	"pictures_path": ["res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png"],
 }

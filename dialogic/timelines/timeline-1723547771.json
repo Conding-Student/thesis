@@ -123,10 +123,6 @@
 			"text": "We use the connector symbols to connect processes within the flowchart"
 		},
 		{
-			"emit_signal": "s2s1_done",
-			"event_id": "dialogic_040"
-		},
-		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
 		}

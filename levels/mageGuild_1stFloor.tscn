@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://World/pictures/interior/16x16Room_Builder_free.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/interior/tilesetformattedupdate1.png" type="Texture" id=2]
@@ -9,13 +9,12 @@
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=7]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://levels/Script/mageGuild_1stFloor.gd" type="Script" id=9]
-[ext_resource path="res://intro/Label.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/world objects/table_wood1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/room/levels_entrance.tscn" type="PackedScene" id=13]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=14]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=15]
-[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=16]
+[ext_resource path="res://intro/path_arrow.tres" type="Texture" id=16]
 [ext_resource path="res://NPC/bard.tscn" type="PackedScene" id=17]
 [ext_resource path="res://NPC/mage_female.tscn" type="PackedScene" id=18]
 [ext_resource path="res://NPC/healer_female.tscn" type="PackedScene" id=19]
@@ -904,8 +903,6 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="pause_menu" parent="TopUi" instance=ExtResource( 15 )]
-
-[node name="Label" parent="TopUi" instance=ExtResource( 10 )]
 
 [node name="Label2" type="Label" parent="TopUi"]
 margin_left = 132.0

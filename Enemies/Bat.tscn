@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Enemies/Bat.png" type="Texture" id=1]
 [ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Overlap/SoftCollision.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=9]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=10]
+[ext_resource path="res://Music and Sounds/monster/monster_bat.wav" type="AudioStream" id=11]
 
 [sub_resource type="ShaderMaterial" id=14]
 resource_local_to_scene = true
@@ -101,7 +102,6 @@ script = ExtResource( 4 )
 material = SubResource( 14 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 3
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -149,6 +149,9 @@ shape = SubResource( 11 )
 autoplay = "Stop"
 anims/Start = SubResource( 12 )
 anims/Stop = SubResource( 13 )
+
+[node name="bat_sounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]

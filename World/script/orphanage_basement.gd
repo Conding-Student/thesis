@@ -4,7 +4,6 @@ onready var topui = $TopUi
 onready var player_controller = $YSort/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
-onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var player_control_collision = $YSort/Player/Controller/joystick
 onready var interaction_button = $YSort/YSort2/Path2D/PathFollow2D/Merrick/TextureButton 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://World/guildCastle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=2]
@@ -14,18 +14,13 @@
 [ext_resource path="res://World/pictures/terrain_atlas.png" type="Texture" id=12]
 [ext_resource path="res://World/world objects/treeMini.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/pictures/Solaria Demo Update 01.png" type="Texture" id=14]
-[ext_resource path="res://intro/Label.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/room/levels_entrance.tscn" type="PackedScene" id=16]
-[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=17]
-[ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=18]
 [ext_resource path="res://levels/Script/mageGuild_out.gd" type="Script" id=19]
-[ext_resource path="res://intro/picture/pause.png" type="Texture" id=20]
 [ext_resource path="res://NPC/priest.tscn" type="PackedScene" id=21]
 [ext_resource path="res://NPC/Nun.tscn" type="PackedScene" id=22]
 [ext_resource path="res://NPC/townfolks_women.tscn" type="PackedScene" id=23]
 [ext_resource path="res://NPC/citizen.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=25]
-[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=26]
+[ext_resource path="res://intro/path_arrow.tres" type="Texture" id=26]
 [ext_resource path="res://NPC/paladin.tscn" type="PackedScene" id=27]
 
 [sub_resource type="ConvexPolygonShape2D" id=20]
@@ -496,10 +491,6 @@ points = PoolVector2Array( 14.0382, 0.120865, 13.9036, 10.8879, 2.32904, 9.94577
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="DynamicFont" id=21]
-size = 5
-font_data = ExtResource( 25 )
-
 [node name="mageGuild_out" type="Node2D"]
 script = ExtResource( 19 )
 
@@ -639,40 +630,6 @@ rotation = 1.57079
 
 [node name="mageGuild_1stFloor_pos" type="Position2D" parent="."]
 position = Vector2( 382, 279 )
-
-[node name="TopUi" type="CanvasLayer" parent="."]
-
-[node name="pause_game" type="TextureButton" parent="TopUi"]
-margin_left = 292.0
-margin_top = 3.0
-margin_right = 312.0
-margin_bottom = 23.0
-texture_normal = ExtResource( 20 )
-
-[node name="HealthUI" parent="TopUi" instance=ExtResource( 17 )]
-margin_left = 3.0
-margin_top = 3.0
-margin_right = 63.0
-margin_bottom = 14.0
-
-[node name="quest" type="TextureButton" parent="TopUi"]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="pause_menu" parent="TopUi" instance=ExtResource( 18 )]
-
-[node name="Label" parent="TopUi" instance=ExtResource( 15 )]
-
-[node name="Label2" type="Label" parent="TopUi"]
-margin_left = 132.0
-margin_top = 8.0
-margin_right = 205.0
-margin_bottom = 22.0
-custom_fonts/font = SubResource( 21 )
-align = 1
-valign = 1
-
-[connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 
 [editable path="objects/guildCastle"]
 [editable path="Camera2D"]

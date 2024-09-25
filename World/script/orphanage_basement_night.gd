@@ -28,6 +28,7 @@ func _ready():
 	Global.set_map(current_map)
 	place_name.text = "Orphanage Basement"
 	#this one can be remove
+	#Global2.complete_badge("badge5")
 	#condition for merrick to be able to spawn
 	if Global2.is_badge_complete("badge5"):
 		merrick_sprite.show()
@@ -87,13 +88,34 @@ func merrick_interaction():
 		var new_dialog = Dialogic.start('ongoing_level2')
 		add_child(new_dialog)
 		new_dialog.connect("timeline_end", self, "interaction_endpoint")
-		new_dialog.connect("dialogic_signal", self, "s2s1_done")
+		new_dialog.connect("dialogic_signal", self, "level2s2_question")
 
-func s2s1_done(param):
-	if param == "s2s1_done":
+func level2s2_question(param):
+	if param == "level2s2":
+		Global2.set_question(0, "In a flowchart, what does a diamond shape usually represent?")
+		Global2.set_answers(0, "Minecraft")
+		Global2.set_answers(1, "Decision")
+		Global2.set_answers(2, "Process")
+		Global2.set_answers(3, "Input/Output")
+		Global2.set_feedback(0, "What made you think that")
+		Global2.set_feedback(1, "Correct!")
+		Global2.set_feedback(2, "Process is square")
+		Global2.set_feedback(3, "Input/Output is parallelogram")
+		Global2.correct_answer_ch1_2 = true
+		#2nd question
+		Global2.set_question(1, "Which symbol is used as the on-page connector in a flowchart?")
+		Global2.set_answers(4, "Circle")
+		Global2.set_answers(5, "Square ")
+		Global2.set_answers(6, "Diamond ")
+		Global2.set_answers(7, "Oval ")
+		Global2.set_feedback(4,"Correct!")
+		Global2.set_feedback(5,"Square is for process")
+		Global2.set_feedback(6,"Diamond is for decision")
+		Global2.set_feedback(7,"Oval is for the start and termination")
+		Global2.correct_answer_ch2_1 = true
+		Global2.dialogue_name = "vallevel2s2"
+		
 		Global2.complete_badge("badge6")
-		SceneTransition.change_scene("res://intro/stages_complete.tscn")
-
 func interaction_endpoint(timelineend):
 	player_controller.show()
 	player_controller_joystick.enable_joystick()

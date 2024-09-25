@@ -1,0 +1,29 @@
+{
+	"events": [
+		{
+			"background": "res://intro/picture/question/default_bg.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You successfully recieved a badge!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The next day, Merrick called Val to the basement to test his knowledge."
+		},
+		{
+			"change_timeline": "timeline-1723548141.json",
+			"event_id": "dialogic_020"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727261101.json",
+		"name": "stageu2s2"
+	}
+}

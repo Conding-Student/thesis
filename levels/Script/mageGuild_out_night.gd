@@ -4,7 +4,6 @@ onready var topui = $TopUi
 onready var player_controller = $objects/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
-onready var current_level = $TopUi/Label
 onready var player = $objects/Player
 onready var player_controls = $objects/Player/Controller
 onready var place_name = $TopUi/Label2
@@ -17,7 +16,6 @@ func _ready():
 	set_overall_initial_position()
 	set_player_position()
 	place_name.text = "Mage Guild Outside"
-	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildOutside_night.wav")
 	Musicmanager.change_scene("Mage Guild Outside night")

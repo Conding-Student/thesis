@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/monster_bat.wav-3ac58a5b09bfd3f92f94e4548aa765bc.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/monster/monster_bat.wav"
+dest_files=[ "res://.import/monster_bat.wav-3ac58a5b09bfd3f92f94e4548aa765bc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

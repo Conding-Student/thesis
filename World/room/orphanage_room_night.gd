@@ -6,7 +6,6 @@ onready var player_controller_joystick = $YSort/Player/Controller/joystick
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var player = $YSort/Player
-onready var current_level = $TopUi/Label
 
 var current_map = "res://World/room/orphanage_room.tscn"
 var staring_player_position = Vector2(40,40)

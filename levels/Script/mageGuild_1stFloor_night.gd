@@ -4,7 +4,6 @@ onready var topui = $TopUi
 onready var player_controller = $objects/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
-onready var current_level = $TopUi/Label
 onready var player = $objects/Player
 onready var player_controller_joystick = $objects/Player/Controller/joystick
 onready var place_name = $TopUi/Label2
@@ -14,17 +13,18 @@ var starting_player_position = Vector2 (568, 428)
 #captain values
 onready var captain_sprite = $objects/people/captain
 onready var captain_interaction_button = $objects/people/captain/TextureButton
+onready var captain_arrow_head = $objects/people/captain/arrow
 
 #cultist values
 onready var cultist_sprite = $objects/people/cultist
 onready var cultist_interaction_button = $objects/people/cultist/TextureButton
+onready var cultist_arrow_head = $objects/people/cultist/arrow
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_overall_initial_position()
 	set_player_position()
 	place_name.text = "Mage Guild Inside"
-	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
 	captain_interaction_button.connect("pressed",self, "captain_interaction")
 	cultist_interaction_button.connect("pressed", self, "cultist_interaction")
@@ -83,11 +83,13 @@ func area_collision_captain_exited(body_rid, body, body_shape_index, local_shape
 func area_collision_captain_entered(body_rid, body, body_shape_index, local_shape_index):
 	if 1 == int(Dialogic.get_variable("introduction")):
 		captain_interaction_button.show()
+		captain_arrow_head.hide()
 	else:
 		captain_interaction_button.hide()
 
 func captain_interaction():
 	captain_interaction_button.hide()
+	
 	player_controller.hide()
 	player_controller_joystick.disable_joystick()
 	var new_dialog = Dialogic.start('pirate')
@@ -98,10 +100,12 @@ func captain_interaction():
 ########## cultist section ####################
 
 func area_collision_cultist_entered(body_rid, body, body_shape_index, local_shape_index):
-	if 1 == int(Dialogic.get_variable("introduction")):
+	if 1 == int(Dialogic.get_variable("introduction")) or 2 == int(Dialogic.get_variable("introduction")):
 		cultist_interaction_button.show()
+		cultist_arrow_head.hide()
 	else:
 		cultist_interaction_button.hide()
+		cultist_arrow_head.show()
 
 func area_collision_cultist_exited(body_rid, body, body_shape_index, local_shape_index):
 	cultist_interaction_button.hide()

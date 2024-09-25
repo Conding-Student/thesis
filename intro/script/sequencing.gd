@@ -3,6 +3,7 @@ extends Control
 #ad ons update
 onready var stage_label_update = $Label
 onready var badges_update = $badges
+onready var badge_label = $badges/Label
 
 signal textbox_closed  # Signal emitted when the textbox is closed
 var stats = PlayerStats
@@ -50,7 +51,7 @@ func _ready():
 	
 	# Hide the button initially
 	submit_button.hide()
-	
+	badge_label.hide()
 	# Connect the text_changed signals of all textfields to the same function
 	textfield1.connect("text_changed", self, "_on_textfield_text_changed")
 	textfield2.connect("text_changed", self, "_on_textfield_text_changed")

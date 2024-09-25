@@ -4,7 +4,7 @@ onready var topui = $TopUi
 onready var player_controller = $YSort/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
-onready var current_level = $TopUi/Label
+onready var place_name = $TopUi/Label2
 onready var player = $YSort/Player
 onready var player_controls = $YSort/Player/Controller
 var current_map = "res://levels/stage_3_night/manor_inside_night.tscn"
@@ -16,7 +16,7 @@ func _ready():
 	set_overall_initial_position()
 	set_player_position()
 	
-	Global.set_current_level(current_level.text)
+	place_name = "Manor inside"
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/manor_insideNight.wav")

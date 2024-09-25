@@ -4,7 +4,6 @@ onready var player_controller = $YSort/player/Controller
 onready var player_controller_joystick = $YSort/player/Controller/joystick
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
-onready var current_level = $TopUi/Label
 onready var player = $YSort/player
 onready var place_name = $TopUi/Label2
 onready var door1_image = $YSort/objects/door
@@ -41,11 +40,10 @@ onready var escape_door_open = $YSort/objects/open_door3
 
 func _ready():
 	state = Global2.state
-	print(Global2.state)
+	#print(Global2.state)
 	set_overall_initial_position()
 	set_player_position()
 	place_name.text = "Manor inside 2nd floor"
-	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
 	first_dialogue()
@@ -204,7 +202,7 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 		Global2.dialogue_name = "stage3React2"
 		Global2.correct_answer_ch1_4 = true
 		Global.load_game_position = true
-		#Musicmanager.stop_music()
+		#Global2.label_visibility = true
 		Musicmanager.set_to_low()
 		SceneTransition.change_scene("res://intro/question_panel.tscn")
 
@@ -227,7 +225,7 @@ func _on_Area2D_body_shape_entered_door2(body_rid, body, body_shape_index, local
 	player_controller.hide()
 	player_controller_joystick.disable_joystick()
 	Musicmanager.set_to_low()
-	#Musicmanager.stop_music()
+	
 	var new_dialog = Dialogic.start('stage4p0')
 	add_child(new_dialog)
 	new_dialog.connect("timeline_end", self, "interaction_endpoint")
@@ -250,7 +248,7 @@ func _on_Area2D_body_shape_entered_chess(body_rid, body, body_shape_index, local
 	player_controller.hide()
 	player_controller_joystick.disable_joystick()
 	Musicmanager.set_to_low()
-	#Musicmanager.stop_music()
+	
 	var new_dialog = Dialogic.start('stage4p2')
 	add_child(new_dialog)
 	new_dialog.connect("timeline_end", self, "interaction_endpoint_question")

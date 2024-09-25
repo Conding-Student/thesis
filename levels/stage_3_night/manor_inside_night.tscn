@@ -1,6 +1,6 @@
-[gd_scene load_steps=151 format=2]
+[gd_scene load_steps=152 format=2]
 
-[ext_resource path="res://intro/Label.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/room/night_level_entrance.tscn" type="PackedScene" id=4]
@@ -17,7 +17,7 @@
 [ext_resource path="res://World/pictures/interior/TopDownHouse_SmallItems.png" type="Texture" id=15]
 [ext_resource path="res://World/pictures/interior/wooden_stairs.png" type="Texture" id=16]
 [ext_resource path="res://World/pictures/interior/interior free.png" type="Texture" id=17]
-[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=18]
+[ext_resource path="res://intro/path_arrow.tres" type="Texture" id=18]
 
 [sub_resource type="TileSet" id=1]
 0/name = "interior free.png 0"
@@ -1898,6 +1898,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="DynamicFont" id=136]
+size = 5
+font_data = ExtResource( 1 )
+
 [node name="manor_inside_night" type="Node2D"]
 script = ExtResource( 8 )
 
@@ -1989,6 +1993,23 @@ cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( 3080397, 0, 0, 18088260, 0, 0 )
 
+[node name="manor_out_night_pos" type="Position2D" parent="."]
+position = Vector2( 209, 75 )
+
+[node name="manor_out_night" parent="." instance=ExtResource( 4 )]
+position = Vector2( 208, 53 )
+rotation = 1.57079
+
+[node name="manor_2ndfloor_night_pos" type="Position2D" parent="."]
+position = Vector2( 304, 280 )
+
+[node name="manor_2ndfloor_night" parent="." instance=ExtResource( 4 )]
+position = Vector2( 335, 280 )
+rotation = 1.57079
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.160784, 0.145098, 0.145098, 1 )
+
 [node name="TopUi" type="CanvasLayer" parent="."]
 
 [node name="pause_game" type="TextureButton" parent="TopUi"]
@@ -2010,24 +2031,14 @@ margin_bottom = 40.0
 
 [node name="pause_menu" parent="TopUi" instance=ExtResource( 2 )]
 
-[node name="Label" parent="TopUi" instance=ExtResource( 1 )]
-
-[node name="manor_out_night_pos" type="Position2D" parent="."]
-position = Vector2( 209, 75 )
-
-[node name="manor_out_night" parent="." instance=ExtResource( 4 )]
-position = Vector2( 208, 53 )
-rotation = 1.57079
-
-[node name="manor_2ndfloor_night_pos" type="Position2D" parent="."]
-position = Vector2( 304, 280 )
-
-[node name="manor_2ndfloor_night" parent="." instance=ExtResource( 4 )]
-position = Vector2( 335, 280 )
-rotation = 1.57079
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.160784, 0.145098, 0.145098, 1 )
+[node name="Label2" type="Label" parent="TopUi"]
+margin_left = 132.0
+margin_top = 8.0
+margin_right = 205.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 136 )
+align = 1
+valign = 1
 
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 

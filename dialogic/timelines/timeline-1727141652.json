@@ -37,9 +37,9 @@
 		{
 			"choice": "Yes",
 			"condition": "",
-			"definition": "",
+			"definition": "1727251831-648",
 			"event_id": "dialogic_011",
-			"value": ""
+			"value": "2"
 		},
 		{
 			"character": "character-1721952113.json",
@@ -48,7 +48,31 @@
 			"text": "Good!"
 		},
 		{
-			"change_timeline": "timeline-1723547771.json",
+			"emit_signal": "level2s2",
+			"event_id": "dialogic_040"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"change_timeline": "timeline-1727261101.json",
 			"event_id": "dialogic_020"
 		},
 		{
@@ -67,23 +91,6 @@
 		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
-		},
-		{
-			"choice": "Not interested",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"character": "character-1721952113.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "All of our feelings are valid, I respect that. I'm going to teach you now valen. "
-		},
-		{
-			"change_timeline": "timeline-1723547771.json",
-			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_013"

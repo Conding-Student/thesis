@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=1]
 [ext_resource path="res://World/tres/fire.tres" type="Texture" id=2]
@@ -8,13 +8,12 @@
 [ext_resource path="res://NPC/child_boy3.tscn" type="PackedScene" id=6]
 [ext_resource path="res://NPC/child_girl2.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=8]
-[ext_resource path="res://intro/Label.tscn" type="PackedScene" id=9]
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=10]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/script/orphanage_room.gd" type="Script" id=13]
 [ext_resource path="res://World/room/entrance.tscn" type="PackedScene" id=14]
-[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=15]
+[ext_resource path="res://intro/path_arrow.tres" type="Texture" id=15]
 
 [sub_resource type="TileSet" id=20]
 0/name = "atlas_16x.png 0"
@@ -856,8 +855,6 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="pause_menu" parent="TopUi" instance=ExtResource( 11 )]
-
-[node name="Label" parent="TopUi" instance=ExtResource( 9 )]
 
 [node name="orphanage_hallway" parent="." instance=ExtResource( 14 )]
 position = Vector2( 5, 96 )

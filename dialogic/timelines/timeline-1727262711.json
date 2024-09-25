@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You've done well, Val. You have a strong grasp of these methods. Now, I have a mission for you to apply your new knowledge"
+		},
+		{
+			"emit_signal": "badge7",
+			"event_id": "dialogic_040"
+		},
+		{
+			"change_scene": "res://intro/stages_complete.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727262711.json",
+		"name": "vallevel2s2"
+	}
+}

@@ -436,6 +436,13 @@ position = Vector2( -28.4445, -27.8182 )
 scale = Vector2( 0.165625, 0.0888889 )
 normal = ExtResource( 13 )
 
+[node name="Light2D" type="Light2D" parent="YSort/merick"]
+position = Vector2( 0, -4.90909 )
+scale = Vector2( 0.425347, 0.367543 )
+texture = ExtResource( 11 )
+texture_scale = 0.4
+energy = 0.6
+
 [node name="floors" type="TileMap" parent="YSort"]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
@@ -526,6 +533,7 @@ margin_bottom = 40.0
 [node name="pause_menu" parent="TopUi" instance=ExtResource( 3 )]
 
 [node name="Label" parent="TopUi" instance=ExtResource( 1 )]
+visible = false
 
 [node name="Label2" type="Label" parent="TopUi"]
 margin_left = 133.0

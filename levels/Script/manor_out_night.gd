@@ -4,7 +4,6 @@ onready var topui = $TopUi
 onready var player_controller = $objects/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
-onready var current_level = $TopUi/Label
 onready var player =$objects/Player
 onready var player_controller_joystick = $objects/Player/Controller/joystick
 onready var place_name = $TopUi/Label2
@@ -24,7 +23,6 @@ func _ready():
 	player_controller_joystick.enable_joystick()
 	Musicmanager.normal_volume()
 	place_name.text = "Manor outside"
-	Global.set_current_level(current_level.text)
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button.connect("pressed", self, "merrick2")
 	attack_button.hide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://World/world objects/sewerBubble1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=2]
@@ -6,13 +6,12 @@
 [ext_resource path="res://World/world objects/sewerDoor_locked.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=6]
-[ext_resource path="res://intro/Label.tscn" type="PackedScene" id=7]
 [ext_resource path="res://levels/Script/mageGuild_sewer.gd" type="Script" id=8]
 [ext_resource path="res://World/pictures/hybrid/sewer_1.png" type="Texture" id=9]
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=10]
 [ext_resource path="res://World/room/night_level_entrance.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=12]
-[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=13]
+[ext_resource path="res://intro/path_arrow.tres" type="Texture" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -534,8 +533,6 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="pause_menu" parent="TopUi" instance=ExtResource( 6 )]
-
-[node name="Label" parent="TopUi" instance=ExtResource( 7 )]
 
 [node name="Label2" type="Label" parent="TopUi"]
 margin_left = 133.0

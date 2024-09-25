@@ -7,16 +7,16 @@ onready var chapter_3 = $Panel4/Panel3
 
 # Array of badge nodes for chapter 1
 onready var badges = [
-	$Panel4/Panel/Badges/HBoxContainer/Units/s1,
-	$Panel4/Panel/Badges/HBoxContainer/Units/s2,
-	$Panel4/Panel/Badges/HBoxContainer/Units/s3,
-	$Panel4/Panel/Badges/HBoxContainer/Units/s4,
-	$Panel4/Panel/Badges/HBoxContainer/Units/s5,
-	$Panel4/Panel/Badges/HBoxContainer2/Units/s1,
-	$Panel4/Panel/Badges/HBoxContainer2/Units/s2,
-	$Panel4/Panel/Badges/HBoxContainer2/Units/s3,
-	$Panel4/Panel/Badges/HBoxContainer2/Units/s4,
-	$Panel4/Panel/Badges/HBoxContainer2/Units/s5
+	$Panel4/Panel/Badges/HBoxContainer/Units/s1, #1
+	$Panel4/Panel/Badges/HBoxContainer/Units/s2, #2
+	$Panel4/Panel/Badges/HBoxContainer/Units/s3, #3
+	$Panel4/Panel/Badges/HBoxContainer/Units/s4, #4
+	$Panel4/Panel/Badges/HBoxContainer/Units/s5, #5
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s1, #6
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s2, #7
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s3, #8
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s4, #9
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s5  #10
 ]
 
 # Array of badge images (default and completed)
@@ -63,22 +63,45 @@ var badge_images = {
 	}
 }
 
-# Called when the node enters the scene tree for the first time.
+# This is the label node reference for updating text
+onready var progress_label =  $Label # Change path to your actual label
+
+# Text map for displaying progress based on badge completion
+var badge_text_map = {
+	"badge1": "Chapter1 U1 2 / 5",
+	"badge2": "Chapter1 U1 3 / 5",
+	"badge3": "Chapter1 U1 4 / 5",
+	"badge4": "Chapter1 U1 5 / 5",
+	"badge5": "Chapter1 U2 1 / 5",
+	"badge6": "Chapter1 U2 2 / 5",
+	"badge7": "Chapter1 U2 3 / 5",
+	"badge8": "Chapter1 U2 4 / 5",
+	"badge9": "Chapter1 U2 5 / 5",
+	"badge10": "Chapter1 U3 1 / 5"
+}
+
 func _ready():
 	chapter_1.show()
-	update_badges()  # Initial update of badge visibility and images
+	update_badges()
 
-# Function to update badge visibility and images based on Global2 values
-# Function to update badge visibility and images based on Global2 values
+# Function to update badge visibility and label based on Global2 values
 func update_badges():
+	var latest_badge_text = ""  # Variable to hold the latest badge progress text
+
 	for i in range(badges.size()):
-		var badge_name = "badge" + str(i + 1)  # badge1, badge2, etc.
-		if Global2.badges_complete.has(badge_name) and Global2.badges_complete[badge_name]:
+		var badge_name = "badge" + str(i + 1)
+		
+		# Check if the badge is completed
+		if Global2.is_badge_complete(badge_name):
 			badges[i].texture = badge_images[badge_name]["earned"]  # Set earned image
-			#print("%s badge earned, displaying earned image." % badge_name)
+			latest_badge_text = badge_text_map[badge_name]  # Update text for the latest completed badge
 		else:
 			badges[i].texture = badge_images[badge_name]["default"]  # Set default image
-			#print("%s badge not earned, displaying default image." % badge_name)
+
+	# Update the label with the most recent completed badge's progress text
+	if latest_badge_text != "":
+		progress_label.text = latest_badge_text
+		Global.set_current_level(latest_badge_text)  # Update global level text, if needed
 
 
 # Chapter navigation functions

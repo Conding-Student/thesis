@@ -8,6 +8,7 @@ var current_enemy_health = 0  # Variable to track the current health of the enem
 #accesing badges ,label value
 onready var badge = $badges
 onready var label = $Label
+onready var badge_label = $badges/Label
 # Questions
 onready var question1 = $Question/q1
 onready var question2 = $Question/q2
@@ -66,6 +67,7 @@ onready var feedback_label = $textbox/Label
 
 # Called when the node is added to the scene
 func _ready():
+	badge_label.hide()
 	# Set up the first question and answers if available
 	if Global2.get_question(0) != "" && Global2.get_answers(0) != "" && Global2.get_answers(1) != "" && Global2.get_answers(2) != "" && Global2.get_answers(3) != "":
 		question1.text = Global2.get_question(0)
@@ -74,6 +76,7 @@ func _ready():
 		ch1_3.text = Global2.get_answers(2)
 		ch1_4.text = Global2.get_answers(3)
 		bg_pic1.texture = load(Global2.get_picture_path(0))
+		
 	else:
 		pass
 
@@ -237,6 +240,12 @@ func value_activating(param):
 		Global.set_door_state("chest1", true)
 		Global2.state = "chest1"
 		Global2.complete_badge("badge4")
+		badge.update_badges()
+	elif param == "badge7":
+		#print("trigger")
+		Global2.complete_badge("badge7")
+		label.updating_label()
+		
 	
 # Reset all relevant Global2 properties to false (used to avoid dialogue errors)
 

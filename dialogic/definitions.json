@@ -50,6 +50,18 @@
 			"name": "introduction",
 			"type": 0,
 			"value": "0"
+		},
+		{
+			"id": "1727253549-787",
+			"name": "mage_guild",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1727251831-648",
+			"name": "mission1",
+			"type": 0,
+			"value": "2"
 		}
 	]
 }
