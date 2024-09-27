@@ -59,7 +59,6 @@ func resume_the_game() -> void:
 	pause_ui.hide()
 
 func _on_pause_game_pressed():
-	
 	get_tree().paused = true
 	topui.visible = false
 	player_controller.visible = false
@@ -81,6 +80,6 @@ func after_paladin(timelinename):
 	player_controller.visible = true
 	player_controller_joystick.enable_joystick()
 	Musicmanager.normal_volume()
-	Global2.explore_town = int(Dialogic.get_variable("explore_town"))
-	Global2.paladin_mage_guild = int(Dialogic.get_variable("paladin"))
+	#Global2.explore_town = int(Dialogic.get_variable("explore_town"))
+	#Global2.paladin_mage_guild = int(Dialogic.get_variable("paladin"))
 

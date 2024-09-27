@@ -516,6 +516,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="arrow_head" parent="YSort/child_boy4" index="7"]
+tile_data = PoolIntArray( -1572868, 0, 0 )
+
 [node name="objects" type="YSort" parent="YSort"]
 
 [node name="path_arrow" type="TileMap" parent="YSort/objects"]
@@ -574,3 +577,6 @@ valign = 1
 autowrap = true
 
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
+
+[editable path="YSort/child_boy4"]
+[editable path="YSort/child_boy4/dialogue_area"]

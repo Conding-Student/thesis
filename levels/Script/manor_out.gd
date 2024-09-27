@@ -75,7 +75,7 @@ func after_knight(timelinename):
 	player_controller_joystick.enable_joystick()
 	Musicmanager.normal_volume()
 	interaction_button1.show()
-	Global2.explore_town = int(Dialogic.get_variable("explore_town"))
-	Global2.manor_guard = int(Dialogic.get_variable("manor_guard"))
+	#Global2.explore_town = int(Dialogic.get_variable("explore_town"))
+	#Global2.manor_guard = int(Dialogic.get_variable("manor_guard"))
 
 

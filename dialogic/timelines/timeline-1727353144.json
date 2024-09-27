@@ -1,7 +1,7 @@
 {
 	"events": [
 		{
-			"condition": "==",
+			"condition": "",
 			"definition": "1727348094-478",
 			"event_id": "dialogic_012",
 			"value": "0"
@@ -11,9 +11,8 @@
 			"event_id": "dialogic_021"
 		},
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 0.5,
-			"animation_wait": true,
+			"animation": "[Default]",
+			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1723097609.json",
@@ -32,41 +31,20 @@
 			"z_index": 0
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": true,
-			"wait_seconds": 0.5
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/citizen3t1/cit3d1.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1723097609.json",
 			"event_id": "dialogic_010",
 			"options": [
 
 			],
 			"portrait": "",
-			"question": "Oh boy, where are you going?"
+			"question": "Oh boy where are you going?"
 		},
 		{
-			"choice": "1.) Just Strolling around.",
+			"choice": "Just strolling around",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/citizen3t1/cit3d2.wav",
-			"volume": 0
 		},
 		{
 			"character": "character-1721952703.json",
@@ -79,6 +57,18 @@
 			"definition": "1723097011-648",
 			"event_id": "dialogic_012",
 			"value": "3"
+		},
+		{
+			"character": "character-1723097609.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This was the townsquare, this is the capital of this region. You may find here some market, houses, and the statue of Legendary Wizard King. "
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh thanks for that information. This was the [explore_town] out of 3 places I needed to look at."
 		},
 		{
 			"definition": "1723097011-648",
@@ -97,34 +87,6 @@
 			"set_value": "1"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/citizen3t1/cit3d3.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1723097609.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "This was the townsquare, this is the capital of this region. You may find here some market, houses, and the statue of Legendary Wizard King. "
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/citizen3t1/cit3d4.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1721952703.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Oh thanks for that information. This was the [explore_town] out of 3 places I needed to look at."
-		},
-		{
 			"custom_slot": "slot1",
 			"event_id": "dialogic_026",
 			"use_default_slot": false
@@ -137,7 +99,7 @@
 			"event_id": "dialogic_013"
 		},
 		{
-			"choice": "2.) its none of your business.",
+			"choice": "it was none of your business",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -147,7 +109,7 @@
 			"character": "character-1723097609.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You're such a rude kid!"
+			"text": "You're such a rude kid"
 		},
 		{
 			"definition": "1727348094-478",
@@ -185,7 +147,6 @@
 		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 0.5,
-			"animation_wait": true,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1723097609.json",
@@ -204,29 +165,13 @@
 			"z_index": 0
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/citizen3t1/cit3d5.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1723097609.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Oh, Why are you asking me about this place? Didn't I told you that this was the Townsquare?"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/manorGuard1/g1d7.wav",
-			"volume": 0
-		},
-		{
-			"character": "character-1721952703.json",
+			"character": "character-1723097609.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Oh yeah, sorry I forgot.  (This was the [explore_town] out of 3 places I need to look at)"
@@ -245,10 +190,37 @@
 			"value": "2"
 		},
 		{
+			"background": "res://Scenes/pictures/townsquare/townsquare.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
 			"character": "character-1723097609.json",
-			"event_id": "dialogic_001",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1723097609.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
 			"portrait": "",
-			"text": "Why are you asking me about this place? that attitude of yours is shameful here in syntaxia!"
+			"question": "Why are you asking me about this place? that attitude of yours is shameful here in syntaxia!"
 		},
 		{
 			"choice": "Say sorry",
@@ -267,7 +239,27 @@
 			"character": "character-1723097609.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Apology accepted. This was the townsquare, this is the capital of this region. You may find here some market, houses, and the statue of Legendary Wizard King. "
+			"text": "Apology accepted. "
+		},
+		{
+			"character": "character-1723097609.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This was the townsquare, this is the capital of this region. You may find here some market, houses, and the statue of Legendary Wizard King. "
+		},
+		{
+			"definition": "1723097011-648",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh thanks for that information. This was the [explore_town] out of 3 places I needed to look at."
 		},
 		{
 			"definition": "1727348094-478",
@@ -283,7 +275,11 @@
 			"use_default_slot": false
 		},
 		{
-			"choice": "leave",
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Leave",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -295,11 +291,14 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1723097509.json",
-		"name": "citizen4"
+		"file": "timeline-1727353144.json",
+		"name": "citizen3"
 	}
 }

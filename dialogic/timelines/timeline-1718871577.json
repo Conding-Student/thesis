@@ -4,7 +4,13 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Above you may find your own Heart health, Levels and pause menu"
+			"text": "Above you may find your own Heart health, current Level,  pause menu, and current map."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To interact within the people, objects and events click the interaction button above them."
 		},
 		{
 			"event_id": "dialogic_022",

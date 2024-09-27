@@ -156,6 +156,11 @@
 			"text": "This was the [explore_town] out of 3 places I needed to look at."
 		},
 		{
+			"custom_slot": "slot1",
+			"event_id": "dialogic_026",
+			"use_default_slot": false
+		},
+		{
 			"event_id": "dialogic_013"
 		},
 		{

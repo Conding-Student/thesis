@@ -19,7 +19,7 @@ func _ready():
 	interaction_button1.connect("pressed", self, "citizen_dialogue")
 	place_name.text = "Towncenter"
 	Global.set_map(current_map)
-
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/towncenterday.wav")
 
 	
 
@@ -75,7 +75,4 @@ func after_citizen3(timelinename):
 	player_controller.visible = true
 	player_controller_joystick.enable_joystick()
 	Musicmanager.normal_volume()
-	Global2.explore_town = int(Dialogic.get_variable("explore_town"))
-	Global2.lady_on_townsquare = int(Dialogic.get_variable("citizen"))
-
 

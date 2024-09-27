@@ -150,8 +150,8 @@
 			"text": "Good. The job will be done on the day of the festival. Most wizards will be busy, so it's the perfect time to strike. Make sure you’re well prepared so you \ndon't disappoint me"
 		},
 		{
-			"change_timeline": "timeline-1723547149.json",
-			"event_id": "dialogic_020"
+			"change_scene": "res://Scenes/horseride.tscn",
+			"event_id": "dialogic_041"
 		},
 		{
 			"event_id": "dialogic_022",

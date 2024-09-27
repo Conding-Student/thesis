@@ -9,11 +9,11 @@ var state = ""
 
 #Stage 2 talking with the villiger number of times
 #quest
-var explore_town = 0
-var lady_on_townsquare = 0
-var manor_guard = 0
-var paladin_mage_guild = 0
-var after_quiz = 0
+#var explore_town = 0
+#var lady_on_townsquare = 0
+#var manor_guard = 0
+#var paladin_mage_guild = 0
+#var after_quiz = 0
 
 
 #levels UI triger cange
@@ -29,7 +29,7 @@ var after_quiz = 0
 ######################## stage complete trigger ################
 # Dictionary mapping badges to their completion status
 var badges_complete = {
-	"badge1": false,
+	"badge1": true,
 	"badge2": false,
 	"badge3": false,
 	"badge4": false,

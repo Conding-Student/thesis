@@ -63,11 +63,11 @@ func save_data(filename: String) -> void:
 		"enemy_state": Global.enemy_state,
 		"enemy_defeated": Global.enemy_defeated,
 		"dialogue_start_tutorial": Global.dialogue_start_tutorial,
-		"explore_town": Global2.explore_town,
-		"manor_guard": Global2.manor_guard,
-		"lady_on_townsquare": Global2.lady_on_townsquare,
-		"paladin_mage_guild": Global2.paladin_mage_guild,
-		"after_quiz": Global2.after_quiz,
+		#"explore_town": Global2.explore_town,
+		#"manor_guard": Global2.manor_guard,
+		#"lady_on_townsquare": Global2.lady_on_townsquare,
+		#"paladin_mage_guild": Global2.paladin_mage_guild,
+		#"after_quiz": Global2.after_quiz,
 		"bat_states": Global.bat_states,
 		"door_states": Global.door_states,
 		"dialogue_states": Global.dialogue_states,
@@ -104,18 +104,18 @@ func apply_loaded_data(loaded_data: Dictionary) -> void:
 	PlayerStats.health = loaded_data.get("players_health", 100)  # Assuming a default value
 	Dialogic.load("slot1")
 	# Load location and state variables
-	Global2.explore_town = int(loaded_data.get("explore_town", 0))
-	Global2.paladin_mage_guild = int(loaded_data.get("paladin_mage_guild", 0))
-	Global2.lady_on_townsquare = int(loaded_data.get("lady_on_townsquare", 0))
-	Global2.manor_guard = int(loaded_data.get("manor_guard", 0))
-	Global2.after_quiz = int(loaded_data.get("after_quiz", 0))
+	#Global2.explore_town = int(loaded_data.get("explore_town", 0))
+	#Global2.paladin_mage_guild = int(loaded_data.get("paladin_mage_guild", 0))
+	#Global2.lady_on_townsquare = int(loaded_data.get("lady_on_townsquare", 0))
+	#Global2.manor_guard = int(loaded_data.get("manor_guard", 0))
+	#Global2.after_quiz = int(loaded_data.get("after_quiz", 0))
 
 	# Set dialogic variables
-	Dialogic.set_variable("explore_town", Global2.explore_town)
-	Dialogic.set_variable("paladin", Global2.paladin_mage_guild)
-	Dialogic.set_variable("citizen", Global2.lady_on_townsquare)
-	Dialogic.set_variable("manor_guard", Global2.manor_guard)
-	Dialogic.set_variable("after_quiz", Global2.after_quiz)
+	#Dialogic.set_variable("explore_town", Global2.explore_town)
+	#Dialogic.set_variable("paladin", Global2.paladin_mage_guild)
+	#Dialogic.set_variable("citizen", Global2.lady_on_townsquare)
+	#Dialogic.set_variable("manor_guard", Global2.manor_guard)
+	#Dialogic.set_variable("after_quiz", Global2.after_quiz)
 
 	# Load player positions
 	Global.set_player_current_position(Vector2(loaded_data.get("player_current_position", [0, 0])[0], loaded_data.get("player_current_position", [0, 0])[1]))

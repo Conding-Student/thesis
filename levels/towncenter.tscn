@@ -934,6 +934,10 @@ position = Vector2( 520, 92 )
 [node name="citizen3" parent="YSort/people" instance=ExtResource( 42 )]
 position = Vector2( 57, 211 )
 
+[node name="arrow_head" parent="YSort/people/citizen3" index="8"]
+cell_size = Vector2( 1, 1 )
+tile_data = PoolIntArray( -2031619, 0, 0 )
+
 [node name="orphanage_outside" parent="." instance=ExtResource( 19 )]
 position = Vector2( 5, 223 )
 
@@ -986,3 +990,4 @@ valign = 1
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 
 [editable path="Camera2D"]
+[editable path="YSort/people/citizen3"]

@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"background": "res://Scenes/pictures/orphanage_hallway.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To interact with other people click the interaction symbol above them."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727345508.json",
+		"name": "interaction_tutorial"
+	}
+}

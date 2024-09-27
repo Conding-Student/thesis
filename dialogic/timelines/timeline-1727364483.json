@@ -1,0 +1,46 @@
+{
+	"events": [
+		{
+			"background": "res://Scenes/pictures/townsquare/market.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Hey good day! is there something are you looking for?"
+		},
+		{
+			"choice": "Check balance money",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Buy",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Leave",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727364483.json",
+		"name": "market_man"
+	}
+}

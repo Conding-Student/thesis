@@ -22,32 +22,8 @@
 			"value": "0"
 		},
 		{
-			"id": "1723097830-905",
-			"name": "citizen",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1723187790-648",
-			"name": "child_tips",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1723102985-768",
-			"name": "paladin",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1723097011-648",
 			"name": "explore_town",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1727150110-648",
-			"name": "introduction",
 			"type": 0,
 			"value": "0"
 		},
@@ -62,6 +38,36 @@
 			"name": "mission1",
 			"type": 0,
 			"value": "2"
+		},
+		{
+			"id": "1727150110-648",
+			"name": "introduction",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1727346209-402",
+			"name": "red_child_dialogue",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723102985-768",
+			"name": "paladin",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723187790-648",
+			"name": "child_tips",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1727348094-478",
+			"name": "Citizen_dialogue",
+			"type": 0,
+			"value": "0"
 		}
 	]
 }

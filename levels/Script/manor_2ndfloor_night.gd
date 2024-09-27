@@ -44,6 +44,7 @@ func _ready():
 	set_overall_initial_position()
 	set_player_position()
 	place_name.text = "Manor inside 2nd floor"
+
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
 	first_dialogue()
