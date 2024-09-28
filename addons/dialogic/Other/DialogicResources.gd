@@ -558,19 +558,32 @@ static func save_resource_folder_flat_structure(flat_tree) -> Dictionary:
 	return {}
 	
 static func recursive_search(currentCheck, currentDictionary, currentFolder, structure_dictionary):
-	structure_dictionary[currentCheck][currentFolder + "."] = currentDictionary['metadata']
+	# Check if 'metadata' key exists in currentDictionary
+	if currentDictionary.has('metadata'):
+		structure_dictionary[currentCheck][currentFolder + "."] = currentDictionary['metadata']
+	else:
+		print("Key 'metadata' missing in currentDictionary for folder: ", currentFolder)
 	
-	for structureFolder in currentDictionary["folders"]:
-		recursive_search(currentCheck, currentDictionary["folders"][structureFolder], currentFolder + structureFolder + "/", structure_dictionary)
-		
-	for structureFile in currentDictionary["files"]:
-		match currentCheck:
-			"Timelines": structure_dictionary['Timelines'][structureFile] = currentFolder
-			"Characters":  structure_dictionary['Characters'][structureFile] = currentFolder
-			"Definitions":  structure_dictionary['Definitions'][structureFile] = currentFolder
-			"Themes":  structure_dictionary['Themes'][structureFile] = currentFolder
+	# Check if 'folders' key exists and is a dictionary
+	if currentDictionary.has("folders"):
+		for structureFolder in currentDictionary["folders"]:
+			recursive_search(currentCheck, currentDictionary["folders"][structureFolder], currentFolder + structureFolder + "/", structure_dictionary)
+	else:
+		print("Key 'folders' missing or invalid in currentDictionary for folder: ", currentFolder)
+
+	# Check if 'files' key exists and is an array or dictionary
+	if currentDictionary.has("files"):
+		for structureFile in currentDictionary["files"]:
+			match currentCheck:
+				"Timelines": structure_dictionary['Timelines'][structureFile] = currentFolder
+				"Characters": structure_dictionary['Characters'][structureFile] = currentFolder
+				"Definitions": structure_dictionary['Definitions'][structureFile] = currentFolder
+				"Themes": structure_dictionary['Themes'][structureFile] = currentFolder
+	else:
+		print("Key 'files' missing or invalid in currentDictionary for folder: ", currentFolder)
 	
 	return structure_dictionary
+
 
 static func recursive_build(build_path, meta, current_dictionary):
 	var passer = {}

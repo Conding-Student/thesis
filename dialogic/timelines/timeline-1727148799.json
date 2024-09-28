@@ -21,13 +21,34 @@
 			"text": "I see you’ve written some interesting code. What sort of spell are you casting with that map?"
 		},
 		{
-			"character": "character-1727149773.json",
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727481183.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1727481183.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "This ain’t your everyday script, mate. It’s a map to a forgotten node in the digital sea—a shipwreck of corrupted data, long lost to time. "
 		},
 		{
-			"character": "character-1727149773.json",
+			"character": "character-1727481183.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "And inside... well, the treasure’s more than just bits and bytes."
@@ -39,13 +60,13 @@
 			"text": "I’ve run into corrupted data before. Tough to decrypt, but always hiding something valuable. What makes this one special?"
 		},
 		{
-			"character": "character-1727149773.json",
+			"character": "character-1727481183.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "This wreck isn’t just some junk code. It’s the legacy of an old captain, a master of recursion and loops. They say he was lost to an infinite loop "
 		},
 		{
-			"character": "character-1727149773.json",
+			"character": "character-1727481183.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "—trapped forever in a cursed process. The treasure... it’s the key to breaking that loop."
@@ -57,13 +78,13 @@
 			"text": "Breaking an infinite loop, huh? Dangerous, but it sounds like the challenge of a lifetime"
 		},
 		{
-			"character": "character-1727149773.json",
+			"character": "character-1727481183.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Dangerous? Aye. The sea of data is unforgiving, and the digital waves carry more than just broken packets. "
 		},
 		{
-			"character": "character-1727149773.json",
+			"character": "character-1727481183.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "But if you’ve got the courage and the right syntax we might just pull it off."
@@ -75,13 +96,13 @@
 			"text": "I’m in. Just one thing—don’t get stuck in an exception. I’ve seen too many who never make it out."
 		},
 		{
-			"character": "character-1727149773.json",
+			"character": "character-1727481183.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "No worries. In Syntaxia, we live by the code, but we also know how to rewrite it. We set sail after the festival don’t be late."
 		},
 		{
-			"character": "character-1727149773.json",
+			"character": "character-1727481183.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "or you’ll be left debugging on the shore."
@@ -109,7 +130,7 @@
 		{
 			"definition": "1727253549-787",
 			"event_id": "dialogic_014",
-			"operation": "=",
+			"operation": "+",
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "1"

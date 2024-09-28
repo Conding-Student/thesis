@@ -1,0 +1,419 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1727443629-787",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"background": "res://Scenes/pictures/mageguild/044675f208009a587708f108d9c627ef.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Didn’t think I’d find someone like you lurking around a place like this. You’re a bit out of your element, aren’t you?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Just looking for something useful"
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Useful, huh? Funny, I thought you were the type who’s always got everything figured out. What are you after, exactly? Spells? Artifacts? "
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Or maybe something more... exciting?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Whatever gets the job done. I don’t need excitement."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No excitement? Now that’s a shame. You know, life’s a little dull without a bit of risk. But I guess you’re all about playing it safe, huh?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not interested in taking risks that don’t pay off."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Always so serious. I like that. But I wonder... what would it take to crack that stone-cold face of yours?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nothing you’ve got."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Now, that sounds like a challenge. Careful, or I might just take you up on that."
+		},
+		{
+			"definition": "1727443629-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"custom_slot": "slot1",
+			"event_id": "dialogic_026",
+			"use_default_slot": false
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1727443629-787",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"background": "res://Scenes/pictures/mageguild/044675f208009a587708f108d9c627ef.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Back again, huh? Thought someone like you would have found what they needed by now. Or maybe you just like running into me."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Coincidence."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Is it? You sure you’re not sticking around for a bit of extra... distraction?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Don’t need distractions."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You keep saying that, but somehow, we keep running into each other. I’m starting to think you like this game."
+		},
+		{
+			"custom_slot": "slot1",
+			"event_id": "dialogic_026",
+			"use_default_slot": false
+		},
+		{
+			"definition": "1727443629-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "2"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1727443629-787",
+			"event_id": "dialogic_012",
+			"value": "2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Still buried in books, huh? You really know how to have a good time, don’t you?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not here for fun."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Always the same answer. You ever let yourself do something unexpected? Something that’s not... calculated?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I do what needs to be done. That's enough."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(leaning in, voice soft and teasing) And what if I said you could use a little chaos in your life? No planning, no thinking. Just... action."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Chaos doesn’t interest me."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You know, you’re a hard one to crack. Most people would have broken by now. But not you. Makes me wonder what it’ll take to get under that skin of yours."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wonder all you like. Won’t change anything."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(chuckles) Maybe. But I’m not done with you yet."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I figured."
+		},
+		{
+			"definition": "1727443629-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "3"
+		},
+		{
+			"custom_slot": "slot1",
+			"event_id": "dialogic_026",
+			"use_default_slot": false
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "==",
+			"definition": "1727443629-787",
+			"event_id": "dialogic_012",
+			"value": "3"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You’re always working. Do you ever stop to breathe?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I get by."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(Lean back) You ever wonder what it’s all for? Why you’re pushing so hard? Always looking ahead but never stopping to live a little?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Don’t have time to waste."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Everyone’s got time. It’s what you do with it that matters."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Doesn’t change anything."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(sighs, shaking her head) You’re a tough one, you know that? I’ve met a lot of people in my time, but no one quite like you."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not interested in being ‘like’ anyone."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, I can see that. Still, you’re missing out. A life without a little risk... it’s not much of a life."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(pauses again, considering her words for a brief moment before continuing with his task) I’m fine with that."
+		},
+		{
+			"character": "character-1727149773.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe you are. But don’t think I’m done with you yet. I’ll crack that stone face one day."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good luck."
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727441258.json",
+		"name": "Pirate_crew"
+	}
+}

@@ -78,7 +78,7 @@ func _on_pause_game_pressed():
 	get_tree().paused = true
 	topui.visible = false
 	player_controller.visible = false
-	pause_ui.show
+	pause_ui.show()
 	
 
 func _on_door_markings_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):

@@ -11,6 +11,7 @@ onready var interaction_button = $objects/Merrick_manor/TextureButton
 onready var attack_button = $objects/Player/Controller/Control/BtnAttack
 onready var path_inside_manor = $manor_inside_night/CollisionShape2D
 onready var question_before_entering = $Area2D/CollisionShape2D
+onready var arrow_head = $objects/lighting/path_arrow
 var current_map = "res://levels/stage_3_night/manor_out_night.tscn"
 var starting_player_position = Vector2 (528, 395)
 var door_id = 0
@@ -30,11 +31,13 @@ func _ready():
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/manorOutside_night.wav")
 	Musicmanager.change_scene("Manor outside")
 	
-	if Global.get_door_state("manor_inside"):
+	if Global.get_door_state("manor_inside") && Global2.is_badge_complete("badge5") == false:
 		#print("Bat is dead on load, removing from scene: ID =", bat_id)  # Debugging print
 		path_inside_manor.disabled = false
+		arrow_head.show()
 	else:
 		path_inside_manor.disabled = true
+		arrow_head.hide()
 	
 	#if Global.get_dialogue_state("manor_inside"):
 		#print("Bat is dead on load, removing from scene: ID =", bat_id)  # Debugging print
@@ -72,9 +75,6 @@ func resume_the_game() -> void:
 	topui.visible = true
 	player_controller.visible = true
 	pause_ui.hide()
-
-func _process(_delta):
-	pass
 	
 func merrick2():
 	player_controller.visible = false

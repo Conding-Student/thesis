@@ -1,12 +1,8 @@
 {
 	"events": [
 		{
-			"background": "res://intro/picture/scenery/intro_map.jpg",
-			"event_id": "dialogic_021"
-		},
-		{
 			"animation": "1-fade_in.gd",
-			"animation_length": 0.5,
+			"animation_length": 0.999,
 			"animation_wait": true,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -29,13 +25,102 @@
 			"character": "character-1726986872.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "In this world, magic flows through code. Every incantation, every spell, is powered by the logic and syntax of this language."
+			"text": "In the world of Syntaxia, magic isn’t bound to ancient spells or runes. It flows through code C# programming magic. "
+		},
+		{
+			"character": "character-1726986872.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You’ve used this power, not to harm, but to survive. And every time you did, a part of you questioned it."
+		},
+		{
+			"character": "character-1726986872.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "An assessment awaits a test not just of your skill, but of your integrity, your ability to rise above the life you’ve been forced into"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1726986872.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
 		},
 		{
 			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "This is your chance to leave behind the guilt and find a path that is yours not one chosen by circumstance. Will you embrace it?"
+		},
+		{
+			"choice": "I’ve always wanted to be more than this. I’m ready to prove it.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1726986872.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": ""
+			"text": "The assessment begins, testing not just your skills, but your understanding of how C# magic can be used for something greater."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "I don’t know if I can leave the past behind...",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1726986872.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You’ve been a thief, but you are not defined by it. In Syntaxia, you can shape a new future with the magic you’ve learned, one guided by your conscience."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Why should I trust this magic? It’s only ever been a tool for survival.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1726986872.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The magic of C# is more than just a means to survive. It can change your fate, help you find a path that aligns with the person you want to be."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {

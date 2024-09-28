@@ -5,6 +5,7 @@
 	"folders": {
 		"Characters": {
 			"files": [
+				"character-1727439562.json",
 				"character-1727149773.json",
 				"character-1727146946.json",
 				"character-1726986872.json",
@@ -19,7 +20,18 @@
 				"character-1720150982.json"
 			],
 			"folders": {
+				"mageguild": {
+					"files": [
+						"character-1727481183.json"
+					],
+					"folders": {
 
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				}
 			},
 			"metadata": {
 				"color": null,
@@ -55,7 +67,32 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
+					}
+				},
+				"currency": {
+					"files": [
+						"1727437460-648"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				},
+				"pirates": {
+					"files": [
+						"1727443629-787",
+						"1727504722-842"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
 					}
 				},
 				"stage2": {
@@ -126,7 +163,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"Market_dealer": {
@@ -138,7 +175,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Merrick": {
@@ -187,6 +224,18 @@
 					},
 					"metadata": {
 						"color": null,
+						"folded": false
+					}
+				},
+				"Pirates": {
+					"files": [
+						"timeline-1727441258.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
 						"folded": true
 					}
 				},
@@ -206,7 +255,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"citizen3": {
@@ -230,7 +279,8 @@
 						"timeline-1727185267.json",
 						"timeline-1727261101.json",
 						"timeline-1727307711.json",
-						"timeline-1727345508.json"
+						"timeline-1727345508.json",
+						"timeline-1727427110.json"
 					],
 					"folders": {
 

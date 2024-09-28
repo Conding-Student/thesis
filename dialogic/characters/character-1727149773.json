@@ -5,17 +5,17 @@
 	"display_name_bool": false,
 	"id": "character-1727149773.json",
 	"mirror_portraits": false,
-	"name": "Pirate",
+	"name": "Pirate_crew",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
+	"offset_x": -20,
 	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://Dialogue/Picture/mageguild/pirate_crew.png"
 		}
 	],
-	"scale": 100,
+	"scale": 20,
 	"theme": ""
 }

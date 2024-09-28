@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://World/guildCastle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/pictures/atlas_16x.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://NPC/Nun.tscn" type="PackedScene" id=22]
 [ext_resource path="res://NPC/townfolks_women.tscn" type="PackedScene" id=23]
 [ext_resource path="res://NPC/citizen.tscn" type="PackedScene" id=24]
+[ext_resource path="res://NPC/paladin_stationary.tscn" type="PackedScene" id=25]
 [ext_resource path="res://intro/path_arrow.tres" type="Texture" id=26]
 [ext_resource path="res://NPC/paladin.tscn" type="PackedScene" id=27]
 
@@ -563,8 +564,12 @@ position = Vector2( 567, 365 )
 [node name="paladin" parent="objects/people" instance=ExtResource( 27 )]
 position = Vector2( 339, 273 )
 
-[node name="paladin2" parent="objects/people" instance=ExtResource( 27 )]
-position = Vector2( 430, 272 )
+[node name="arrow_head" parent="objects/people/paladin" index="8"]
+cell_size = Vector2( 1, 1 )
+tile_data = PoolIntArray( -2031619, 0, 0 )
+
+[node name="paladin_stationary" parent="objects/people" instance=ExtResource( 25 )]
+position = Vector2( 428, 269 )
 
 [node name="objects" type="YSort" parent="objects"]
 
@@ -672,4 +677,5 @@ valign = 1
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 
 [editable path="objects/guildCastle"]
+[editable path="objects/people/paladin"]
 [editable path="Camera2D"]

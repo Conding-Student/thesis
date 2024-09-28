@@ -109,6 +109,7 @@ func area_collision_cultist_entered(body_rid, body, body_shape_index, local_shap
 
 func area_collision_cultist_exited(body_rid, body, body_shape_index, local_shape_index):
 	cultist_interaction_button.hide()
+	cultist_arrow_head.show()
 
 func cultist_interaction():
 	cultist_interaction_button.hide()

@@ -121,7 +121,13 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Make sure to communicate with other people to get information. Go to the townsquare. As of now [explore_town] out of 3 places you already knew. "
+			"text": "Make sure to communicate with other people to get information. As of now [explore_town] out of 3 places you already knew. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Go to the townsquare, talk to women at its entrance. Check the upper and right side of its map."
 		},
 		{
 			"event_id": "dialogic_022",

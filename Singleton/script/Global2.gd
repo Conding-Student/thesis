@@ -29,7 +29,7 @@ var state = ""
 ######################## stage complete trigger ################
 # Dictionary mapping badges to their completion status
 var badges_complete = {
-	"badge1": true,
+	"badge1": false,
 	"badge2": false,
 	"badge3": false,
 	"badge4": false,

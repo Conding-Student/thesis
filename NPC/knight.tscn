@@ -216,5 +216,8 @@ position = Vector2( -28, -43 )
 scale = Vector2( 0.165625, 0.0888889 )
 normal = ExtResource( 6 )
 
+[node name="arrow_head" type="TileMap" parent="."]
+format = 1
+
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]

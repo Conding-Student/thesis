@@ -48,7 +48,7 @@ margin_top = 2.0
 margin_right = 205.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 7 )
-text = "Chapter 1 u1 1 / 5"
+text = "Chapter1 U1 1 / 5"
 
 [node name="Panel4" type="Panel" parent="."]
 visible = false

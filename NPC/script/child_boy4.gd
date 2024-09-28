@@ -24,6 +24,7 @@ var last_direction = Vector2.RIGHT  # Store the last movement direction
 func _ready():
 	interaction_button.visible = false
 	
+	
 func _physics_process(delta):
 	match state:
 		IDLE:
@@ -87,12 +88,8 @@ func pick_random_state(state_list):
 
 #dialgoue diameter
 func _on_dialogue_area_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if Global2.is_badge_complete("badge1") == false or Global2.is_badge_complete("badge2") == true && Global2.is_badge_complete("badge3") == false:
-		if int(Dialogic.get_variable("red_child_dialogue")) != 3:
+	if int(Dialogic.get_variable("red_child_dialogue")) != 3:
 			interaction_button.visible = true
-			arrow_head.visible = false
-		else:
-			interaction_button.visible = false
 			arrow_head.visible = false
 	else: 
 		interaction_button.visible = false

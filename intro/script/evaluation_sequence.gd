@@ -99,6 +99,9 @@ func _ready():
 func _on_Question1_pressed():
 	panel1.show()
 	panel2.hide()
+	panel3.hide()
+	panel4.hide()
+	panel5.hide()
 
 func _on_Question2_pressed():
 	panel1.hide()
@@ -135,3 +138,4 @@ func _on_next_stage_pressed():
 	SceneTransition.change_scene(Global.map)
 	Global2.reset_evaluations()
 	Global2.reset_interactions()
+	Global.from_sequence = false

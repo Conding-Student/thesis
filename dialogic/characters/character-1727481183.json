@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1727481183.json",
+	"mirror_portraits": false,
+	"name": "Pirate captain",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -20,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Dialogue/Picture/mageguild/pirate_captain.png"
+		}
+	],
+	"scale": 20,
+	"theme": ""
+}

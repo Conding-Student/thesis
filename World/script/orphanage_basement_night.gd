@@ -13,6 +13,7 @@ onready var place_name = $TopUi/Label2
 onready var merrick_sprite = $YSort/merick
 onready var merrick_collision_area = $YSort/merick/Area2D/CollisionShape2D
 onready var interacton_button = $YSort/merick/TextureButton
+onready var arrow_head = $YSort/merick/arrow_head
 
 var current_map = "res://World/room/night/orphanage_basement_night.tscn"
 var starting_player_position = Vector2(236, 81)
@@ -32,30 +33,34 @@ func _ready():
 	#condition for merrick to be able to spawn
 	if Global2.is_badge_complete("badge5"):
 		merrick_sprite.show()
+		arrow_head.show()
 	else:
 		merrick_sprite.hide()
+		arrow_head.hide()
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)
-		print("1")
+		#print("1")
 	elif Global.from_level != null and Global.load_game_position == true:
 		player.global_position = Global.get_player_current_position()
 		Global.load_game_position = false
-		print("2")
+		#print("2")
 	elif Global.from_level != null:
 		var target_node_path = Global.from_level + "_pos"
 		if has_node(target_node_path):
 			var target_node = get_node(target_node_path)
 			player.global_position = target_node.position
-			print("3")
+			#print("3")
 		else:
-			print("position")
+			pass
+			#print("position")
 	else:
 		if Global.map == "res://World/room/night/orphanage_basement_night.tscn":
 			player.global_position = Global.get_player_current_position()
 		else:
-			print("4")
+			pass
+			#print("4")
 
 func set_overall_initial_position():
 	Global.set_player_initial_position(Global.get_player_current_position())
@@ -122,6 +127,11 @@ func interaction_endpoint(timelineend):
 
 # When player near at merrick this will happen
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	interacton_button.show()
+	if Global2.is_badge_complete("badge5"):
+		interacton_button.show()
+		arrow_head.hide()
 func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
-	interacton_button.hide()
+	if Global2.is_badge_complete("badge5"):
+		interacton_button.hide()
+		arrow_head.show()
+	

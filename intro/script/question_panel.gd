@@ -221,7 +221,7 @@ func end(timelineend):
 
 func value_activating(param):
 	if param == "stage2_done" && PlayerStats.health != 0:
-		Global2.after_quiz = Dialogic.set_variable("after_quiz",1)
+		#Global2.after_quiz = Dialogic.set_variable("after_quiz",1)
 		Global2.complete_badge("badge2")
 		badge.update_badges()
 		label.updating_label()

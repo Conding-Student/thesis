@@ -21,7 +21,7 @@ onready var chest = $YSort/YSort2/chest_lock/AnimatedSprite
 onready var merrick_sprite = $YSort/YSort2/Path2D/PathFollow2D/Merrick/Sprite 
 onready var pathfollow = $YSort/YSort2/Path2D/PathFollow2D
 onready var animation_merrick = $YSort/YSort2/Path2D/PathFollow2D/Merrick/AnimationPlayer 
-
+onready var arrow_head = $YSort/YSort2/Path2D/PathFollow2D/Merrick/arrow_head
 # Disconneting signal merrick
 onready var enter_signal1 = $YSort/YSort2/Path2D/PathFollow2D/Merrick/Area2D
 
@@ -38,6 +38,7 @@ func _ready():
 	
 	if Global2.is_badge_complete("badge1") == true:
 		merrick_sprite.visible = false
+		arrow_head.visible = false
 	
 
 func set_player_position():
@@ -122,5 +123,6 @@ func after_stagem2(timelinename):
 	player_control_collision.enable_joystick()
 	Global2.complete_badge("badge1")
 	merrick_sprite.visible = true
+	
 	SceneTransition.change_scene("res://intro/stages_complete.tscn")
 	

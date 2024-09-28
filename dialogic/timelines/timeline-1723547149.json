@@ -59,18 +59,10 @@
 			"text": "I understand. We'll just have to make sure we succeed"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/sideMission1/sm1d3.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Get ready. I'm going to teach you advanced ListKey magic methods. These will enhance your proficiency and increase our success rate for the job"
+			"text": "Get ready. I'm going to teach you advanced flowcharting and pseudocode. These will enhance your proficiency and increase our success rate for the job"
 		},
 		{
 			"change_scene": "res://World/room/night/orphanage_basement_night.tscn",

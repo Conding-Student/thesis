@@ -1,6 +1,10 @@
 {
 	"events": [
 		{
+			"background": "res://intro/picture/question/default_bg.png",
+			"event_id": "dialogic_021"
+		},
+		{
 			"character": "character-1721952703.json",
 			"event_id": "dialogic_001",
 			"portrait": "",

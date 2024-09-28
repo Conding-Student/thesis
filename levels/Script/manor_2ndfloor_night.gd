@@ -259,12 +259,34 @@ func interaction_endpoint_question():
 
 
 func _on_Area2D_body_shape_entered_escape(body_rid, body, body_shape_index, local_shape_index):
-	Global2.set_question(0,"Input the addition of a and b. Follow this format letter + letter")
-	Global2.set_answers(0, "a + b")
-	Global2.set_feedback(0, "remember to put spaces also it is case sensitive. If 'a' is small it should be small")
+	Global2.set_question(0,"The process need to start, write the 'start' keyword in pseudocode")
+	Global2.set_answers(0, "start")
+	Global2.set_feedback(0, "remember to put only the 'start' keyword no any other spaces")
 	Global2.dialogue_name = "stage5p2"
 	Musicmanager.set_to_low()
-	Global2.set_picture_path(0,"res://intro/picture/question/stage5_sequence.png")
+	Global2.set_picture_path(0,"res://intro/picture/question/level1/stage5/question1/Question #1 - 1.png")
+	#2nd 1uestion
+	Global2.set_question(1,"Now you need to try to crack the lock, write this keyword 'attempt to pick the lock'" )
+	Global2.set_answers(1,"attempt to pick the lock")
+	Global2.set_feedback(1,"Remember to type the exact keywords and check for double spaces.")
+	Global2.set_picture_path(1,"res://intro/picture/question/level1/stage5/question1/Question #1 - 2.png")
+	#3rd question
+	Global2.set_question(2, "You've done it! now type this keyword to mark what you've done: 'pick the lock'")
+	Global2.set_answers(2,"pick the lock")
+	Global2.set_feedback(2,"Remember to type the exact keywords and check for double spaces.")
+	Global2.set_picture_path(2,"res://intro/picture/question/level1/stage5/question1/Question #1 - 3.png")
+	#4th question
+	Global2.set_question(3,"Now you must open the door since the lock has been decode. type this words: \n'open the door'" )
+	Global2.set_answers(3,"open the door")
+	Global2.set_feedback(3,"Remember to type the exact keywords and check for double spaces.")
+	Global2.set_picture_path(3,"res://intro/picture/question/level1/stage5/question1/Question #1 - 4.png")
+	#5h question
+	Global2.set_question(4,"The process must always end, what keyword should you write to avoid infinite loop" )
+	Global2.set_answers(4,"end")
+	Global2.set_feedback(4,"The keyword was the exact opposite of start, its 1st letter starts with 'e'")
+	Global2.set_picture_path(4,"res://intro/picture/question/level1/stage5/question1/Question #1 - 5.png")
+	
+	
 	SceneTransition.change_scene("res://intro/sequencing.tscn")
 	Global.load_game_position = true
 	

@@ -827,7 +827,7 @@ position = Vector2( 405, 233 )
 position = Vector2( 353, 95 )
 
 [node name="captain" parent="objects/people" instance=ExtResource( 29 )]
-position = Vector2( 360, 231 )
+position = Vector2( 118, 308 )
 
 [node name="king" parent="objects/people" instance=ExtResource( 31 )]
 position = Vector2( 66, 225 )

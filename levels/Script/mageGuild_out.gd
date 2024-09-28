@@ -7,7 +7,6 @@ onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as 
 onready var player = $objects/Player
 onready var player_controller_joystick = $objects/Player/Controller/joystick
 onready var interaction_button1 = $objects/people/paladin/TextureButton
-onready var interaction_button2 = $objects/people/paladin2/TextureButton
 onready var place_name = $TopUi/Label2
 
 var current_map = "res://levels/mageGuild_out.tscn"
@@ -20,7 +19,6 @@ func _ready():
 	set_player_position()
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button1.connect("pressed", self, "paladin_dialogue")
-	interaction_button2.connect("pressed", self, "paladin_dialogue")
 	Global.set_map(current_map)
 	place_name.text = "Mage Guild Outside"
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildOutside_day.wav")
@@ -66,7 +64,6 @@ func _on_pause_game_pressed():
 
 func paladin_dialogue():
 	interaction_button1.hide()
-	interaction_button2.hide()
 	player_controller.visible = false
 	player_controller_joystick.disable_joystick()
 	Musicmanager.set_to_low()
@@ -76,7 +73,6 @@ func paladin_dialogue():
 
 func after_paladin(timelinename):
 	interaction_button1.show()
-	interaction_button2.show()
 	player_controller.visible = true
 	player_controller_joystick.enable_joystick()
 	Musicmanager.normal_volume()

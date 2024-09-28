@@ -35,8 +35,8 @@ func _on_continue_pressed() ->void:
 
 func _on_start_pressed() ->void:
 	Global.start_level_trigger = true
-	SceneTransition.change_scene("res://intro/pre_test.tscn"
-	)
+	Dialogic.reset_saves() #reset all values in dialogic
+	SceneTransition.change_scene("res://Scenes/intro_chill.tscn")
 
 func _on_exit_pressed() ->void:
 	quit.show()
