@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://World/pictures/base_out_atlas.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/terrain_atlas.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Tree2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/heart_spawn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPC/Guard_patrol.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=10]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=11]
@@ -1260,13 +1261,21 @@ position = Vector2( -137, 299 )
 [node name="Tree33" parent="objects/tree border" instance=ExtResource( 7 )]
 position = Vector2( -109, 325 )
 
+[node name="heart2" parent="objects/tree border" instance=ExtResource( 8 )]
+position = Vector2( 210, 27 )
+heart_id = "heart2"
+
+[node name="heart3" parent="objects/tree border" instance=ExtResource( 8 )]
+position = Vector2( 543, 44 )
+heart_id = "heart3"
+
 [node name="people" type="YSort" parent="objects"]
 
 [node name="Guard_patrol" parent="objects/people" instance=ExtResource( 9 )]
 position = Vector2( 387, 340 )
 
 [node name="Guard_patrol2" parent="objects/people" instance=ExtResource( 9 )]
-position = Vector2( 98, 382 )
+position = Vector2( 72, 365 )
 
 [node name="Guard_patrol3" parent="objects/people" instance=ExtResource( 9 )]
 position = Vector2( 263, 353 )
@@ -1293,6 +1302,7 @@ texture_scale = 0.5
 energy = 0.6
 
 [node name="path_arrow" type="TileMap" parent="objects/lighting"]
+visible = false
 tile_set = SubResource( 20 )
 cell_size = Vector2( 1, 1 )
 format = 1

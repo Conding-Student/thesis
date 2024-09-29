@@ -37,13 +37,8 @@ func _ready():
 		arrow_head.show()
 	else:
 		path_inside_manor.disabled = true
-		arrow_head.hide()
+		
 	
-	#if Global.get_dialogue_state("manor_inside"):
-		#print("Bat is dead on load, removing from scene: ID =", bat_id)  # Debugging print
-		#question_before_entering.disabled = true
-	#else:
-		#question_before_entering.disabled = false
 	
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
@@ -90,6 +85,7 @@ func interaction_endpoint(timelineend):
 	player_controller.visible = true
 	player_controller_joystick.enable_joystick()
 	Musicmanager.resume_music()
+	arrow_head.show()
 
 func merrick_inside(param):
 	if param == "merrick_inside":

@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://World/pictures/interior/16x16Room_Builder_free.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/interior/tilesetformattedupdate1.png" type="Texture" id=2]
@@ -15,21 +15,8 @@
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=14]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=15]
 [ext_resource path="res://intro/path_arrow.tres" type="Texture" id=16]
-[ext_resource path="res://NPC/bard.tscn" type="PackedScene" id=17]
-[ext_resource path="res://NPC/mage_female.tscn" type="PackedScene" id=18]
-[ext_resource path="res://NPC/healer_female.tscn" type="PackedScene" id=19]
-[ext_resource path="res://NPC/merchant.tscn" type="PackedScene" id=20]
-[ext_resource path="res://NPC/healer.tscn" type="PackedScene" id=21]
-[ext_resource path="res://NPC/queen.tscn" type="PackedScene" id=22]
-[ext_resource path="res://NPC/prince.tscn" type="PackedScene" id=23]
-[ext_resource path="res://NPC/samurai.tscn" type="PackedScene" id=24]
-[ext_resource path="res://NPC/priest.tscn" type="PackedScene" id=25]
 [ext_resource path="res://NPC/cultist.tscn" type="PackedScene" id=26]
-[ext_resource path="res://NPC/mage_male.tscn" type="PackedScene" id=27]
 [ext_resource path="res://NPC/piratecrew.tscn" type="PackedScene" id=28]
-[ext_resource path="res://NPC/captain.tscn" type="PackedScene" id=29]
-[ext_resource path="res://NPC/bunny_women.tscn" type="PackedScene" id=30]
-[ext_resource path="res://NPC/king.tscn" type="PackedScene" id=31]
 [ext_resource path="res://World/world objects/table_wood2.tscn" type="PackedScene" id=32]
 [ext_resource path="res://World/world objects/bookshelf_wood1.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=34]
@@ -787,56 +774,17 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="people" type="YSort" parent="objects"]
 
-[node name="bard" parent="objects/people" instance=ExtResource( 17 )]
-position = Vector2( 237, 100 )
-
-[node name="queen" parent="objects/people" instance=ExtResource( 22 )]
-position = Vector2( 230, 224 )
-
-[node name="healer" parent="objects/people" instance=ExtResource( 21 )]
-position = Vector2( 109, 116 )
-
-[node name="priest" parent="objects/people" instance=ExtResource( 25 )]
-position = Vector2( 38, 223 )
-
-[node name="prince" parent="objects/people" instance=ExtResource( 23 )]
-position = Vector2( 286, 278 )
-
 [node name="cultist" parent="objects/people" instance=ExtResource( 26 )]
 position = Vector2( 28, 309 )
-
-[node name="samurai" parent="objects/people" instance=ExtResource( 24 )]
-position = Vector2( 274, 148 )
-
-[node name="merchant" parent="objects/people" instance=ExtResource( 20 )]
-position = Vector2( 439, 91 )
-
-[node name="mage_male" parent="objects/people" instance=ExtResource( 27 )]
-position = Vector2( 147, 85 )
-
-[node name="mage_female" parent="objects/people" instance=ExtResource( 18 )]
-position = Vector2( 122, 209 )
-
-[node name="healer_female" parent="objects/people" instance=ExtResource( 19 )]
-position = Vector2( 319, 346 )
-
-[node name="piratecrew" parent="objects/people" instance=ExtResource( 28 )]
-position = Vector2( 405, 233 )
-
-[node name="bunny_women" parent="objects/people" instance=ExtResource( 30 )]
-position = Vector2( 353, 95 )
-
-[node name="captain" parent="objects/people" instance=ExtResource( 29 )]
-position = Vector2( 118, 308 )
-
-[node name="king" parent="objects/people" instance=ExtResource( 31 )]
-position = Vector2( 66, 225 )
 
 [node name="path_arrow" type="TileMap" parent="objects/people"]
 tile_set = SubResource( 67 )
 cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( 24641780, 0, 0 )
+
+[node name="piratecrew" parent="objects/people" instance=ExtResource( 28 )]
+position = Vector2( 249, 232 )
 
 [node name="bookshelf1" parent="objects" instance=ExtResource( 33 )]
 position = Vector2( 336, 321 )

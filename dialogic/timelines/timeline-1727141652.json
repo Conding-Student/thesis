@@ -48,7 +48,7 @@
 			"text": "Good!"
 		},
 		{
-			"emit_signal": "level2s2",
+			"emit_signal": "tutorial",
 			"event_id": "dialogic_040"
 		},
 		{
@@ -72,8 +72,8 @@
 			"z_index": 0
 		},
 		{
-			"change_timeline": "timeline-1727261101.json",
-			"event_id": "dialogic_020"
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		},
 		{
 			"choice": "not yet",
@@ -99,6 +99,6 @@
 	"metadata": {
 		"dialogic-version": "1.5.1",
 		"file": "timeline-1727141652.json",
-		"name": "ongoing_level2"
+		"name": "ongoing_level1"
 	}
 }

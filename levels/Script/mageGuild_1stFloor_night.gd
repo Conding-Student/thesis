@@ -11,9 +11,8 @@ var current_map = "res://levels/stage_3_night/mageGuild_1stFloor_night.tscn"
 var starting_player_position = Vector2 (568, 428)
 
 #captain values
-onready var captain_sprite = $objects/people/captain
-onready var captain_interaction_button = $objects/people/captain/TextureButton
-onready var captain_arrow_head = $objects/people/captain/arrow
+#onready var captain_interaction_button = $objects/people/captain/TextureButton
+
 
 #cultist values
 onready var cultist_sprite = $objects/people/cultist
@@ -26,7 +25,7 @@ func _ready():
 	set_player_position()
 	place_name.text = "Mage Guild Inside"
 	resume.connect("pressed", self, "resume_the_game")
-	captain_interaction_button.connect("pressed",self, "captain_interaction")
+	#captain_interaction_button.connect("pressed",self, "captain_interaction")
 	cultist_interaction_button.connect("pressed", self, "cultist_interaction")
 	Global.set_map(current_map)
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildInside.wav")
@@ -77,24 +76,13 @@ func interaction_endpoint(timelineend):
 	player_controller_joystick.enable_joystick()
 
 ########## captain section ####################
-func area_collision_captain_exited(body_rid, body, body_shape_index, local_shape_index):
-	captain_interaction_button.hide()
-
-func area_collision_captain_entered(body_rid, body, body_shape_index, local_shape_index):
-	if 1 == int(Dialogic.get_variable("introduction")):
-		captain_interaction_button.show()
-		captain_arrow_head.hide()
-	else:
-		captain_interaction_button.hide()
-
-func captain_interaction():
-	captain_interaction_button.hide()
-	
-	player_controller.hide()
-	player_controller_joystick.disable_joystick()
-	var new_dialog = Dialogic.start('pirate')
-	add_child(new_dialog)
-	new_dialog.connect("timeline_end", self, "interaction_endpoint")
+#func captain_interaction():
+	#captain_interaction_button.hide()
+	#player_controller.hide()
+	#player_controller_joystick.disable_joystick()
+	#var new_dialog = Dialogic.start('pirate')
+	#add_child(new_dialog)
+	#new_dialog.connect("timeline_end", self, "interaction_endpoint")
 	
 ########## captain section ####################
 ########## cultist section ####################

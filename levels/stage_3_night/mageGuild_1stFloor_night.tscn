@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=2]
+[gd_scene load_steps=82 format=2]
 
 [ext_resource path="res://World/pictures/interior/16x16Room_Builder_free.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/interior/tilesetformattedupdate1.png" type="Texture" id=2]
@@ -9,27 +9,14 @@
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=7]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://levels/Script/mageGuild_1stFloor_night.gd" type="Script" id=9]
+[ext_resource path="res://NPC/piratecrew.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/world objects/table_wood1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/pictures/interior/floor_mageguild.png" type="Texture" id=13]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=14]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/ligthing/light.png" type="Texture" id=16]
-[ext_resource path="res://NPC/bard.tscn" type="PackedScene" id=17]
-[ext_resource path="res://NPC/mage_female.tscn" type="PackedScene" id=18]
-[ext_resource path="res://NPC/healer_female.tscn" type="PackedScene" id=19]
-[ext_resource path="res://NPC/merchant.tscn" type="PackedScene" id=20]
-[ext_resource path="res://NPC/healer.tscn" type="PackedScene" id=21]
-[ext_resource path="res://NPC/queen.tscn" type="PackedScene" id=22]
-[ext_resource path="res://NPC/prince.tscn" type="PackedScene" id=23]
-[ext_resource path="res://NPC/samurai.tscn" type="PackedScene" id=24]
-[ext_resource path="res://NPC/priest.tscn" type="PackedScene" id=25]
 [ext_resource path="res://NPC/cultist.tscn" type="PackedScene" id=26]
-[ext_resource path="res://NPC/mage_male.tscn" type="PackedScene" id=27]
-[ext_resource path="res://NPC/piratecrew.tscn" type="PackedScene" id=28]
-[ext_resource path="res://NPC/captain.tscn" type="PackedScene" id=29]
-[ext_resource path="res://NPC/bunny_women.tscn" type="PackedScene" id=30]
-[ext_resource path="res://NPC/king.tscn" type="PackedScene" id=31]
 [ext_resource path="res://World/world objects/table_wood2.tscn" type="PackedScene" id=32]
 [ext_resource path="res://World/world objects/bookshelf_wood1.tscn" type="PackedScene" id=33]
 [ext_resource path="res://World/room/night_level_entrance.tscn" type="PackedScene" id=34]
@@ -721,9 +708,6 @@ extents = Vector2( 34.5, 32.5 )
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="CircleShape2D" id=69]
-radius = 38.3275
-
 [sub_resource type="TileSet" id=67]
 0/name = "path_arrow.tres 0"
 0/texture = ExtResource( 36 )
@@ -827,21 +811,6 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="people" type="YSort" parent="objects"]
 
-[node name="bard" parent="objects/people" instance=ExtResource( 17 )]
-position = Vector2( 237, 100 )
-
-[node name="queen" parent="objects/people" instance=ExtResource( 22 )]
-position = Vector2( 230, 224 )
-
-[node name="healer" parent="objects/people" instance=ExtResource( 21 )]
-position = Vector2( 109, 116 )
-
-[node name="priest" parent="objects/people" instance=ExtResource( 25 )]
-position = Vector2( 38, 223 )
-
-[node name="prince" parent="objects/people" instance=ExtResource( 23 )]
-position = Vector2( 286, 278 )
-
 [node name="cultist" parent="objects/people" instance=ExtResource( 26 )]
 position = Vector2( 28, 309 )
 
@@ -865,58 +834,14 @@ cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( -655338, 0, 0 )
 
-[node name="samurai" parent="objects/people" instance=ExtResource( 24 )]
-position = Vector2( 274, 148 )
-
-[node name="merchant" parent="objects/people" instance=ExtResource( 20 )]
-position = Vector2( 439, 91 )
-
-[node name="mage_male" parent="objects/people" instance=ExtResource( 27 )]
-position = Vector2( 147, 85 )
-
-[node name="mage_female" parent="objects/people" instance=ExtResource( 18 )]
-position = Vector2( 122, 209 )
-
-[node name="healer_female" parent="objects/people" instance=ExtResource( 19 )]
-position = Vector2( 319, 346 )
-
-[node name="piratecrew" parent="objects/people" instance=ExtResource( 28 )]
-position = Vector2( 405, 233 )
-
-[node name="bunny_women" parent="objects/people" instance=ExtResource( 30 )]
-position = Vector2( 353, 95 )
-
-[node name="captain" parent="objects/people" instance=ExtResource( 29 )]
-position = Vector2( 128, 312 )
-
-[node name="Area2D" type="Area2D" parent="objects/people/captain"]
-collision_layer = 128
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="objects/people/captain/Area2D"]
-position = Vector2( -1, -9 )
-shape = SubResource( 69 )
-
-[node name="TextureButton" type="TouchScreenButton" parent="objects/people/captain"]
-visible = false
-position = Vector2( -27, -38 )
-scale = Vector2( 0.165625, 0.0888889 )
-normal = ExtResource( 37 )
-
-[node name="arrow" type="TileMap" parent="objects/people/captain"]
-tile_set = SubResource( 70 )
-cell_size = Vector2( 1, 1 )
-format = 1
-tile_data = PoolIntArray( -1769476, 0, 0 )
-
-[node name="king" parent="objects/people" instance=ExtResource( 31 )]
-position = Vector2( 66, 225 )
-
 [node name="path_arrow" type="TileMap" parent="objects/people"]
 tile_set = SubResource( 67 )
 cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( 2163172, 0, 0, 24445173, 0, 0 )
+
+[node name="piratecrew" parent="objects/people" instance=ExtResource( 10 )]
+position = Vector2( 132, 99 )
 
 [node name="lighting" type="YSort" parent="objects"]
 
@@ -1115,8 +1040,6 @@ autowrap = true
 
 [connection signal="body_shape_entered" from="objects/people/cultist/Area2D" to="." method="area_collision_cultist_entered"]
 [connection signal="body_shape_exited" from="objects/people/cultist/Area2D" to="." method="area_collision_cultist_exited"]
-[connection signal="body_shape_entered" from="objects/people/captain/Area2D" to="." method="area_collision_captain_entered"]
-[connection signal="body_shape_exited" from="objects/people/captain/Area2D" to="." method="area_collision_captain_exited"]
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 
 [editable path="objects/Camera2D"]

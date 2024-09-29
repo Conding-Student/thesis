@@ -118,7 +118,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				}
 			},
@@ -163,7 +163,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Market_dealer": {
@@ -217,14 +217,15 @@
 						"timeline-1723993652.json",
 						"timeline-1723993959.json",
 						"timeline-1727140591.json",
-						"timeline-1727141652.json"
+						"timeline-1727141652.json",
+						"timeline-1727537350.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Pirates": {
@@ -248,14 +249,17 @@
 						"timeline-1726700139.json",
 						"timeline-1726834691.json",
 						"timeline-1726839008.json",
-						"timeline-1727262711.json"
+						"timeline-1727262711.json",
+						"timeline-1727538235.json",
+						"timeline-1727578283.json",
+						"timeline-1727583363.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"citizen3": {
@@ -287,7 +291,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"hints": {
