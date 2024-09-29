@@ -28,25 +28,42 @@ var state = ""
 
 ######################## stage complete trigger ################
 # Dictionary mapping badges to their completion status
+# Current state of badges
 var badges_complete = {
 	"badge1": false,
 	"badge2": false,
 	"badge3": false,
 	"badge4": false,
-	"badge5": false,
+	"badge5": true,
 	"badge6": false,
 	"badge7": false,
 	"badge8": false,
 	"badge9": false,
 	"badge10": false,
-	
 }
+
+# Previous state of badges (initially, it's the same as badges_complete)
+var previous_badges_state = badges_complete.duplicate()
+
+# Function to check if a new badge has been added
+func check_for_new_badges():
+	for badge_name in badges_complete:
+		var previous_status = previous_badges_state[badge_name]
+		var current_status = badges_complete[badge_name]
+		
+		# Check if a badge has changed from false to true
+		if not previous_status and current_status:
+			print("New badge added: " + badge_name)
+			# You can add more functionality here, like unlocking rewards or updating UI
+
+	# Update the previous badge state to the current state after the check
+	previous_badges_state = badges_complete.duplicate()
 
 # Marks a badge as complete and displays a notification
 func complete_badge(badge_name: String):
 	if badges_complete.has(badge_name):
 		badges_complete[badge_name] = true
-		#print("%s badge earned!" % badge_name)
+		print("%s badge earned!" % badge_name)
 
 # Checks if a badge is complete
 func is_badge_complete(badge_name: String) -> bool:

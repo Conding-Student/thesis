@@ -5,13 +5,13 @@
 			"event_id": "dialogic_021"
 		},
 		{
-			"character": "",
+			"character": "character-1721952703.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You successfully recieved a badge!"
+			"text": "Ahmm that was an easy one."
 		},
 		{
-			"emit_signal": "badge7",
+			"emit_signal": "badge8",
 			"event_id": "dialogic_040"
 		},
 		{
@@ -21,7 +21,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1727261101.json",
-		"name": "stageu2s2"
+		"file": "timeline-1727538235.json",
+		"name": "level2s3"
 	}
 }

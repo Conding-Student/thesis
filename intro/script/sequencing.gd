@@ -99,6 +99,11 @@ func value_activating(param):
 		badges_update.update_badges()
 		#print("emit signal trigger okay toh")
 		SceneTransition.change_scene("res://intro/stages_complete.tscn")
+	elif param == "badge10":
+		Global2.complete_badge("badge10")
+		Global.from_sequence = true
+		badges_update.update_badges()
+		SceneTransition.change_scene("res://intro/stages_complete.tscn")
 		
 # Hide all textfields
 func hide_all_textfields():

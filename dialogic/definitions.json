@@ -46,28 +46,10 @@
 			"value": "0"
 		},
 		{
-			"id": "1727150110-648",
-			"name": "introduction",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1727251831-648",
-			"name": "mission1",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1727504722-842",
 			"name": "pirate_captain",
 			"type": 0,
 			"value": ""
-		},
-		{
-			"id": "1723097011-648",
-			"name": "explore_town",
-			"type": 0,
-			"value": "0"
 		},
 		{
 			"id": "1723102204-573",
@@ -84,6 +66,24 @@
 		{
 			"id": "1723187790-648",
 			"name": "child_tips",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1723097011-648",
+			"name": "explore_town",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1727150110-648",
+			"name": "introduction",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1727251831-648",
+			"name": "mission1",
 			"type": 0,
 			"value": "0"
 		}

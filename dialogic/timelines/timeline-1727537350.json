@@ -5,9 +5,8 @@
 			"event_id": "dialogic_021"
 		},
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 1,
-			"animation_wait": true,
+			"animation": "[Default]",
+			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1721952113.json",
@@ -16,7 +15,7 @@
 			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": true,
+				"0": false,
 				"1": false,
 				"2": false,
 				"3": false,
@@ -26,23 +25,10 @@
 			"z_index": 0
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": true,
-			"wait_seconds": 1
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level2s2/l2s2d1.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Now, tell me what you've learned about Flowchart decision and connectors"
+			"text": "Good, now for your practice I need you to open those 3  chest. Each one of them have different level of diffulties. you must start from that wooden chest."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -51,7 +37,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1723548141.json",
-		"name": "level2s2p1"
+		"file": "timeline-1727537350.json",
+		"name": "level2s3chest"
 	}
 }

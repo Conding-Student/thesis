@@ -10,9 +10,9 @@ onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animation = $AnimationPlayer
 
-onready var captain_sprite = $character
-onready var captain_interaction_button = $TextureButton
-onready var captain_arrow_head = $arrow
+onready var interaction_button = $TextureButton
+onready var arrow_head = $arrow_head
+
 
 enum {
 	IDLE,
@@ -85,12 +85,12 @@ func pick_random_state(state_list):
 	return state_list.pop_front()
 
 ############interaction############
-func area_collision_captain_exited(body_rid, body, body_shape_index, local_shape_index):
-	captain_interaction_button.hide()
 
-func area_collision_captain_entered(body_rid, body, body_shape_index, local_shape_index):
-	if Global2.is_badge_complete("badge5"):
-		captain_interaction_button.show()
-		captain_arrow_head.hide()
-	else:
-		captain_interaction_button.hide()
+func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+		interaction_button.show()
+		arrow_head.hide()
+	
+
+func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	arrow_head.hide()
+	interaction_button.hide()

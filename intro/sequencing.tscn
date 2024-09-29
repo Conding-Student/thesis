@@ -153,37 +153,39 @@ custom_constants/separation = 5
 alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="action_panel/user_input1"]
-margin_right = 58.0
+margin_right = 53.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 placeholder_text = "1"
 
 [node name="LineEdit2" type="LineEdit" parent="action_panel/user_input1"]
-margin_left = 63.0
-margin_right = 121.0
+margin_left = 58.0
+margin_right = 111.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 placeholder_text = "2"
 
 [node name="LineEdit3" type="LineEdit" parent="action_panel/user_input1"]
-margin_left = 126.0
-margin_right = 160.0
+margin_left = 116.0
+margin_right = 169.0
 margin_bottom = 19.0
+size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
-placeholder_text = "3"
+text = "3"
+placeholder_text = "2"
 
 [node name="LineEdit4" type="LineEdit" parent="action_panel/user_input1"]
-margin_left = 165.0
-margin_right = 223.0
+margin_left = 174.0
+margin_right = 227.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 placeholder_text = "4"
 
 [node name="LineEdit5" type="LineEdit" parent="action_panel/user_input1"]
-margin_left = 228.0
+margin_left = 232.0
 margin_right = 286.0
 margin_bottom = 19.0
 size_flags_horizontal = 3

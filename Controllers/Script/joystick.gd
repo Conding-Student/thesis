@@ -7,6 +7,7 @@ onready var max_distance = $CollisionShape2D.shape.radius
 var touched = false
 var joystick_active = true  # This will control whether the joystick can be moved
 
+
 func _input(event):
 	if joystick_active:  # Only allow input when the joystick is active
 		if event is InputEventScreenTouch:

@@ -1,3 +1,4 @@
+
 extends KinematicBody2D
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
@@ -6,7 +7,7 @@ export var ACCELERATION = 500
 export var MAX_SPEED = 80
 export var ROLL_SPEED = 120
 export var FRICTION = 500
-
+onready var controller = $Controller
 enum {
 	MOVE,
 	ROLL,
@@ -32,6 +33,10 @@ func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 
+func show_controller():
+	controller.show()
+func hide_controller():
+	controller.hide()
 func _physics_process(delta):
 	
 	match state:
