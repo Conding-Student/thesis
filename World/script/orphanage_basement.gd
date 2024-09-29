@@ -21,7 +21,7 @@ onready var chest = $YSort/YSort2/chest_lock/AnimatedSprite
 onready var merrick_sprite = $YSort/YSort2/Path2D/PathFollow2D/Merrick/Sprite 
 onready var pathfollow = $YSort/YSort2/Path2D/PathFollow2D
 onready var animation_merrick = $YSort/YSort2/Path2D/PathFollow2D/Merrick/AnimationPlayer 
-onready var arrow_head = $YSort/YSort2/Path2D/PathFollow2D/Merrick/arrow_head
+onready var arrow_head = $YSort/YSort2/Path2D/PathFollow2D/Merrick/talk_box
 # Disconneting signal merrick
 onready var enter_signal1 = $YSort/YSort2/Path2D/PathFollow2D/Merrick/Area2D
 

@@ -9,8 +9,10 @@ onready var sprite = $character
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animation = $AnimationPlayer
+
 onready var interaction_button = $TextureButton
-onready var arrow_head = $Node2D
+onready var arrow_head = $talk_box
+
 enum {
 	IDLE,
 	WANDER
@@ -83,23 +85,10 @@ func pick_random_state(state_list):
 
 
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if Global2.is_badge_complete("badge1") == true or Global2.is_badge_complete("badge2") == true && Global2.is_badge_complete("badge3") == false:
-		if int(Dialogic.get_variable("Citizen_dialogue")) != 3:
-			interaction_button.visible = true
-			arrow_head.visible = false
-		else:
-			interaction_button.visible = false
-			arrow_head.visible = false
-	else: 
-		interaction_button.visible = false
-		arrow_head.visible = false
-
+	interaction_button.show()
+	arrow_head.hide()
 
 
 func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
-	if int(Dialogic.get_variable("Citizen_dialogue")) == 1: 
-		interaction_button.visible = false
-		arrow_head.visible = false
-	else:
-		interaction_button.visible = false
-		arrow_head.visible = true
+	interaction_button.hide()
+	arrow_head.show()

@@ -429,7 +429,7 @@ script = ExtResource( 6 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 198, 87 )
+position = Vector2( 208, 87 )
 
 [node name="floors" type="TileMap" parent="YSort"]
 tile_set = SubResource( 1 )
@@ -507,8 +507,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="arrow_head" parent="YSort/YSort2/Path2D/PathFollow2D/Merrick" index="5"]
-tile_data = PoolIntArray( -5767290, 1610612736, 0 )
+[node name="talk_box" parent="YSort/YSort2/Path2D/PathFollow2D/Merrick" index="5"]
+position = Vector2( -119.101, -93.0844 )
+rotation = 3.10478
 
 [node name="orphanage_office" parent="." instance=ExtResource( 4 )]
 position = Vector2( 250, 61 )

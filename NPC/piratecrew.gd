@@ -11,7 +11,7 @@ onready var wanderController = $WanderController
 onready var animation = $AnimationPlayer
 
 onready var interaction_button = $TextureButton
-onready var arrow_head = $arrow_head
+onready var arrow_head = $Node2D
 
 
 enum {
@@ -92,5 +92,5 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 	
 
 func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
-	arrow_head.hide()
+	arrow_head.show()
 	interaction_button.hide()

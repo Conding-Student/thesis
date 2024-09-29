@@ -5,7 +5,33 @@
 			"event_id": "dialogic_021"
 		},
 		{
-			"character": "",
+			"event_id": "dialogic_015",
+			"id": "anchor-1727621333",
+			"index": 0,
+			"name": "start"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727620761.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1727620761.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -21,6 +47,16 @@
 			"value": ""
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your total money after purchasing was [val_money]. "
+		},
+		{
+			"anchor_id": "anchor-1727621333",
+			"event_id": "dialogic_016"
+		},
+		{
 			"choice": "Buy",
 			"condition": "",
 			"definition": "",
@@ -34,7 +70,7 @@
 			"name": "asking_to_buy"
 		},
 		{
-			"character": "",
+			"character": "character-1727620761.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -50,7 +86,7 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"character": "character-1727620761.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -66,7 +102,13 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"condition": ">=",
+			"definition": "1727437460-648",
+			"event_id": "dialogic_012",
+			"value": "5"
+		},
+		{
+			"character": "character-1727620761.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Pleasure doing business. Stay out of trouble, eh"
@@ -76,6 +118,19 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Your total money after purchasing was [val_money].  "
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1727620761.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sorry little pal but your out of bytes. Try to find some work in the mageguild."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -103,7 +158,7 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"character": "character-1727620761.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -119,7 +174,13 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"condition": ">=",
+			"definition": "1727437460-648",
+			"event_id": "dialogic_012",
+			"value": "10"
+		},
+		{
+			"character": "character-1727620761.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Pleasure doing business. Stay out of trouble, eh"
@@ -129,6 +190,19 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Your total money after purchasing was [val_money]."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1727620761.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sorry little pal but your out of bytes. Try to find some work in the mageguild."
 		},
 		{
 			"event_id": "dialogic_022",

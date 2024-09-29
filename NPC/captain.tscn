@@ -1,12 +1,12 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Overlap/SoftCollision.tscn" type="PackedScene" id=2]
-[ext_resource path="res://NPC/script/grandpa.gd" type="Script" id=3]
+[ext_resource path="res://intro/tres/talkAt.tscn" type="PackedScene" id=3]
 [ext_resource path="res://NPC/picture/captain.png" type="Texture" id=4]
 [ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=5]
 [ext_resource path="res://NPC/picture/interact-removebg-preview.png" type="Texture" id=6]
-[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=7]
+[ext_resource path="res://NPC/script/captain.gd" type="Script" id=7]
 
 [sub_resource type="Animation" id=11]
 length = 0.001
@@ -166,24 +166,8 @@ height = 0.0
 [sub_resource type="CircleShape2D" id=20]
 radius = 38.3275
 
-[sub_resource type="TileSet" id=21]
-0/name = "path_arrow.tres 0"
-0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 7, 7 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
 [node name="captain" type="KinematicBody2D"]
-script = ExtResource( 3 )
+script = ExtResource( 7 )
 
 [node name="shadow" type="Sprite" parent="."]
 position = Vector2( 0, -1 )
@@ -231,11 +215,8 @@ position = Vector2( -27, -38 )
 scale = Vector2( 0.165625, 0.0888889 )
 normal = ExtResource( 6 )
 
-[node name="arrow" type="TileMap" parent="."]
-tile_set = SubResource( 21 )
-cell_size = Vector2( 1, 1 )
-format = 1
-tile_data = PoolIntArray( -1769476, 0, 0 )
+[node name="talk_box" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -21 )
 
-[connection signal="body_shape_entered" from="Area2D" to="." method="area_collision_captain_entered"]
-[connection signal="body_shape_exited" from="Area2D" to="." method="area_collision_captain_exited"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]

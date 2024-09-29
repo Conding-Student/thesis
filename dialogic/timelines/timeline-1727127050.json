@@ -11,43 +11,24 @@
 			"event_id": "dialogic_021"
 		},
 		{
-			"animation": "[Default]",
-			"animation_length": 0,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
-			"character": "",
-			"event_id": "dialogic_002",
-			"mirror_portrait": false,
-			"portrait": "",
-			"portrait_definition": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": false
-			},
-			"type": 0,
-			"z_index": 0
-		},
-		{
 			"character": "character-1721952703.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "That’s odd... a cultist working behind the bar? This guild is stranger than I expected."
 		},
 		{
-			"animation": "[Default]",
-			"animation_length": 0,
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"animation_wait": true,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "",
+			"character": "character-1727146946.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "",
+			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": false,
+				"0": true,
 				"1": false,
 				"2": false,
 				"3": false,

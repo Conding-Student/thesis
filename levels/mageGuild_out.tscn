@@ -564,10 +564,6 @@ position = Vector2( 567, 365 )
 [node name="paladin" parent="objects/people" instance=ExtResource( 27 )]
 position = Vector2( 339, 273 )
 
-[node name="arrow_head" parent="objects/people/paladin" index="8"]
-cell_size = Vector2( 1, 1 )
-tile_data = PoolIntArray( -2031619, 0, 0 )
-
 [node name="paladin_stationary" parent="objects/people" instance=ExtResource( 25 )]
 position = Vector2( 428, 269 )
 

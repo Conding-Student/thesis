@@ -5,8 +5,11 @@ onready var player_controller = $objects/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
 onready var player = $objects/Player
-onready var player_controls = $objects/Player/Controller
+onready var player_controller_joystick = $objects/Player/Controller/joystick
 onready var place_name = $TopUi/Label2
+onready var pirate_crew_interaction_button = $objects/people/piratecrew/TextureButton
+onready var captain_interaction_button = $objects/people/captain/TextureButton
+
 var current_map = "res://levels/mageGuild_1stFloor.tscn"
 var starting_player_position = Vector2 (568, 428)
 
@@ -16,6 +19,8 @@ func _ready():
 	set_player_position()
 	place_name.text = "Mage Guild Inside"
 	resume.connect("pressed", self, "resume_the_game")
+	pirate_crew_interaction_button.connect("pressed",self, "pirate_crew_interaction")
+	captain_interaction_button.connect("pressed",self,"captain_interaction")
 	Global.set_map(current_map)
 
 func set_player_position():
@@ -55,3 +60,19 @@ func _on_pause_game_pressed():
 	topui.visible = false
 	player_controller.visible = false
 	pause_ui.show()
+
+############## interactions ################
+func pirate_crew_interaction():
+	print("active")
+
+func captain_interaction():
+	captain_interaction_button.hide()
+	player_controller.hide()
+	player_controller_joystick.disable_joystick()
+	var new_dialog = Dialogic.start('pirate')
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "interaction_end")
+
+func interaction_end(timelineend):
+	player_controller.show()
+	player_controller_joystick.enable_joystick()

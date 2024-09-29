@@ -8,6 +8,7 @@ onready var player = $YSort/Player
 onready var player_controller_joystick = $YSort/Player/Controller/joystick
 onready var interaction_button1 = $YSort/people/citizen3/TextureButton
 onready var place_name = $TopUi/Label2
+onready var merchant_iteraction_button = $YSort/people/merchant/TextureButton
 var current_map = "res://levels/towncenter.tscn"
 var starting_player_position = Vector2(128, 67)
 
@@ -17,6 +18,7 @@ func _ready():
 	set_player_position()
 	resume.connect("pressed", self, "resume_the_game")
 	interaction_button1.connect("pressed", self, "citizen_dialogue")
+	merchant_iteraction_button.connect("pressed", self, "fruitmerchant_dialogue")
 	place_name.text = "Towncenter"
 	Global.set_map(current_map)
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/towncenterday.wav")
@@ -72,7 +74,18 @@ func citizen_dialogue():
 
 func after_citizen3(timelinename):
 	interaction_button1.show()
-	player_controller.visible = true
+	player_controller.show()
 	player_controller_joystick.enable_joystick()
 	Musicmanager.normal_volume()
 
+func fruitmerchant_dialogue():
+	merchant_iteraction_button.hide()
+	player_controller.hide()
+	player_controller_joystick.disable_joystick()
+	var new_dialog = Dialogic.start('market_man')
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "interaction_end")
+
+func interaction_end(timelineend):
+	player_controller.show()
+	player_controller_joystick.enable_joystick()

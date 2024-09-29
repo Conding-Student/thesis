@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var dialogue_button = $TextureButton
-onready var arrow_head = $arrow_head
+onready var arrow_head = $talk_box
 # Called when the node enters the scene tree for the first time.
 
 func _ready():

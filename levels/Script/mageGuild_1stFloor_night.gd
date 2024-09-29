@@ -15,9 +15,8 @@ var starting_player_position = Vector2 (568, 428)
 
 
 #cultist values
-onready var cultist_sprite = $objects/people/cultist
 onready var cultist_interaction_button = $objects/people/cultist/TextureButton
-onready var cultist_arrow_head = $objects/people/cultist/arrow
+onready var captain_interaction_button = $objects/people/captain/TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,6 +26,7 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	#captain_interaction_button.connect("pressed",self, "captain_interaction")
 	cultist_interaction_button.connect("pressed", self, "cultist_interaction")
+	captain_interaction_button.connect("pressed",self,"captain_interaction")
 	Global.set_map(current_map)
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildInside.wav")
 	Musicmanager.change_scene("Mage Guild inside")
@@ -75,29 +75,13 @@ func interaction_endpoint(timelineend):
 	player_controller.show()
 	player_controller_joystick.enable_joystick()
 
-########## captain section ####################
-#func captain_interaction():
-	#captain_interaction_button.hide()
-	#player_controller.hide()
-	#player_controller_joystick.disable_joystick()
-	#var new_dialog = Dialogic.start('pirate')
-	#add_child(new_dialog)
-	#new_dialog.connect("timeline_end", self, "interaction_endpoint")
-	
-########## captain section ####################
-########## cultist section ####################
-
-func area_collision_cultist_entered(body_rid, body, body_shape_index, local_shape_index):
-	if 1 == int(Dialogic.get_variable("introduction")) or 2 == int(Dialogic.get_variable("introduction")):
-		cultist_interaction_button.show()
-		cultist_arrow_head.hide()
-	else:
-		cultist_interaction_button.hide()
-		cultist_arrow_head.show()
-
-func area_collision_cultist_exited(body_rid, body, body_shape_index, local_shape_index):
+func captain_interaction():
 	cultist_interaction_button.hide()
-	cultist_arrow_head.show()
+	player_controller.hide()
+	player_controller_joystick.disable_joystick()
+	var new_dialog = Dialogic.start('pirate')
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "interaction_endpoint")
 
 func cultist_interaction():
 	cultist_interaction_button.hide()

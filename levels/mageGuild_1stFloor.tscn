@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://World/pictures/interior/16x16Room_Builder_free.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/interior/tilesetformattedupdate1.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://intro/picture/pause.png" type="Texture" id=7]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://levels/Script/mageGuild_1stFloor.gd" type="Script" id=9]
+[ext_resource path="res://NPC/captain.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/world objects/table_wood1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/room/levels_entrance.tscn" type="PackedScene" id=13]
@@ -774,17 +775,20 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="people" type="YSort" parent="objects"]
 
-[node name="cultist" parent="objects/people" instance=ExtResource( 26 )]
-position = Vector2( 28, 309 )
-
 [node name="path_arrow" type="TileMap" parent="objects/people"]
 tile_set = SubResource( 67 )
 cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( 24641780, 0, 0 )
 
+[node name="cultist" parent="objects/people" instance=ExtResource( 26 )]
+position = Vector2( 28, 309 )
+
 [node name="piratecrew" parent="objects/people" instance=ExtResource( 28 )]
 position = Vector2( 249, 232 )
+
+[node name="captain" parent="objects/people" instance=ExtResource( 10 )]
+position = Vector2( 125, 322 )
 
 [node name="bookshelf1" parent="objects" instance=ExtResource( 33 )]
 position = Vector2( 336, 321 )
@@ -863,4 +867,5 @@ valign = 1
 
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 
+[editable path="objects/people/piratecrew"]
 [editable path="objects/Camera2D"]

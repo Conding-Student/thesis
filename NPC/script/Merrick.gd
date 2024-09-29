@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var dialogue_button = $TextureButton
-onready var arrow_head = $arrow_head
+onready var arrow_head = $talk_box
 
 func _ready():
 	dialogue_button.visible = false

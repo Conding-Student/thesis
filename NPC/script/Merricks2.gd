@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 onready var merrick = $Sprite
 onready var dialogue_button = $TextureButton
-onready var arrow_head = $arow_head
+onready var arrow_head = $talk_box
 # $TextureButtonCalled when the node enters the scene tree for the first time.
 func _ready():
 	if Global2.is_badge_complete("badge1"):

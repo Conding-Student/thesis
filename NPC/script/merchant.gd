@@ -10,6 +10,8 @@ onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animation = $AnimationPlayer
 
+onready var interaction_button = $TextureButton
+onready var arrow_head = $Node2D
 enum {
 	IDLE,
 	WANDER
@@ -79,3 +81,13 @@ func update_wander():
 func pick_random_state(state_list):
 	state_list.shuffle()
 	return state_list.pop_front()
+
+
+func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	interaction_button.show()
+	arrow_head.hide()
+
+
+func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	interaction_button.hide()
+	arrow_head.show()

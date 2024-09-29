@@ -13,7 +13,7 @@ onready var place_name = $TopUi/Label2
 onready var merrick_sprite = $YSort/merick
 onready var merrick_collision_area = $YSort/merick/Area2D/CollisionShape2D
 onready var interacton_button = $YSort/merick/TextureButton
-onready var arrow_head = $YSort/merick/arrow_head
+onready var arrow_head = $YSort/merick/talk_box
 
 var current_map = "res://World/room/night/orphanage_basement_night.tscn"
 var starting_player_position = Vector2(236, 81)

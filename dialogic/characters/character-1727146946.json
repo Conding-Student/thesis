@@ -8,14 +8,14 @@
 	"name": "Cultist",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
+	"offset_x": -20,
 	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://Dialogue/Picture/mageguild/cultist.png"
 		}
 	],
-	"scale": 100,
+	"scale": 30,
 	"theme": ""
 }

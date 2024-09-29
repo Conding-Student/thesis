@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://NPC/script/Merricks2.gd" type="Script" id=1]
 [ext_resource path="res://NPC/picture/grandpa.png" type="Texture" id=2]
 [ext_resource path="res://NPC/picture/interact-removebg-preview.png" type="Texture" id=3]
-[ext_resource path="res://intro/tres/path_arrow.tres" type="Texture" id=4]
+[ext_resource path="res://intro/tres/talkAt.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.0
@@ -60,22 +60,6 @@ tracks/0/keys = {
 "values": [ 11, 10, 11, 10 ]
 }
 
-[sub_resource type="TileSet" id=7]
-0/name = "path_arrow.tres 0"
-0/texture = ExtResource( 4 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 7, 6 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
 [node name="merricks2" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -115,9 +99,8 @@ anims/RESET = SubResource( 3 )
 anims/idle_down = SubResource( 5 )
 anims/walk_left = SubResource( 6 )
 
-[node name="arow_head" type="TileMap" parent="."]
-tile_set = SubResource( 7 )
-format = 1
+[node name="talk_box" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1, -30 )
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]

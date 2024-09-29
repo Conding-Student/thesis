@@ -16,12 +16,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1727253549-787",
-			"name": "mage_guild",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1727346209-402",
 			"name": "red_child_dialogue",
 			"type": 0,
@@ -38,18 +32,6 @@
 			"name": "val_money",
 			"type": 0,
 			"value": "0"
-		},
-		{
-			"id": "1727443629-787",
-			"name": "pirate_crew",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1727504722-842",
-			"name": "pirate_captain",
-			"type": 0,
-			"value": ""
 		},
 		{
 			"id": "1723102204-573",
@@ -76,14 +58,32 @@
 			"value": "0"
 		},
 		{
-			"id": "1727150110-648",
-			"name": "introduction",
+			"id": "1727443629-787",
+			"name": "pirate_crew",
 			"type": 0,
 			"value": "0"
 		},
 		{
+			"id": "1727504722-842",
+			"name": "pirate_captain",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1727150110-648",
+			"name": "introduction",
+			"type": 0,
+			"value": "1"
+		},
+		{
 			"id": "1727251831-648",
 			"name": "mission1",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1727253549-787",
+			"name": "mage_guild",
 			"type": 0,
 			"value": "0"
 		}

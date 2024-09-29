@@ -10,7 +10,7 @@ onready var sprite = $Sprite
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animation = $AnimationPlayer
-onready var arrow_head = $arrow_head
+onready var arrow_head = $talk_box
 
 enum {
 	IDLE,
