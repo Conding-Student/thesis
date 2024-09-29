@@ -124,7 +124,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Themes": {
@@ -175,7 +175,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"Merrick": {
@@ -227,18 +227,6 @@
 						"folded": false
 					}
 				},
-				"Pirates": {
-					"files": [
-						"timeline-1727441258.json"
-					],
-					"folders": {
-
-					},
-					"metadata": {
-						"color": null,
-						"folded": true
-					}
-				},
 				"Valen": {
 					"files": [
 						"timeline-1723815657.json",
@@ -268,7 +256,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"game": {
@@ -287,7 +275,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"hints": {
@@ -312,7 +300,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"paladin": {
