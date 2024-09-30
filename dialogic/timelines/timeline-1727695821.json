@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"background": "res://intro/picture/question/default_bg.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The next day, Merrick wasted no time in putting Val's newfound knowledge of Linked ListKey magic to the test. As they descended once again into the dimly lit basement."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You've earned a badge!!"
+		},
+		{
+			"change_scene": "res://World/room/night/orphanage_basement_night.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727695821.json",
+		"name": "level3s2game"
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Merrick and Val meticulously planned their mission, deciding to execute it under the cover of nighttime. The festival's noise and chaos would provide the perfect distraction."
+		},
+		{
+			"background": "res://Scenes/pictures/unit2cahpter1/stage1/orphanage_basement.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Val, we’ll use the festival to our advantage. The noise and commotion will cover our movements. Are you ready?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I’m ready. Let’s do this."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727701051.json",
+		"name": "level3s3p0"
+	}
+}

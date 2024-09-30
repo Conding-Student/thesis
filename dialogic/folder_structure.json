@@ -47,7 +47,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Definitions": {
@@ -104,7 +104,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"stage2": {
@@ -136,7 +136,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Themes": {
@@ -157,7 +157,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Timelines": {
@@ -189,7 +189,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Merrick": {
@@ -232,14 +232,15 @@
 						"timeline-1723993959.json",
 						"timeline-1727140591.json",
 						"timeline-1727141652.json",
-						"timeline-1727537350.json"
+						"timeline-1727537350.json",
+						"timeline-1727701051.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"Valen": {
@@ -254,14 +255,15 @@
 						"timeline-1727262711.json",
 						"timeline-1727538235.json",
 						"timeline-1727578283.json",
-						"timeline-1727583363.json"
+						"timeline-1727583363.json",
+						"timeline-1727699423.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"citizen3": {
@@ -286,7 +288,8 @@
 						"timeline-1727261101.json",
 						"timeline-1727307711.json",
 						"timeline-1727345508.json",
-						"timeline-1727427110.json"
+						"timeline-1727427110.json",
+						"timeline-1727695821.json"
 					],
 					"folders": {
 

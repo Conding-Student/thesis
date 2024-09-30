@@ -7,24 +7,6 @@ extends Node
 var state = ""
 
 
-#Stage 2 talking with the villiger number of times
-#quest
-#var explore_town = 0
-#var lady_on_townsquare = 0
-#var manor_guard = 0
-#var paladin_mage_guild = 0
-#var after_quiz = 0
-
-
-#levels UI triger cange
-#var stage2_trigger = false
-
-#var stage3_trigger = false
-
-#Stage completion trigger for the display notification
-#var stage1_complete = false 
-#var stage2_complete = false
-#var stage3_complete = false
 
 ######################## stage complete trigger ################
 # Dictionary mapping badges to their completion status
@@ -40,6 +22,11 @@ var badges_complete = {
 	"badge8": false,
 	"badge9": false,
 	"badge10": false,
+	"badge11": false,
+	"badge12": false,
+	"badge13": false,
+	"badge14": false,
+	"badge15": false,
 }
 
 # Previous state of badges (initially, it's the same as badges_complete)

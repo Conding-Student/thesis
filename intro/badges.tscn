@@ -420,35 +420,35 @@ margin_bottom = 11.0
 custom_fonts/font = SubResource( 2 )
 text = "Unit 3"
 
-[node name="1" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
+[node name="s1" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
 margin_left = 2.0
 margin_top = 15.0
 margin_right = 22.0
 margin_bottom = 35.0
 texture = ExtResource( 4 )
 
-[node name="2" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
-margin_left = 65.0
-margin_top = 15.0
-margin_right = 85.0
-margin_bottom = 35.0
-texture = ExtResource( 4 )
-
-[node name="3" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
-margin_left = 44.0
-margin_top = 15.0
-margin_right = 64.0
-margin_bottom = 35.0
-texture = ExtResource( 4 )
-
-[node name="4" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
+[node name="s2" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
 margin_left = 23.0
 margin_top = 15.0
 margin_right = 43.0
 margin_bottom = 35.0
 texture = ExtResource( 4 )
 
-[node name="5" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
+[node name="s3" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
+margin_left = 44.0
+margin_top = 15.0
+margin_right = 64.0
+margin_bottom = 35.0
+texture = ExtResource( 4 )
+
+[node name="s4" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
+margin_left = 65.0
+margin_top = 15.0
+margin_right = 85.0
+margin_bottom = 35.0
+texture = ExtResource( 4 )
+
+[node name="s5" type="TextureRect" parent="Panel4/Panel/Badges/HBoxContainer3/Units"]
 margin_left = 87.0
 margin_top = 11.0
 margin_right = 112.0

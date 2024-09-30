@@ -16,7 +16,12 @@ onready var badges = [
 	$Panel4/Panel/Badges/HBoxContainer2/Units/s2, #7
 	$Panel4/Panel/Badges/HBoxContainer2/Units/s3, #8
 	$Panel4/Panel/Badges/HBoxContainer2/Units/s4, #9
-	$Panel4/Panel/Badges/HBoxContainer2/Units/s5  #10
+	$Panel4/Panel/Badges/HBoxContainer2/Units/s5, #10
+	$Panel4/Panel/Badges/HBoxContainer3/Units/s1, #11
+	$Panel4/Panel/Badges/HBoxContainer3/Units/s2, #12
+	$Panel4/Panel/Badges/HBoxContainer3/Units/s3, #13
+	$Panel4/Panel/Badges/HBoxContainer3/Units/s4, #14
+	$Panel4/Panel/Badges/HBoxContainer3/Units/s5 #15
 ]
 
 # Array of badge images (default and completed)
@@ -58,8 +63,28 @@ var badge_images = {
 		"earned": preload("res://intro/picture/normal badge.png"),
 	},
 	"badge10": {
+		"default": preload("res://intro/picture/semi-mastery badges.png"),
+		"earned": preload("res://intro/picture/semi-mastery.png"),
+	},
+	"badge11": {
 		"default": preload("res://intro/picture/normal-badge-gray.png"),
 		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge12": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge13": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge14": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge15": {
+		"default": preload("res://intro/picture/semi-mastery badges.png"),
+		"earned": preload("res://intro/picture/semi-mastery.png"),
 	}
 }
 
@@ -77,7 +102,12 @@ var badge_text_map = {
 	"badge7": "Chapter1 U2 3 / 5",
 	"badge8": "Chapter1 U2 4 / 5",
 	"badge9": "Chapter1 U2 5 / 5",
-	"badge10": "Chapter1 U3 1 / 5"
+	"badge10": "Chapter1 U3 1 / 5",
+	"badge11": "Chapter1 U3 2 / 5",
+	"badge12": "Chapter1 U3 3 / 5",
+	"badge13": "Chapter1 U3 4 / 5",
+	"badge14": "Chapter1 U3 5 / 5",
+	"badge15": "Chapter2 U1 1 / 5"
 }
 
 func _ready():

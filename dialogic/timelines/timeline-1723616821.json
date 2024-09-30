@@ -27,26 +27,10 @@
 			"wait_seconds": 1
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level3s1/l3s1d1.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Datatypes and Variable are a fundamental C# concepts what you need to know in order to effectively make a syntax"
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level3s1/l3s1d2.wav",
-			"volume": 0
 		},
 		{
 			"character": "character-1721952113.json",
@@ -55,26 +39,10 @@
 			"text": "Datatype defines what type of data is used for processing"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level3s1/l3s1d3.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Meanwhile, variables refers to the memory address of which we store temporary data or values"
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level3s1/l3s1d4.wav",
-			"volume": 0
 		},
 		{
 			"character": "character-1721952113.json",
@@ -83,26 +51,10 @@
 			"text": "This magic is essential for opening doors crafted by master enchanters to safeguard ancient treasures and forbidden knowledge"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level3s1/l3s1d5.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "There are many different data types. But for now, let me tell you about the most commonly used ones."
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level3s1/l3s1d6.wav",
-			"volume": 0
 		},
 		{
 			"character": "character-1721952113.json",
@@ -111,26 +63,10 @@
 			"text": "The first is STRING"
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level3s1/l3s1d7.wav",
-			"volume": 0
-		},
-		{
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "string allows us to store a sequence of characters that's sorrounded by double quotes"
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://Dialogue/Voice/level3s1/l3s1d8.wav",
-			"volume": 0
 		},
 		{
 			"character": "character-1721952113.json",

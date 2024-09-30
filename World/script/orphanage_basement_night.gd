@@ -99,7 +99,7 @@ func merrick_interaction():
 		Musicmanager.set_to_low()
 		var new_dialog = Dialogic.start('before_level2s1')
 		add_child(new_dialog)
-		new_dialog.connect("timeline_end", self, "interaction_endpoint")
+		new_dialog.connect("timeline_end", self, "interaction_endpoint") #2nd
 	elif tutorial_trigger == true:
 		tutorial_trigger = false
 		var new_dialog = Dialogic.start('level2s1')
@@ -111,21 +111,43 @@ func merrick_interaction():
 		add_child(new_dialog)
 		new_dialog.connect("timeline_end", self, "asking_question_stage2")
 
-	elif Global2.is_badge_complete("badge7"):
+	elif Global2.is_badge_complete("badge7") && Global2.is_badge_complete("badge10") == false:
 		Musicmanager.set_to_low()
 		player_controller.hide()
 		player_controller_joystick.disable_joystick()
 		var new_dialog = Dialogic.start('level2s3chest') #4th to stage 3
 		add_child(new_dialog)
 		new_dialog.connect("timeline_end", self, "interaction_endpoint_for_stage3")
-	
-		
+	elif Global2.is_badge_complete("badge10") && Global2.is_badge_complete("badge11") == false:
+		Musicmanager.set_to_low()
+		player_controller.hide()
+		player_controller_joystick.disable_joystick()
+		var new_dialog = Dialogic.start('level3s1') #4th to stage 3
+		add_child(new_dialog)
+		new_dialog.connect("timeline_end", self, "interaction_endpoint_badge11")
+	elif Global2.is_badge_complete("badge11") && Global2.is_badge_complete("badge12") == false:
+		Musicmanager.set_to_low()
+		player_controller.hide()
+		player_controller_joystick.disable_joystick()
+		var new_dialog = Dialogic.start('level3s2') #4th to stage 3
+		add_child(new_dialog)
+		new_dialog.connect("timeline_end", self, "interaction_endpoint_badge12")
+	elif Global2.is_badge_complete("badge12") && Global2.is_badge_complete("badge13") == false:
+		Musicmanager.set_to_low()
+		player_controller.hide()
+		player_controller_joystick.disable_joystick()
+		var new_dialog = Dialogic.start('level3s3p0') #4th to stage 3
+		add_child(new_dialog)
+		new_dialog.connect("timeline_end", self, "interaction_endpoint_badge13")
 	else:
 		Musicmanager.set_to_low()
 		var new_dialog = Dialogic.start('ongoing_level1') #2nd to trigger to tutorial 1
 		add_child(new_dialog)
 		new_dialog.connect("timeline_end", self, "interaction_endpoint_goings1")
 		new_dialog.connect("dialogic_signal", self, "tutorial_stage1")
+
+func interaction_endpoint_badge13(timelineend):
+	SceneTransition.change_scene("animation")
 
 func interaction_endpoint_for_stage3(timelineedn):
 	player_controller.show()
@@ -139,6 +161,44 @@ func interaction_endpoint_for_stage3(timelineedn):
 	#semi_woodenchest_closed.show() 
 	#semi_woodenchest_solid_collision.disabled = true
 
+func interaction_endpoint_badge12(timelineend):
+	Global2.set_question(0, "What refers to a memory address that holds space for temporary data in C#?")
+	Global2.set_answers(0, "Constant")
+	Global2.set_answers(1, "String ")
+	Global2.set_answers(2, "Variable")
+	Global2.set_answers(3, "Boolean")
+	Global2.set_feedback(0, "Incorrect. A constant holds data that cannot change, not temporary data.")
+	Global2.set_feedback(1, "Incorrect. A string is a data type, but not the concept that refers to memory holding temporary data.")
+	Global2.set_feedback(2, "Correct! A variable refers to a memory address that holds temporary data.")
+	Global2.set_feedback(3, "Incorrect. Boolean is a data type, but it doesn't refer to the concept of temporary data storage.")
+	Global2.correct_answer_ch1_3 = true
+	#2nd question
+	Global2.set_question(1, " In declaring variables, Data_type must be a valid C# data type including char, int, float, double, or any user defined data type")
+	Global2.set_answers(4, "False")
+	Global2.set_answers(5, "True ")
+	Global2.set_answers(6, "Not sure ")
+	Global2.set_answers(7, "No! ")
+	Global2.set_feedback(4,"Incorrect. C# requires a valid data type, like int, char, or user-defined types.")
+	Global2.set_feedback(5,"Correct! Variables in C# must have a valid data type.")
+	Global2.set_feedback(6,"Data types like int, char, or custom types are required when declaring variables.")
+	Global2.set_feedback(7,"Incorrect. C# requires valid data types, such as char, int, or user-defined types.")
+	Global2.correct_answer_ch2_2 = true
+	#3rd question
+	Global2.set_question(2, "What separates identifiers in a variable list?")
+	Global2.set_answers(8, "Plus ")
+	Global2.set_answers(9, "Commas")
+	Global2.set_answers(10, "Dot")
+	Global2.set_answers(11, "slash")
+	Global2.set_feedback(8,"Incorrect. The plus sign is used for addition or concatenation, not for separating variables.")
+	Global2.set_feedback(9,"Correct! Commas are used to separate identifiers in a variable list.")
+	Global2.set_feedback(10,"Incorrect. A dot is used for accessing properties or methods, not for separating variables.")
+	Global2.set_feedback(11,"Incorrect. A slash is used in division or paths, not for separating variable identifiers.")
+	Global2.correct_answer_ch3_2 = true
+	
+	Global.load_game_position = true
+	Global2.dialogue_name = "badge12"
+	SceneTransition.change_scene("res://intro/question_panel.tscn")
+
 func interaction_endpoint_goings1(timelinename):
 	player_controller.show()
 	player_controller_joystick.enable_joystick()
@@ -150,7 +210,16 @@ func tutorial_stage1(param):
 		#here I wanted to hide the contrller
 	else:
 		print("fail to load the dialogic")
-		
+
+func interaction_endpoint_badge11(timelineend):
+	Global.load_game_position = true
+	Global2.complete_badge("badge11")
+	#player_controller.show()
+	#player_controller_joystick.enable_joystick()
+	var new_dialog = Dialogic.start('level3s2game') 
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "interaction_endpoint")
+
 func badge6_done(timelineend):
 	Global.load_game_position = true
 	Global2.complete_badge("badge6")
@@ -219,22 +288,18 @@ func asking_question_stage2(timelineend):
 	Global2.dialogue_name = "stageu2s2"
 	SceneTransition.change_scene("res://intro/question_panel.tscn")
 	
-	
-func show_chest():
-	pass
-
 func level2s2_question(param):
 	if param == "level2s2":
-		
-		
 		Global2.complete_badge("badge6")
+
 func interaction_endpoint(timelineend):
 	player_controller.show()
 	player_controller_joystick.enable_joystick()
 
 # When player near at merrick this will happen
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if woodenchest_collision.disabled == false or Global2.is_badge_complete("badge8"):
+	Global.load_game_position = true
+	if woodenchest_collision.disabled == false or Global2.is_badge_complete("badge8") and Global2.is_badge_complete("badge10") == false:
 		interacton_button.hide()
 		arrow_head.hide()
 	elif Global2.is_badge_complete("badge5"):
