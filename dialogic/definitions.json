@@ -28,12 +28,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1727437460-648",
-			"name": "val_money",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1723102204-573",
 			"name": "manor_guard_orig",
 			"type": 0,
@@ -84,6 +78,12 @@
 		{
 			"id": "1727251831-648",
 			"name": "mission1",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1727437460-648",
+			"name": "val_money",
 			"type": 0,
 			"value": "0"
 		}

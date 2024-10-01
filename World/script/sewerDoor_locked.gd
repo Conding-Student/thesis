@@ -1,22 +1,16 @@
 extends Node2D
 
-onready var button = $TextureButton
+onready var path_arrow = $TileMap
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 
-
-
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if Global2.badge2 == true:
-		button.visible = true
-		Global.set_player_current_position(body.position)
-		Global.player_position_retain = true
+	if Global2.is_badge_complete("badge13"):
+		path_arrow.visible = true
 		
 	else:
-		print(Global2.badge2)
+		path_arrow.visible = false
+		print("badge13 not trigger in sewer door to library")
 
-
-func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
-	button.visible = false
-	Global.player_position_retain = false

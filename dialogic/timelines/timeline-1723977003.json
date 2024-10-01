@@ -53,6 +53,16 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "You've proven your capability with datatype and variables. Continue to refine your skills, and soon you'll be ready for even more complex enchantments"
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Now we need to get into the mage guild cellar. There was  a door passage located at the upper part of this building. We need to get into it \nwithout making any commotion"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {

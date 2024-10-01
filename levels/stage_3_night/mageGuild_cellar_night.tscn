@@ -344,6 +344,7 @@ size = 5
 font_data = ExtResource( 13 )
 
 [node name="mageGuild_cellar_night" type="Node2D"]
+position = Vector2( 1, 34 )
 script = ExtResource( 7 )
 
 [node name="Floor1" type="TileMap" parent="."]
@@ -396,6 +397,7 @@ tile_data = PoolIntArray( 131076, 26, 65536, 131077, 4, 2 )
 position = Vector2( 152, 79 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 3, 22 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
@@ -409,20 +411,20 @@ format = 1
 tile_data = PoolIntArray( 1310749, 0, 0 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 152, 79 )
+position = Vector2( 155, 101 )
 zoom = Vector2( 0.7, 0.7 )
 
 [node name="TopLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( -1, -32 )
+position = Vector2( -1, -1 )
 
 [node name="BottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 225, 146 )
+position = Vector2( 224, 178 )
 
 [node name="mageGuild_sewer_night" parent="." instance=ExtResource( 1 )]
-position = Vector2( 137, -10 )
+position = Vector2( 136, -13 )
 
 [node name="mageGuild_sewer_night_pos" type="Position2D" parent="."]
-position = Vector2( 136, 19 )
+position = Vector2( 136, 59 )
 
 [node name="mageGuild_1stFloor_night" parent="." instance=ExtResource( 1 )]
 position = Vector2( 185, 115 )
@@ -460,6 +462,9 @@ custom_fonts/font = SubResource( 29 )
 align = 1
 valign = 1
 autowrap = true
+
+[node name="mageGuild_1stFloor_night_level3_pos" type="Position2D" parent="."]
+position = Vector2( 156, 102 )
 
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 

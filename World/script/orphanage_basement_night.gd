@@ -147,9 +147,11 @@ func merrick_interaction():
 		new_dialog.connect("dialogic_signal", self, "tutorial_stage1")
 
 func interaction_endpoint_badge13(timelineend):
-	SceneTransition.change_scene("animation")
+	Musicmanager.stop_music()
+	Global.load_game_position = false
+	SceneTransition.change_scene("res://Scenes/nigt_festival.tscn")
 
-func interaction_endpoint_for_stage3(timelineedn):
+func interaction_endpoint_for_stage3(timelineend):
 	player_controller.show()
 	player_controller_joystick.enable_joystick()
 	woodenchest_arrow_head.show()

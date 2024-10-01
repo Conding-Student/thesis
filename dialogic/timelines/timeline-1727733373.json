@@ -1,0 +1,73 @@
+{
+	"events": [
+		{
+			"background": "res://intro/picture/question/default_bg.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You sucessfully gain a badge!"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "They entered cautiously, but soon heard voices approaching. They quickly hid, holding their breaths as the footsteps grew louder and then faded away."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That was close. Let's keep moving."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "After ensuring it was safe, they continued navigating the guild until they stood before a door glowing with powerful enchantments. Merrick examined it."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is it. The passage to the library. My body won't fit into that small passage. I'll stand watch and distract any guards. Val, you must enter and explore this passage to complete the mission."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I won’t let you down."
+		},
+		{
+			"character": "character-1721952113.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is what you need to steal. Make sure no one follows you back to the manor. I'll be fine. I've done this before."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Merrick ran off to create a diversion, leading the guards away from the library."
+		},
+		{
+			"emit_signal": "badge14",
+			"event_id": "dialogic_040"
+		},
+		{
+			"change_scene": "res://intro/stages_complete.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727733373.json",
+		"name": "level3s4badge14"
+	}
+}

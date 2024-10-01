@@ -1,0 +1,304 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://World/script/magical_chestgd..gd" type="Script" id=1]
+[ext_resource path="res://World/pictures/interior/2_indoors.png" type="Texture" id=2]
+[ext_resource path="res://World/pictures/coins/MonedaD.png" type="Texture" id=3]
+[ext_resource path="res://NPC/picture/interact-removebg-preview.png" type="Texture" id=4]
+[ext_resource path="res://Music and Sounds/sound effects/coin_recieved.wav" type="AudioStream" id=5]
+[ext_resource path="res://UI/HeartUIFull.png" type="Texture" id=6]
+[ext_resource path="res://Music and Sounds/sound effects/power_up.wav" type="AudioStream" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "sparkle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("StaticBody2D/glitters:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StaticBody2D/glitters2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "sparkle_heart"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("StaticBody2D/glitters:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StaticBody2D/glitters2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StaticBody2D/chest_closed:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StaticBody2D/heart:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, -28 ), Vector2( 1, -30 ), Vector2( 1, -32 ), Vector2( 1, -34 ), Vector2( 1, -36 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("StaticBody2D/heart:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "audio"
+tracks/5/path = NodePath("powerup")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 7 )
+} ],
+"times": PoolRealArray( 0.5 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "sparkle_stop"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("StaticBody2D/glitters:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StaticBody2D/glitters2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StaticBody2D/chest_closed:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StaticBody2D/coins:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -28 ), Vector2( 0, -30 ), Vector2( 0, -32 ), Vector2( 0, -34 ), Vector2( 0, -36 ), Vector2( 0, -38 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("StaticBody2D/coins:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("StaticBody2D/coins:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "audio"
+tracks/6/path = NodePath("AudioStreamPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": [ {
+"end_offset": 0.349309,
+"start_offset": 0.0,
+"stream": ExtResource( 5 )
+} ],
+"times": PoolRealArray( 0.5 )
+}
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 35.6018
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 12, 9.5 )
+
+[node name="magical_chest" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/sparkle = SubResource( 1 )
+anims/sparkle_heart = SubResource( 5 )
+anims/sparkle_stop = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "SFX"
+
+[node name="powerup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+bus = "SFX"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="chest_open" type="Sprite" parent="StaticBody2D"]
+position = Vector2( -5.96046e-08, -23 )
+scale = Vector2( 0.71875, 0.62069 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 160, 288, 32, 29 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chest_closed" type="Sprite" parent="StaticBody2D"]
+position = Vector2( -5.96046e-08, -24.2414 )
+scale = Vector2( 0.71875, 0.62069 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 128, 288, 32, 29 )
+
+[node name="glitters" type="Sprite" parent="StaticBody2D"]
+visible = false
+position = Vector2( 2.15625, -31.069 )
+scale = Vector2( 0.71875, 0.62069 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 4, 289, 29, 30 )
+
+[node name="glitters2" type="Sprite" parent="StaticBody2D"]
+visible = false
+position = Vector2( 1.4375, -30.4483 )
+scale = Vector2( 0.71875, 0.62069 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 33, 290, 29, 27 )
+
+[node name="coins" type="Sprite" parent="StaticBody2D"]
+visible = false
+position = Vector2( -5.96046e-08, -46.5862 )
+scale = Vector2( 0.71875, 0.62069 )
+texture = ExtResource( 3 )
+hframes = 5
+
+[node name="heart" type="Sprite" parent="StaticBody2D"]
+visible = false
+position = Vector2( 1, -35.5972 )
+texture = ExtResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+visible = false
+position = Vector2( -152.5, -97.3103 )
+scale = Vector2( 1, 1 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2( 156, 69 )
+shape = SubResource( 3 )
+
+[node name="TextureButton" type="TouchScreenButton" parent="StaticBody2D"]
+visible = false
+position = Vector2( -26, -51 )
+scale = Vector2( 0.165625, 0.0888889 )
+normal = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 4.17233e-07, -24.5 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 4.17233e-07, -24.5 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[connection signal="body_shape_entered" from="StaticBody2D/Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="StaticBody2D/Area2D" to="." method="_on_Area2D_body_shape_exited"]

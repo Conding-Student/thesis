@@ -43,7 +43,6 @@ func hide_everything():
 	player_panel.hide()
 	instruction_panel_orig.hide()
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Connect the player's no_health signal to the _on_no_health function
@@ -104,6 +103,11 @@ func value_activating(param):
 		Global.from_sequence = true
 		badges_update.update_badges()
 		SceneTransition.change_scene("res://intro/stages_complete.tscn")
+	elif param == "badge15":
+		Global2.complete_badge("badge15")
+		Global.from_sequence = true
+		badges_update.update_badges()
+		SceneTransition.change_scene("res://intro/stages_complete.tscn")
 		
 # Hide all textfields
 func hide_all_textfields():
@@ -130,6 +134,7 @@ func show_only_relevant_textfield(index: int):
 
 # Function that gets called when any textfield's text changes
 func _on_textfield_text_changed(new_text):
+	# Use strip_edges() to remove unnecessary whitespaces in all textfields
 	if textfield1.text.strip_edges() != "" or textfield2.text.strip_edges() != "" or textfield3.text.strip_edges() != "" or textfield4.text.strip_edges() != "" or textfield5.text.strip_edges() != "":
 		submit_button.show()  # Show the button if any field has text
 	else:
@@ -138,7 +143,7 @@ func _on_textfield_text_changed(new_text):
 # Check the answer and provide feedback
 func check_answer():
 	var correct_answer = Global2.evaluations["answers"][current_question_index]
-	var user_answer = get_relevant_user_answer(current_question_index)
+	var user_answer = get_relevant_user_answer(current_question_index).strip_edges()
 	var wrong_feedback = Global2.evaluations["feedback"][current_question_index]
 
 	if user_answer == correct_answer:
@@ -160,15 +165,15 @@ func check_answer():
 func get_relevant_user_answer(index: int) -> String:
 	match index:
 		0:
-			return textfield1.text
+			return textfield1.text.strip_edges()
 		1:
-			return textfield2.text
+			return textfield2.text.strip_edges()
 		2:
-			return textfield3.text
+			return textfield3.text.strip_edges()
 		3:
-			return textfield4.text
+			return textfield4.text.strip_edges()
 		4:
-			return textfield5.text
+			return textfield5.text.strip_edges()
 		_:
 			return ""
 

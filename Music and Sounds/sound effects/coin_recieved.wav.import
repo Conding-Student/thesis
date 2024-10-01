@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coin_recieved.wav-71a0cfe20a1ddd818754acbdf8b2d1ad.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/sound effects/coin_recieved.wav"
+dest_files=[ "res://.import/coin_recieved.wav-71a0cfe20a1ddd818754acbdf8b2d1ad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

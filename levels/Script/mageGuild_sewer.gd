@@ -12,11 +12,17 @@ var current_map = "res://levels/stage_3_night/mageGuild_sewer_night.tscn"
 
 var starting_player_position = Vector2 (568, 428)
 
+onready var path_to_library = $mageGuild_secretLibrary/CollisionShape2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Global2.is_badge_complete("badge14"):
+		path_to_library.disabled = false
+	else:
+		path_to_library.disabled = true
+	
 	set_overall_initial_position()
 	set_player_position()
-	
 	resume.connect("pressed", self, "resume_the_game")
 	#interaction_button.connect("pressed", self, "first_door")
 	Global.set_map(current_map)

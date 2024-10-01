@@ -795,7 +795,7 @@ remote_path = NodePath("../../Camera2D")
 position = Vector2( 28, 309 )
 
 [node name="talk_box" parent="objects/people/cultist" index="8"]
-position = Vector2( 36, 4 )
+position = Vector2( -1, -28 )
 
 [node name="path_arrow" type="TileMap" parent="objects/people"]
 tile_set = SubResource( 67 )

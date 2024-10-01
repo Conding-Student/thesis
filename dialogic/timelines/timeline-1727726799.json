@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You earned a badge!"
+		},
+		{
+			"emit_signal": "badge13",
+			"event_id": "dialogic_040"
+		},
+		{
+			"change_scene": "res://intro/stages_complete.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727726799.json",
+		"name": "level3s3badge13"
+	}
+}

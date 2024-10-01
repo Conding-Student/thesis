@@ -1,0 +1,25 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As night fell, they set out, blending seamlessly with the revelers. The bustling streets and the vibrant festival atmosphere masked their movements as they snuck into the guild's "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "premises. Upon reaching the guild, they encountered their first obstacle: a door with an advanced lock enchantment. Merrick turned to Val"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727720956.json",
+		"name": "night_festival"
+	}
+}

@@ -16,7 +16,7 @@ var badges_complete = {
 	"badge2": false,
 	"badge3": false,
 	"badge4": false,
-	"badge5": false,
+	"badge5": true,
 	"badge6": false,
 	"badge7": false,
 	"badge8": false,
@@ -74,10 +74,10 @@ var NRI =  ((post_final_score - pre_final_score) / MPI) * 100 # Need to be displ
 ######################### DYNAMIC QUIZ VALUES #######################
 # Evaluation: using dictionaries for questions, answers, and feedback
 var evaluations = {
-	"questions": ["", "", "", "","",""],
-	"answers": ["","", "","", "", "", "","",""
+	"questions": ["question1", "question2", "", "","",""],
+	"answers": ["answer space","space p p", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "", "",""],
-	"feedback": ["", "", "", "","", "", "", "","",""
+	"feedback": ["space", "ppp", "", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "",""],
 	"pictures_path": ["res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png"],
 }

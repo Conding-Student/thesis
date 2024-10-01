@@ -91,7 +91,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"pirates": {
@@ -157,7 +157,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Timelines": {
@@ -233,14 +233,15 @@
 						"timeline-1727140591.json",
 						"timeline-1727141652.json",
 						"timeline-1727537350.json",
-						"timeline-1727701051.json"
+						"timeline-1727701051.json",
+						"timeline-1727735257.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Valen": {
@@ -289,14 +290,17 @@
 						"timeline-1727307711.json",
 						"timeline-1727345508.json",
 						"timeline-1727427110.json",
-						"timeline-1727695821.json"
+						"timeline-1727695821.json",
+						"timeline-1727720956.json",
+						"timeline-1727726799.json",
+						"timeline-1727733373.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"hints": {
