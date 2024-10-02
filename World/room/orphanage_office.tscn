@@ -977,7 +977,7 @@ position = Vector2( 160, 182 )
 rotation = 1.5708
 
 [node name="orphanage_hallway_pos" type="Position2D" parent="."]
-position = Vector2( 160, 170 )
+position = Vector2( 159, 159 )
 
 [node name="orphanage_basement" parent="." instance=ExtResource( 8 )]
 position = Vector2( 265, 51 )

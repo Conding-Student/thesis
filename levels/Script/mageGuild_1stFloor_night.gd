@@ -7,31 +7,38 @@ onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as 
 onready var player = $objects/Player
 onready var player_controller_joystick = $objects/Player/Controller/joystick
 onready var place_name = $TopUi/Label2
+onready var pirate_crew_interaction_button = $objects/people/piratecrew/TextureButton
+#onready var captain_interaction_button = $objects/people/captain/TextureButton
+onready var bard= $objects/people/bard
+onready var pirate_captain = $objects/people/captain
+onready var cultist = $objects/people/cultist
+onready var mission_chest = $objects/objects/mission_chest
 var current_map = "res://levels/stage_3_night/mageGuild_1stFloor_night.tscn"
 var starting_player_position = Vector2 (568, 428)
 
-#captain values
-#onready var captain_interaction_button = $objects/people/captain/TextureButton
+#path to cellar
 
-
-#cultist values
-onready var cultist_interaction_button = $objects/people/cultist/TextureButton
-onready var captain_interaction_button = $objects/people/captain/TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_overall_initial_position()
 	set_player_position()
-	place_name.text = "Mage Guild Inside"
+	place_name.text = "Mage Guild Inside night"
 	resume.connect("pressed", self, "resume_the_game")
-	#captain_interaction_button.connect("pressed",self, "captain_interaction")
-	cultist_interaction_button.connect("pressed", self, "cultist_interaction")
-	captain_interaction_button.connect("pressed",self,"captain_interaction")
+	pirate_crew_interaction_button.connect("pressed",self, "pirate_crew_interaction")
+	#captain_interaction_button.connect("pressed",self,"captain_interaction")
+	#bard_interaction_button.connect("pressed", self, "bard_interaction")
+	pirate_captain.connect("start_conversation",self, "conversation_start")
+	pirate_captain.connect("end_conversation", self, "conversation_end")
+	bard.connect("start_conversation",self, "conversation_start")
+	bard.connect("end_conversation",self, "conversation_end")
+	cultist.connect("start_conversation",self, "conversation_start")
+	cultist.connect("end_conversation",self, "conversation_end")
+	bard.connect("mission1_accepted",mission_chest, "chest_mission_available")
+	mission_chest.connect("chest_has_been_opened", self, "mission_completed")
 	Global.set_map(current_map)
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildInside.wav")
-	Musicmanager.change_scene("Mage Guild inside")
 	
-
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)
@@ -70,30 +77,37 @@ func _on_pause_game_pressed():
 	player_controller.visible = false
 	pause_ui.show()
 
-#common endpoint
-func interaction_endpoint(timelineend):
+############## interactions ################
+
+#bard mission 
+func mission_completed():
+	conversation_start()
+	bard.mission_completed()
+
+func conversation_start():
+	#print("signal is okay")
+	player_controller.hide()
+	player_controller_joystick.disable_joystick()
+	topui.visible = false
+
+func conversation_end():
+	player_controller.show()
+	player_controller_joystick.enable_joystick()
+	topui.visible = true
+
+func pirate_crew_interaction():
+	print("active")
+
+func interaction_end(timelineend):
 	player_controller.show()
 	player_controller_joystick.enable_joystick()
 
-func captain_interaction():
-	cultist_interaction_button.hide()
-	player_controller.hide()
-	player_controller_joystick.disable_joystick()
-	var new_dialog = Dialogic.start('pirate')
-	add_child(new_dialog)
-	new_dialog.connect("timeline_end", self, "interaction_endpoint")
-
-func cultist_interaction():
-	cultist_interaction_button.hide()
-	player_controller.hide()
-	player_controller_joystick.disable_joystick()
-	var new_dialog = Dialogic.start('cultist')
-	add_child(new_dialog)
-	new_dialog.connect("timeline_end", self, "interaction_endpoint")
-	new_dialog.connect("dialogic_signal", self, "heart_replenish")
-
-func heart_replenish(param):
-	if param == "heal":
-		PlayerStats.health = 5
+func into_cellar(body_rid, body, body_shape_index, local_shape_index):
+	if int(Dialogic.get_variable("cultist_mission")) == 1:
+		SceneTransition.change_scene("res://levels/stage_3_night/mageGuild_cellar_night.tscn")
 	else:
-		print("wrong value")
+		player_controller.hide()
+		player_controller_joystick.disable_joystick()
+		var new_dialog = Dialogic.start('cellar_lock')
+		add_child(new_dialog)
+		new_dialog.connect("timeline_end", self, "interaction_end")

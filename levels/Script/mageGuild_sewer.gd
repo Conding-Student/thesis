@@ -18,6 +18,7 @@ onready var path_to_library = $mageGuild_secretLibrary/CollisionShape2D
 func _ready():
 	if Global2.is_badge_complete("badge14"):
 		path_to_library.disabled = false
+		Global.load_game_position = false
 	else:
 		path_to_library.disabled = true
 	
@@ -33,11 +34,11 @@ func _ready():
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)
-		#print("1")
+		print("1")
 	elif Global.from_level != null && Global.load_game_position == true:
 		player.global_position = Global.get_player_current_position()
 		Global.load_game_position = false
-		#print("2")
+		print("2")
 	# Whenever the player get into new scene of event.
 	elif Global.get_player_current_position() != Vector2(0,0) and Global.player_position_retain == true:
 		player.global_position = Global.get_player_current_position()
@@ -54,7 +55,7 @@ func set_player_position():
 			#print("Player position set from ", target_node_path)
 	else:
 		player.global_position = Global.get_player_current_position()
-		#print("3")
+		print("3")
 
 func set_overall_initial_position():
 	Global.set_player_initial_position(Global.get_player_current_position())

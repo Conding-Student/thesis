@@ -33,6 +33,14 @@ func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)
 		print("1")
+	elif Global2.is_badge_complete("badge12") && Global2.is_badge_complete("badge13") == false:
+		player.global_position = starting_player_position
+		Musicmanager.set_to_low()
+		player_controller.hide()
+		player_controller_joystick.disable_joystick()
+		var new_dialog = Dialogic.start('level3s3p1')
+		add_child(new_dialog)
+		new_dialog.connect("timeline_end", self, "interaction_endpoint") 
 	elif Global.from_level != null && Global.load_game_position == true:
 		player.global_position = Global.get_player_current_position()
 		Global.load_game_position = false
@@ -47,14 +55,6 @@ func set_player_position():
 		else:
 			pass
 			print("Player position set from ", target_node_path)
-	elif Global2.is_badge_complete("badge12") && Global2.is_badge_complete("badge13") == false:
-		player.global_position = starting_player_position
-		Musicmanager.set_to_low()
-		player_controller.hide()
-		player_controller_joystick.disable_joystick()
-		var new_dialog = Dialogic.start('level3s3p1')
-		add_child(new_dialog)
-		new_dialog.connect("timeline_end", self, "interaction_endpoint") 
 	else:
 		player.global_position = Global.get_player_current_position()
 		print("3")

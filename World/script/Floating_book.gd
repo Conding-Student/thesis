@@ -18,7 +18,7 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 	#Declare string variable name 'locktype' with a value of 'magic' 
 	#3rd question
 	Global2.set_question(2, "Declare string variable name 'locktype' with a value of 'magic'")
-	Global2.set_answers(2, 'string locktype = "magic;"')
+	Global2.set_answers(2, 'string locktype = "magic";')
 	Global2.set_feedback(2,'Incorrect. To declare a string, the correct syntax is: string locktype = "magic";. Ensure you are using double quotes for the string value and the correct data type. Also semi-colon')
 	#4th question
 	Global2.set_question(3, "Declare bool variable name 'isLocked' with a value of false")

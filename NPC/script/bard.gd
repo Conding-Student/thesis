@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-export var ACCELERATION = 200
-export var MAX_SPEED = 25
-export var FRICTION = 150
+export var ACCELERATION = 300
+export var MAX_SPEED = 50
+export var FRICTION = 200
 export var WANDER_TARGET_RANGE = 4
 
 onready var sprite = $character
@@ -11,10 +11,11 @@ onready var wanderController = $WanderController
 onready var animation = $AnimationPlayer
 
 onready var interaction_button = $TextureButton
-onready var arrow_head = $talk_box
-
+onready var talk_box = $talk_box
+ 
 signal start_conversation
 signal end_conversation
+signal mission1_accepted
 
 enum {
 	IDLE,
@@ -26,7 +27,9 @@ var state = IDLE
 var last_direction = Vector2.RIGHT  # Store the last movement direction
 
 func _ready():
+	#pass
 	interaction_button.connect("pressed",self, "interaction")
+
 func _physics_process(delta):
 	match state:
 		IDLE:
@@ -88,23 +91,41 @@ func pick_random_state(state_list):
 	state_list.shuffle()
 	return state_list.pop_front()
 
-
 ####################### interaction ####################
 func interaction():
 	interaction_button.hide()
 	emit_signal("start_conversation")
-	var new_dialog = Dialogic.start('pirate')
+	var new_dialog = Dialogic.start('bard')
 	add_child(new_dialog)
 	new_dialog.connect("timeline_end", self, "interaction_end")
+	new_dialog.connect("dialogic_signal", self, "mission")
 
 func interaction_end(timelineend):
 	emit_signal("end_conversation")
-	
-func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	interaction_button.show()
-	arrow_head.hide()
 
+func mission(param):
+	if param == "mission1_accepted":
+		emit_signal("mission1_accepted")
+
+func mission_completed():
+	Dialogic.set_variable("bard_interaction", 2)
+	var new_dialog = Dialogic.start('bard')
+	add_child(new_dialog)
+	new_dialog.connect("timeline_end", self, "interaction_end")
+
+func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if int(Dialogic.get_variable("bard_interaction")) != 2: 
+		talk_box.hide()
+		interaction_button.show()
+	else:
+		talk_box.hide()
+		interaction_button.hide()
 
 func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
-	arrow_head.show()
-	interaction_button.hide()
+	if int(Dialogic.get_variable("bard_interaction")) != 2: 
+		talk_box.show()
+		interaction_button.hide()
+	else:
+		talk_box.hide()
+		interaction_button.hide()
+	

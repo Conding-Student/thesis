@@ -40,12 +40,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1723187790-648",
-			"name": "child_tips",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1723097011-648",
 			"name": "explore_town",
 			"type": 0,
@@ -58,20 +52,26 @@
 			"value": "0"
 		},
 		{
+			"id": "1727437460-648",
+			"name": "val_money",
+			"type": 0,
+			"value": "0"
+		},
+		{
 			"id": "1727504722-842",
 			"name": "pirate_captain",
 			"type": 0,
-			"value": ""
+			"value": "0"
 		},
 		{
-			"id": "1727150110-648",
-			"name": "introduction",
+			"id": "1727823022-339",
+			"name": "bard_interaction",
 			"type": 0,
-			"value": "1"
+			"value": "0"
 		},
 		{
-			"id": "1727253549-787",
-			"name": "mage_guild",
+			"id": "1727834552-713",
+			"name": "cultist",
 			"type": 0,
 			"value": "0"
 		},
@@ -82,8 +82,14 @@
 			"value": "0"
 		},
 		{
-			"id": "1727437460-648",
-			"name": "val_money",
+			"id": "1723187790-648",
+			"name": "child_tips",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1727841876-833",
+			"name": "cultist_mission",
 			"type": 0,
 			"value": "0"
 		}

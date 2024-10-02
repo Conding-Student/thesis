@@ -2,16 +2,16 @@
 	"events": [
 		{
 			"condition": "==",
-			"definition": "1727150110-648",
+			"definition": "1727504722-842",
 			"event_id": "dialogic_012",
-			"value": "1"
+			"value": "0"
 		},
 		{
 			"event_id": "dialogic_024",
 			"set_theme": "theme-1726986938.cfg"
 		},
 		{
-			"background": "res://Scenes/pictures/Untitled.png",
+			"background": "res://Scenes/pictures/mageguild/044675f208009a587708f108d9c627ef.jpg",
 			"event_id": "dialogic_021"
 		},
 		{
@@ -114,12 +114,6 @@
 			"text": "I do remember Mr. merrick told I could eat here, maybe I can ask the person right in the counter."
 		},
 		{
-			"condition": "",
-			"definition": "1727253549-787",
-			"event_id": "dialogic_012",
-			"value": "0"
-		},
-		{
 			"definition": "1727251831-648",
 			"event_id": "dialogic_014",
 			"operation": "+",
@@ -128,7 +122,7 @@
 			"set_value": "1"
 		},
 		{
-			"definition": "1727253549-787",
+			"definition": "1727504722-842",
 			"event_id": "dialogic_014",
 			"operation": "+",
 			"random_upper_limit": 100,
@@ -136,7 +130,56 @@
 			"set_value": "1"
 		},
 		{
+			"custom_slot": "slot1",
+			"event_id": "dialogic_026",
+			"use_default_slot": false
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1727504722-842",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"background": "res://Scenes/pictures/mageguild/044675f208009a587708f108d9c627ef.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727481183.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1727481183.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I already told ya that we were gonna set sail after the festival right? lets enjoy and bring honor to the legendary wizard king!"
 		},
 		{
 			"event_id": "dialogic_022",

@@ -22,14 +22,15 @@
 			"folders": {
 				"mageguild": {
 					"files": [
-						"character-1727481183.json"
+						"character-1727481183.json",
+						"character-1727822754.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"towncenter": {
@@ -47,7 +48,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Definitions": {
@@ -91,6 +92,31 @@
 					},
 					"metadata": {
 						"color": null,
+						"folded": true
+					}
+				},
+				"mageguild": {
+					"files": [
+						"1727823022-339",
+						"1727834552-713"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				},
+				"mission": {
+					"files": [
+						"1727841876-833"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
 						"folded": false
 					}
 				},
@@ -121,22 +147,20 @@
 				},
 				"unit2": {
 					"files": [
-						"1727150110-648",
-						"1727251831-648",
-						"1727253549-787"
+						"1727251831-648"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				}
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Themes": {
@@ -157,7 +181,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Timelines": {
@@ -257,14 +281,16 @@
 						"timeline-1727538235.json",
 						"timeline-1727578283.json",
 						"timeline-1727583363.json",
-						"timeline-1727699423.json"
+						"timeline-1727699423.json",
+						"timeline-1727842398.json",
+						"timeline-1727850296.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"citizen3": {
@@ -300,7 +326,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"hints": {
@@ -326,7 +352,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"paladin": {

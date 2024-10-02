@@ -1,10 +1,285 @@
 {
 	"events": [
+		{
+			"condition": "",
+			"definition": "1727823022-339",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"background": "res://Scenes/pictures/mageguild/b877ad73500df6843b4141e66bdfce72.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey there, Aren't you Valen? "
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why'd you ask?"
+		},
+		{
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " I heard you're good at picking locks"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "How'd yo-"
+		},
+		{
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That shouldn't matter"
+		},
+		{
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I need help in opening this box"
+		},
+		{
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " It contains a family heirloom but the lock's been jammed of improper c# coding"
+		},
+		{
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_010",
+			"options": [
 
+			],
+			"portrait": "",
+			"question": "Can you please help me? I'll give you a reward for your efforts"
+		},
+		{
+			"choice": "Okay, don't worry.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, don't worry I will open it up for you."
+		},
+		{
+			"emit_signal": "mission1_accepted",
+			"event_id": "dialogic_040"
+		},
+		{
+			"definition": "1727823022-339",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"definition": "1727251831-648",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"custom_slot": "slot1",
+			"event_id": "dialogic_026",
+			"use_default_slot": false
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Maybe next time.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe some other time, i am too busy as of this moment."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1727823022-339",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"background": "res://Scenes/pictures/mageguild/b877ad73500df6843b4141e66bdfce72.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Did you finally open my chest?"
+		},
+		{
+			"choice": "Not yet.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1727823022-339",
+			"event_id": "dialogic_012",
+			"value": "2"
+		},
+		{
+			"background": "res://Scenes/pictures/mageguild/b877ad73500df6843b4141e66bdfce72.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There we go"
+		},
+		{
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're a lifesaver. Merrick trained you well"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "SFX",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Music and Sounds/sound effects/coin_recieved.wav",
+			"volume": -10
+		},
+		{
+			"character": "character-1727822754.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Here's a coin as promised"
+		},
+		{
+			"definition": "1727437460-648",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "10"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your current money is now [val_money]"
+		},
+		{
+			"custom_slot": "slot1",
+			"event_id": "dialogic_026",
+			"use_default_slot": false
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
 		"file": "timeline-1727618819.json",
-		"name": "timeline-1727618819.json"
+		"name": "bard"
 	}
 }

@@ -36,7 +36,7 @@
 			"character": "character-1721952113.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This is it. The passage to the library. My body won't fit into that small passage. I'll stand watch and distract any guards. Val, you must enter and explore this passage to complete the mission."
+			"text": "This is it. The passage to the library. My body won't fit into that small passage. I'll stand watch and distract any guards. Val, \nyou must enter and explore this passage to complete the mission."
 		},
 		{
 			"character": "character-1721952703.json",

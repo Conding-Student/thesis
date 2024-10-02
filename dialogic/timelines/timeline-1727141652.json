@@ -35,8 +35,8 @@
 			"question": "Oh, Did you already explore the mage guild and meet new people?"
 		},
 		{
-			"choice": "Yes",
-			"condition": "",
+			"choice": "I already knew some of them",
+			"condition": ">=",
 			"definition": "1727251831-648",
 			"event_id": "dialogic_011",
 			"value": "2"
