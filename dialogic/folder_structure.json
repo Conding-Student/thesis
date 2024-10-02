@@ -48,7 +48,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Definitions": {
@@ -68,7 +68,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"Citizen3": {
@@ -117,7 +117,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"pirates": {
@@ -147,7 +147,8 @@
 				},
 				"unit2": {
 					"files": [
-						"1727251831-648"
+						"1727251831-648",
+						"1727860687-648"
 					],
 					"folders": {
 
@@ -160,7 +161,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Themes": {
@@ -352,7 +353,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"paladin": {

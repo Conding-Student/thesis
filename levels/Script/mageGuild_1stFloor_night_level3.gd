@@ -96,6 +96,7 @@ func interaction_endpoint_quiz(timelineend):
 	Global2.set_feedback(1, "Incorrect. Float is for decimal numbers, not integers.")
 	Global2.set_feedback(2, "Correct! Int is used for storing whole numbers.")
 	Global2.set_feedback(3, "Incorrect. Double is for decimal numbers, not integers.")
+	Global2.set_picture_path(0,"res://intro/picture/question/level3/stage4/Lvl 3 Stage 4 - 1.png")
 	Global2.correct_answer_ch1_3 = true
 	#2nd question
 	Global2.set_question(1, "Complete the right way to declare a variable.")
@@ -107,6 +108,7 @@ func interaction_endpoint_quiz(timelineend):
 	Global2.set_feedback(5,"Incorrect. Double is for more precise decimal numbers, but the 'f' suffix indicates a float.")
 	Global2.set_feedback(6,"Incorrect. Char is used to store a single character.")
 	Global2.set_feedback(7,"Correct! The 'f' suffix specifies that this is a float value.")
+	Global2.set_picture_path(1,"res://intro/picture/question/level3/stage4/Lvl 3 Stage 4 - 2.png")
 	Global2.correct_answer_ch2_4 = true
 	#3rd question
 	Global2.set_question(2, "Complete the right way to declare a variable.")
@@ -118,6 +120,7 @@ func interaction_endpoint_quiz(timelineend):
 	Global2.set_feedback(9,"Correct! Bool is used to store true or false values.")
 	Global2.set_feedback(10,"Incorrect. Float is for decimal numbers, not boolean values.")
 	Global2.set_feedback(11,"Incorrect. String is used for text, not boolean values.")
+	Global2.set_picture_path(2, "res://intro/picture/question/level3/stage4/Lvl 3 Stage 4 - 3.png")
 	Global2.correct_answer_ch3_2 = true
 	
 	Global.load_game_position = true

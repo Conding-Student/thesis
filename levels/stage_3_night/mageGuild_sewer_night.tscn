@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://World/world objects/sewerBubble1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://World/room/night_level_entrance.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://intro/path_arrow.tres" type="Texture" id=13]
+[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -527,6 +528,14 @@ format = 1
 tile_data = PoolIntArray( 1245476, 0, 0, 3473501, 0, 0 )
 
 [node name="bat" type="YSort" parent="YSort"]
+
+[node name="Bat6" parent="YSort/bat" instance=ExtResource( 14 )]
+position = Vector2( 73, 19 )
+bat_id = "bat6"
+
+[node name="Bat7" parent="YSort/bat" instance=ExtResource( 14 )]
+position = Vector2( 173, 86 )
+bat_id = "bat7"
 
 [node name="mageGuild_cellar_night_pos" type="Position2D" parent="."]
 position = Vector2( 267, 25 )

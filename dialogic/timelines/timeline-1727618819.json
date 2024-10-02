@@ -119,6 +119,14 @@
 			"set_value": "1"
 		},
 		{
+			"definition": "1727251831-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "2"
+		},
+		{
 			"custom_slot": "slot1",
 			"event_id": "dialogic_026",
 			"use_default_slot": false
@@ -262,7 +270,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Your current money is now [val_money]"
+			"text": "Your current money is now [val_money] bytes."
 		},
 		{
 			"custom_slot": "slot1",

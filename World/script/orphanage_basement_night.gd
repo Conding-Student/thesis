@@ -95,7 +95,7 @@ func merrick_interaction():
 	interacton_button.hide()
 	player_controller.hide()
 	player_controller_joystick.disable_joystick()
-	if 0 == int(Dialogic.get_variable("introduction")): #first to trigger
+	if  int(Dialogic.get_variable("introduction")) == 0:#first to trigger
 		Musicmanager.set_to_low()
 		var new_dialog = Dialogic.start('before_level2s1')
 		add_child(new_dialog)

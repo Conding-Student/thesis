@@ -57,12 +57,26 @@
 			"text": "Go and take your time to explore and meet new people."
 		},
 		{
-			"definition": "1727150110-648",
+			"definition": "1727437460-648",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "20"
+		},
+		{
+			"definition": "1727860687-648",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your current money is [val_money] bytes"
 		},
 		{
 			"custom_slot": "slot1",

@@ -106,6 +106,14 @@
 			"set_value": "1"
 		},
 		{
+			"definition": "1727860687-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "2"
+		},
+		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
 		},
@@ -340,7 +348,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Your money after eating is [val_money]"
+			"text": "Your money after eating is [val_money] bytes."
 		},
 		{
 			"emit_signal": "heal",

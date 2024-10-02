@@ -50,7 +50,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Your total money after purchasing was [val_money]. "
+			"text": "Your total money after purchasing was [val_money] bytes."
 		},
 		{
 			"anchor_id": "anchor-1727621333",

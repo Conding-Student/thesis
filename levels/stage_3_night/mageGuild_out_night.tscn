@@ -566,7 +566,7 @@ bat_id = "bat4"
 position = Vector2( 688, 340 )
 bat_id = "bat5"
 
-[node name="Bat" parent="objects/bats" instance=ExtResource( 24 )]
+[node name="Bat1" parent="objects/bats" instance=ExtResource( 24 )]
 position = Vector2( 265, 369 )
 bat_id = "bat1"
 
