@@ -63,11 +63,6 @@ func save_data(filename: String) -> void:
 		"enemy_state": Global.enemy_state,
 		"enemy_defeated": Global.enemy_defeated,
 		"dialogue_start_tutorial": Global.dialogue_start_tutorial,
-		#"explore_town": Global2.explore_town,
-		#"manor_guard": Global2.manor_guard,
-		#"lady_on_townsquare": Global2.lady_on_townsquare,
-		#"paladin_mage_guild": Global2.paladin_mage_guild,
-		#"after_quiz": Global2.after_quiz,
 		"bat_states": Global.bat_states,
 		"door_states": Global.door_states,
 		"dialogue_states": Global.dialogue_states,
@@ -80,6 +75,48 @@ func save_data(filename: String) -> void:
 	
 	save_to_file(filename, save_data)
 
+# Function to reset all game state values to their default
+func reset_to_default() -> void:
+	# Reset player stats and game state
+	PlayerStats.health = 5
+	Global.set_map("")
+	Global.set_current_level("Chapter1 U1 1 / 5")
+	Global.save_triggered = false
+	Global.from_level = null
+	Global.set_player_current_position(Vector2(0, 0))
+	Global.player_initial_position = Vector2(0, 0)
+	Global.player_position_engaged = Vector2(0, 0)
+	Global.player_after_door_position = Vector2(0, 0)
+	Global.player_position_retain = false
+	Global.load_game_position = false
+	
+	# Reset enemy positions
+	var default_enemy_position = {"enemy1": Vector2(0, 0), "enemy2": Vector2(0, 0), "enemy3": Vector2(0, 0)}
+	Global.enemy_current_position = default_enemy_position
+	Global.enemy_initial_position = default_enemy_position
+	Global.enemy_engaged_position = default_enemy_position
+	
+	# Reset enemy state
+	Global.enemy_state = {"enemy1": false, "enemy2": false, "enemy3": false}
+	Global.enemy_defeated = {"enemy1": false, "enemy2": false, "enemy3": false}
+	
+	# Reset dialogue and tutorial states
+	Global.dialogue_start_tutorial = false
+	Global.bat_states = {}
+	Global.door_states = {}
+	Global.dialogue_states = {}
+	
+	# Reset quest and badges
+	Global2.state = ""
+	Global2.badges_complete = {
+		"badge1": false, "badge2": false, "badge3": false, "badge4": false, "badge5": false,
+		"badge6": false, "badge7": false, "badge8": false, "badge9": false, "badge10": false,
+		"badge11": false, "badge12": false, "badge13": false, "badge14": false, "badge15": false
+	}
+
+	# Optionally reset Dialogic data (if applicable)
+	#Dialogic.reset("slot1")
+	Dialogic.reset_saves() #reset all values in dialogic
 
 
 # Load game data from a file
@@ -103,19 +140,7 @@ func apply_loaded_data(loaded_data: Dictionary) -> void:
 	Global.from_level = loaded_data.get("from_level", "")
 	PlayerStats.health = loaded_data.get("players_health", 100)  # Assuming a default value
 	Dialogic.load("slot1")
-	# Load location and state variables
-	#Global2.explore_town = int(loaded_data.get("explore_town", 0))
-	#Global2.paladin_mage_guild = int(loaded_data.get("paladin_mage_guild", 0))
-	#Global2.lady_on_townsquare = int(loaded_data.get("lady_on_townsquare", 0))
-	#Global2.manor_guard = int(loaded_data.get("manor_guard", 0))
-	#Global2.after_quiz = int(loaded_data.get("after_quiz", 0))
 
-	# Set dialogic variables
-	#Dialogic.set_variable("explore_town", Global2.explore_town)
-	#Dialogic.set_variable("paladin", Global2.paladin_mage_guild)
-	#Dialogic.set_variable("citizen", Global2.lady_on_townsquare)
-	#Dialogic.set_variable("manor_guard", Global2.manor_guard)
-	#Dialogic.set_variable("after_quiz", Global2.after_quiz)
 
 	# Load player positions
 	Global.set_player_current_position(Vector2(loaded_data.get("player_current_position", [0, 0])[0], loaded_data.get("player_current_position", [0, 0])[1]))

@@ -23,7 +23,7 @@ var starting_player_position = Vector2 (568, 428)
 func _ready():
 	set_overall_initial_position()
 	set_player_position()
-	place_name.text = "Mage Guild Inside"
+	place_name.text = "Mage Guild Inside Day"
 	resume.connect("pressed", self, "resume_the_game")
 	pirate_crew_interaction_button.connect("pressed",self, "pirate_crew_interaction")
 	#captain_interaction_button.connect("pressed",self,"captain_interaction")
@@ -104,6 +104,7 @@ func interaction_end(timelineend):
 
 func into_cellar(body_rid, body, body_shape_index, local_shape_index):
 	if int(Dialogic.get_variable("cultist_mission")) == 1:
+		Global.from_level = "mageGuild_1stFloor"
 		SceneTransition.change_scene("res://levels/stage_3_night/mageGuild_cellar_night.tscn")
 	else:
 		player_controller.hide()

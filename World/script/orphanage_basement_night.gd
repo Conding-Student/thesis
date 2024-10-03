@@ -35,7 +35,7 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	interacton_button.connect("pressed",self, "merrick_interaction")
 	Global.set_map(current_map)
-	place_name.text = "Orphanage Basement"
+	place_name.text = "Orphanage Basement night"
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/orphanageNight.wav")
 	Musicmanager.change_scene("orphanage_night")
 	Musicmanager.normal_volume()

@@ -812,7 +812,7 @@ tile_data = PoolIntArray( 2163172, 0, 0, 24445173, 0, 0 )
 position = Vector2( 81, 136 )
 
 [node name="captain" parent="objects/people" instance=ExtResource( 17 )]
-position = Vector2( 118, 311 )
+position = Vector2( 166, 326 )
 
 [node name="bard" parent="objects/people" instance=ExtResource( 18 )]
 position = Vector2( 136, 63 )
@@ -916,7 +916,7 @@ collision_layer = 128
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -10, 1 )
+position = Vector2( -9, 1 )
 shape = SubResource( 68 )
 
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]

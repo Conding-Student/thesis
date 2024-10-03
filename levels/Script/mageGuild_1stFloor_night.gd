@@ -38,7 +38,7 @@ func _ready():
 	mission_chest.connect("chest_has_been_opened", self, "mission_completed")
 	Global.set_map(current_map)
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildInside.wav")
-	
+	Musicmanager.change_scene("mageguild night inside")
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
 		Global.set_player_current_position(starting_player_position)
@@ -104,6 +104,7 @@ func interaction_end(timelineend):
 
 func into_cellar(body_rid, body, body_shape_index, local_shape_index):
 	if int(Dialogic.get_variable("cultist_mission")) == 1:
+		Global.from_level = "mageGuild_cellar_night"
 		SceneTransition.change_scene("res://levels/stage_3_night/mageGuild_cellar_night.tscn")
 	else:
 		player_controller.hide()

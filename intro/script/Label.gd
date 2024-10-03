@@ -15,7 +15,12 @@ func updating_label():
 		"badge7": "Chapter1 U2 3 / 5",
 		"badge8": "Chapter1 U2 4 / 5",
 		"badge9": "Chapter1 U2 5 / 5",
-		"badge10": "Chapter1 U3 1 / 5"
+		"badge10": "Chapter1 U3 1 / 5",
+		"badge11": "Chapter1 U3 1 / 5",
+		"badge12": "Chapter1 U3 1 / 5",
+		"badge13": "Chapter1 U3 1 / 5",
+		"badge14": "Chapter1 U3 1 / 5",
+		"badge15": "Chapter1 U3 1 / 5"
 	}
 	
 	# Loop through the badge-text map and update the label for the first completed badge

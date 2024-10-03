@@ -77,11 +77,16 @@ func path_checking():
 		orig_mageguild.disabled = true
 		path_to_mageguild_day.disabled = true
 		path_arrow.hide()
-	elif int(Dialogic.get_variable("cultist_mission")) <= 2:
+	elif Global.from_level == "mageGuild_1stFloor":
 		orig_mageguild.disabled = true
 		path_to_mageguild_day.disabled = false
 		print("trigger day guild")
+	elif Global.from_level == "mageGuild_1stFloor_night":
+		orig_mageguild.disabled = false
+		path_to_mageguild_day.disabled = true
+		print("trigger night guild")
 	else:
+		print(Global.from_level)
 		print("trigger else")
 		orig_mageguild.disabled =false
 		path_to_mageguild_day.disabled = true
