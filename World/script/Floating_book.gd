@@ -8,20 +8,25 @@ func _ready():
 
 
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	Global2.set_question(0, "Declare int variable name 'lockno' with a value of 1")
-	Global2.set_answers(0, "int lockno = 1;")
-	Global2.set_feedback(0, "The correct syntax is int 'lockno' = 1;. Make sure to include the data type and semi-colon. Use the correct format!")
+	Global2.set_question(0, "Declare a datatype that can stored words or phrases. Usually it uses double aphosthrope for its value")
+	Global2.set_answers(0, "string")
+	Global2.set_feedback(0, "The correct syntax is string.")
 	#2nd question
-	Global2.set_question(1, "Declare Double variable name 'level' with a value of 5.9")
-	Global2.set_answers(1, "double level = 5.9;")
-	Global2.set_feedback(1,"You need to declare a double like this: double level = 5.9;. Make sure to use the correct data type and semi-colon. Use the format!")
+	Global2.set_question(1, "Declare a variable name for the datatype of string. Named it as a book since it was the item that you want to retrieve")
+	Global2.set_answers(1, "book")
+	Global2.set_feedback(1,"The named should be book. Since it was the item that you want to retrieve")
 	#Declare string variable name 'locktype' with a value of 'magic' 
 	#3rd question
-	Global2.set_question(2, "Declare string variable name 'locktype' with a value of 'magic'")
-	Global2.set_answers(2, 'string locktype = "magic";')
-	Global2.set_feedback(2,'Incorrect. To declare a string, the correct syntax is: string locktype = "magic";. Ensure you are using double quotes for the string value and the correct data type. Also semi-colon')
+	Global2.set_question(2, "After choosing datatype and declaring variable name you should use the right sign to assign value on it")
+	Global2.set_answers(2, '=')
+	Global2.set_feedback(2,'equal sign that should be the right answer')
 	#4th question
-	Global2.set_question(3, "Declare bool variable name 'isLocked' with a value of false")
-	Global2.set_answers(3, "bool islocked = false;")
-	Global2.set_feedback(3, "Incorrect. The correct syntax for declaring a boolean is: bool isLocked = false;. Make sure to use the correct data type and the right format! do not forget the semi-colon")
+	Global2.set_question(3, "Now stored a value from the variable you created named it as secrets since that book contains secret information")
+	Global2.set_answers(3, '"secrets"')
+	Global2.set_feedback(3, 'Incorrect. The correct syntax for assigning value is: "secrets" . Make sure to use the correct value and the right format! do not forget the double aphosthrophe')
+	
+	#4th question
+	Global2.set_question(3, "Every variable declaration must be end. Put the ending symbol of semi-colon")
+	Global2.set_answers(3, ';')
+	Global2.set_feedback(3, 'Incorrect. The correct syntax is: ;')
 	SceneTransition.change_scene("res://intro/sequencing.tscn")

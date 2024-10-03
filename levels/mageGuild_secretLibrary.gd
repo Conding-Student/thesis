@@ -18,6 +18,8 @@ func _ready():
 	place_name.text = "Mage Guild Secret Library"
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
+	Musicmanager.set_music_path("res://Music and Sounds/bg music/libary.wav")
+	Musicmanager.change_scene("Secret_library")
 	if Global2.is_badge_complete("badge14"):
 		pass
 	else:

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scenes/Video/intro-bg.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Scenes/Video/intro_pt2.ogv" type="VideoStream" id=1]
 [ext_resource path="res://Scenes/pictures/skip.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/Kenney Mini Square Mono.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/Script/intro_chill.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Video/intropt2_reverse.ogv" type="VideoStream" id=5]
+[ext_resource path="res://Music and Sounds/bg music/Compressed-Kim Lightyear - Magic Tales (2).wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 9
@@ -59,6 +61,11 @@ tracks/0/keys = {
 [node name="intro_chill" type="Node"]
 script = ExtResource( 4 )
 
+[node name="reverse" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 5 )
+
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 margin_right = 320.0
 margin_bottom = 180.0
@@ -92,5 +99,11 @@ color = Color( 0, 0, 0, 1 )
 anims/Fadein = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+bus = "Music"
+
+[connection signal="finished" from="reverse" to="." method="_on_reverse_finished"]
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="Skip_button" to="." method="_on_Skip_button_pressed"]

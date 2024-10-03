@@ -1,7 +1,7 @@
 extends Node
 
 onready var video_player = $VideoPlayer
-var is_reversing = false  # To track whether the video is reversing or playing forward
+onready var reverse = $reverse
 
 func _ready():
 	var new_dialog = Dialogic.start('introductionp1')
@@ -20,9 +20,13 @@ func interaction_endpoint2(timelineend):
 	SceneTransition.change_scene("res://intro/pre_test.tscn")
 
 func _on_VideoPlayer_finished():
-	video_player.play()
+	reverse.play()
 
 
 
 func _on_Skip_button_pressed():
 	SceneTransition.change_scene("res://levels/stage_3_night/manor_out_night.tscn")
+
+
+func _on_reverse_finished():
+	video_player.play()

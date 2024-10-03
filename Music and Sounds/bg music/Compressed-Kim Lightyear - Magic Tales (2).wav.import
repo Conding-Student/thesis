@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Compressed-Kim Lightyear - Magic Tales (2).wav-9f297096b2248fe718929a1887582087.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/bg music/Compressed-Kim Lightyear - Magic Tales (2).wav"
+dest_files=[ "res://.import/Compressed-Kim Lightyear - Magic Tales (2).wav-9f297096b2248fe718929a1887582087.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

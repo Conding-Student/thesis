@@ -1,10 +1,18 @@
 {
 	"events": [
 		{
+			"background": "res://Scenes/pictures/intro/thief.png",
+			"event_id": "dialogic_021"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Survival in the orphanage has never been easy. You’ve done what you had to stolen what you needed not because you wanted to. "
+		},
+		{
+			"background": "res://Scenes/pictures/intro/guilt.png",
+			"event_id": "dialogic_021"
 		},
 		{
 			"character": "",

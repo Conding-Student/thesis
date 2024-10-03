@@ -27,6 +27,10 @@
 			"text": "That was close. Let's keep moving."
 		},
 		{
+			"background": "res://Scenes/pictures/unit3chapter1/stage4/sneak.png",
+			"event_id": "dialogic_021"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",

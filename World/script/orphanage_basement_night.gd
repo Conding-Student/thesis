@@ -4,7 +4,6 @@ onready var topui = $TopUi
 onready var player_controller = $YSort/Player/Controller
 onready var pause_ui = $TopUi/pause_menu/pause_menu/Panel
 onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as Button
-onready var current_level = $TopUi/Label
 onready var player = $YSort/Player
 onready var player_controller_joystick = $YSort/Player/Controller/joystick
 onready var place_name = $TopUi/Label2
@@ -35,7 +34,7 @@ func _ready():
 	resume.connect("pressed", self, "resume_the_game")
 	interacton_button.connect("pressed",self, "merrick_interaction")
 	Global.set_map(current_map)
-	place_name.text = "Orphanage Basement night"
+	place_name.text = "Orphanage Basement"
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/orphanageNight.wav")
 	Musicmanager.change_scene("orphanage_night")
 	Musicmanager.normal_volume()
