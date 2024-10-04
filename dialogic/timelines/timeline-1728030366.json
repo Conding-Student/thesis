@@ -1,0 +1,163 @@
+{
+	"events": [
+		{
+			"background": "res://Scenes/pictures/chapter2/gandalf_house_inside.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The battles have drained me, Val, but knowledge… knowledge I still have in abundance"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You’ve heard of the IDE tome, haven’t you? The ancient artifact believed to hold the power to end this war"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The IDE tome? Thought that was just a myth."
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Most think that, but I’ve spent my life studying it. It’s real, and it's the key to end this long fought war against those disgusting  bugs and errors."
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "With it, we could bring back peace here in syntaxia!"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(freezing for a moment, realization dawning) (So… I’m in the past. No wonder things feel off.) (slight frown, keeping his thoughts hidden)"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Suddenly, the door flies open with a loud creak, and Analexius bursts into the room, panting dramatically."
+		},
+		{
+			"character": "character-1728031425.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Master! You won’t believe it! I, Analexius the Great, have vanquished one of those bugs—by my own hands! No magic, just sheer strength! \nI suffocated the filthy thing until it begged for mercy!"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Right… sounds believable. (What a joke.)"
+		},
+		{
+			"character": "character-1728031425.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(ignoring Val, continuing his story) Well… it might’ve lost interest and… wandered off, but the important thing is, I survived."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "haha Impressive."
+		},
+		{
+			"character": "character-1728031425.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hold on what’s this? Master, have you hired a walking rugged punching bag? Looks like he’s been through every form of bug torture imaginable!"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(irritated, but calm) I'm not here to amuse you."
+		},
+		{
+			"character": "character-1720150982.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(snorts) Clearly. You look like a bug yourself. I bet you can’t even fight your own kin! "
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(clearing his throat, interrupting) That’s enough, Analexius. Val is no entertainer. He is… your fellow student."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What?"
+		},
+		{
+			"character": "character-1728031425.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Him? A student? You’re joking! This bug impersonator? Oh, this is going to be good. Maybe you’ll learn how to squash bugs instead of being one."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(tightly gripping his fist, his patience wearing thin) Care to say that again?"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Peace, Val. Analexius, that’s enough. I sense a unique potential in you, something… different. The same aura I felt in Analexius when I first took him in."
+		},
+		{
+			"character": "character-1728031425.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh please, Master, my aura is leagues ahead of his. I’m practically glowing with power!"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, well, in your case, it turns out most of that aura was… pure strenght"
+		},
+		{
+			"character": "character-1728031425.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Luck? Me? Ha! That’s absurd. I’m pure talent. Unlike this… second-rate, try-hard copycat."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(sighing, clearly tired of the conversation, but steady in his resolve) Believe what you want. I’m not here for you. I’m here to learn."
+		},
+		{
+			"character": "character-1728031425.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We’ll see how long that lasts."
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Analexius, enough. Val is staying. You will both learn under my guidance."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1728030366.json",
+		"name": "c2level1p3"
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In his curiosity, he decided to open the book by himself."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh no!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The book suddenly release an enormous amount of C# magic shocking and stunning Valen. When Val opened his eyes, he found himself outdoors on a cloudy day. \nThe distant sounds of battle echoed around him, with grunts and spells being cast. Confused and disoriented, he tried to piece together what had happened. \nRealizing that the mission was far from over and he was in an entirely new and unexpected situation."
+		},
+		{
+			"change_scene": "res://levels/Chapter2_maps/forest1Chap2.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1728000044.json",
+		"name": "timetravelling"
+	}
+}

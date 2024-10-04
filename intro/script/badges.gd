@@ -21,7 +21,17 @@ onready var badges = [
 	$Panel4/Panel/Badges/HBoxContainer3/Units/s2, #12
 	$Panel4/Panel/Badges/HBoxContainer3/Units/s3, #13
 	$Panel4/Panel/Badges/HBoxContainer3/Units/s4, #14
-	$Panel4/Panel/Badges/HBoxContainer3/Units/s5 #15
+	$Panel4/Panel/Badges/HBoxContainer3/Units/s5, #15
+	$Panel4/Panel2/Badges/HBoxContainer/Units/s1, #16
+	$Panel4/Panel2/Badges/HBoxContainer/Units/s2, #17
+	$Panel4/Panel2/Badges/HBoxContainer/Units/s3, #18
+	$Panel4/Panel2/Badges/HBoxContainer/Units/s4, #19
+	$Panel4/Panel2/Badges/HBoxContainer/Units/s5, #20
+	$Panel4/Panel2/Badges/HBoxContainer2/Units/s1,#21
+	$Panel4/Panel2/Badges/HBoxContainer2/Units/s2,#22
+	$Panel4/Panel2/Badges/HBoxContainer2/Units/s3,#23
+	$Panel4/Panel2/Badges/HBoxContainer2/Units/s4,#24
+	$Panel4/Panel2/Badges/HBoxContainer2/Units/s5 #25
 ]
 
 # Array of badge images (default and completed)
@@ -85,7 +95,48 @@ var badge_images = {
 	"badge15": {
 		"default": preload("res://intro/picture/semi-mastery badges.png"),
 		"earned": preload("res://intro/picture/semi-mastery.png"),
+	},
+	"badge16": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge17": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge18": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge19": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge20": {
+		"default": preload("res://intro/picture/semi-mastery badges.png"),
+		"earned": preload("res://intro/picture/semi-mastery.png"),
+	},
+	"badge21": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge22": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge23": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge24": {
+		"default": preload("res://intro/picture/normal-badge-gray.png"),
+		"earned": preload("res://intro/picture/normal badge.png"),
+	},
+	"badge25": {
+		"default": preload("res://intro/picture/semi-mastery badges.png"),
+		"earned": preload("res://intro/picture/semi-mastery.png"),
 	}
+	
 }
 
 # This is the label node reference for updating text
@@ -107,7 +158,17 @@ var badge_text_map = {
 	"badge12": "Chapter1 U3 3 / 5",
 	"badge13": "Chapter1 U3 4 / 5",
 	"badge14": "Chapter1 U3 5 / 5",
-	"badge15": "Chapter2 U1 1 / 5"
+	"badge15": "Chapter2 U1 1 / 5",
+	"badge16": "Chapter2 U1 2 / 5",
+	"badge17": "Chapter2 U1 3 / 5",
+	"badge18": "Chapter2 U1 4 / 5",
+	"badge19": "Chapter2 U1 5 / 5",
+	"badge20": "Chapter2 U2 1 / 5",
+	"badge21": "Chapter2 U2 2 / 5",
+	"badge22": "Chapter2 U2 3 / 5",
+	"badge23": "Chapter2 U2 4 / 5",
+	"badge24": "Chapter2 U2 5 / 5",
+	"badge25": "Chapter2 U3 1 / 5"
 }
 
 func _ready():

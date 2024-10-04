@@ -26,7 +26,17 @@ var badges_complete = {
 	"badge12": false,
 	"badge13": false,
 	"badge14": false,
-	"badge15": false,
+	"badge15": true,
+	"badge16": false,
+	"badge17": false,
+	"badge18": false,
+	"badge19": false,
+	"badge20": false,
+	"badge21": false,
+	"badge22": false,
+	"badge23": false,
+	"badge24": false,
+	"badge25": false,
 }
 
 # Previous state of badges (initially, it's the same as badges_complete)

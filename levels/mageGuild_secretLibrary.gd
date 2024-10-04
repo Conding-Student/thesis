@@ -7,12 +7,14 @@ onready var resume = $TopUi/pause_menu/pause_menu/Panel/VBoxContainer/resume as 
 onready var player = $YSort/player
 onready var player_controller_joystick = $YSort/player/Controller/joystick
 onready var place_name = $TopUi/Label2
+onready var book = $Floating_book
 var current_map = "res://levels/stage_3_night/mageGuild_secretLibrary.tscn"
 var starting_player_position = Vector2 (568, 428)
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	book.connect("start_interaction", self, "controller_hide")
 	set_overall_initial_position()
 	set_player_position()
 	place_name.text = "Mage Guild Secret Library"
@@ -64,3 +66,7 @@ func _on_pause_game_pressed():
 	topui.visible = false
 	player_controller.visible = false
 	pause_ui.show()
+
+func controller_hide():
+	player_controller.hide()
+	topui.hide()

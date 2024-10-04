@@ -334,7 +334,7 @@
 15/shapes = [  ]
 15/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="forest2Chap2" type="Node2D"]
 
 [node name="floor1" type="TileMap" parent="."]
 tile_set = SubResource( 1 )

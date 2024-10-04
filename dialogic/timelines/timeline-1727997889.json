@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"background": "res://Scenes/pictures/mageguild/2a2d474883e728a28f0aafcfee69a187.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is it. Now to unlock the enchantment."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1727997889.json",
+		"name": "level3book"
+	}
+}

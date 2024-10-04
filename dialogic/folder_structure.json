@@ -30,6 +30,30 @@
 					},
 					"metadata": {
 						"color": null,
+						"folded": true
+					}
+				},
+				"timetravel": {
+					"files": [
+						"character-1728009045.json",
+						"character-1728031425.json"
+					],
+					"folders": {
+						"bugs": {
+							"files": [
+								"character-1728010649.json"
+							],
+							"folders": {
+
+							},
+							"metadata": {
+								"color": null,
+								"folded": true
+							}
+						}
+					},
+					"metadata": {
+						"color": null,
 						"folded": false
 					}
 				},
@@ -42,13 +66,13 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				}
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Definitions": {
@@ -68,7 +92,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Citizen3": {
@@ -145,6 +169,18 @@
 						"folded": true
 					}
 				},
+				"timetravel": {
+					"files": [
+						"1728021648-250"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				},
 				"unit2": {
 					"files": [
 						"1727251831-648",
@@ -161,7 +197,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Themes": {
@@ -284,7 +320,9 @@
 						"timeline-1727583363.json",
 						"timeline-1727699423.json",
 						"timeline-1727842398.json",
-						"timeline-1727850296.json"
+						"timeline-1727850296.json",
+						"timeline-1727997889.json",
+						"timeline-1727999106.json"
 					],
 					"folders": {
 
@@ -320,14 +358,15 @@
 						"timeline-1727695821.json",
 						"timeline-1727720956.json",
 						"timeline-1727726799.json",
-						"timeline-1727733373.json"
+						"timeline-1727733373.json",
+						"timeline-1728000044.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"hints": {
@@ -366,6 +405,66 @@
 					"metadata": {
 						"color": null,
 						"folded": true
+					}
+				},
+				"timetravel": {
+					"files": [
+
+					],
+					"folders": {
+						"Gandalf": {
+							"files": [
+
+							],
+							"folders": {
+
+							},
+							"metadata": {
+								"color": null,
+								"folded": false
+							}
+						},
+						"instructions": {
+							"files": [
+								"timeline-1728022272.json"
+							],
+							"folders": {
+
+							},
+							"metadata": {
+								"color": null,
+								"folded": true
+							}
+						},
+						"level1": {
+							"files": [
+
+							],
+							"folders": {
+								"stage1": {
+									"files": [
+										"timeline-1728009104.json",
+										"timeline-1728019727.json",
+										"timeline-1728030366.json"
+									],
+									"folders": {
+
+									},
+									"metadata": {
+										"color": null,
+										"folded": false
+									}
+								}
+							},
+							"metadata": {
+								"color": null,
+								"folded": false
+							}
+						}
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
 					}
 				}
 			},

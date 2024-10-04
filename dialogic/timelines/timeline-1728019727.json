@@ -1,0 +1,126 @@
+{
+	"events": [
+		{
+			"background": "res://Scenes/pictures/chapter2/forest1.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hang on, old man. I’ve got you. Let me use magic to unlock your handcuffes"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You… know magic too?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Enough to get by. You alright?"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I’ve seen better days. But… yes, thanks to you, I’m still breathing."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good. Would’ve been a shame if I saved you for nothing."
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're… not just any traveler, are you? That was no ordinary display of skill… or C# magic. Who are you?"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Name’s Val. Nothing fancy, just passing through."
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I see… You can call me Gandalf Alaric Runeheart. And I believe we are no longer strangers."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(takes the wizard’s hand, firm but relaxed) Guess not. What were those things, Gandalf? Not the kind of creatures you see every day."
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "How come you don't know them? they are the bugs, errors, and glitches into this world. They were here to corrupt every fabric of life here in Syntaxia!"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We are at war for more than a decade. They plague the world of Syntaxia due to the misuse of C# magic. Which is why, in this era, it was strictly prohibited to use C# magic."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Though intrigued by Val’s sudden appearance and usage of list magic, Gandalf is already too exhausted after that fight and everything that has happened. \nThus, he invited Val to his house. Having nowhere else to go, Val followed him.  "
+		},
+		{
+			"definition": "1728021648-250",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"custom_slot": "slot1",
+			"event_id": "dialogic_026",
+			"use_default_slot": false
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1728019727.json",
+		"name": "c2level1p2"
+	}
+}

@@ -98,6 +98,12 @@
 			"name": "red_child_dialogue",
 			"type": 0,
 			"value": "0"
+		},
+		{
+			"id": "1728021648-250",
+			"name": "gandalf",
+			"type": 0,
+			"value": "0"
 		}
 	]
 }
