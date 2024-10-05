@@ -265,6 +265,7 @@ func value_activating(param):
 		#print("trigger")
 		Global2.complete_badge("badge14")
 		label.updating_label()
+	
 		
 	
 # Reset all relevant Global2 properties to false (used to avoid dialogue errors)

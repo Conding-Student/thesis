@@ -13,7 +13,7 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1721952113.json",
+			"character": "character-1728009045.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -63,6 +63,10 @@
 			"z_index": 0
 		},
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1727127117.cfg"
+		},
+		{
 			"character": "character-1728010649.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -79,6 +83,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "What the hell are those things…? Doesn’t matter. He’s not gonna last much longer"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
 		},
 		{
 			"character": "character-1728009045.json",

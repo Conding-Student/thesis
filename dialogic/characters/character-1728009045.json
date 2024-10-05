@@ -13,9 +13,9 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://Dialogue/Picture/cvhapter2/gandalf2.png"
 		}
 	],
-	"scale": 100,
+	"scale": 40,
 	"theme": ""
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://World/pictures/interior/TopDownHouse_FloorsAndWalls.png" type="Texture" id=1]
 [ext_resource path="res://World/pictures/interior/tiles (floor and walls).png" type="Texture" id=2]
@@ -20,6 +20,9 @@
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=18]
 [ext_resource path="res://intro/pause_menu.tscn" type="PackedScene" id=19]
 [ext_resource path="res://levels/gandalfHouse_ground.gd" type="Script" id=20]
+[ext_resource path="res://World/path_arrow.tscn" type="PackedScene" id=21]
+[ext_resource path="res://NPC/picture/interact-removebg-preview.png" type="Texture" id=22]
+[ext_resource path="res://NPC/Gandalf.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1285,6 +1288,8 @@ points = PoolVector2Array( 6.34814, 1.87875, 28.8533, 1.47686, 28.8533, 15.1407,
 5/shapes = [  ]
 5/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=37]
+
 [sub_resource type="DynamicFont" id=36]
 size = 5
 font_data = ExtResource( 17 )
@@ -1369,7 +1374,7 @@ rotation = 1.58677
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Camera2D" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 60, 142 )
+position = Vector2( 80, 208 )
 zoom = Vector2( 0.8, 0.8 )
 
 [node name="TopLeft" parent="YSort/Camera2D/Limits" index="0"]
@@ -1379,12 +1384,35 @@ position = Vector2( 0, -14 )
 position = Vector2( 240, 239 )
 
 [node name="player" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 60, 142 )
+position = Vector2( 80, 208 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/player"]
 remote_path = NodePath("../../Camera2D")
 
+[node name="Gandalf" parent="YSort" instance=ExtResource( 23 )]
+position = Vector2( 24, 194 )
+
 [node name="path" type="YSort" parent="YSort"]
+
+[node name="path_arrow" parent="YSort/path" instance=ExtResource( 21 )]
+tile_data = PoolIntArray( 2752550, 0, 0, 14876749, 0, 0 )
+
+[node name="eat" type="YSort" parent="YSort"]
+
+[node name="Area2D" type="Area2D" parent="YSort/eat"]
+position = Vector2( 41, 45 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/eat/Area2D"]
+shape = SubResource( 37 )
+
+[node name="TextureButton" type="TouchScreenButton" parent="YSort/eat/Area2D"]
+visible = false
+position = Vector2( -27, -20 )
+scale = Vector2( 0.165625, 0.0888889 )
+z_index = 2
+normal = ExtResource( 22 )
 
 [node name="TopUi" type="CanvasLayer" parent="."]
 
@@ -1416,6 +1444,8 @@ custom_fonts/font = SubResource( 36 )
 align = 1
 valign = 1
 
+[connection signal="body_shape_entered" from="YSort/eat/Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="YSort/eat/Area2D" to="." method="_on_Area2D_body_shape_exited"]
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 
 [editable path="YSort/Camera2D"]

@@ -21,23 +21,6 @@ font_data = ExtResource( 10 )
 [node name="gandalfHouse_Outside" type="Node2D"]
 script = ExtResource( 13 )
 
-[node name="forest1Chap2_pos" type="Position2D" parent="."]
-position = Vector2( 327, 94 )
-
-[node name="forest1Chap2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 348, 95 )
-
-[node name="gandalfHouse_ground_pos" type="Position2D" parent="."]
-position = Vector2( 130, 65 )
-
-[node name="gandalfHouse_ground" parent="." instance=ExtResource( 5 )]
-position = Vector2( 128, 40 )
-rotation = 1.56778
-
-[node name="path_arrow" parent="." instance=ExtResource( 8 )]
-position = Vector2( 314, 93 )
-tile_data = PoolIntArray( -196577, 0, 0 )
-
 [node name="floor1" type="TileMap" parent="."]
 position = Vector2( 161, 87 )
 tile_set = ExtResource( 2 )
@@ -64,10 +47,29 @@ cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( -327686, 16, 0, -327685, 16, 1, -327684, 16, 1, -327683, 16, 1, -327682, 16, 1, -327681, 16, 2, -262150, 16, 65536, -262145, 16, 65538, -196614, 16, 65536, -196609, 16, 65538, -131078, 16, 131072, -131077, 16, 1, -131076, 16, 1, -131075, 14, 0, -131074, 14, 1, -131073, 16, 131074, -65539, 14, 1, -65538, 14, 0, 262140, 18, 0 )
 
+[node name="forest1Chap2_pos" type="Position2D" parent="."]
+position = Vector2( 327, 94 )
+
+[node name="forest1Chap2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 348, 95 )
+
+[node name="gandalfHouse_ground_pos" type="Position2D" parent="."]
+position = Vector2( 130, 65 )
+
+[node name="gandalfHouse_ground" parent="." instance=ExtResource( 5 )]
+position = Vector2( 128, 40 )
+rotation = 1.56778
+
+[node name="path_arrow" parent="." instance=ExtResource( 8 )]
+position = Vector2( 314, 93 )
+z_index = 1
+tile_data = PoolIntArray( -3735743, 0, 0, -196577, 0, 0 )
+
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 314, 93 )
 
 [node name="player" parent="YSort" instance=ExtResource( 6 )]
+z_index = 2
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/player"]
 remote_path = NodePath("../../Camera2D")

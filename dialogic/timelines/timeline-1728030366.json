@@ -1,8 +1,32 @@
 {
 	"events": [
 		{
-			"background": "res://Scenes/pictures/chapter2/gandalf_house_inside.jpg",
+			"background": "res://Scenes/pictures/chapter2/gandalf_house_inside.png",
 			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
 		},
 		{
 			"character": "character-1728009045.json",
@@ -41,10 +65,62 @@
 			"text": "(freezing for a moment, realization dawning) (So… I’m in the past. No wonder things feel off.) (slight frown, keeping his thoughts hidden)"
 		},
 		{
+			"animation": "instant_out.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"background": "res://Scenes/pictures/chapter2/doorSlam.png",
+			"event_id": "dialogic_021"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Suddenly, the door flies open with a loud creak, and Analexius bursts into the room, panting dramatically."
+		},
+		{
+			"background": "res://Scenes/pictures/chapter2/gandalf_house_inside.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1728031425.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1727127117.cfg"
 		},
 		{
 			"character": "character-1728031425.json",
@@ -83,7 +159,7 @@
 			"text": "(irritated, but calm) I'm not here to amuse you."
 		},
 		{
-			"character": "character-1720150982.json",
+			"character": "character-1728031425.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "(snorts) Clearly. You look like a bug yourself. I bet you can’t even fight your own kin! "
@@ -113,10 +189,38 @@
 			"text": "(tightly gripping his fist, his patience wearing thin) Care to say that again?"
 		},
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
 			"character": "character-1728009045.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Peace, Val. Analexius, that’s enough. I sense a unique potential in you, something… different. The same aura I felt in Analexius when I first took him in."
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1727127117.cfg"
 		},
 		{
 			"character": "character-1728031425.json",
@@ -125,10 +229,18 @@
 			"text": "Oh please, Master, my aura is leagues ahead of his. I’m practically glowing with power!"
 		},
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
 			"character": "character-1728009045.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yes, well, in your case, it turns out most of that aura was… pure strenght"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1727127117.cfg"
 		},
 		{
 			"character": "character-1728031425.json",
@@ -149,10 +261,22 @@
 			"text": "We’ll see how long that lasts."
 		},
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
 			"character": "character-1728009045.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Analexius, enough. Val is staying. You will both learn under my guidance."
+		},
+		{
+			"definition": "1728021648-250",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "2"
 		},
 		{
 			"event_id": "dialogic_022",

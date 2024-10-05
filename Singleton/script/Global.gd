@@ -45,6 +45,12 @@ var door_states = {}
 # Declare and initialize the dictionary to store the bat states
 var bat_states = {}  # Add this line at the top
 
+func are_bat_states_false(bat_ids: Array) -> bool:
+	for bat_id in bat_ids:
+		if bat_states.get(bat_id, true) != false:  # Default to true if the bat_id doesn't exist
+			return false  # Return false if any state is not false
+	return true  # All specified states are false if the loop completes
+
 
 # Function to set the state of a dialogue (open or closed)
 func set_dialogue_state(dialogue_id: String, is_open: bool):

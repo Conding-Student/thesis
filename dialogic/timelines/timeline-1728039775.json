@@ -1,0 +1,142 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1728021648-250",
+			"event_id": "dialogic_012",
+			"value": "2"
+		},
+		{
+			"background": "res://Scenes/pictures/chapter2/gandalf_house_inside.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1726986938.cfg"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Gandalf, how do we fight the bugs here? I tried smashing one, but it just came back the next day!"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ah, yes. Physical force won’t work. Bugs in Syntaxia are bound to the code itself. Only through the magic of C# can they be truly subdued. \nBut remember, they will always respawn after a few days, no matter what."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So… how do I start learning this magic? How can I use it against them?"
+		},
+		{
+			"background": "res://intro/picture/question/chapter2/level tutoral/chapter 2 stage 1 - 1.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We begin with Assignment Operators. Think of it like telling the world what things should be. You start by assigning a value to something like how you claim your pouch is holding 50 coins."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So, it’s like setting my inventory! But what if I earn more?"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Then you use the shortcut spells, such as +="
+		},
+		{
+			"background": "res://intro/picture/question/chapter2/level tutoral/chapter 2 stage 1 - 2.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This adds 10 coins to your pouch. There are others like -= for subtracting, and *= for multiplying."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So, I can keep track of my coins without manually adding each time! What about fighting bugs?"
+		},
+		{
+			"background": "res://intro/picture/question/chapter2/level tutoral/chapter 2 stage 1 - 3.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good question. To fight effectively, you need to understand Unary and Comparison. Unary spells, like ++ or --, increase or decrease values by one."
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, like when I drink a potion! My health goes up by one each time?"
+		},
+		{
+			"background": "res://intro/picture/question/chapter2/level tutoral/chapter 2 stage 1 - 4.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Precisely. And then, to know when to act, we use Comparison Operators. These let you check conditions:"
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You’re seeing if your health is low, signaling you to heal. Comparison spells like ==, !=, >, and < are your tools for decision-making."
+		},
+		{
+			"background": "res://Scenes/pictures/chapter2/gandalf_house_inside.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I’ll be ready, Master. I’m starting to get it now. This magic… it feels powerful."
+		},
+		{
+			"character": "character-1728009045.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Now, kill those bugs that we've encounter before by solving their complexities"
+		},
+		{
+			"definition": "1728021648-250",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "3"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1728039775.json",
+		"name": "c2level1_tutorial"
+	}
+}

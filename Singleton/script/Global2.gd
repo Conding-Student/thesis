@@ -26,7 +26,7 @@ var badges_complete = {
 	"badge12": false,
 	"badge13": false,
 	"badge14": false,
-	"badge15": true,
+	"badge15": false,
 	"badge16": false,
 	"badge17": false,
 	"badge18": false,
@@ -81,13 +81,32 @@ var NRI =  ((post_final_score - pre_final_score) / MPI) * 100 # Need to be displ
 
 ################## PRE-POST TEST ###################
 
+################### enemy tres path ################
+
+# Store the file path of the enemy .tres file globally
+var enemy_data = null  # This will hold the loaded Resource
+
+# Function to load the enemy data from a .tres file
+func load_enemy_data(path_to_tres):
+	enemy_data = load(path_to_tres)
+	if enemy_data != null:
+		print("Enemy data loaded successfully.")
+		print("Enemy name: ", enemy_data.name)
+		print("Enemy health: ", enemy_data.health)
+		print("Enemy damage: ", enemy_data.damage)
+	else:
+		print("Failed to load enemy data.")
+
+var bug_defeated = false
+#################### enemy tres path #################
+
 ######################### DYNAMIC QUIZ VALUES #######################
 # Evaluation: using dictionaries for questions, answers, and feedback
 var evaluations = {
-	"questions": ["question1", "question2", "", "","",""],
-	"answers": ["answer space","space p p", "","", "", "", "","",""
+	"questions": ["", "", "", "","",""],
+	"answers": ["","", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "", "",""],
-	"feedback": ["space", "ppp", "", "","", "", "", "","",""
+	"feedback": ["", "", "", "","", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "",""],
 	"pictures_path": ["res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png"],
 }

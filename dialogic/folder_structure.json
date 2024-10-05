@@ -178,7 +178,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"unit2": {
@@ -197,7 +197,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Themes": {
@@ -414,19 +414,20 @@
 					"folders": {
 						"Gandalf": {
 							"files": [
-
+								"timeline-1728039775.json"
 							],
 							"folders": {
 
 							},
 							"metadata": {
 								"color": null,
-								"folded": false
+								"folded": true
 							}
 						},
 						"instructions": {
 							"files": [
-								"timeline-1728022272.json"
+								"timeline-1728022272.json",
+								"timeline-1728038238.json"
 							],
 							"folders": {
 
@@ -455,6 +456,19 @@
 										"folded": false
 									}
 								}
+							},
+							"metadata": {
+								"color": null,
+								"folded": true
+							}
+						},
+						"val_reaction": {
+							"files": [
+								"timeline-1728047149.json",
+								"timeline-1728090797.json"
+							],
+							"folders": {
+
 							},
 							"metadata": {
 								"color": null,

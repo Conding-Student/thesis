@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"background": "res://Scenes/pictures/chapter2/forest1.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Phew, now its done."
+		},
+		{
+			"emit_signal": "bug1",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1728090797.json",
+		"name": "bug1"
+	}
+}

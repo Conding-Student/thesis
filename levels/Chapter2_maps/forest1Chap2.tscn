@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://World/world objects/forest1.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/KinematicBody2D.tscn" type="PackedScene" id=2]
@@ -17,6 +17,9 @@
 [ext_resource path="res://NPC/Gandalf.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/room/chapter2_entrance.tscn" type="PackedScene" id=16]
 [ext_resource path="res://World/path_arrow.tscn" type="PackedScene" id=17]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 45.0
 
 [sub_resource type="DynamicFont" id=1]
 size = 5
@@ -57,20 +60,20 @@ position = Vector2( 1, 168 )
 
 [node name="YSort" type="YSort" parent="."]
 
+[node name="Gandalf" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 328, 166 )
+
 [node name="Camera2D" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 36, 52 )
+position = Vector2( 149, 192 )
 
 [node name="BottomRight" parent="YSort/Camera2D/Limits" index="1"]
 position = Vector2( 560, 240 )
 
 [node name="player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 36, 52 )
+position = Vector2( 149, 192 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/player"]
 remote_path = NodePath("../../Camera2D")
-
-[node name="Gandalf" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 329, 175 )
 
 [node name="trees" type="YSort" parent="YSort"]
 
@@ -189,12 +192,28 @@ position = Vector2( 385, 23 )
 [node name="bugs" type="YSort" parent="YSort"]
 
 [node name="bug1" parent="YSort/bugs" instance=ExtResource( 14 )]
-position = Vector2( 253, 60 )
+position = Vector2( 243, 42 )
 bug_id = "bug1"
+
+[node name="quiz" type="Area2D" parent="YSort/bugs/bug1"]
+collision_layer = 128
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/bugs/bug1/quiz"]
+position = Vector2( -2, -8 )
+shape = SubResource( 2 )
 
 [node name="bug2" parent="YSort/bugs" instance=ExtResource( 14 )]
 position = Vector2( 326, 139 )
 bug_id = "bug2"
+
+[node name="quiz" type="Area2D" parent="YSort/bugs/bug2"]
+collision_layer = 128
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/bugs/bug2/quiz"]
+position = Vector2( -2, -8 )
+shape = SubResource( 2 )
 
 [node name="path" type="YSort" parent="YSort"]
 
@@ -231,6 +250,8 @@ custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
 
+[connection signal="body_shape_entered" from="YSort/bugs/bug1/quiz" to="." method="_on_quiz_body_shape_entered"]
+[connection signal="body_shape_entered" from="YSort/bugs/bug2/quiz" to="." method="_on_quizbug2_body_shape_entered"]
 [connection signal="pressed" from="TopUi/pause_game" to="." method="_on_pause_game_pressed"]
 
 [editable path="YSort/Camera2D"]

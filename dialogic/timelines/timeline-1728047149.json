@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"background": "res://intro/picture/question/default_bg.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1721952703.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I successfully debug one monster. There is only one left"
+		},
+		{
+			"emit_signal": "bug2",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1728047149.json",
+		"name": "bug2"
+	}
+}

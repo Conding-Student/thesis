@@ -16,6 +16,8 @@ onready var wanderController = $WanderController
 onready var stats = $Stats
 onready var hurtbox = $Hurtbox
 
+
+
 enum {
 	IDLE,
 	WANDER,
@@ -29,7 +31,7 @@ var knockback = Vector2.ZERO
 
 func _ready():
 	# Check the state from the Global singleton
-	if not Global.get_bat_state(bug_id) && Global2.is_badge_complete("badge16"):
+	if not Global.get_bat_state(bug_id):
 		#print("Bat is dead on load, removing from scene: ID =", bat_id)  # Debugging print
 		queue_free()  # If dead, remove from the scene
 	else:
@@ -89,7 +91,6 @@ func _on_Hurtbox_area_entered(area):
 	hurtbox.start_invincibility(0.4)
 
 func _on_Stats_no_health():
-	Global.set_bat_state(bug_id, false) 
 	queue_free()
 	var enemyDeathEffect = deatheffect.instance()
 	get_parent().add_child(enemyDeathEffect)

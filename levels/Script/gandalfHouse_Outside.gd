@@ -17,7 +17,7 @@ var starting_player_position = Vector2  (36, 52)
 func _ready():
 	set_overall_initial_position()
 	set_player_position()
-	place_name.text = "Old Syntaxia forest"
+	place_name.text = "Gandalf house outside"
 	resume.connect("pressed", self, "resume_the_game")
 	Global.set_map(current_map)
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/guildInside.wav")

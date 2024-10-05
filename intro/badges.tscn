@@ -51,7 +51,6 @@ custom_fonts/font = SubResource( 7 )
 text = "Chapter1 U1 1 / 5"
 
 [node name="Panel4" type="Panel" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -156,7 +155,6 @@ margin_bottom = 18.0
 texture_normal = ExtResource( 8 )
 
 [node name="Panel2" type="Panel" parent="Panel4"]
-visible = false
 self_modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -213,9 +211,9 @@ margin_bottom = 35.0
 texture = ExtResource( 4 )
 
 [node name="s2" type="TextureRect" parent="Panel4/Panel2/Badges/HBoxContainer/Units"]
-margin_left = 65.0
+margin_left = 23.0
 margin_top = 15.0
-margin_right = 85.0
+margin_right = 43.0
 margin_bottom = 35.0
 texture = ExtResource( 4 )
 
@@ -227,9 +225,9 @@ margin_bottom = 35.0
 texture = ExtResource( 4 )
 
 [node name="s4" type="TextureRect" parent="Panel4/Panel2/Badges/HBoxContainer/Units"]
-margin_left = 23.0
+margin_left = 64.0
 margin_top = 15.0
-margin_right = 43.0
+margin_right = 84.0
 margin_bottom = 35.0
 texture = ExtResource( 4 )
 
@@ -259,10 +257,10 @@ margin_bottom = 35.0
 texture = ExtResource( 4 )
 
 [node name="s2" type="TextureRect" parent="Panel4/Panel2/Badges/HBoxContainer2/Units"]
-margin_left = 65.0
-margin_top = 15.0
-margin_right = 85.0
-margin_bottom = 35.0
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 44.0
+margin_bottom = 36.0
 texture = ExtResource( 4 )
 
 [node name="s3" type="TextureRect" parent="Panel4/Panel2/Badges/HBoxContainer2/Units"]
@@ -273,9 +271,9 @@ margin_bottom = 35.0
 texture = ExtResource( 4 )
 
 [node name="s4" type="TextureRect" parent="Panel4/Panel2/Badges/HBoxContainer2/Units"]
-margin_left = 23.0
+margin_left = 66.0
 margin_top = 15.0
-margin_right = 43.0
+margin_right = 86.0
 margin_bottom = 35.0
 texture = ExtResource( 4 )
 
@@ -311,6 +309,7 @@ margin_bottom = 17.0
 texture_normal = ExtResource( 8 )
 
 [node name="Panel" type="Panel" parent="Panel4"]
+visible = false
 self_modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0

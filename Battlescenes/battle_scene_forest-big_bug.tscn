@@ -375,7 +375,6 @@ anims/health_hide = SubResource( 15 )
 anims/shake = SubResource( 14 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 anchor_mode = 0
 current = true
 

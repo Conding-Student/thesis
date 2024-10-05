@@ -156,6 +156,7 @@ position = Vector2( -2, -13 )
 shape = SubResource( 2 )
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 shape = SubResource( 3 )
