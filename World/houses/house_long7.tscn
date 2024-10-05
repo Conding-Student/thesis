@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/pictures/town/house/special houses.png" type="Texture" id=1]
+
+[node name="house_long" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 103, 438, 181, 122 )
+region_filter_clip = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -31, 47, -30, 59, 26, 58, 27, 47, 84, 47, 84, 24, 89, 24, 89, -25, 34, -25, 34, -28, 3, -60, -7, -60, -38, -28, -38, -24, -91, -24, -91, 24, -87, 24, -87, 48 )
