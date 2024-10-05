@@ -51,6 +51,7 @@ custom_fonts/font = SubResource( 7 )
 text = "Chapter1 U1 1 / 5"
 
 [node name="Panel4" type="Panel" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -155,6 +156,7 @@ margin_bottom = 18.0
 texture_normal = ExtResource( 8 )
 
 [node name="Panel2" type="Panel" parent="Panel4"]
+visible = false
 self_modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -309,7 +311,6 @@ margin_bottom = 17.0
 texture_normal = ExtResource( 8 )
 
 [node name="Panel" type="Panel" parent="Panel4"]
-visible = false
 self_modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
