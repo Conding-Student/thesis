@@ -55,7 +55,7 @@
 			"text": "This is what you need to steal. Make sure no one follows you back to the manor. I'll be fine. I've done this before."
 		},
 		{
-			"background": "",
+			"background": "res://Scenes/pictures/unit3chapter1/stage4/merrickChase.png",
 			"event_id": "dialogic_021"
 		},
 		{
