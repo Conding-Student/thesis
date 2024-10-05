@@ -20,6 +20,7 @@ func interaction_endpoint2(timelineend):
 	SceneTransition.change_scene("res://intro/pre_test.tscn")
 
 func _on_VideoPlayer_finished():
+	video_player.stop()
 	reverse.play()
 
 
@@ -29,4 +30,5 @@ func _on_Skip_button_pressed():
 
 
 func _on_reverse_finished():
+	reverse.stop()
 	video_player.play()

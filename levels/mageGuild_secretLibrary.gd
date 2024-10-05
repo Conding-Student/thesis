@@ -22,10 +22,11 @@ func _ready():
 	Global.set_map(current_map)
 	Musicmanager.set_music_path("res://Music and Sounds/bg music/libary.wav")
 	Musicmanager.change_scene("Secret_library")
-	if Global2.is_badge_complete("badge14"):
-		pass
+	if Global2.is_badge_complete("badge15"):
+		Musicmanager.stop_music()
+		SceneTransition.change_scene("res://Scenes/timetravel.tscn")
 	else:
-		pass
+		print("error in loading movie scene onging chapter2")
 
 func set_player_position():
 	if Global.get_player_initial_position() == Vector2(0, 0):
