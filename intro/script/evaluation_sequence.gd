@@ -29,11 +29,11 @@ onready var right_answer5 = $PanelContainer/question5/info/correction/answer
 
 
 #user answer
-onready var user_answer1 = $PanelContainer/question1/info/correction/answer
-onready var user_answer2 = $PanelContainer/question2/info/correction/answer
-onready var user_answer3 = $PanelContainer/question3/info/correction/answer 
-onready var user_answer4 = $PanelContainer/question4/info/correction/answer
-onready var user_answer5 = $PanelContainer/question5/info/correction/answer
+onready var user_answer1 = $PanelContainer/question1/info/answer/answer
+onready var user_answer2 = $PanelContainer/question2/info/answer/answer
+onready var user_answer3 = $PanelContainer/question3/info/answer/answer
+onready var user_answer4 = $PanelContainer/question4/info/answer/answer
+onready var user_answer5 = $PanelContainer/question5/info/answer/answer
 
 #feedbacks
 onready var question1_feedback1 = $PanelContainer/question1/info/answer/feedback
@@ -47,10 +47,10 @@ func _ready():
 	#if question has been set for 1st and then so on
 	if Global2.evaluations["questions"][0] != "":
 		button1.disabled = false
-		user_answer1.text = Global2.get_answers(0)
+		right_answer1.text = Global2.get_answers(0)
 		question1.text = Global2.get_question(0)
 		question1_feedback1.text = Global2.get_feedback(0)
-		right_answer1.text = Global2.get_answers_sequence(0)
+		user_answer1.text = Global2.get_answers_sequence(0)
 	else:
 	# The question has not been set (is an empty string
 		#print("Question at index", 0, "is still empty.")

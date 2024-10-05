@@ -174,7 +174,6 @@ var badge_text_map = {
 func _ready():
 	chapter_1.show()
 	update_badges()
-
 # Function to update badge visibility and label based on Global2 values
 func update_badges():
 	var latest_badge_text = ""  # Variable to hold the latest badge progress text

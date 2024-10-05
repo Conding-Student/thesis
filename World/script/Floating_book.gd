@@ -24,7 +24,7 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 		Global2.set_feedback(0, "The correct syntax is string.")
 		Global2.set_picture_path(0,"res://intro/picture/question/level3/stage5/Stage 5 - 1.png")
 		#2nd question
-		Global2.set_question(1, "Declare a variable name for the datatype of string.\nName it as book since it was the item that you want to retrieve.")
+		Global2.set_question(1, 'Declare a variable name for the datatype of string.\nName it as "book" since it was the item that you want to retrieve.')
 		Global2.set_answers(1, "book")
 		Global2.set_feedback(1,"The named should be book. Since it was the item that you want to retrieve")
 		Global2.set_picture_path(1, "res://intro/picture/question/level3/stage5/Stage 5 - 2.png")
@@ -35,7 +35,7 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 		Global2.set_feedback(2,'equal sign that should be the right answer')
 		Global2.set_picture_path(2,"res://intro/picture/question/level3/stage5/Stage 5 - 3.png")
 		#4th question
-		Global2.set_question(3, "Now stored a value from the variable you created named it as secrets since that book contains secret information")
+		Global2.set_question(3, 'Now stored a value from the variable you created named it as "secrets" since that book contains secret information')
 		Global2.set_answers(3, '"secrets"')
 		Global2.set_feedback(3, 'Incorrect. The correct syntax for assigning value is: "secrets" . Make sure to use the correct value and the right format! do not forget the double aphosthrophe')
 		Global2.set_picture_path(3,"res://intro/picture/question/level3/stage5/Stage 5 - 4.png" )

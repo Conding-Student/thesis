@@ -103,10 +103,10 @@ var bug_defeated = false
 ######################### DYNAMIC QUIZ VALUES #######################
 # Evaluation: using dictionaries for questions, answers, and feedback
 var evaluations = {
-	"questions": ["", "", "", "","",""],
-	"answers": ["","", "","", "", "", "","",""
+	"questions": ["question1", "question2", "question3", "question4","question5",""],
+	"answers": ["right answer","right answer2", "right answer3","right answer4", "right answer5", "", "","",""
 	, "", "", "","", "", "", "", "", "", "", "",""],
-	"feedback": ["", "", "", "","", "", "", "","",""
+	"feedback": ["right feedback", "right feedback2", "right feedback3", "right feedback4","right feedback5", "", "", "","",""
 	, "", "", "","", "", "", "", "", "", "",""],
 	"pictures_path": ["res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png", "res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png","res://intro/picture/question/default_bg.png"],
 }
@@ -202,7 +202,7 @@ func reset_evaluations():
 	# Reset the evaluation dictionary to default values
 	evaluations = {
 		"questions": ["", "", "", "", "", ""],
-		"answers": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+		"answers": ["sagot1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
 		"feedback": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
 		"pictures_path": [
 			"res://intro/picture/question/default_bg.png",
@@ -261,7 +261,11 @@ func reset_interactions():
 		interaction_history["interactions"][i] = ""
 	print("Interactions have been reset!")
 func get_answers_sequence(index: int) -> String:
-	return interaction_history["interactions"][index]
+	var result = interaction_history["interactions"][index]
+	if result == "":
+		return "perfect answer"
+	return result
+
 
 func get_question_sequence(index: int) -> String:
 	return interaction_history["interactions"][index]

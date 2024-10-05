@@ -55,6 +55,10 @@
 			"text": "This is what you need to steal. Make sure no one follows you back to the manor. I'll be fine. I've done this before."
 		},
 		{
+			"background": "",
+			"event_id": "dialogic_021"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",

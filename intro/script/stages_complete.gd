@@ -14,7 +14,9 @@ var current_badge = -1  # -1 means no badge is currently displayed
 var badge_order = [
 	"badge1", "badge2", "badge3", "badge4", "badge5", 
 	"badge6", "badge7", "badge8", "badge9", "badge10", 
-	"badge11", "badge12", "badge13", "badge14", "badge15",
+	"badge11", "badge12", "badge13", "badge14", "badge15", "badge16",
+	"badge17","badge18","badge19","badge20","badge21","badge22","badge23",
+	"badge24","badge25"
 	# Add as many badges as needed
 ]
 

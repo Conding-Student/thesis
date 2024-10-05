@@ -22,13 +22,8 @@ func interaction_endpoint2(timelineend):
 func _on_VideoPlayer_finished():
 	video_player.stop()
 	reverse.play()
-
-
-
 func _on_Skip_button_pressed():
 	SceneTransition.change_scene("res://levels/stage_3_night/manor_out_night.tscn")
-
-
 func _on_reverse_finished():
 	reverse.stop()
 	video_player.play()

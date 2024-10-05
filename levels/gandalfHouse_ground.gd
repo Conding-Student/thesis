@@ -9,6 +9,7 @@ onready var player_controller_joystick = $YSort/player/Controller/joystick
 onready var place_name = $TopUi/Label2
 onready var gandalf = $YSort/Gandalf
 onready var eating_interaction_button = $YSort/eat/Area2D/TextureButton
+onready var badge = $TopUi/pause_menu/pause_menu/badges
 var current_map = "res://levels/Chapter2_maps/forest1Chap2.tscn"
 var starting_player_position = Vector2   (80, 208)
 
@@ -71,6 +72,7 @@ func Hide_controller():
 	player_controller_joystick.disable_joystick()
 
 func show_controller():
+	badge.update_badges()
 	topui.show()
 	player_controller.show()
 	player_controller_joystick.enable_joystick()

@@ -26,6 +26,7 @@ onready var textfield2 = $action_panel/user_input1/LineEdit2
 onready var textfield3 = $action_panel/user_input1/LineEdit3
 onready var textfield4 = $action_panel/user_input1/LineEdit4
 onready var textfield5 = $action_panel/user_input1/LineEdit5
+onready var clear_all = $clearall
 onready var submit_button = $Button
 
 # Background picture
@@ -47,9 +48,9 @@ func hide_everything():
 func _ready():
 	# Connect the player's no_health signal to the _on_no_health function
 	stats.connect("no_health", self, "_on_no_health")
-	
 	# Hide the button initially
 	submit_button.hide()
+	clear_all.hide()
 	badge_label.hide()
 	# Connect the text_changed signals of all textfields to the same function
 	textfield1.connect("text_changed", self, "_on_textfield_text_changed")
@@ -137,8 +138,10 @@ func _on_textfield_text_changed(new_text):
 	# Use strip_edges() to remove unnecessary whitespaces in all textfields
 	if textfield1.text.strip_edges() != "" or textfield2.text.strip_edges() != "" or textfield3.text.strip_edges() != "" or textfield4.text.strip_edges() != "" or textfield5.text.strip_edges() != "":
 		submit_button.show()  # Show the button if any field has text
+		clear_all.show()
 	else:
 		submit_button.hide()  # Hide the button if all fields are empty
+		clear_all.hide()
 
 # Check the answer and provide feedback
 func check_answer():
@@ -148,6 +151,7 @@ func check_answer():
 
 	if user_answer == correct_answer:
 		# First handle heart feedback
+		clear_all.hide()
 		yield(need_hearts(), "completed")  # Wait for heart feedback to finish
 		feedback_label.text = "Correct"  # Now show correct feedback
 
@@ -237,4 +241,18 @@ func feedback_orig(feedback):
 
 # Button press handling
 func _on_Button_pressed():
+	submit_button.hide()
 	check_answer()
+
+
+func _on_clear_all_pressed():
+	# Clear all text fields
+	textfield1.text = ""
+	textfield2.text = ""
+	textfield3.text = ""
+	textfield4.text = ""
+	textfield5.text = ""
+	
+	clear_all.hide()
+	# Hide submit button as all fields are cleared
+	submit_button.hide()

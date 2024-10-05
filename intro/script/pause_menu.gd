@@ -7,6 +7,7 @@ onready var option = $settings/Panel
 onready var save = $save_files/Panel
 onready var confirmation = $back_to_menu/Panel
 onready var restart_state = $save_files/saving_file
+onready var label_onbadge = $badges/Label
 
 var initial_spawn_1st = Vector2(0,0) 
 

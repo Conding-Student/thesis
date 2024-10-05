@@ -13,6 +13,7 @@ func _ready():
 	interaction_button.connect("pressed",self, "interaction_start")
 
 func interaction_start():
+	interaction_button.hide()
 	if int(Dialogic.get_variable("gandalf")) == 0:
 		emit_signal("start_dialogue")
 		print("need to debug2")
@@ -30,7 +31,7 @@ func end_interaction(timelineend):
 
 func earn_badge16(timelineend):
 	Global2.complete_badge("badge16")
-	badges.update_badges()
+	#badges.update_badges()
 	emit_signal("end_dialogue")
 
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
