@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://World/room/house.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=17]
 [ext_resource path="res://NPC/Boy.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Controllers/interaction_button.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Enemies/Slime.tscn" type="PackedScene" id=20]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -657,6 +658,9 @@ shape = SubResource( 51 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Slime1" parent="YSort/enemies" instance=ExtResource( 20 )]
+position = Vector2( 12, -47 )
 
 [node name="NPC" type="YSort" parent="YSort"]
 
